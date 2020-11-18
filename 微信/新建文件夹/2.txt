@@ -1,0 +1,215 @@
+01A24F40    55              push    ebp
+01A24F41    8BEC            mov     ebp, esp
+01A24F43    6A FF           push    -0x1
+01A24F45    68 76FB4602     push    0246FB76
+01A24F4A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+01A24F50    50              push    eax
+01A24F51    83EC 08         sub     esp, 0x8
+01A24F54    56              push    esi
+01A24F55    57              push    edi
+01A24F56    A1 C4108102     mov     eax, dword ptr ds:[0x28110C4]
+01A24F5B    33C5            xor     eax, ebp
+01A24F5D    50              push    eax
+01A24F5E    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+01A24F61    64:A3 00000000  mov     dword ptr fs:[0], eax
+01A24F67    8BF9            mov     edi, ecx
+01A24F69    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A24F70    83EC 10         sub     esp, 0x10
+01A24F73    BA 2C2F6402     mov     edx, 02642F2C                    ; ASCII "02_manager\FTSContactMgr.cpp"
+01A24F78    8BC4            mov     eax, esp
+01A24F7A    B9 02000000     mov     ecx, 0x2
+01A24F7F    83EC 10         sub     esp, 0x10
+01A24F82    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A24F85    8BC4            mov     eax, esp
+01A24F87    83EC 10         sub     esp, 0x10
+01A24F8A    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A24F8D    8BC4            mov     eax, esp
+01A24F8F    83EC 10         sub     esp, 0x10
+01A24F92    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A24F95    8BC4            mov     eax, esp
+01A24F97    83EC 10         sub     esp, 0x10
+01A24F9A    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A24F9D    8BC4            mov     eax, esp
+01A24F9F    83EC 10         sub     esp, 0x10
+01A24FA2    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A24FA5    8BC4            mov     eax, esp
+01A24FA7    68 082F6402     push    02642F08                         ; ASCII "On Logout"
+01A24FAC    68 642F6402     push    02642F64                         ; ASCII "FTSContactMgr"
+01A24FB1    68 4C2F6402     push    02642F4C                         ; ASCII "FTSContactMgr::OnLogout"
+01A24FB6    6A 33           push    0x33
+01A24FB8    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A24FBB    E8 70E51C00     call    01BF3530
+01A24FC0    83C4 70         add     esp, 0x70
+01A24FC3    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+01A24FCA  - E9 C1C46702     jmp     kstEx.040A1490
+01A24FCF    CC              int3
+01A24FD0    FF70 04         push    dword ptr ds:[eax+0x4]
+01A24FD3    E8 18F6DDFF     call    018045F0
+01A24FD8    8B47 5C         mov     eax, dword ptr ds:[edi+0x5C]
+01A24FDB    33C9            xor     ecx, ecx
+01A24FDD    8940 04         mov     dword ptr ds:[eax+0x4], eax
+01A24FE0    8B47 5C         mov     eax, dword ptr ds:[edi+0x5C]
+01A24FE3    8900            mov     dword ptr ds:[eax], eax
+01A24FE5    8B47 5C         mov     eax, dword ptr ds:[edi+0x5C]
+01A24FE8    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+01A24FEF    8940 08         mov     dword ptr ds:[eax+0x8], eax
+01A24FF2    8D47 48         lea     eax, dword ptr ds:[edi+0x48]
+01A24FF5    C747 60 0000000>mov     dword ptr ds:[edi+0x60], 0x0
+01A24FFC    8708            xchg    dword ptr ds:[eax], ecx
+01A24FFE    8B47 28         mov     eax, dword ptr ds:[edi+0x28]
+01A25001    85C0            test    eax, eax
+01A25003    74 3E           je      short 01A25043
+01A25005    50              push    eax
+01A25006    6A 01           push    0x1
+01A25008    68 FFFF1F00     push    0x1FFFFF
+01A2500D    FF15 14F45002   call    dword ptr ds:[<&KERNEL32.OpenThr>; kernel32.OpenThread
+01A25013    8BF0            mov     esi, eax
+01A25015    C745 F0 0000000>mov     dword ptr ss:[ebp-0x10], 0x0
+01A2501C    8D45 F0         lea     eax, dword ptr ss:[ebp-0x10]
+01A2501F    50              push    eax
+01A25020    56              push    esi
+01A25021    FF15 10F45002   call    dword ptr ds:[<&KERNEL32.GetExit>; kernel32.GetExitCodeThread
+01A25027    817D F0 0301000>cmp     dword ptr ss:[ebp-0x10], 0x103
+01A2502E    75 13           jnz     short 01A25043
+01A25030    68 E8030000     push    0x3E8
+01A25035    56              push    esi
+01A25036    FF15 4CF45002   call    dword ptr ds:[<&KERNEL32.WaitFor>; kernel32.WaitForSingleObject
+01A2503C    56              push    esi
+01A2503D    FF15 6CF45002   call    dword ptr ds:[<&KERNEL32.CloseHa>; kernel32.CloseHandle
+01A25043    8B77 10         mov     esi, dword ptr ds:[edi+0x10]
+01A25046    C747 2C 0000000>mov     dword ptr ds:[edi+0x2C], 0x0
+01A2504D    C747 28 0000000>mov     dword ptr ds:[edi+0x28], 0x0
+01A25054    85F6            test    esi, esi
+01A25056    74 19           je      short 01A25071
+01A25058    8BCE            mov     ecx, esi
+01A2505A    E8 81C0F3FF     call    019610E0
+01A2505F    6A 3C           push    0x3C
+01A25061    56              push    esi
+01A25062    E8 41A48E00     call    0230F4A8
+01A25067    83C4 08         add     esp, 0x8
+01A2506A    C747 10 0000000>mov     dword ptr ds:[edi+0x10], 0x0
+01A25071    8B77 14         mov     esi, dword ptr ds:[edi+0x14]
+01A25074    85F6            test    esi, esi
+01A25076    74 19           je      short 01A25091
+01A25078    8BCE            mov     ecx, esi
+01A2507A    E8 6181F3FF     call    0195D1E0
+01A2507F    6A 3C           push    0x3C
+01A25081    56              push    esi
+01A25082    E8 21A48E00     call    0230F4A8
+01A25087    83C4 08         add     esp, 0x8
+01A2508A    C747 14 0000000>mov     dword ptr ds:[edi+0x14], 0x0
+01A25091    8B4F 04         mov     ecx, dword ptr ds:[edi+0x4]      ; WeChatWi.01E1ABCE
+01A25094    85C9            test    ecx, ecx
+01A25096    74 28           je      short 01A250C0
+01A25098    8B01            mov     eax, dword ptr ds:[ecx]
+01A2509A    FF50 1C         call    dword ptr ds:[eax+0x1C]
+01A2509D    8B77 04         mov     esi, dword ptr ds:[edi+0x4]      ; WeChatWi.01E1ABCE
+01A250A0    85F6            test    esi, esi
+01A250A2    74 15           je      short 01A250B9
+01A250A4    8BCE            mov     ecx, esi
+01A250A6    E8 15091900     call    01BB59C0
+01A250AB    68 CC000000     push    0xCC
+01A250B0    56              push    esi
+01A250B1    E8 F2A38E00     call    0230F4A8
+01A250B6    83C4 08         add     esp, 0x8
+01A250B9    C747 04 0000000>mov     dword ptr ds:[edi+0x4], 0x0
+01A250C0    8B4F 08         mov     ecx, dword ptr ds:[edi+0x8]      ; kernel32.GetModuleFileNameW
+01A250C3    85C9            test    ecx, ecx
+01A250C5    74 28           je      short 01A250EF
+01A250C7    8B01            mov     eax, dword ptr ds:[ecx]
+01A250C9    FF50 1C         call    dword ptr ds:[eax+0x1C]
+01A250CC    8B77 08         mov     esi, dword ptr ds:[edi+0x8]      ; kernel32.GetModuleFileNameW
+01A250CF    85F6            test    esi, esi
+01A250D1    74 15           je      short 01A250E8
+01A250D3    8BCE            mov     ecx, esi
+01A250D5    E8 F6A11900     call    01BBF2D0
+01A250DA    68 90000000     push    0x90
+01A250DF    56              push    esi
+01A250E0    E8 C3A38E00     call    0230F4A8
+01A250E5    83C4 08         add     esp, 0x8
+01A250E8    C747 08 0000000>mov     dword ptr ds:[edi+0x8], 0x0
+01A250EF    8B4F 0C         mov     ecx, dword ptr ds:[edi+0xC]      ; user32.MessageBoxW
+01A250F2    85C9            test    ecx, ecx
+01A250F4    74 28           je      short 01A2511E
+01A250F6    8B01            mov     eax, dword ptr ds:[ecx]
+01A250F8    FF50 1C         call    dword ptr ds:[eax+0x1C]
+01A250FB    8B77 0C         mov     esi, dword ptr ds:[edi+0xC]      ; user32.MessageBoxW
+01A250FE    85F6            test    esi, esi
+01A25100    74 15           je      short 01A25117
+01A25102    8BCE            mov     ecx, esi
+01A25104    E8 674B1900     call    01BB9C70
+01A25109    68 B8000000     push    0xB8
+01A2510E    56              push    esi
+01A2510F    E8 94A38E00     call    0230F4A8
+01A25114    83C4 08         add     esp, 0x8
+01A25117    C747 0C 0000000>mov     dword ptr ds:[edi+0xC], 0x0
+01A2511E    8B4F 24         mov     ecx, dword ptr ds:[edi+0x24]
+01A25121    85C9            test    ecx, ecx
+01A25123    74 2B           je      short 01A25150
+01A25125    8B01            mov     eax, dword ptr ds:[ecx]
+01A25127    FF50 1C         call    dword ptr ds:[eax+0x1C]
+01A2512A    8B77 24         mov     esi, dword ptr ds:[edi+0x24]
+01A2512D    85F6            test    esi, esi
+01A2512F    74 18           je      short 01A25149
+01A25131    8BCE            mov     ecx, esi
+01A25133    C706 DC0E6702   mov     dword ptr ds:[esi], 02670EDC
+01A25139    E8 52E41A00     call    01BD3590
+01A2513E    6A 64           push    0x64
+01A25140    56              push    esi
+01A25141    E8 62A38E00     call    0230F4A8
+01A25146    83C4 08         add     esp, 0x8
+01A25149    C747 24 0000000>mov     dword ptr ds:[edi+0x24], 0x0
+01A25150    8B4F 18         mov     ecx, dword ptr ds:[edi+0x18]
+01A25153    85C9            test    ecx, ecx
+01A25155    74 28           je      short 01A2517F
+01A25157    8B01            mov     eax, dword ptr ds:[ecx]
+01A25159    FF50 1C         call    dword ptr ds:[eax+0x1C]
+01A2515C    8B77 18         mov     esi, dword ptr ds:[edi+0x18]
+01A2515F    85F6            test    esi, esi
+01A25161    74 15           je      short 01A25178
+01A25163    8BCE            mov     ecx, esi
+01A25165    E8 96711900     call    01BBC300
+01A2516A    68 CC000000     push    0xCC
+01A2516F    56              push    esi
+01A25170    E8 33A38E00     call    0230F4A8
+01A25175    83C4 08         add     esp, 0x8
+01A25178    C747 18 0000000>mov     dword ptr ds:[edi+0x18], 0x0
+01A2517F    8B4F 1C         mov     ecx, dword ptr ds:[edi+0x1C]
+01A25182    85C9            test    ecx, ecx
+01A25184    74 28           je      short 01A251AE
+01A25186    8B01            mov     eax, dword ptr ds:[ecx]
+01A25188    FF50 1C         call    dword ptr ds:[eax+0x1C]
+01A2518B    8B77 1C         mov     esi, dword ptr ds:[edi+0x1C]
+01A2518E    85F6            test    esi, esi
+01A25190    74 15           je      short 01A251A7
+01A25192    8BCE            mov     ecx, esi
+01A25194    E8 67711900     call    01BBC300
+01A25199    68 CC000000     push    0xCC
+01A2519E    56              push    esi
+01A2519F    E8 04A38E00     call    0230F4A8
+01A251A4    83C4 08         add     esp, 0x8
+01A251A7    C747 1C 0000000>mov     dword ptr ds:[edi+0x1C], 0x0
+01A251AE    8B4F 20         mov     ecx, dword ptr ds:[edi+0x20]
+01A251B1    85C9            test    ecx, ecx
+01A251B3    74 28           je      short 01A251DD
+01A251B5    8B01            mov     eax, dword ptr ds:[ecx]
+01A251B7    FF50 1C         call    dword ptr ds:[eax+0x1C]
+01A251BA    8B77 20         mov     esi, dword ptr ds:[edi+0x20]
+01A251BD    85F6            test    esi, esi
+01A251BF    74 15           je      short 01A251D6
+01A251C1    8BCE            mov     ecx, esi
+01A251C3    E8 68D33400     call    01D72530
+01A251C8    68 8C000000     push    0x8C
+01A251CD    56              push    esi
+01A251CE    E8 D5A28E00     call    0230F4A8
+01A251D3    83C4 08         add     esp, 0x8
+01A251D6    C747 20 0000000>mov     dword ptr ds:[edi+0x20], 0x0
+01A251DD    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+01A251E0    64:890D 0000000>mov     dword ptr fs:[0], ecx
+01A251E7    59              pop     ecx                              ; user32.77D191BE
+01A251E8    5F              pop     edi                              ; user32.77D191BE
+01A251E9    5E              pop     esi                              ; user32.77D191BE
+01A251EA    8BE5            mov     esp, ebp
+01A251EC    5D              pop     ebp                              ; user32.77D191BE
+01A251ED    C3              retn
+

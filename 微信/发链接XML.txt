@@ -1,0 +1,16 @@
+﻿$ ==>    ><msg fromusername="wxid_wnx60jxkiwtg22" encryptusername="v1_db66
+$+80     >8ead76398d81633f5ec20ab71efc3808ad81d46a4655ce8cc0aeeae961f9ec58
+$+100    >6a6f2ead7acf8aad558287892a03@stranger" fromnickname="晴缘畅" conten
+$+180    >t="我是晴缘畅" fullpy="qingyuanchang" shortpy="QYC" imagestatus="4" s
+$+200    >cene="30" country="" province="" city="" sign="" percard="0" sex
+$+280    >="0" alias="" weibo="" albumflag="0" albumstyle="0" albumbgimgid
+$+300    >="" snsflag="0" snsbgimgid="" snsbgobjectid="0" mhash="0f0a0c547
+$+380    >48807f81de15409ed900e14" mfullhash="0f0a0c54748807f81de15409ed90
+$+400    >0e14" bigheadimgurl="" smallheadimgurl="" ticket="v2_bb8758b96b8
+$+480    >93d410c5e60400007743115014e543cb9198f49733bd40643a6a729195e48948
+$+500    >92c60d04356ebc93138942754c5c4145592be633add6ea256f86bba697b4cec3
+$+580    >2bff24d919ec47cc60255@stranger" opcode="2" googlecontact="" qrti
+$+600    >cket="" chatroomusername="" sourceusername="" sourcenickname=""
+$+680    >sharecardusername="" sharecardnickname="" cardversion=""><brandl
+$+700    >ist count="0" ver="690162698"></brandlist></msg>
+

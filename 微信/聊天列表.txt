@@ -1,0 +1,69 @@
+710289A0  /$  55            push    ebp
+710289A1  |.  8BEC          mov     ebp, esp
+710289A3  |.  6A FF         push    -0x1
+710289A5  |.  68 695AAF71   push    71AF5A69
+710289AA  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+710289B0  |.  50            push    eax
+710289B1  |.  81EC EC030000 sub     esp, 0x3EC
+710289B7  |.  A1 C450E971   mov     eax, dword ptr ds:[0x71E950C4]   ;  ">*`
+710289BC  |.  33C5          xor     eax, ebp
+710289BE  |.  8945 EC       mov     dword ptr ss:[ebp-0x14], eax
+710289C1  |.  53            push    ebx
+710289C2  |.  56            push    esi
+710289C3  |.  50            push    eax
+710289C4  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+710289C7  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+710289CD  |.  A1 581BEF71   mov     eax, dword ptr ds:[0x71EF1B58]
+710289D2  |.  8B75 08       mov     esi, dword ptr ss:[ebp+0x8]
+710289D5  |.  A8 01         test    al, 0x1
+710289D7  |.  75 28         jnz     short 71028A01
+710289D9  |.  83C8 01       or      eax, 0x1
+710289DC  |.  A3 581BEF71   mov     dword ptr ds:[0x71EF1B58], eax
+710289E1  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+710289E8  |.  E8 33FB1700   call    711A8520
+710289ED  |.  68 C0A2B671   push    71B6A2C0
+710289F2  |.  E8 944B9500   call    7197D58B
+710289F7  |.  83C4 04       add     esp, 0x4
+710289FA  |.  C745 FC FFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+71028A01  |>  803D 741BEF71>cmp     byte ptr ds:[0x71EF1B74], 0x0
+71028A08  |.  75 04         jnz     short 71028A0E
+71028A0A  |.  32C0          xor     al, al
+71028A0C  |.  EB 60         jmp     short 71028A6E
+71028A0E  |>  8D8D 0CFCFFFF lea     ecx, dword ptr ss:[ebp-0x3F4]
+71028A14  |.  E8 97331B00   call    711DBDB0
+71028A19  |.  8D85 0CFCFFFF lea     eax, dword ptr ss:[ebp-0x3F4]
+71028A1F  |.  C745 FC 01000>mov     dword ptr ss:[ebp-0x4], 0x1
+71028A26  |.  50            push    eax
+71028A27  |.  56            push    esi
+71028A28  |.  E8 D3520400   call    7106DD00                         ;  ÁÄÌìÁÐ±í
+71028A2D  |.  8BC8          mov     ecx, eax
+71028A2F  |.  E8 4C9B1B00   call    711E2580
+71028A34  |.  84C0          test    al, al
+71028A36  |.  74 27         je      short 71028A5F
+71028A38  |.  68 ACDEC971   push    71C9DEAC                         ;  weixin
+71028A3D  |.  8D8D 14FCFFFF lea     ecx, dword ptr ss:[ebp-0x3EC]
+71028A43  |.  E8 482F2100   call    7123B990
+71028A48  |.  85C0          test    eax, eax
+71028A4A  |.  0F94C0        sete    al
+71028A4D  |.  84C0          test    al, al
+71028A4F  |.  75 0E         jnz     short 71028A5F
+71028A51  |.  8B9D 58FCFFFF mov     ebx, dword ptr ss:[ebp-0x3A8]
+71028A57  |.  C1EB 03       shr     ebx, 0x3
+71028A5A  |.  80E3 01       and     bl, 0x1
+71028A5D  |.  EB 02         jmp     short 71028A61
+71028A5F  |>  32DB          xor     bl, bl
+71028A61  |>  8D8D 0CFCFFFF lea     ecx, dword ptr ss:[ebp-0x3F4]
+71028A67  |.  E8 043C1B00   call    711DC670
+71028A6C  |.  8AC3          mov     al, bl
+71028A6E  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+71028A71  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+71028A78  |.  59            pop     ecx
+71028A79  |.  5E            pop     esi
+71028A7A  |.  5B            pop     ebx
+71028A7B  |.  8B4D EC       mov     ecx, dword ptr ss:[ebp-0x14]
+71028A7E  |.  33CD          xor     ecx, ebp
+71028A80  |.  E8 76479500   call    7197D1FB
+71028A85  |.  8BE5          mov     esp, ebp
+71028A87  |.  5D            pop     ebp
+71028A88  \.  C2 0400       retn    0x4
+

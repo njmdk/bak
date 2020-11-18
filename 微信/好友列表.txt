@@ -1,0 +1,95 @@
+728391A0  /$  55            push    ebp
+728391A1  |.  8BEC          mov     ebp, esp
+728391A3  |.  56            push    esi
+728391A4  |.  8B75 08       mov     esi, dword ptr ss:[ebp+0x8]
+728391A7  |.  68 ACDE4A73   push    734ADEAC                         ;  UNICODE "weixin"
+728391AC  |.  8D4E 08       lea     ecx, dword ptr ds:[esi+0x8]
+728391AF  |.  E8 DC272100   call    72A4B990
+728391B4  |.  85C0          test    eax, eax
+728391B6  |.  0F94C0        sete    al
+728391B9  |.  84C0          test    al, al
+728391BB  |.  75 2C         jnz     short 728391E9
+728391BD  |.  8B4E 4C       mov     ecx, dword ptr ds:[esi+0x4C]
+728391C0  |.  8BC1          mov     eax, ecx
+728391C2  |.  C1E8 03       shr     eax, 0x3
+728391C5  |.  24 01         and     al, 0x1
+728391C7  |.  74 20         je      short 728391E9
+728391C9  |.  F6C1 08       test    cl, 0x8
+728391CC  |.  74 14         je      short 728391E2
+728391CE  |.  56            push    esi
+728391CF  |.  E8 7C060000   call    72839850
+728391D4  |.  85C0          test    eax, eax
+728391D6  |.  75 0A         jnz     short 728391E2
+728391D8  |.  B8 01000000   mov     eax, 0x1
+728391DD  |.  5E            pop     esi                              ;  WeChatWi.734D1B94
+728391DE  |.  5D            pop     ebp                              ;  WeChatWi.734D1B94
+728391DF  |.  C2 0400       retn    0x4
+728391E2  |>  33C0          xor     eax, eax
+728391E4  |.  5E            pop     esi                              ;  WeChatWi.734D1B94
+728391E5  |.  5D            pop     ebp                              ;  WeChatWi.734D1B94
+728391E6  |.  C2 0400       retn    0x4
+728391E9  |>  32C0          xor     al, al
+728391EB  |.  5E            pop     esi                              ;  WeChatWi.734D1B94
+728391EC  |.  5D            pop     ebp                              ;  WeChatWi.734D1B94
+728391ED  \.  C2 0400       retn    0x4
+728391F0  /$  55            push    ebp
+728391F1  |.  8BEC          mov     ebp, esp
+728391F3  |.  6A FF         push    -0x1
+728391F5  |.  68 F95A3073   push    73305AF9
+728391FA  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+72839200  |.  50            push    eax
+72839201  |.  81EC E8030000 sub     esp, 0x3E8
+72839207  |.  A1 C4506A73   mov     eax, dword ptr ds:[0x736A50C4]
+7283920C  |.  33C5          xor     eax, ebp
+7283920E  |.  8945 EC       mov     dword ptr ss:[ebp-0x14], eax
+72839211  |.  56            push    esi
+72839212  |.  50            push    eax
+72839213  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+72839216  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+7283921C  |.  A1 581B7073   mov     eax, dword ptr ds:[0x73701B58]
+72839221  |.  8B75 08       mov     esi, dword ptr ss:[ebp+0x8]
+72839224  |.  A8 01         test    al, 0x1
+72839226  |.  75 28         jnz     short 72839250
+72839228  |.  83C8 01       or      eax, 0x1
+7283922B  |.  A3 581B7073   mov     dword ptr ds:[0x73701B58], eax
+72839230  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+72839237  |.  E8 E4F21700   call    729B8520
+7283923C  |.  68 C0A23773   push    7337A2C0
+72839241  |.  E8 45439500   call    7318D58B
+72839246  |.  83C4 04       add     esp, 0x4
+72839249  |.  C745 FC FFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+72839250  |>  803D 741B7073>cmp     byte ptr ds:[0x73701B74], 0x0
+72839257  |.  75 05         jnz     short 7283925E
+72839259  |.  83C8 FF       or      eax, 0xFFFFFFFF
+7283925C  |.  EB 4A         jmp     short 728392A8
+7283925E  |>  8D8D 0CFCFFFF lea     ecx, dword ptr ss:[ebp-0x3F4]
+72839264  |.  E8 472B1B00   call    729EBDB0
+72839269  |.  8D85 0CFCFFFF lea     eax, dword ptr ss:[ebp-0x3F4]
+7283926F  |.  C745 FC 01000>mov     dword ptr ss:[ebp-0x4], 0x1
+72839276  |.  50            push    eax
+72839277  |.  56            push    esi
+72839278  |.  E8 834A0400   call    7287DD00                         ;  ºÃÓÑÁÐ±í
+7283927D  |.  8BC8          mov     ecx, eax
+7283927F  |.  E8 FC921B00   call    729F2580
+72839284  |.  84C0          test    al, al
+72839286  |.  74 10         je      short 72839298
+72839288  |.  8D85 0CFCFFFF lea     eax, dword ptr ss:[ebp-0x3F4]
+7283928E  |.  50            push    eax
+7283928F  |.  E8 BC050000   call    72839850
+72839294  |.  8BF0          mov     esi, eax
+72839296  |.  EB 03         jmp     short 7283929B
+72839298  |>  83CE FF       or      esi, 0xFFFFFFFF
+7283929B  |>  8D8D 0CFCFFFF lea     ecx, dword ptr ss:[ebp-0x3F4]
+728392A1  |.  E8 CA331B00   call    729EC670
+728392A6  |.  8BC6          mov     eax, esi
+728392A8  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+728392AB  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+728392B2  |.  59            pop     ecx                              ;  WeChatWi.734D1B94
+728392B3  |.  5E            pop     esi                              ;  WeChatWi.734D1B94
+728392B4  |.  8B4D EC       mov     ecx, dword ptr ss:[ebp-0x14]     ;  usp10.75E62962
+728392B7  |.  33CD          xor     ecx, ebp
+728392B9  |.  E8 3D3F9500   call    7318D1FB
+728392BE  |.  8BE5          mov     esp, ebp
+728392C0  |.  5D            pop     ebp                              ;  WeChatWi.734D1B94
+728392C1  \.  C2 0400       retn    0x4
+

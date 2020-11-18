@@ -1,0 +1,40 @@
+72AF3FE1  |.  E8 5AEEFFFF   |call    72AF2E40
+72AF3FE6  |>  81C6 E0030000 |add     esi, 0x3E0
+72AF3FEC  |.  3BB5 E4FBFFFF |cmp     esi, dword ptr ss:[ebp-0x41C]
+72AF3FF2  |.^ 0F85 08FFFFFF \jnz     72AF3F00
+72AF3FF8  |.  8BBD ECFBFFFF mov     edi, dword ptr ss:[ebp-0x414]
+72AF3FFE  |>  8BCB          mov     ecx, ebx
+72AF4000  |.  C643 70 01    mov     byte ptr ds:[ebx+0x70], 0x1
+72AF4004  |.  E8 F7120000   call    72AF5300
+72AF4009  |.  8B8D E4FBFFFF mov     ecx, dword ptr ss:[ebp-0x41C]
+72AF400F  |.  B8 43082184   mov     eax, 0x84210843
+72AF4014  |.  2B8D E0FBFFFF sub     ecx, dword ptr ss:[ebp-0x420]
+72AF401A  |.  F7E9          imul    ecx
+72AF401C  |.  A1 A49BD173   mov     eax, dword ptr ds:[0x73D19BA4]
+72AF4021  |.  03D1          add     edx, ecx                         ;  好友加载完成
+72AF4023  |.  C1FA 09       sar     edx, 0x9
+72AF4026  |.  8BF2          mov     esi, edx
+72AF4028  |.  C1EE 1F       shr     esi, 0x1F
+72AF402B  |.  03F2          add     esi, edx
+72AF402D  |.  A8 01         test    al, 0x1
+72AF402F  |.  75 2D         jnz     short 72AF405E
+72AF4031  |.  0F57C0        xorps   xmm0, xmm0
+72AF4034  |.  83C8 01       or      eax, 0x1
+72AF4037  |.  68 304A9373   push    73934A30
+72AF403C  |.  A3 A49BD173   mov     dword ptr ds:[0x73D19BA4], eax
+72AF4041  |.  0F1105 A89BD1>movups  dqword ptr ds:[0x73D19BA8], xmm0
+72AF4048  |.  0F1105 B89BD1>movups  dqword ptr ds:[0x73D19BB8], xmm0
+72AF404F  |.  0F1105 C89BD1>movups  dqword ptr ds:[0x73D19BC8], xmm0
+72AF4056  |.  E8 970F9B00   call    734A4FF2
+72AF405B  |.  83C4 04       add     esp, 0x4
+72AF405E  |>  E8 5DCB3200   call    72E20BC0
+72AF4063  |.  2BC7          sub     eax, edi
+72AF4065  |.  8935 B09BD173 mov     dword ptr ds:[0x73D19BB0], esi
+72AF406B  |.  8D8D E0FBFFFF lea     ecx, dword ptr ss:[ebp-0x420]
+72AF4071  |.  A3 AC9BD173   mov     dword ptr ds:[0x73D19BAC], eax
+72AF4076  |.  E8 B57FFCFF   call    72ABC030
+72AF407B  |.  8B85 54FBFFFF mov     eax, dword ptr ss:[ebp-0x4AC]
+72AF4081  |.  85C0          test    eax, eax
+72AF4083  |.  74 09         je      short 72AF408E
+72AF4085  |.  50            push    eax
+

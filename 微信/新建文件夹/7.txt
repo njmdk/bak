@@ -1,0 +1,451 @@
+01BA60C0    53              push    ebx
+01BA60C1    8BDC            mov     ebx, esp
+01BA60C3    83EC 08         sub     esp, 0x8
+01BA60C6    83E4 F8         and     esp, 0xFFFFFFF8
+01BA60C9    83C4 04         add     esp, 0x4
+01BA60CC    55              push    ebp
+01BA60CD    8B6B 04         mov     ebp, dword ptr ds:[ebx+0x4]
+01BA60D0    896C24 04       mov     dword ptr ss:[esp+0x4], ebp
+01BA60D4    8BEC            mov     ebp, esp
+01BA60D6    6A FF           push    -0x1
+01BA60D8    68 E0084A02     push    024A08E0
+01BA60DD    64:A1 00000000  mov     eax, dword ptr fs:[0]
+01BA60E3    50              push    eax
+01BA60E4    53              push    ebx
+01BA60E5    83EC 70         sub     esp, 0x70
+01BA60E8    56              push    esi
+01BA60E9    57              push    edi
+01BA60EA    A1 C4108102     mov     eax, dword ptr ds:[0x28110C4]
+01BA60EF    33C5            xor     eax, ebp
+01BA60F1    50              push    eax
+01BA60F2    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+01BA60F5    64:A3 00000000  mov     dword ptr fs:[0], eax
+01BA60FB    8BF1            mov     esi, ecx
+01BA60FD    8975 D0         mov     dword ptr ss:[ebp-0x30], esi
+01BA6100    8B06            mov     eax, dword ptr ds:[esi]
+01BA6102    8B40 18         mov     eax, dword ptr ds:[eax+0x18]
+01BA6105    FFD0            call    eax
+01BA6107    84C0            test    al, al
+01BA6109    0F84 2B050000   je      01BA663A
+01BA610F    8B06            mov     eax, dword ptr ds:[esi]
+01BA6111    8BCE            mov     ecx, esi
+01BA6113    FF50 0C         call    dword ptr ds:[eax+0xC]
+01BA6116    6A 14           push    0x14
+01BA6118    E8 BC937600     call    0230F4D9
+01BA611D    83C4 04         add     esp, 0x4
+01BA6120    8945 E4         mov     dword ptr ss:[ebp-0x1C], eax
+01BA6123    8D48 04         lea     ecx, dword ptr ds:[eax+0x4]
+01BA6126    C700 5CE46302   mov     dword ptr ds:[eax], 0263E45C
+01BA612C    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+01BA6132    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+01BA6139    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+01BA6140    894D DC         mov     dword ptr ss:[ebp-0x24], ecx
+01BA6143    8BCE            mov     ecx, esi
+01BA6145    C740 10 0000000>mov     dword ptr ds:[eax+0x10], 0x0
+01BA614C    E8 5F4E0000     call    01BAAFB0
+01BA6151    8846 65         mov     byte ptr ds:[esi+0x65], al
+01BA6154    FF15 A4F55002   call    dword ptr ds:[<&KERNEL32.GetTick>; kernel32.GetTickCount
+01BA615A    0F57C0          xorps   xmm0, xmm0
+01BA615D    8945 D4         mov     dword ptr ss:[ebp-0x2C], eax
+01BA6160    0F1145 A8       movups  dqword ptr ss:[ebp-0x58], xmm0
+01BA6164    C745 B8 0000000>mov     dword ptr ss:[ebp-0x48], 0x0
+01BA616B    8B4B 0C         mov     ecx, dword ptr ds:[ebx+0xC]
+01BA616E    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+01BA6175    85C9            test    ecx, ecx
+01BA6177    74 2A           je      short 01BA61A3
+01BA6179    807E 65 00      cmp     byte ptr ds:[esi+0x65], 0x0
+01BA617D    8D45 A8         lea     eax, dword ptr ss:[ebp-0x58]
+01BA6180    74 10           je      short 01BA6192
+01BA6182    68 C8F66602     push    0266F6C8                         ; UNICODE "SELECT * FROM Contact WHERE Reserved2 == 1"
+01BA6187    50              push    eax
+01BA6188    E8 F3E80400     call    01BF4A80
+01BA618D    83C4 08         add     esp, 0x8
+01BA6190    EB 20           jmp     short 01BA61B2
+01BA6192    51              push    ecx
+01BA6193    68 20F76602     push    0266F720                         ; UNICODE "SELECT * FROM Contact WHERE Type & %d != 0"
+01BA6198    50              push    eax
+01BA6199    E8 E2E80400     call    01BF4A80
+01BA619E    83C4 0C         add     esp, 0xC
+01BA61A1    EB 0F           jmp     short 01BA61B2
+01BA61A3    6A FF           push    -0x1
+01BA61A5    68 E8F56602     push    0266F5E8                         ; UNICODE "SELECT * FROM Contact "
+01BA61AA    8D4D A8         lea     ecx, dword ptr ss:[ebp-0x58]
+01BA61AD    E8 4EE20400     call    01BF4400
+01BA61B2    8B7D A8         mov     edi, dword ptr ss:[ebp-0x58]     ; WeChatWi.01AAE880
+01BA61B5    85FF            test    edi, edi
+01BA61B7    74 2A           je      short 01BA61E3
+01BA61B9    66:833F 00      cmp     word ptr ds:[edi], 0x0
+01BA61BD    74 24           je      short 01BA61E3
+01BA61BF    6A 01           push    0x1
+01BA61C1    51              push    ecx
+01BA61C2    8D55 B4         lea     edx, dword ptr ss:[ebp-0x4C]
+01BA61C5    8BCF            mov     ecx, edi
+01BA61C7    E8 948E0500     call    01BFF060
+01BA61CC    8B45 B4         mov     eax, dword ptr ss:[ebp-0x4C]
+01BA61CF    83C4 08         add     esp, 0x8
+01BA61D2    85C0            test    eax, eax
+01BA61D4    74 0A           je      short 01BA61E0
+01BA61D6    8038 00         cmp     byte ptr ds:[eax], 0x0
+01BA61D9    74 05           je      short 01BA61E0
+01BA61DB    8B7D A8         mov     edi, dword ptr ss:[ebp-0x58]     ; WeChatWi.01AAE880
+01BA61DE    EB 08           jmp     short 01BA61E8
+01BA61E0    8B7D A8         mov     edi, dword ptr ss:[ebp-0x58]     ; WeChatWi.01AAE880
+01BA61E3    B8 C0315E02     mov     eax, 025E31C0
+01BA61E8    6A 01           push    0x1
+01BA61EA    68 6A010000     push    0x16A
+01BA61EF    68 90F56602     push    0266F590                         ; ASCII "03_service\storage\ContactStorage.cpp"
+01BA61F4    50              push    eax
+01BA61F5    8BCE            mov     ecx, esi
+01BA61F7    E8 44D90200     call    01BD3B40
+01BA61FC    C745 E8 0000000>mov     dword ptr ss:[ebp-0x18], 0x0
+01BA6203    85FF            test    edi, edi
+01BA6205    74 2A           je      short 01BA6231
+01BA6207    66:833F 00      cmp     word ptr ds:[edi], 0x0
+01BA620B    74 24           je      short 01BA6231
+01BA620D    6A 01           push    0x1
+01BA620F    51              push    ecx
+01BA6210    8D55 B4         lea     edx, dword ptr ss:[ebp-0x4C]
+01BA6213    8BCF            mov     ecx, edi
+01BA6215    E8 468E0500     call    01BFF060
+01BA621A    8B45 B4         mov     eax, dword ptr ss:[ebp-0x4C]
+01BA621D    83C4 08         add     esp, 0x8
+01BA6220    85C0            test    eax, eax
+01BA6222    74 0A           je      short 01BA622E
+01BA6224    8038 00         cmp     byte ptr ds:[eax], 0x0
+01BA6227    74 05           je      short 01BA622E
+01BA6229    8B7D A8         mov     edi, dword ptr ss:[ebp-0x58]     ; WeChatWi.01AAE880
+01BA622C    EB 08           jmp     short 01BA6236
+01BA622E    8B7D A8         mov     edi, dword ptr ss:[ebp-0x58]     ; WeChatWi.01AAE880
+01BA6231    B8 C0315E02     mov     eax, 025E31C0
+01BA6236    50              push    eax
+01BA6237    8D45 E8         lea     eax, dword ptr ss:[ebp-0x18]
+01BA623A    8BCE            mov     ecx, esi
+01BA623C    50              push    eax
+01BA623D    E8 7EE10200     call    01BD43C0
+01BA6242    84C0            test    al, al
+01BA6244    75 78           jnz     short 01BA62BE
+01BA6246    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01BA624D    83EC 10         sub     esp, 0x10
+01BA6250    BA 90F56602     mov     edx, 0266F590                    ; ASCII "03_service\storage\ContactStorage.cpp"
+01BA6255    8BC4            mov     eax, esp
+01BA6257    B9 04000000     mov     ecx, 0x4
+01BA625C    83EC 10         sub     esp, 0x10
+01BA625F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6262    8BC4            mov     eax, esp
+01BA6264    83EC 10         sub     esp, 0x10
+01BA6267    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA626A    8BC4            mov     eax, esp
+01BA626C    83EC 10         sub     esp, 0x10
+01BA626F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6272    8BC4            mov     eax, esp
+01BA6274    83EC 10         sub     esp, 0x10
+01BA6277    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA627A    8BC4            mov     eax, esp
+01BA627C    83EC 10         sub     esp, 0x10
+01BA627F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6282    8BC4            mov     eax, esp
+01BA6284    68 B8F56602     push    0266F5B8                         ; ASCII "getListFromDB prepareStmt fail"
+01BA6289    68 D8F56602     push    0266F5D8                         ; ASCII "ContactStorage"
+01BA628E    68 18F66602     push    0266F618                         ; ASCII "ContactStorage::getListFromDB"
+01BA6293    68 6F010000     push    0x16F
+01BA6298    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA629B    E8 90D20400     call    01BF3530
+01BA62A0    83C4 70         add     esp, 0x70
+01BA62A3    8BCE            mov     ecx, esi
+01BA62A5    6A 01           push    0x1
+01BA62A7    E8 14DF0200     call    01BD41C0
+01BA62AC    8B4D E4         mov     ecx, dword ptr ss:[ebp-0x1C]     ; user32.77D191BE
+01BA62AF    6A 01           push    0x1
+01BA62B1    8B01            mov     eax, dword ptr ds:[ecx]
+01BA62B3    FF10            call    dword ptr ds:[eax]
+01BA62B5    C645 EF 00      mov     byte ptr ss:[ebp-0x11], 0x0
+01BA62B9    E9 5C030000     jmp     01BA661A
+01BA62BE    33C0            xor     eax, eax
+01BA62C0    C745 BC 0000000>mov     dword ptr ss:[ebp-0x44], 0x0
+01BA62C7    8945 D8         mov     dword ptr ss:[ebp-0x28], eax
+01BA62CA    8945 C0         mov     dword ptr ss:[ebp-0x40], eax
+01BA62CD    8945 C4         mov     dword ptr ss:[ebp-0x3C], eax
+01BA62D0    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+01BA62D4    FF75 E8         push    dword ptr ss:[ebp-0x18]          ; user32.77D191F1
+01BA62D7    E8 E4502F00     call    01E9B3C0
+01BA62DC    83C4 04         add     esp, 0x4
+01BA62DF    8945 E0         mov     dword ptr ss:[ebp-0x20], eax
+01BA62E2    83F8 64         cmp     eax, 0x64
+01BA62E5    0F85 36010000   jnz     01BA6421
+01BA62EB    0f1f4400 00     nop     dword ptr ds:[eax+eax]
+01BA62F0    6A 00           push    0x0
+01BA62F2    FF75 E8         push    dword ptr ss:[ebp-0x18]          ; user32.77D191F1
+01BA62F5    E8 D6582F00     call    01E9BBD0
+01BA62FA    0F57C0          xorps   xmm0, xmm0
+01BA62FD    C745 A4 0000000>mov     dword ptr ss:[ebp-0x5C], 0x0
+01BA6304    83C4 08         add     esp, 0x8
+01BA6307    0F1145 94       movups  dqword ptr ss:[ebp-0x6C], xmm0
+01BA630B    6A FF           push    -0x1
+01BA630D    6A 00           push    0x0
+01BA630F    50              push    eax
+01BA6310    8D4D 94         lea     ecx, dword ptr ss:[ebp-0x6C]
+01BA6313    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+01BA6317    E8 74E10400     call    01BF4490
+01BA631C    8B4B 08         mov     ecx, dword ptr ds:[ebx+0x8]
+01BA631F    8D45 94         lea     eax, dword ptr ss:[ebp-0x6C]
+01BA6322    50              push    eax
+01BA6323    8D45 C8         lea     eax, dword ptr ss:[ebp-0x38]
+01BA6326    50              push    eax
+01BA6327    E8 F4560000     call    01BABA20
+01BA632C    8B75 C8         mov     esi, dword ptr ss:[ebp-0x38]
+01BA632F    FF75 E8         push    dword ptr ss:[ebp-0x18]          ; user32.77D191F1
+01BA6332    83C6 28         add     esi, 0x28
+01BA6335    56              push    esi
+01BA6336    E8 750D0000     call    01BA70B0
+01BA633B    837E 48 00      cmp     dword ptr ds:[esi+0x48], 0x0
+01BA633F    75 10           jnz     short 01BA6351
+01BA6341    83BE 3C010000 0>cmp     dword ptr ds:[esi+0x13C], 0x0
+01BA6348    75 07           jnz     short 01BA6351
+01BA634A    B8 01000000     mov     eax, 0x1
+01BA634F    EB 02           jmp     short 01BA6353
+01BA6351    33C0            xor     eax, eax
+01BA6353    84C0            test    al, al
+01BA6355    74 51           je      short 01BA63A8
+01BA6357    8D45 80         lea     eax, dword ptr ss:[ebp-0x80]
+01BA635A    8BCE            mov     ecx, esi
+01BA635C    50              push    eax
+01BA635D    E8 FE99C6FF     call    0180FD60
+01BA6362    8B4D DC         mov     ecx, dword ptr ss:[ebp-0x24]
+01BA6365    50              push    eax
+01BA6366    C645 FC 03      mov     byte ptr ss:[ebp-0x4], 0x3
+01BA636A    E8 6188C5FF     call    017FEBD0
+01BA636F    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+01BA6373    8B45 80         mov     eax, dword ptr ss:[ebp-0x80]
+01BA6376    85C0            test    eax, eax
+01BA6378    74 10           je      short 01BA638A
+01BA637A    50              push    eax
+01BA637B    E8 9F468900     call    0243AA1F
+01BA6380    83C4 04         add     esp, 0x4
+01BA6383    C745 80 0000000>mov     dword ptr ss:[ebp-0x80], 0x0
+01BA638A    8B45 8C         mov     eax, dword ptr ss:[ebp-0x74]
+01BA638D    C745 88 0000000>mov     dword ptr ss:[ebp-0x78], 0x0
+01BA6394    C745 84 0000000>mov     dword ptr ss:[ebp-0x7C], 0x0
+01BA639B    85C0            test    eax, eax
+01BA639D    74 09           je      short 01BA63A8
+01BA639F    50              push    eax
+01BA63A0    E8 7A468900     call    0243AA1F
+01BA63A5    83C4 04         add     esp, 0x4
+01BA63A8    83BE 40010000 0>cmp     dword ptr ds:[esi+0x140], 0x0
+01BA63AF    75 0F           jnz     short 01BA63C0
+01BA63B1    8D45 D8         lea     eax, dword ptr ss:[ebp-0x28]
+01BA63B4    8975 D8         mov     dword ptr ss:[ebp-0x28], esi
+01BA63B7    50              push    eax
+01BA63B8    8D4D BC         lea     ecx, dword ptr ss:[ebp-0x44]
+01BA63BB    E8 E0C7C8FF     call    01832BA0
+01BA63C0    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+01BA63C4    8B45 94         mov     eax, dword ptr ss:[ebp-0x6C]     ; user32.77D18830
+01BA63C7    85C0            test    eax, eax
+01BA63C9    74 10           je      short 01BA63DB
+01BA63CB    50              push    eax
+01BA63CC    E8 4E468900     call    0243AA1F
+01BA63D1    83C4 04         add     esp, 0x4
+01BA63D4    C745 94 0000000>mov     dword ptr ss:[ebp-0x6C], 0x0
+01BA63DB    8B45 A0         mov     eax, dword ptr ss:[ebp-0x60]     ; user32.77D189CD
+01BA63DE    C745 9C 0000000>mov     dword ptr ss:[ebp-0x64], 0x0
+01BA63E5    C745 98 0000000>mov     dword ptr ss:[ebp-0x68], 0x0
+01BA63EC    85C0            test    eax, eax
+01BA63EE    74 09           je      short 01BA63F9
+01BA63F0    50              push    eax
+01BA63F1    E8 29468900     call    0243AA1F
+01BA63F6    83C4 04         add     esp, 0x4
+01BA63F9    FF75 E8         push    dword ptr ss:[ebp-0x18]          ; user32.77D191F1
+01BA63FC    E8 BF4F2F00     call    01E9B3C0
+01BA6401    8BF8            mov     edi, eax
+01BA6403    83C4 04         add     esp, 0x4
+01BA6406    897D E0         mov     dword ptr ss:[ebp-0x20], edi
+01BA6409    83FF 64         cmp     edi, 0x64
+01BA640C  ^ 0F84 DEFEFFFF   je      01BA62F0
+01BA6412  - E9 D9AF4F02     jmp     kstEx.040A13F0
+01BA6417    CC              int3
+01BA6418    8B75 D0         mov     esi, dword ptr ss:[ebp-0x30]
+01BA641B    8945 D8         mov     dword ptr ss:[ebp-0x28], eax
+01BA641E    8B45 E0         mov     eax, dword ptr ss:[ebp-0x20]
+01BA6421    83F8 65         cmp     eax, 0x65
+01BA6424    74 74           je      short 01BA649A
+01BA6426    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01BA642D    83EC 10         sub     esp, 0x10
+01BA6430    8BC4            mov     eax, esp
+01BA6432    83EC 10         sub     esp, 0x10
+01BA6435    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6438    8BC4            mov     eax, esp
+01BA643A    83EC 10         sub     esp, 0x10
+01BA643D    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6440    8BC4            mov     eax, esp
+01BA6442    83EC 10         sub     esp, 0x10
+01BA6445    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6448    8BC4            mov     eax, esp
+01BA644A    FF76 24         push    dword ptr ds:[esi+0x24]          ; kernel32.GetModuleFileNameW
+01BA644D    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6450    E8 DB2C3400     call    01EE9130
+01BA6455    83EC 0C         sub     esp, 0xC
+01BA6458    8BCC            mov     ecx, esp
+01BA645A    6A 01           push    0x1
+01BA645C    C601 02         mov     byte ptr ds:[ecx], 0x2
+01BA645F    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01BA6462    8BCE            mov     ecx, esi
+01BA6464    E8 F7E30200     call    01BD4860
+01BA6469    83EC 10         sub     esp, 0x10
+01BA646C    8BCC            mov     ecx, esp
+01BA646E    50              push    eax
+01BA646F    E8 8C04C5FF     call    017F6900
+01BA6474    68 38F66602     push    0266F638                         ; ASCII "getListFromDB err fail=%d ,error=%s"
+01BA6479    68 D8F56602     push    0266F5D8                         ; ASCII "ContactStorage"
+01BA647E    68 18F66602     push    0266F618                         ; ASCII "ContactStorage::getListFromDB"
+01BA6483    68 92010000     push    0x192
+01BA6488    BA 90F56602     mov     edx, 0266F590                    ; ASCII "03_service\storage\ContactStorage.cpp"
+01BA648D    B9 04000000     mov     ecx, 0x4
+01BA6492    E8 99D00400     call    01BF3530
+01BA6497    83C4 70         add     esp, 0x70
+01BA649A    FF75 E8         push    dword ptr ss:[ebp-0x18]          ; user32.77D191F1
+01BA649D    E8 4E412F00     call    01E9A5F0
+01BA64A2    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01BA64A9    83EC 0C         sub     esp, 0xC
+01BA64AC    8BC4            mov     eax, esp
+01BA64AE    83EC 10         sub     esp, 0x10
+01BA64B1    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA64B4    8BC4            mov     eax, esp
+01BA64B6    83EC 10         sub     esp, 0x10
+01BA64B9    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA64BC    8BC4            mov     eax, esp
+01BA64BE    83EC 10         sub     esp, 0x10
+01BA64C1    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA64C4    8BC4            mov     eax, esp
+01BA64C6    83EC 10         sub     esp, 0x10
+01BA64C9    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA64CC    8BC4            mov     eax, esp
+01BA64CE    83EC 10         sub     esp, 0x10
+01BA64D1    8BCC            mov     ecx, esp
+01BA64D3    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA64D6    8B43 08         mov     eax, dword ptr ds:[ebx+0x8]
+01BA64D9    FF70 04         push    dword ptr ds:[eax+0x4]
+01BA64DC    E8 FF03C5FF     call    017F68E0
+01BA64E1    68 5CF66602     push    0266F65C                         ; ASCII "constact from db total count = %d"
+01BA64E6    68 D8F56602     push    0266F5D8                         ; ASCII "ContactStorage"
+01BA64EB    68 18F66602     push    0266F618                         ; ASCII "ContactStorage::getListFromDB"
+01BA64F0    68 99010000     push    0x199
+01BA64F5    BA 90F56602     mov     edx, 0266F590                    ; ASCII "03_service\storage\ContactStorage.cpp"
+01BA64FA    B9 02000000     mov     ecx, 0x2
+01BA64FF    E8 2CD00400     call    01BF3530
+01BA6504    8B4D DC         mov     ecx, dword ptr ss:[ebp-0x24]
+01BA6507    83C4 70         add     esp, 0x70
+01BA650A    8B01            mov     eax, dword ptr ds:[ecx]
+01BA650C    3B41 04         cmp     eax, dword ptr ds:[ecx+0x4]
+01BA650F    8B4D E4         mov     ecx, dword ptr ss:[ebp-0x1C]     ; user32.77D191BE
+01BA6512    75 08           jnz     short 01BA651C
+01BA6514    8B01            mov     eax, dword ptr ds:[ecx]
+01BA6516    6A 01           push    0x1
+01BA6518    FF10            call    dword ptr ds:[eax]
+01BA651A    EB 13           jmp     short 01BA652F
+01BA651C    51              push    ecx
+01BA651D    6A 00           push    0x0
+01BA651F    6A 00           push    0x0
+01BA6521    6A 15           push    0x15
+01BA6523    E8 4882F0FF     call    01AAE770
+01BA6528    8BC8            mov     ecx, eax
+01BA652A    E8 C192F0FF     call    01AAF7F0
+01BA652F    6A 01           push    0x1
+01BA6531    8BCE            mov     ecx, esi
+01BA6533    E8 88DC0200     call    01BD41C0
+01BA6538    8B45 D8         mov     eax, dword ptr ss:[ebp-0x28]     ; user32.77D4048F
+01BA653B    2B45 BC         sub     eax, dword ptr ss:[ebp-0x44]
+01BA653E    C1F8 02         sar     eax, 0x2
+01BA6541    85C0            test    eax, eax
+01BA6543    74 0D           je      short 01BA6552
+01BA6545    6A 01           push    0x1
+01BA6547    8D45 BC         lea     eax, dword ptr ss:[ebp-0x44]
+01BA654A    8BCE            mov     ecx, esi
+01BA654C    50              push    eax
+01BA654D    E8 0E1B0000     call    01BA8060
+01BA6552    FF15 A4F55002   call    dword ptr ds:[<&KERNEL32.GetTick>; kernel32.GetTickCount
+01BA6558    8B75 D4         mov     esi, dword ptr ss:[ebp-0x2C]
+01BA655B    8BC8            mov     ecx, eax
+01BA655D    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01BA6564    8BD0            mov     edx, eax
+01BA6566    2BCE            sub     ecx, esi
+01BA6568    2BD6            sub     edx, esi
+01BA656A    3BC6            cmp     eax, esi
+01BA656C    0F42D1          cmovb   edx, ecx
+01BA656F    83EC 10         sub     esp, 0x10
+01BA6572    8BC4            mov     eax, esp
+01BA6574    83EC 10         sub     esp, 0x10
+01BA6577    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA657A    8BC4            mov     eax, esp
+01BA657C    83EC 10         sub     esp, 0x10
+01BA657F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6582    8BC4            mov     eax, esp
+01BA6584    83EC 10         sub     esp, 0x10
+01BA6587    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA658A    8BC4            mov     eax, esp
+01BA658C    83EC 10         sub     esp, 0x10
+01BA658F    8BCC            mov     ecx, esp
+01BA6591    0F1100          movups  dqword ptr ds:[eax], xmm0
+01BA6594    8B43 08         mov     eax, dword ptr ds:[ebx+0x8]
+01BA6597    52              push    edx
+01BA6598    8B70 04         mov     esi, dword ptr ds:[eax+0x4]
+01BA659B    E8 4003C5FF     call    017F68E0
+01BA65A0    83EC 10         sub     esp, 0x10
+01BA65A3    8BCC            mov     ecx, esp
+01BA65A5    56              push    esi
+01BA65A6    E8 3503C5FF     call    017F68E0
+01BA65AB    68 C8F76602     push    0266F7C8                         ; ASCII "getListFromDB total count %d,cost time %d"
+01BA65B0    68 D8F56602     push    0266F5D8                         ; ASCII "ContactStorage"
+01BA65B5    68 18F66602     push    0266F618                         ; ASCII "ContactStorage::getListFromDB"
+01BA65BA    68 A8010000     push    0x1A8
+01BA65BF    BA 90F56602     mov     edx, 0266F590                    ; ASCII "03_service\storage\ContactStorage.cpp"
+01BA65C4    B9 02000000     mov     ecx, 0x2
+01BA65C9    E8 62CF0400     call    01BF3530
+01BA65CE    83C4 70         add     esp, 0x70
+01BA65D1    FF15 A4F55002   call    dword ptr ds:[<&KERNEL32.GetTick>; kernel32.GetTickCount
+01BA65D7    8B4D D4         mov     ecx, dword ptr ss:[ebp-0x2C]
+01BA65DA    8BF0            mov     esi, eax
+01BA65DC    2BF1            sub     esi, ecx
+01BA65DE    8BD0            mov     edx, eax
+01BA65E0    2BD1            sub     edx, ecx
+01BA65E2    3BC1            cmp     eax, ecx
+01BA65E4    6A 00           push    0x0
+01BA65E6    0F42D6          cmovb   edx, esi
+01BA65E9    B9 02000000     mov     ecx, 0x2
+01BA65EE    52              push    edx
+01BA65EF    E8 2C3D1D00     call    01D7A320
+01BA65F4    8B4D BC         mov     ecx, dword ptr ss:[ebp-0x44]
+01BA65F7    83C4 08         add     esp, 0x8
+01BA65FA    837D E0 65      cmp     dword ptr ss:[ebp-0x20], 0x65
+01BA65FE    0f9445 ef       sete    byte ptr ss:[ebp-0x11]
+01BA6602    85C9            test    ecx, ecx
+01BA6604    74 14           je      short 01BA661A
+01BA6606    8B45 C4         mov     eax, dword ptr ss:[ebp-0x3C]
+01BA6609    2BC1            sub     eax, ecx
+01BA660B    6A 04           push    0x4
+01BA660D    C1F8 02         sar     eax, 0x2
+01BA6610    50              push    eax
+01BA6611    51              push    ecx
+01BA6612    E8 59E6C4FF     call    017F4C70
+01BA6617    83C4 0C         add     esp, 0xC
+01BA661A    85FF            test    edi, edi
+01BA661C    74 09           je      short 01BA6627
+01BA661E    57              push    edi
+01BA661F    E8 FB438900     call    0243AA1F
+01BA6624    83C4 04         add     esp, 0x4
+01BA6627    8B4D B4         mov     ecx, dword ptr ss:[ebp-0x4C]
+01BA662A    85C9            test    ecx, ecx
+01BA662C    74 09           je      short 01BA6637
+01BA662E    51              push    ecx
+01BA662F    E8 EB438900     call    0243AA1F
+01BA6634    83C4 04         add     esp, 0x4
+01BA6637    8A45 EF         mov     al, byte ptr ss:[ebp-0x11]
+01BA663A    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+01BA663D    64:890D 0000000>mov     dword ptr fs:[0], ecx
+01BA6644    59              pop     ecx                              ; user32.77D191BE
+01BA6645    5F              pop     edi                              ; user32.77D191BE
+01BA6646    5E              pop     esi                              ; user32.77D191BE
+01BA6647    8BE5            mov     esp, ebp
+01BA6649    5D              pop     ebp                              ; user32.77D191BE
+01BA664A    8BE3            mov     esp, ebx
+01BA664C    5B              pop     ebx                              ; user32.77D191BE
+01BA664D    C2 0800         retn    0x8
+

@@ -1,0 +1,382 @@
+72B0BBB0  /$  55            push    ebp
+72B0BBB1  |.  8BEC          mov     ebp, esp
+72B0BBB3  |.  6A FF         push    -0x1
+72B0BBB5  |.  68 BCF53273   push    7332F5BC
+72B0BBBA  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+72B0BBC0  |.  50            push    eax
+72B0BBC1  |.  81EC CC080000 sub     esp, 0x8CC
+72B0BBC7  |.  A1 C4506A73   mov     eax, dword ptr ds:[0x736A50C4]
+72B0BBCC  |.  33C5          xor     eax, ebp
+72B0BBCE  |.  8945 F0       mov     dword ptr ss:[ebp-0x10], eax
+72B0BBD1  |.  53            push    ebx
+72B0BBD2  |.  56            push    esi
+72B0BBD3  |.  57            push    edi
+72B0BBD4  |.  50            push    eax
+72B0BBD5  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+72B0BBD8  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+72B0BBDE  |.  8B7D 08       mov     edi, dword ptr ss:[ebp+0x8]
+72B0BBE1  |.  8B5D 0C       mov     ebx, dword ptr ss:[ebp+0xC]
+72B0BBE4  |.  83BF CC010000>cmp     dword ptr ds:[edi+0x1CC], 0x0
+72B0BBEB  |.  0F84 F7040000 je      72B0C0E8
+72B0BBF1  |.  837B 04 00    cmp     dword ptr ds:[ebx+0x4], 0x0
+72B0BBF5  |.  0F9EC0        setle   al
+72B0BBF8  |.  84C0          test    al, al
+72B0BBFA  |.  0F85 E8040000 jnz     72B0C0E8
+72B0BC00  |.  3807          cmp     byte ptr ds:[edi], al
+72B0BC02  |.  75 30         jnz     short 72B0BC34
+72B0BC04  |.  83BF CC010000>cmp     dword ptr ds:[edi+0x1CC], 0x0
+72B0BC0B  |.  8DB7 BC010000 lea     esi, dword ptr ds:[edi+0x1BC]
+72B0BC11  |.  74 21         je      short 72B0BC34
+72B0BC13  |.  8BCF          mov     ecx, edi
+72B0BC15  |.  E8 B678FEFF   call    72AF34D0
+72B0BC1A  |.  8B87 40010000 mov     eax, dword ptr ds:[edi+0x140]
+72B0BC20  |.  8BCF          mov     ecx, edi
+72B0BC22  |.  8947 08       mov     dword ptr ds:[edi+0x8], eax
+72B0BC25  |.  8B87 44010000 mov     eax, dword ptr ds:[edi+0x144]
+72B0BC2B  |.  56            push    esi
+72B0BC2C  |.  8947 0C       mov     dword ptr ds:[edi+0xC], eax
+72B0BC2F  |.  E8 1C7AFEFF   call    72AF3650
+72B0BC34  |>  57            push    edi
+72B0BC35  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0BC3B  |.  E8 D070FEFF   call    72AF2D10
+72B0BC40  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+72B0BC47  |.  80BD 58FCFFFF>cmp     byte ptr ss:[ebp-0x3A8], 0x0
+72B0BC4E  |.  0F84 C8000000 je      72B0BD1C
+72B0BC54  |.  8B87 4C010000 mov     eax, dword ptr ds:[edi+0x14C]    ;  ntdll_1.77924DCD
+72B0BC5A  |.  83F8 01       cmp     eax, 0x1                         ;  Switch (cases 1..12)
+72B0BC5D  |.  75 3F         jnz     short 72B0BC9E
+72B0BC5F  |.  E8 EC15B4FF   call    7264D250                         ;  Case 1 of switch 72B0BC5A
+72B0BC64  |.  6A 01         push    0x1
+72B0BC66  |.  8D85 8CFCFFFF lea     eax, dword ptr ss:[ebp-0x374]
+72B0BC6C  |.  8BD3          mov     edx, ebx
+72B0BC6E  |.  6A 00         push    0x0
+72B0BC70  |.  50            push    eax
+72B0BC71  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0BC77  |.  E8 A4EAD9FF   call    728AA720
+72B0BC7C  |.  83C4 0C       add     esp, 0xC
+72B0BC7F  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0BC85  |.  E8 96F8B0FF   call    7261B520
+72B0BC8A  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0BC90  |.  33FF          xor     edi, edi
+72B0BC92  |.  E8 5976FEFF   call    72AF32F0
+72B0BC97  |.  8BC7          mov     eax, edi
+72B0BC99  |.  E9 4F040000   jmp     72B0C0ED
+72B0BC9E  |>  83F8 02       cmp     eax, 0x2
+72B0BCA1  |.  0F84 0C030000 je      72B0BFB3
+72B0BCA7  |.  83F8 08       cmp     eax, 0x8
+72B0BCAA  |.  0F84 03030000 je      72B0BFB3
+72B0BCB0  |.  83F8 03       cmp     eax, 0x3
+72B0BCB3  |.  75 14         jnz     short 72B0BCC9
+72B0BCB5  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]    ;  Case 3 of switch 72B0BC5A
+72B0BCBB  |.  8BF8          mov     edi, eax
+72B0BCBD  |.  E8 2E76FEFF   call    72AF32F0
+72B0BCC2  |.  8BC7          mov     eax, edi
+72B0BCC4  |.  E9 24040000   jmp     72B0C0ED
+72B0BCC9  |>  83F8 04       cmp     eax, 0x4
+72B0BCCC  |.  0F84 AA000000 je      72B0BD7C
+72B0BCD2  |.  83F8 06       cmp     eax, 0x6
+72B0BCD5  |.  0F85 9C000000 jnz     72B0BD77
+72B0BCDB  |.  8BCF          mov     ecx, edi                         ;  Case 6 of switch 72B0BC5A
+72B0BCDD  |.  E8 DE2DFEFF   call    72AEEAC0
+72B0BCE2  |.  8B80 3C010000 mov     eax, dword ptr ds:[eax+0x13C]
+72B0BCE8  |.  8378 04 01    cmp     dword ptr ds:[eax+0x4], 0x1
+72B0BCEC  |.  75 2E         jnz     short 72B0BD1C
+72B0BCEE  |.  8BCF          mov     ecx, edi
+72B0BCF0  |.  E8 CB2DFEFF   call    72AEEAC0
+72B0BCF5  |.  8B80 3C010000 mov     eax, dword ptr ds:[eax+0x13C]
+72B0BCFB  |.  50            push    eax
+72B0BCFC  |.  8D45 BC       lea     eax, dword ptr ss:[ebp-0x44]
+72B0BCFF  |.  50            push    eax
+72B0BD00  |.  E8 0B300000   call    72B0ED10
+72B0BD05  |.  C645 FC 06    mov     byte ptr ss:[ebp-0x4], 0x6
+72B0BD09  |.  837D C0 00    cmp     dword ptr ss:[ebp-0x40], 0x0
+72B0BD0D  |.  0F9EC0        setle   al
+72B0BD10  |.  84C0          test    al, al
+72B0BD12  |.  74 1F         je      short 72B0BD33
+72B0BD14  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0BD17  |.  E8 841BB7FF   call    7267D8A0
+72B0BD1C  |>  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0BD22  |.  BF 01000000   mov     edi, 0x1
+72B0BD27  |.  E8 C475FEFF   call    72AF32F0
+72B0BD2C  |.  8BC7          mov     eax, edi
+72B0BD2E  |.  E9 BA030000   jmp     72B0C0ED
+72B0BD33  |>  E8 1815B4FF   call    7264D250
+72B0BD38  |.  6A 30         push    0x30
+72B0BD3A  |.  8D45 BC       lea     eax, dword ptr ss:[ebp-0x44]
+72B0BD3D  |.  8BD3          mov     edx, ebx
+72B0BD3F  |.  6A 00         push    0x0
+72B0BD41  |.  50            push    eax
+72B0BD42  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0BD48  |.  E8 D3E9D9FF   call    728AA720
+72B0BD4D  |.  83C4 0C       add     esp, 0xC
+72B0BD50  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0BD56  |.  E8 C5F7B0FF   call    7261B520
+72B0BD5B  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0BD5E  |.  E8 3D1BB7FF   call    7267D8A0
+72B0BD63  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0BD69  |.  33FF          xor     edi, edi
+72B0BD6B  |.  E8 8075FEFF   call    72AF32F0
+72B0BD70  |.  8BC7          mov     eax, edi
+72B0BD72  |.  E9 76030000   jmp     72B0C0ED
+72B0BD77  |>  83F8 10       cmp     eax, 0x10
+72B0BD7A  |.  75 1B         jnz     short 72B0BD97
+72B0BD7C  |>  57            push    edi                              ;  Cases 4,10 of switch 72B0BC5A
+72B0BD7D  |.  53            push    ebx
+72B0BD7E  |.  E8 BDF8FFFF   call    72B0B640
+72B0BD83  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0BD89  |.  33FF          xor     edi, edi
+72B0BD8B  |.  E8 6075FEFF   call    72AF32F0
+72B0BD90  |.  8BC7          mov     eax, edi
+72B0BD92  |.  E9 56030000   jmp     72B0C0ED
+72B0BD97  |>  83F8 05       cmp     eax, 0x5
+72B0BD9A  |.  74 13         je      short 72B0BDAF
+72B0BD9C  |.  83F8 07       cmp     eax, 0x7
+72B0BD9F  |.  74 0E         je      short 72B0BDAF
+72B0BDA1  |.  83F8 0E       cmp     eax, 0xE
+72B0BDA4  |.  74 09         je      short 72B0BDAF
+72B0BDA6  |.  83F8 12       cmp     eax, 0x12
+72B0BDA9  |.  0F85 28030000 jnz     72B0C0D7
+72B0BDAF  |>  8D8D 28F7FFFF lea     ecx, dword ptr ss:[ebp-0x8D8]    ;  Cases 5,7,E,12 of switch 72B0BC5A
+72B0BDB5  |.  E8 6679B3FF   call    72643720
+72B0BDBA  |.  8D4D 8C       lea     ecx, dword ptr ss:[ebp-0x74]
+72B0BDBD  |.  E8 0E64BDFF   call    726E21D0
+72B0BDC2  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0BDC5  |.  E8 0664BDFF   call    726E21D0
+72B0BDCA  |.  83EC 14       sub     esp, 0x14
+72B0BDCD  |.  C645 FC 09    mov     byte ptr ss:[ebp-0x4], 0x9
+72B0BDD1  |.  8D45 BC       lea     eax, dword ptr ss:[ebp-0x44]
+72B0BDD4  |.  8BCC          mov     ecx, esp
+72B0BDD6  |.  50            push    eax
+72B0BDD7  |.  E8 44F6F3FF   call    72A4B420
+72B0BDDC  |.  8D45 8C       lea     eax, dword ptr ss:[ebp-0x74]
+72B0BDDF  |.  50            push    eax
+72B0BDE0  |.  8D45 D7       lea     eax, dword ptr ss:[ebp-0x29]
+72B0BDE3  |.  50            push    eax
+72B0BDE4  |.  8D85 28F7FFFF lea     eax, dword ptr ss:[ebp-0x8D8]
+72B0BDEA  |.  50            push    eax
+72B0BDEB  |.  57            push    edi
+72B0BDEC  |.  E8 7F050000   call    72B0C370
+72B0BDF1  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0BDF7  |.  E8 C4FDB0FF   call    7261BBC0
+72B0BDFC  |.  8D45 D8       lea     eax, dword ptr ss:[ebp-0x28]
+72B0BDFF  |.  C645 FC 0A    mov     byte ptr ss:[ebp-0x4], 0xA
+72B0BE03  |.  50            push    eax
+72B0BE04  |.  E8 0781B1FF   call    72623F10
+72B0BE09  |.  8BC8          mov     ecx, eax
+72B0BE0B  |.  E8 C0CEEAFF   call    729B8CD0
+72B0BE10  |.  6A 00         push    0x0
+72B0BE12  |.  50            push    eax
+72B0BE13  |.  8D4D A8       lea     ecx, dword ptr ss:[ebp-0x58]
+72B0BE16  |.  E8 15F7F3FF   call    72A4B530
+72B0BE1B  |.  8D4D D8       lea     ecx, dword ptr ss:[ebp-0x28]
+72B0BE1E  |.  C645 FC 0B    mov     byte ptr ss:[ebp-0x4], 0xB
+72B0BE22  |.  E8 9989B1FF   call    726247C0
+72B0BE27  |.  8D85 78FFFFFF lea     eax, dword ptr ss:[ebp-0x88]
+72B0BE2D  |.  50            push    eax
+72B0BE2E  |.  8D8D 28F7FFFF lea     ecx, dword ptr ss:[ebp-0x8D8]
+72B0BE34  |.  E8 4722EBFF   call    729BE080
+72B0BE39  |.  6A 00         push    0x0
+72B0BE3B  |.  8D87 BC010000 lea     eax, dword ptr ds:[edi+0x1BC]
+72B0BE41  |.  50            push    eax
+72B0BE42  |.  8D4D DC       lea     ecx, dword ptr ss:[ebp-0x24]
+72B0BE45  |.  E8 E6F6F3FF   call    72A4B530
+72B0BE4A  |.  8BD0          mov     edx, eax
+72B0BE4C  |.  83EC 10       sub     esp, 0x10
+72B0BE4F  |.  C645 FC 0D    mov     byte ptr ss:[ebp-0x4], 0xD
+72B0BE53  |.  0F1005 803346>movups  xmm0, dqword ptr ds:[0x73463380]
+72B0BE5A  |.  8BCC          mov     ecx, esp
+72B0BE5C  |.  83EC 10       sub     esp, 0x10
+72B0BE5F  |.  0F1101        movups  dqword ptr ds:[ecx], xmm0
+72B0BE62  |.  8BCC          mov     ecx, esp
+72B0BE64  |.  83EC 10       sub     esp, 0x10
+72B0BE67  |.  8BC4          mov     eax, esp
+72B0BE69  |.  83EC 10       sub     esp, 0x10
+72B0BE6C  |.  0F1101        movups  dqword ptr ds:[ecx], xmm0
+72B0BE6F  |.  8BCA          mov     ecx, edx
+72B0BE71  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BE74  |.  8BC4          mov     eax, esp
+72B0BE76  |.  83EC 10       sub     esp, 0x10
+72B0BE79  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BE7C  |.  8BC4          mov     eax, esp
+72B0BE7E  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BE81  |.  E8 7A7FB1FF   call    72623E00
+72B0BE86  |.  83EC 10       sub     esp, 0x10
+72B0BE89  |.  BA 7C8D5173   mov     edx, 73518D7C                    ;  ASCII "05_plugins\Favorite\manager\FavoriteMgr.cpp"
+72B0BE8E  |.  8BCC          mov     ecx, esp
+72B0BE90  |.  68 00985173   push    73519800                         ;  ASCII "favitem: %s"
+72B0BE95  |.  68 B48C5173   push    73518CB4                         ;  ASCII "FavoriteMgr"
+72B0BE9A  |.  68 44975173   push    73519744                         ;  ASCII "FavoriteMgr::sendFavAsMsg"
+72B0BE9F  |.  C601 02       mov     byte ptr ds:[ecx], 0x2
+72B0BEA2  |.  8941 08       mov     dword ptr ds:[ecx+0x8], eax
+72B0BEA5  |.  B9 02000000   mov     ecx, 0x2
+72B0BEAA  |.  68 CA090000   push    0x9CA
+72B0BEAF  |.  E8 5CE7F3FF   call    72A4A610
+72B0BEB4  |.  83C4 70       add     esp, 0x70
+72B0BEB7  |.  C645 FC 0C    mov     byte ptr ss:[ebp-0x4], 0xC
+72B0BEBB  |.  8D4D DC       lea     ecx, dword ptr ss:[ebp-0x24]
+72B0BEBE  |.  E8 DD19B7FF   call    7267D8A0
+72B0BEC3  |.  E8 68B2B2FF   call    72637130
+72B0BEC8  |.  FFB5 A4F7FFFF push    dword ptr ss:[ebp-0x85C]
+72B0BECE  |.  8D45 BC       lea     eax, dword ptr ss:[ebp-0x44]
+72B0BED1  |.  50            push    eax
+72B0BED2  |.  8D45 8C       lea     eax, dword ptr ss:[ebp-0x74]
+72B0BED5  |.  50            push    eax
+72B0BED6  |.  8D85 78FFFFFF lea     eax, dword ptr ss:[ebp-0x88]
+72B0BEDC  |.  50            push    eax
+72B0BEDD  |.  53            push    ebx
+72B0BEDE  |.  8D45 A8       lea     eax, dword ptr ss:[ebp-0x58]
+72B0BEE1  |.  50            push    eax
+72B0BEE2  |.  8D85 98FDFFFF lea     eax, dword ptr ss:[ebp-0x268]
+72B0BEE8  |.  50            push    eax
+72B0BEE9  |.  E8 C200CFFF   call    727FBFB0                         ;  ·¢ËÍÁ´½Ó
+72B0BEEE  |.  53            push    ebx
+72B0BEEF  |.  8D85 98FDFFFF lea     eax, dword ptr ss:[ebp-0x268]
+72B0BEF5  |.  50            push    eax
+72B0BEF6  |.  E8 551B0000   call    72B0DA50
+72B0BEFB  |.  0F1005 803346>movups  xmm0, dqword ptr ds:[0x73463380]
+72B0BF02  |.  83EC 10       sub     esp, 0x10
+72B0BF05  |.  8D8D 00FEFFFF lea     ecx, dword ptr ss:[ebp-0x200]
+72B0BF0B  |.  8BF8          mov     edi, eax
+72B0BF0D  |.  8BC4          mov     eax, esp
+72B0BF0F  |.  83EC 10       sub     esp, 0x10
+72B0BF12  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BF15  |.  8BC4          mov     eax, esp
+72B0BF17  |.  83EC 10       sub     esp, 0x10
+72B0BF1A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BF1D  |.  8BC4          mov     eax, esp
+72B0BF1F  |.  83EC 10       sub     esp, 0x10
+72B0BF22  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BF25  |.  8BC4          mov     eax, esp
+72B0BF27  |.  83EC 10       sub     esp, 0x10
+72B0BF2A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BF2D  |.  8BC4          mov     eax, esp
+72B0BF2F  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B0BF32  |.  E8 C97EB1FF   call    72623E00
+72B0BF37  |.  83EC 10       sub     esp, 0x10
+72B0BF3A  |.  BA 7C8D5173   mov     edx, 73518D7C                    ;  ASCII "05_plugins\Favorite\manager\FavoriteMgr.cpp"
+72B0BF3F  |.  8BF4          mov     esi, esp
+72B0BF41  |.  B9 02000000   mov     ecx, 0x2
+72B0BF46  |.  68 F0975173   push    735197F0                         ;  ASCII "appmsg xml: %s"
+72B0BF4B  |.  68 B48C5173   push    73518CB4                         ;  ASCII "FavoriteMgr"
+72B0BF50  |.  68 44975173   push    73519744                         ;  ASCII "FavoriteMgr::sendFavAsMsg"
+72B0BF55  |.  68 CD090000   push    0x9CD
+72B0BF5A  |.  C606 02       mov     byte ptr ds:[esi], 0x2
+72B0BF5D  |.  8946 08       mov     dword ptr ds:[esi+0x8], eax
+72B0BF60  |.  E8 ABE6F3FF   call    72A4A610
+72B0BF65  |.  83C4 70       add     esp, 0x70
+72B0BF68  |.  8D8D 78FFFFFF lea     ecx, dword ptr ss:[ebp-0x88]
+72B0BF6E  |.  E8 2D19B7FF   call    7267D8A0
+72B0BF73  |.  8D4D A8       lea     ecx, dword ptr ss:[ebp-0x58]
+72B0BF76  |.  E8 2519B7FF   call    7267D8A0
+72B0BF7B  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0BF81  |.  E8 9AF5B0FF   call    7261B520
+72B0BF86  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0BF89  |.  E8 1219B7FF   call    7267D8A0
+72B0BF8E  |.  8D4D 8C       lea     ecx, dword ptr ss:[ebp-0x74]
+72B0BF91  |.  E8 0A19B7FF   call    7267D8A0
+72B0BF96  |.  8D8D 28F7FFFF lea     ecx, dword ptr ss:[ebp-0x8D8]
+72B0BF9C  |.  E8 AF64B3FF   call    72642450
+72B0BFA1  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0BFA7  |.  E8 4473FEFF   call    72AF32F0
+72B0BFAC  |.  8BC7          mov     eax, edi
+72B0BFAE  |.  E9 3A010000   jmp     72B0C0ED
+72B0BFB3  |>  83BD 78FDFFFF>cmp     dword ptr ss:[ebp-0x288], 0x0    ;  Cases 2,8 of switch 72B0BC5A
+72B0BFBA  |.^ 0F86 5CFDFFFF jbe     72B0BD1C
+72B0BFC0  |.  8BB5 74FDFFFF mov     esi, dword ptr ss:[ebp-0x28C]
+72B0BFC6  |.  8D45 BC       lea     eax, dword ptr ss:[ebp-0x44]
+72B0BFC9  |.  6A 01         push    0x1
+72B0BFCB  |.  50            push    eax
+72B0BFCC  |.  8B36          mov     esi, dword ptr ds:[esi]
+72B0BFCE  |.  8D4E 08       lea     ecx, dword ptr ds:[esi+0x8]
+72B0BFD1  |.  E8 3A60FEFF   call    72AF2010
+72B0BFD6  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0BFD9  |.  C645 FC 01    mov     byte ptr ss:[ebp-0x4], 0x1
+72B0BFDD  |.  E8 0E12F3FF   call    72A3D1F0
+72B0BFE2  |.  84C0          test    al, al
+72B0BFE4  |.  75 1F         jnz     short 72B0C005
+72B0BFE6  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0BFE9  |.  E8 B218B7FF   call    7267D8A0
+72B0BFEE  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0BFF4  |.  BF 02000000   mov     edi, 0x2
+72B0BFF9  |.  E8 F272FEFF   call    72AF32F0
+72B0BFFE  |.  8BC7          mov     eax, edi
+72B0C000  |.  E9 E8000000   jmp     72B0C0ED
+72B0C005  |>  83BF 4C010000>cmp     dword ptr ds:[edi+0x14C], 0x2
+72B0C00C  |.  75 3F         jnz     short 72B0C04D
+72B0C00E  |.  8D45 BC       lea     eax, dword ptr ss:[ebp-0x44]
+72B0C011  |.  50            push    eax
+72B0C012  |.  8D85 98FDFFFF lea     eax, dword ptr ss:[ebp-0x268]
+72B0C018  |.  53            push    ebx
+72B0C019  |.  50            push    eax
+72B0C01A  |.  E8 3112B4FF   call    7264D250
+72B0C01F  |.  8BC8          mov     ecx, eax
+72B0C021  |.  E8 0AE1D9FF   call    728AA130
+72B0C026  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0C02C  |.  E8 EFF4B0FF   call    7261B520
+72B0C031  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0C034  |.  E8 6718B7FF   call    7267D8A0
+72B0C039  |.  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]
+72B0C03F  |.  33FF          xor     edi, edi
+72B0C041  |.  E8 AA72FEFF   call    72AF32F0
+72B0C046  |.  8BC7          mov     eax, edi
+72B0C048  |.  E9 A0000000   jmp     72B0C0ED
+72B0C04D  |>  837E 6C 00    cmp     dword ptr ds:[esi+0x6C], 0x0
+72B0C051  |.  BA 68000000   mov     edx, 0x68
+72B0C056  |.  B9 7C000000   mov     ecx, 0x7C
+72B0C05B  |.  0F9EC0        setle   al
+72B0C05E  |.  84C0          test    al, al
+72B0C060  |.  0F45CA        cmovne  ecx, edx
+72B0C063  |.  8D0431        lea     eax, dword ptr ds:[ecx+esi]
+72B0C066  |.  50            push    eax
+72B0C067  |.  8D4D A8       lea     ecx, dword ptr ss:[ebp-0x58]
+72B0C06A  |.  E8 B1F3F3FF   call    72A4B420
+72B0C06F  |.  6A 01         push    0x1
+72B0C071  |.  83EC 14       sub     esp, 0x14
+72B0C074  |.  8D45 A8       lea     eax, dword ptr ss:[ebp-0x58]
+72B0C077  |.  8BCC          mov     ecx, esp
+72B0C079  |.  8965 D0       mov     dword ptr ss:[ebp-0x30], esp
+72B0C07C  |.  50            push    eax
+72B0C07D  |.  E8 9EF3F3FF   call    72A4B420
+72B0C082  |.  83EC 14       sub     esp, 0x14
+72B0C085  |.  8D45 BC       lea     eax, dword ptr ss:[ebp-0x44]
+72B0C088  |.  8BCC          mov     ecx, esp
+72B0C08A  |.  8965 A4       mov     dword ptr ss:[ebp-0x5C], esp
+72B0C08D  |.  50            push    eax
+72B0C08E  |.  E8 8DF3F3FF   call    72A4B420
+72B0C093  |.  83EC 14       sub     esp, 0x14
+72B0C096  |.  8BCC          mov     ecx, esp
+72B0C098  |.  8965 A0       mov     dword ptr ss:[ebp-0x60], esp
+72B0C09B  |.  53            push    ebx
+72B0C09C  |.  E8 7FF3F3FF   call    72A4B420
+72B0C0A1  |.  8D85 98FDFFFF lea     eax, dword ptr ss:[ebp-0x268]
+72B0C0A7  |.  C645 FC 05    mov     byte ptr ss:[ebp-0x4], 0x5
+72B0C0AB  |.  50            push    eax
+72B0C0AC  |.  E8 7FB0B2FF   call    72637130
+72B0C0B1  |.  8BC8          mov     ecx, eax
+72B0C0B3  |.  C645 FC 02    mov     byte ptr ss:[ebp-0x4], 0x2
+72B0C0B7  |.  E8 F401CFFF   call    727FC2B0
+72B0C0BC  |.  8D8D 98FDFFFF lea     ecx, dword ptr ss:[ebp-0x268]
+72B0C0C2  |.  E8 59F4B0FF   call    7261B520
+72B0C0C7  |.  8D4D A8       lea     ecx, dword ptr ss:[ebp-0x58]
+72B0C0CA  |.  E8 D117B7FF   call    7267D8A0
+72B0C0CF  |.  8D4D BC       lea     ecx, dword ptr ss:[ebp-0x44]
+72B0C0D2  |.  E8 C917B7FF   call    7267D8A0
+72B0C0D7  |>  8D8D 58FCFFFF lea     ecx, dword ptr ss:[ebp-0x3A8]    ;  Default case of switch 72B0BC5A
+72B0C0DD  |.  33FF          xor     edi, edi
+72B0C0DF  |.  E8 0C72FEFF   call    72AF32F0
+72B0C0E4  |.  8BC7          mov     eax, edi
+72B0C0E6  |.  EB 05         jmp     short 72B0C0ED
+72B0C0E8  |>  B8 01000000   mov     eax, 0x1
+72B0C0ED  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+72B0C0F0  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+72B0C0F7  |.  59            pop     ecx                              ;  user32.765678D7
+72B0C0F8  |.  5F            pop     edi                              ;  user32.765678D7
+72B0C0F9  |.  5E            pop     esi                              ;  user32.765678D7
+72B0C0FA  |.  5B            pop     ebx                              ;  user32.765678D7
+72B0C0FB  |.  8B4D F0       mov     ecx, dword ptr ss:[ebp-0x10]
+72B0C0FE  |.  33CD          xor     ecx, ebp
+72B0C100  |.  E8 F6106800   call    7318D1FB
+72B0C105  |.  8BE5          mov     esp, ebp
+72B0C107  |.  5D            pop     ebp                              ;  user32.765678D7
+72B0C108  \.  C2 0800       retn    0x8
+

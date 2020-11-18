@@ -1,0 +1,443 @@
+01B5F910    55              push    ebp
+01B5F911    8BEC            mov     ebp, esp
+01B5F913    6A FF           push    -0x1
+01B5F915    68 04DD4902     push    0249DD04
+01B5F91A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+01B5F920    50              push    eax
+01B5F921    83EC 30         sub     esp, 0x30
+01B5F924    53              push    ebx
+01B5F925    56              push    esi
+01B5F926    57              push    edi
+01B5F927    A1 C4108102     mov     eax, dword ptr ds:[0x28110C4]
+01B5F92C    33C5            xor     eax, ebp
+01B5F92E    50              push    eax
+01B5F92F    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+01B5F932    64:A3 00000000  mov     dword ptr fs:[0], eax
+01B5F938    8BF9            mov     edi, ecx
+01B5F93A    C745 F0 0000000>mov     dword ptr ss:[ebp-0x10], 0x0
+01B5F941    83EC 10         sub     esp, 0x10
+01B5F944    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+01B5F94B    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01B5F952    8BC4            mov     eax, esp
+01B5F954    83EC 10         sub     esp, 0x10
+01B5F957    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F95A    8BC4            mov     eax, esp
+01B5F95C    83EC 10         sub     esp, 0x10
+01B5F95F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F962    8BC4            mov     eax, esp
+01B5F964    83EC 10         sub     esp, 0x10
+01B5F967    8BCC            mov     ecx, esp
+01B5F969    FF75 28         push    dword ptr ss:[ebp+0x28]
+01B5F96C    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F96F    E8 8C6FC9FF     call    017F6900
+01B5F974  - E9 57245402     jmp     kstEx.040A1DD0
+01B5F979    CC              int3
+01B5F97A    8BCC            mov     ecx, esp
+01B5F97C    53              push    ebx
+01B5F97D    E8 7E6FC9FF     call    017F6900
+01B5F982    8B75 08         mov     esi, dword ptr ss:[ebp+0x8]
+01B5F985    83EC 10         sub     esp, 0x10
+01B5F988    8BCC            mov     ecx, esp
+01B5F98A    56              push    esi
+01B5F98B    E8 706FC9FF     call    017F6900
+01B5F990    68 043B6502     push    02653B04                         ; ASCII "onGYNetEnd(errType:%d, errCode:%d, sceneID:%d)"
+01B5F995    68 50456602     push    02664550                         ; ASCII "NetSceneVerifyUser"
+01B5F99A    68 00466602     push    02664600                         ; ASCII "NetSceneVerifyUser::onGYNetEnd"
+01B5F99F    6A 59           push    0x59
+01B5F9A1    BA 20466602     mov     edx, 02664620                    ; ASCII "03_service\net\scene\NetSceneVerifyUser.cpp"
+01B5F9A6    B9 02000000     mov     ecx, 0x2
+01B5F9AB    E8 803B0900     call    01BF3530
+01B5F9B0    8B47 44         mov     eax, dword ptr ds:[edi+0x44]
+01B5F9B3    83C4 70         add     esp, 0x70
+01B5F9B6    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+01B5F9B9    85F6            test    esi, esi
+01B5F9BB    0F84 EA000000   je      01B5FAAB
+01B5F9C1    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01B5F9C8    83EC 10         sub     esp, 0x10
+01B5F9CB    8BC4            mov     eax, esp
+01B5F9CD    83EC 10         sub     esp, 0x10
+01B5F9D0    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F9D3    8BC4            mov     eax, esp
+01B5F9D5    83EC 10         sub     esp, 0x10
+01B5F9D8    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F9DB    8BC4            mov     eax, esp
+01B5F9DD    83EC 10         sub     esp, 0x10
+01B5F9E0    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F9E3    8BC4            mov     eax, esp
+01B5F9E5    83EC 10         sub     esp, 0x10
+01B5F9E8    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F9EB    8BC4            mov     eax, esp
+01B5F9ED    83EC 10         sub     esp, 0x10
+01B5F9F0    8BCC            mov     ecx, esp
+01B5F9F2    53              push    ebx
+01B5F9F3    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5F9F6    E8 056FC9FF     call    017F6900
+01B5F9FB    68 B0466602     push    026646B0                         ; ASCII 56,"erifyUser err errcode: %d"
+01B5FA00    68 50456602     push    02664550                         ; ASCII "NetSceneVerifyUser"
+01B5FA05    68 00466602     push    02664600                         ; ASCII "NetSceneVerifyUser::onGYNetEnd"
+01B5FA0A    6A 5E           push    0x5E
+01B5FA0C    BA 20466602     mov     edx, 02664620                    ; ASCII "03_service\net\scene\NetSceneVerifyUser.cpp"
+01B5FA11    B9 04000000     mov     ecx, 0x4
+01B5FA16    E8 153B0900     call    01BF3530
+01B5FA1B    6A 58           push    0x58
+01B5FA1D    E8 B7FA7A00     call    0230F4D9
+01B5FA22    83C4 74         add     esp, 0x74
+01B5FA25    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FA28    8BF0            mov     esi, eax
+01B5FA2A    8D45 10         lea     eax, dword ptr ss:[ebp+0x10]
+01B5FA2D    8975 F0         mov     dword ptr ss:[ebp-0x10], esi
+01B5FA30    6A 00           push    0x0
+01B5FA32    50              push    eax
+01B5FA33    E8 C8480900     call    01BF4300
+01B5FA38    8D45 D8         lea     eax, dword ptr ss:[ebp-0x28]
+01B5FA3B    8BCE            mov     ecx, esi
+01B5FA3D    50              push    eax
+01B5FA3E    E8 FD15F5FF     call    01AB1040
+01B5FA43    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FA46    8BF0            mov     esi, eax
+01B5FA48    E8 63AACFFF     call    0185A4B0
+01B5FA4D    A1 C8C88602     mov     eax, dword ptr ds:[0x286C8C8]
+01B5FA52    85C0            test    eax, eax
+01B5FA54    75 24           jnz     short 01B5FA7A
+01B5FA56    68 84000000     push    0x84
+01B5FA5B    E8 79FA7A00     call    0230F4D9
+01B5FA60    83C4 04         add     esp, 0x4
+01B5FA63    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+01B5FA66    8BC8            mov     ecx, eax
+01B5FA68    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+01B5FA6C    E8 FFEBF4FF     call    01AAE670
+01B5FA71    C645 FC 00      mov     byte ptr ss:[ebp-0x4], 0x0
+01B5FA75    A3 C8C88602     mov     dword ptr ds:[0x286C8C8], eax
+01B5FA7A    56              push    esi
+01B5FA7B    6A 00           push    0x0
+01B5FA7D    6A 00           push    0x0
+01B5FA7F    68 A4000000     push    0xA4
+01B5FA84    8BC8            mov     ecx, eax
+01B5FA86    E8 65FDF4FF     call    01AAF7F0
+01B5FA8B    6A 00           push    0x0
+01B5FA8D    8BCF            mov     ecx, edi
+01B5FA8F    E8 1C040000     call    01B5FEB0
+01B5FA94    FFB7 C0000000   push    dword ptr ds:[edi+0xC0]
+01B5FA9A    E8 212ACBFF     call    018124C0
+01B5FA9F    8BC8            mov     ecx, eax
+01B5FAA1    E8 8ADCF5FF     call    01ABD730
+01B5FAA6    E9 D3030000     jmp     01B5FE7E
+01B5FAAB    8BF0            mov     esi, eax
+01B5FAAD    85F6            test    esi, esi
+01B5FAAF    0F84 ED000000   je      01B5FBA2
+01B5FAB5    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01B5FABC    83EC 10         sub     esp, 0x10
+01B5FABF    8BC4            mov     eax, esp
+01B5FAC1    83EC 10         sub     esp, 0x10
+01B5FAC4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FAC7    8BC4            mov     eax, esp
+01B5FAC9    83EC 10         sub     esp, 0x10
+01B5FACC    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FACF    8BC4            mov     eax, esp
+01B5FAD1    83EC 10         sub     esp, 0x10
+01B5FAD4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FAD7    8BC4            mov     eax, esp
+01B5FAD9    83EC 10         sub     esp, 0x10
+01B5FADC    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FADF    8BC4            mov     eax, esp
+01B5FAE1    83EC 10         sub     esp, 0x10
+01B5FAE4    8BCC            mov     ecx, esp
+01B5FAE6    56              push    esi
+01B5FAE7    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FAEA    E8 116EC9FF     call    017F6900
+01B5FAEF    68 CC626502     push    026562CC                         ; ASCII "mRetCode: %d"
+01B5FAF4    68 50456602     push    02664550                         ; ASCII "NetSceneVerifyUser"
+01B5FAF9    68 00466602     push    02664600                         ; ASCII "NetSceneVerifyUser::onGYNetEnd"
+01B5FAFE    6A 67           push    0x67
+01B5FB00    BA 20466602     mov     edx, 02664620                    ; ASCII "03_service\net\scene\NetSceneVerifyUser.cpp"
+01B5FB05    B9 04000000     mov     ecx, 0x4
+01B5FB0A    E8 213A0900     call    01BF3530
+01B5FB0F    6A 58           push    0x58
+01B5FB11    E8 C3F97A00     call    0230F4D9
+01B5FB16    83C4 74         add     esp, 0x74
+01B5FB19    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FB1C    8BF0            mov     esi, eax
+01B5FB1E    8D45 10         lea     eax, dword ptr ss:[ebp+0x10]
+01B5FB21    8975 EC         mov     dword ptr ss:[ebp-0x14], esi
+01B5FB24    6A 00           push    0x0
+01B5FB26    50              push    eax
+01B5FB27    E8 D4470900     call    01BF4300
+01B5FB2C    8D45 D8         lea     eax, dword ptr ss:[ebp-0x28]
+01B5FB2F    8BCE            mov     ecx, esi
+01B5FB31    50              push    eax
+01B5FB32    E8 0915F5FF     call    01AB1040
+01B5FB37    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FB3A    8BF0            mov     esi, eax
+01B5FB3C    E8 6FA9CFFF     call    0185A4B0
+01B5FB41    A1 C8C88602     mov     eax, dword ptr ds:[0x286C8C8]
+01B5FB46    85C0            test    eax, eax
+01B5FB48    75 24           jnz     short 01B5FB6E
+01B5FB4A    68 84000000     push    0x84
+01B5FB4F    E8 85F97A00     call    0230F4D9
+01B5FB54    83C4 04         add     esp, 0x4
+01B5FB57    8945 EC         mov     dword ptr ss:[ebp-0x14], eax
+01B5FB5A    8BC8            mov     ecx, eax
+01B5FB5C    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+01B5FB60    E8 0BEBF4FF     call    01AAE670
+01B5FB65    C645 FC 00      mov     byte ptr ss:[ebp-0x4], 0x0
+01B5FB69    A3 C8C88602     mov     dword ptr ds:[0x286C8C8], eax
+01B5FB6E    56              push    esi
+01B5FB6F    6A 00           push    0x0
+01B5FB71    6A 00           push    0x0
+01B5FB73    68 A4000000     push    0xA4
+01B5FB78    8BC8            mov     ecx, eax
+01B5FB7A    E8 71FCF4FF     call    01AAF7F0
+01B5FB7F    6A 00           push    0x0
+01B5FB81    8BCF            mov     ecx, edi
+01B5FB83    E8 28030000     call    01B5FEB0
+01B5FB88    FFB7 C0000000   push    dword ptr ds:[edi+0xC0]
+01B5FB8E    E8 2D29CBFF     call    018124C0
+01B5FB93    8BC8            mov     ecx, eax
+01B5FB95    E8 96DBF5FF     call    01ABD730
+01B5FB9A    8B5D F0         mov     ebx, dword ptr ss:[ebp-0x10]
+01B5FB9D    E9 DC020000     jmp     01B5FE7E
+01B5FBA2    8B8F 3C010000   mov     ecx, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01B5FBA8    A1 34E48602     mov     eax, dword ptr ds:[0x286E434]
+01B5FBAD    8B51 04         mov     edx, dword ptr ds:[ecx+0x4]
+01B5FBB0    85D2            test    edx, edx
+01B5FBB2    75 03           jnz     short 01B5FBB7
+01B5FBB4    8B50 04         mov     edx, dword ptr ds:[eax+0x4]
+01B5FBB7    837A 08 D4      cmp     dword ptr ds:[edx+0x8], -0x2C
+01B5FBBB    75 6B           jnz     short 01B5FC28
+01B5FBBD    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01B5FBC4    83EC 10         sub     esp, 0x10
+01B5FBC7    8BC4            mov     eax, esp
+01B5FBC9    83EC 10         sub     esp, 0x10
+01B5FBCC    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FBCF    8BC4            mov     eax, esp
+01B5FBD1    83EC 10         sub     esp, 0x10
+01B5FBD4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FBD7    8BC4            mov     eax, esp
+01B5FBD9    83EC 10         sub     esp, 0x10
+01B5FBDC    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FBDF    8BC4            mov     eax, esp
+01B5FBE1    83EC 10         sub     esp, 0x10
+01B5FBE4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FBE7    8BC4            mov     eax, esp
+01B5FBE9    83EC 10         sub     esp, 0x10
+01B5FBEC    8BCC            mov     ecx, esp
+01B5FBEE    6A 00           push    0x0
+01B5FBF0    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FBF3    E8 086DC9FF     call    017F6900
+01B5FBF8    68 CC626502     push    026562CC                         ; ASCII "mRetCode: %d"
+01B5FBFD    68 50456602     push    02664550                         ; ASCII "NetSceneVerifyUser"
+01B5FC02    68 00466602     push    02664600                         ; ASCII "NetSceneVerifyUser::onGYNetEnd"
+01B5FC07    6A 71           push    0x71
+01B5FC09    BA 20466602     mov     edx, 02664620                    ; ASCII "03_service\net\scene\NetSceneVerifyUser.cpp"
+01B5FC0E    B9 02000000     mov     ecx, 0x2
+01B5FC13    E8 18390900     call    01BF3530
+01B5FC18    83C4 70         add     esp, 0x70
+01B5FC1B    6A 00           push    0x0
+01B5FC1D    6A 00           push    0x0
+01B5FC1F    6A 00           push    0x0
+01B5FC21    68 A2000000     push    0xA2
+01B5FC26    EB 7D           jmp     short 01B5FCA5
+01B5FC28    8B51 04         mov     edx, dword ptr ds:[ecx+0x4]
+01B5FC2B    85D2            test    edx, edx
+01B5FC2D    75 03           jnz     short 01B5FC32
+01B5FC2F    8B50 04         mov     edx, dword ptr ds:[eax+0x4]
+01B5FC32    837A 08 EA      cmp     dword ptr ds:[edx+0x8], -0x16
+01B5FC36    0F85 97000000   jnz     01B5FCD3
+01B5FC3C    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01B5FC43    83EC 10         sub     esp, 0x10
+01B5FC46    8BC4            mov     eax, esp
+01B5FC48    83EC 10         sub     esp, 0x10
+01B5FC4B    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FC4E    8BC4            mov     eax, esp
+01B5FC50    83EC 10         sub     esp, 0x10
+01B5FC53    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FC56    8BC4            mov     eax, esp
+01B5FC58    83EC 10         sub     esp, 0x10
+01B5FC5B    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FC5E    8BC4            mov     eax, esp
+01B5FC60    83EC 10         sub     esp, 0x10
+01B5FC63    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FC66    8BC4            mov     eax, esp
+01B5FC68    83EC 10         sub     esp, 0x10
+01B5FC6B    8BCC            mov     ecx, esp
+01B5FC6D    6A 00           push    0x0
+01B5FC6F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FC72    E8 896CC9FF     call    017F6900
+01B5FC77    68 CC626502     push    026562CC                         ; ASCII "mRetCode: %d"
+01B5FC7C    68 50456602     push    02664550                         ; ASCII "NetSceneVerifyUser"
+01B5FC81    68 00466602     push    02664600                         ; ASCII "NetSceneVerifyUser::onGYNetEnd"
+01B5FC86    6A 7A           push    0x7A
+01B5FC88    BA 20466602     mov     edx, 02664620                    ; ASCII "03_service\net\scene\NetSceneVerifyUser.cpp"
+01B5FC8D    B9 02000000     mov     ecx, 0x2
+01B5FC92    E8 99380900     call    01BF3530
+01B5FC97    83C4 70         add     esp, 0x70
+01B5FC9A    6A 00           push    0x0
+01B5FC9C    6A 00           push    0x0
+01B5FC9E    6A 00           push    0x0
+01B5FCA0    68 A7000000     push    0xA7
+01B5FCA5    E8 C6EAF4FF     call    01AAE770
+01B5FCAA    8BC8            mov     ecx, eax
+01B5FCAC    E8 3FFBF4FF     call    01AAF7F0
+01B5FCB1    6A 00           push    0x0
+01B5FCB3    8BCF            mov     ecx, edi
+01B5FCB5    E8 F6010000     call    01B5FEB0
+01B5FCBA    FFB7 C0000000   push    dword ptr ds:[edi+0xC0]
+01B5FCC0    E8 FB27CBFF     call    018124C0
+01B5FCC5    8BC8            mov     ecx, eax
+01B5FCC7    E8 64DAF5FF     call    01ABD730
+01B5FCCC    8BDE            mov     ebx, esi
+01B5FCCE    E9 AB010000     jmp     01B5FE7E
+01B5FCD3    8B51 04         mov     edx, dword ptr ds:[ecx+0x4]
+01B5FCD6    85D2            test    edx, edx
+01B5FCD8    75 03           jnz     short 01B5FCDD
+01B5FCDA    8B50 04         mov     edx, dword ptr ds:[eax+0x4]
+01B5FCDD    837A 08 00      cmp     dword ptr ds:[edx+0x8], 0x0
+01B5FCE1    8B51 04         mov     edx, dword ptr ds:[ecx+0x4]
+01B5FCE4    0F85 97000000   jnz     01B5FD81
+01B5FCEA    85D2            test    edx, edx
+01B5FCEC    75 03           jnz     short 01B5FCF1
+01B5FCEE    8B50 04         mov     edx, dword ptr ds:[eax+0x4]
+01B5FCF1    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01B5FCF8    83EC 10         sub     esp, 0x10
+01B5FCFB    8BC4            mov     eax, esp
+01B5FCFD    83EC 10         sub     esp, 0x10
+01B5FD00    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FD03    8BC4            mov     eax, esp
+01B5FD05    83EC 10         sub     esp, 0x10
+01B5FD08    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FD0B    8BC4            mov     eax, esp
+01B5FD0D    83EC 10         sub     esp, 0x10
+01B5FD10    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FD13    8BC4            mov     eax, esp
+01B5FD15    83EC 10         sub     esp, 0x10
+01B5FD18    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FD1B    8BC4            mov     eax, esp
+01B5FD1D    83EC 10         sub     esp, 0x10
+01B5FD20    8BCC            mov     ecx, esp
+01B5FD22    FF72 08         push    dword ptr ds:[edx+0x8]
+01B5FD25    0F1100          movups  dqword ptr ds:[eax], xmm0
+01B5FD28    E8 D36BC9FF     call    017F6900
+01B5FD2D    68 48406502     push    02654048                         ; ASCII "baseresponse().ret(): %d"
+01B5FD32    68 50456602     push    02664550                         ; ASCII "NetSceneVerifyUser"
+01B5FD37    68 00466602     push    02664600                         ; ASCII "NetSceneVerifyUser::onGYNetEnd"
+01B5FD3C    68 82000000     push    0x82
+01B5FD41    BA 20466602     mov     edx, 02664620                    ; ASCII "03_service\net\scene\NetSceneVerifyUser.cpp"
+01B5FD46    B9 02000000     mov     ecx, 0x2
+01B5FD4B    E8 E0370900     call    01BF3530
+01B5FD50    83C4 70         add     esp, 0x70
+01B5FD53    6A 00           push    0x0
+01B5FD55    6A 00           push    0x0
+01B5FD57    6A 00           push    0x0
+01B5FD59    68 A3000000     push    0xA3
+01B5FD5E    E8 0DEAF4FF     call    01AAE770
+01B5FD63    8BC8            mov     ecx, eax
+01B5FD65    E8 86FAF4FF     call    01AAF7F0
+01B5FD6A    6A 01           push    0x1
+01B5FD6C    8BCF            mov     ecx, edi
+01B5FD6E    E8 3D010000     call    01B5FEB0
+01B5FD73    8BCF            mov     ecx, edi
+01B5FD75    E8 C6A4FBFF     call    01B1A240
+01B5FD7A    8BDE            mov     ebx, esi
+01B5FD7C    E9 FD000000     jmp     01B5FE7E
+01B5FD81    85D2            test    edx, edx
+01B5FD83    75 03           jnz     short 01B5FD88
+01B5FD85    8B50 04         mov     edx, dword ptr ds:[eax+0x4]
+01B5FD88    837A 08 E8      cmp     dword ptr ds:[edx+0x8], -0x18
+01B5FD8C    74 6F           je      short 01B5FDFD
+01B5FD8E    8B49 04         mov     ecx, dword ptr ds:[ecx+0x4]
+01B5FD91    85C9            test    ecx, ecx
+01B5FD93    75 03           jnz     short 01B5FD98
+01B5FD95    8B48 04         mov     ecx, dword ptr ds:[eax+0x4]
+01B5FD98    8379 08 DE      cmp     dword ptr ds:[ecx+0x8], -0x22
+01B5FD9C    74 5F           je      short 01B5FDFD
+01B5FD9E    6A 58           push    0x58
+01B5FDA0    E8 34F77A00     call    0230F4D9
+01B5FDA5    83C4 04         add     esp, 0x4
+01B5FDA8    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FDAB    8BF0            mov     esi, eax
+01B5FDAD    8D45 10         lea     eax, dword ptr ss:[ebp+0x10]
+01B5FDB0    8975 EC         mov     dword ptr ss:[ebp-0x14], esi
+01B5FDB3    6A 00           push    0x0
+01B5FDB5    50              push    eax
+01B5FDB6    E8 45450900     call    01BF4300
+01B5FDBB    8D45 D8         lea     eax, dword ptr ss:[ebp-0x28]
+01B5FDBE    8BCE            mov     ecx, esi
+01B5FDC0    50              push    eax
+01B5FDC1    E8 7A12F5FF     call    01AB1040
+01B5FDC6    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FDC9    8BF0            mov     esi, eax
+01B5FDCB    E8 E0A6CFFF     call    0185A4B0
+01B5FDD0    56              push    esi
+01B5FDD1    6A 00           push    0x0
+01B5FDD3    6A 00           push    0x0
+01B5FDD5    68 A4000000     push    0xA4
+01B5FDDA    E8 91E9F4FF     call    01AAE770
+01B5FDDF    8BC8            mov     ecx, eax
+01B5FDE1    E8 0AFAF4FF     call    01AAF7F0
+01B5FDE6    6A 00           push    0x0
+01B5FDE8    8BCF            mov     ecx, edi
+01B5FDEA    E8 C1000000     call    01B5FEB0
+01B5FDEF    8BCF            mov     ecx, edi
+01B5FDF1    E8 4AA4FBFF     call    01B1A240
+01B5FDF6    33DB            xor     ebx, ebx
+01B5FDF8    E9 81000000     jmp     01B5FE7E
+01B5FDFD    6A 00           push    0x0
+01B5FDFF    8D45 10         lea     eax, dword ptr ss:[ebp+0x10]
+01B5FE02    50              push    eax
+01B5FE03    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FE06    E8 F5440900     call    01BF4300
+01B5FE0B    C645 FC 03      mov     byte ptr ss:[ebp-0x4], 0x3
+01B5FE0F    837D DC 00      cmp     dword ptr ss:[ebp-0x24], 0x0
+01B5FE13    0F9EC0          setle   al
+01B5FE16    84C0            test    al, al
+01B5FE18    74 1E           je      short 01B5FE38
+01B5FE1A    BA 7D0F0000     mov     edx, 0xF7D
+01B5FE1F    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+01B5FE22    E8 D9500900     call    01BF4F00
+01B5FE27    50              push    eax
+01B5FE28    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FE2B    E8 00480900     call    01BF4630
+01B5FE30    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+01B5FE33    E8 78A6CFFF     call    0185A4B0
+01B5FE38    6A 58           push    0x58
+01B5FE3A    E8 9AF67A00     call    0230F4D9
+01B5FE3F    83C4 04         add     esp, 0x4
+01B5FE42    8945 EC         mov     dword ptr ss:[ebp-0x14], eax
+01B5FE45    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FE48    51              push    ecx
+01B5FE49    8BC8            mov     ecx, eax
+01B5FE4B    E8 F011F5FF     call    01AB1040
+01B5FE50    50              push    eax
+01B5FE51    6A 00           push    0x0
+01B5FE53    6A 00           push    0x0
+01B5FE55    68 A4000000     push    0xA4
+01B5FE5A    E8 11E9F4FF     call    01AAE770
+01B5FE5F    8BC8            mov     ecx, eax
+01B5FE61    E8 8AF9F4FF     call    01AAF7F0
+01B5FE66    6A 00           push    0x0
+01B5FE68    8BCF            mov     ecx, edi
+01B5FE6A    E8 41000000     call    01B5FEB0
+01B5FE6F    8BCF            mov     ecx, edi
+01B5FE71    E8 CAA3FBFF     call    01B1A240
+01B5FE76    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01B5FE79    E8 32A6CFFF     call    0185A4B0
+01B5FE7E    8B4D 24         mov     ecx, dword ptr ss:[ebp+0x24]
+01B5FE81    83F9 10         cmp     ecx, 0x10
+01B5FE84    72 0F           jb      short 01B5FE95
+01B5FE86    6A 01           push    0x1
+01B5FE88    41              inc     ecx
+01B5FE89    51              push    ecx
+01B5FE8A    FF75 10         push    dword ptr ss:[ebp+0x10]
+01B5FE8D    E8 DE4DC9FF     call    017F4C70
+01B5FE92    83C4 0C         add     esp, 0xC
+01B5FE95    8BC3            mov     eax, ebx
+01B5FE97    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+01B5FE9A    64:890D 0000000>mov     dword ptr fs:[0], ecx
+01B5FEA1    59              pop     ecx                              ; user32.77D191BE
+01B5FEA2    5F              pop     edi                              ; user32.77D191BE
+01B5FEA3    5E              pop     esi                              ; user32.77D191BE
+01B5FEA4    5B              pop     ebx                              ; user32.77D191BE
+01B5FEA5    8BE5            mov     esp, ebp
+01B5FEA7    5D              pop     ebp                              ; user32.77D191BE
+01B5FEA8    C2 2800         retn    0x28
+

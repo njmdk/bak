@@ -1,0 +1,97 @@
+7292C770  /.  55            push    ebp
+7292C771  |.  8BEC          mov     ebp, esp
+7292C773  |.  6A FF         push    -0x1
+7292C775  |.  68 108B3173   push    73318B10
+7292C77A  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+7292C780  |.  50            push    eax
+7292C781  |.  51            push    ecx
+7292C782  |.  53            push    ebx
+7292C783  |.  56            push    esi
+7292C784  |.  57            push    edi
+7292C785  |.  A1 C4506A73   mov     eax, dword ptr ds:[0x736A50C4]
+7292C78A  |.  33C5          xor     eax, ebp
+7292C78C  |.  50            push    eax
+7292C78D  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+7292C790  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+7292C796  |.  8BF9          mov     edi, ecx
+7292C798  |.  0F1005 803346>movups  xmm0, dqword ptr ds:[0x73463380]
+7292C79F  |.  83EC 10       sub     esp, 0x10
+7292C7A2  |.  8BC4          mov     eax, esp
+7292C7A4  |.  83EC 10       sub     esp, 0x10
+7292C7A7  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+7292C7AA  |.  8BC4          mov     eax, esp
+7292C7AC  |.  83EC 10       sub     esp, 0x10
+7292C7AF  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+7292C7B2  |.  8BC4          mov     eax, esp
+7292C7B4  |.  83EC 10       sub     esp, 0x10
+7292C7B7  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+7292C7BA  |.  8BC4          mov     eax, esp
+7292C7BC  |.  83EC 10       sub     esp, 0x10
+7292C7BF  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+7292C7C2  |.  8BC4          mov     eax, esp
+7292C7C4  |.  83EC 10       sub     esp, 0x10
+7292C7C7  |.  8BCC          mov     ecx, esp
+7292C7C9  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+7292C7CC  |.  8B47 84       mov     eax, dword ptr ds:[edi-0x7C]     ;  user32.765677E2
+7292C7CF  |.  68 C4B24D73   push    734DB2C4                         ;  ASCII "onDownloadSuccessed. sceneID:%d"
+7292C7D4  |.  99            cdq
+7292C7D5  |.  68 E8E74D73   push    734DE7E8                         ;  ASCII "NetSceneDownloadAppAttachCDN"
+7292C7DA  |.  8951 0C       mov     dword ptr ds:[ecx+0xC], edx
+7292C7DD  |.  BA 74E74D73   mov     edx, 734DE774
+7292C7E2  |.  C601 00       mov     byte ptr ds:[ecx], 0x0
+7292C7E5  |.  8941 08       mov     dword ptr ds:[ecx+0x8], eax
+7292C7E8  |.  B9 02000000   mov     ecx, 0x2
+7292C7ED  |.  68 50E94D73   push    734DE950                         ;  ASCII 4E,"etSceneDownloadAppAttachCDN::onDownloadSuccessed"
+7292C7F2  |.  68 E6000000   push    0xE6
+7292C7F7  |.  E8 14DE1100   call    72A4A610
+7292C7FC  |.  83C4 70       add     esp, 0x70
+7292C7FF  |.  80BF 050B0000>cmp     byte ptr ds:[edi+0xB05], 0x0
+7292C806  |.  74 0B         je      short 7292C813
+7292C808  |.  8D8F 080B0000 lea     ecx, dword ptr ds:[edi+0xB08]
+7292C80E  |.  E8 BD7A0F00   call    72A242D0
+7292C813  |>  8B75 0C       mov     esi, dword ptr ss:[ebp+0xC]
+7292C816  |.  83EC 18       sub     esp, 0x18
+7292C819  |.  8BCC          mov     ecx, esp
+7292C81B  |.  6A FF         push    -0x1
+7292C81D  |.  8D46 58       lea     eax, dword ptr ds:[esi+0x58]
+7292C820  |.  C741 14 0F000>mov     dword ptr ds:[ecx+0x14], 0xF
+7292C827  |.  6A 00         push    0x0
+7292C829  |.  C741 10 00000>mov     dword ptr ds:[ecx+0x10], 0x0
+7292C830  |.  50            push    eax
+7292C831  |.  C601 00       mov     byte ptr ds:[ecx], 0x0
+7292C834  |.  E8 477BCFFF   call    72624380
+7292C839  |.  33C0          xor     eax, eax
+7292C83B  |.  8D8F C4FEFFFF lea     ecx, dword ptr ds:[edi-0x13C]
+7292C841  |.  3887 060B0000 cmp     byte ptr ds:[edi+0xB06], al
+7292C847  |.  0f95c0        setne   al
+7292C84A  |.  8D0445 050000>lea     eax, dword ptr ds:[eax*2+0x5]
+7292C851  |.  50            push    eax
+7292C852  |.  FFB7 1C0B0000 push    dword ptr ds:[edi+0xB1C]         ;  接收文件完成
+7292C858  |.  FF36          push    dword ptr ds:[esi]
+7292C85A  |.  E8 211EFEFF   call    7290E680
+7292C85F  |.  80BF 060B0000>cmp     byte ptr ds:[edi+0xB06], 0x0
+7292C866  |.  74 0C         je      short 7292C874
+7292C868  |.  E8 B3B6D0FF   call    72637F20
+7292C86D  |.  B9 4A010000   mov     ecx, 0x14A
+7292C872  |.  EB 0A         jmp     short 7292C87E
+7292C874  |>  E8 A7B6D0FF   call    72637F20
+7292C879  |.  B9 49010000   mov     ecx, 0x149
+7292C87E  |>  6A 01         push    0x1
+7292C880  |.  6A 01         push    0x1
+7292C882  |.  BA 0B000000   mov     edx, 0xB
+7292C887  |.  E8 560C6800   call    72FAD4E2
+7292C88C  |.  83C4 08       add     esp, 0x8
+7292C88F  |.  8D8F C4FEFFFF lea     ecx, dword ptr ds:[edi-0x13C]
+7292C895  |.  6A 01         push    0x1
+7292C897  |.  6A 00         push    0x0
+7292C899  |.  E8 22F9FFFF   call    7292C1C0
+7292C89E  |.  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+7292C8A1  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+7292C8A8  |.  59            pop     ecx                              ;  user32.765678D7
+7292C8A9  |.  5F            pop     edi                              ;  user32.765678D7
+7292C8AA  |.  5E            pop     esi                              ;  user32.765678D7
+7292C8AB  |.  5B            pop     ebx                              ;  user32.765678D7
+7292C8AC  |.  8BE5          mov     esp, ebp
+7292C8AE  |.  5D            pop     ebp                              ;  user32.765678D7
+7292C8AF  \.  C2 0800       retn    0x8
+

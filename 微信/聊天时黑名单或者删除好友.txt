@@ -1,0 +1,377 @@
+72EC1D51  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EC1D54  |.  E8 B7881700   call    7303A610
+72EC1D59  |.  83C4 70       add     esp, 0x70
+72EC1D5C  |>  8D8D F8FDFFFF lea     ecx, dword ptr ss:[ebp-0x208]
+72EC1D62  |.  E8 E969D7FF   call    72C38750
+72EC1D67  |>  8D8D 78FFFFFF lea     ecx, dword ptr ss:[ebp-0x88]
+72EC1D6D  |>  C645 FC 13    mov     byte ptr ss:[ebp-0x4], 0x13
+72EC1D71  |.  E8 4A2AD5FF   call    72C147C0
+72EC1D76  |>  8BBD 20FDFFFF mov     edi, dword ptr ss:[ebp-0x2E0]    ;  Cases 30,2710 of switch 72EC1128
+72EC1D7C  |>  E8 0F0CEEFF   call    72DA2990
+72EC1D81  |.  8B70 24       mov     esi, dword ptr ds:[eax+0x24]
+72EC1D84  |.  8D85 00FBFFFF lea     eax, dword ptr ss:[ebp-0x500]    ;  eax=黑名单对象
+72EC1D8A  |.  50            push    eax
+72EC1D8B  |.  8D85 2CFDFFFF lea     eax, dword ptr ss:[ebp-0x2D4]
+72EC1D91  |.  50            push    eax
+72EC1D92  |.  E8 F90BEEFF   call    72DA2990
+72EC1D97  |.  8D48 24       lea     ecx, dword ptr ds:[eax+0x24]
+72EC1D9A  |.  E8 C1F3D4FF   call    72C11160
+72EC1D9F  |.  3930          cmp     dword ptr ds:[eax], esi          ;  WeChatWi.73E2B715
+72EC1DA1  |.  74 31         je      short 72EC1DD4
+72EC1DA3  |.  8D85 00FBFFFF lea     eax, dword ptr ss:[ebp-0x500]
+72EC1DA9  |.  50            push    eax
+72EC1DAA  |.  8D85 2CFDFFFF lea     eax, dword ptr ss:[ebp-0x2D4]
+72EC1DB0  |.  50            push    eax
+72EC1DB1  |.  E8 DA0BEEFF   call    72DA2990
+72EC1DB6  |.  8D48 24       lea     ecx, dword ptr ds:[eax+0x24]
+72EC1DB9  |.  E8 A2F3D4FF   call    72C11160
+72EC1DBE  |.  FF30          push    dword ptr ds:[eax]
+72EC1DC0  |.  8D85 1CFDFFFF lea     eax, dword ptr ss:[ebp-0x2E4]
+72EC1DC6  |.  50            push    eax
+72EC1DC7  |.  E8 C40BEEFF   call    72DA2990
+72EC1DCC  |.  8D48 24       lea     ecx, dword ptr ds:[eax+0x24]
+72EC1DCF  |.  E8 1C440000   call    72EC61F0
+72EC1DD4  |>  807D 5B 00    cmp     byte ptr ss:[ebp+0x5B], 0x0
+72EC1DD8  |.  0F84 0F080000 je      72EC25ED
+72EC1DDE  |.  8B85 E8FAFFFF mov     eax, dword ptr ss:[ebp-0x518]
+72EC1DE4  |.  8985 18FDFFFF mov     dword ptr ss:[ebp-0x2E8], eax
+72EC1DEA  |.  8B85 ECFAFFFF mov     eax, dword ptr ss:[ebp-0x514]
+72EC1DF0  |.  8985 1CFDFFFF mov     dword ptr ss:[ebp-0x2E4], eax
+72EC1DF6  |.  E8 950BEEFF   call    72DA2990
+72EC1DFB  |.  8B70 0C       mov     esi, dword ptr ds:[eax+0xC]
+72EC1DFE  |.  8D85 18FDFFFF lea     eax, dword ptr ss:[ebp-0x2E8]
+72EC1E04  |.  50            push    eax
+72EC1E05  |.  8D85 2CFDFFFF lea     eax, dword ptr ss:[ebp-0x2D4]
+72EC1E0B  |.  50            push    eax
+72EC1E0C  |.  E8 7F0BEEFF   call    72DA2990
+72EC1E11  |.  8D48 0C       lea     ecx, dword ptr ds:[eax+0xC]
+72EC1E14  |.  E8 07D1DBFF   call    72C7EF20
+72EC1E19  |.  3930          cmp     dword ptr ds:[eax], esi          ;  WeChatWi.73E2B715
+72EC1E1B  |.  0F84 CC070000 je      72EC25ED
+72EC1E21  |.  0F1005 8033A5>movups  xmm0, dqword ptr ds:[0x73A53380]
+72EC1E28  |.  83EC 10       sub     esp, 0x10
+72EC1E2B  |.  8BC4          mov     eax, esp
+72EC1E2D  |.  83EC 10       sub     esp, 0x10
+72EC1E30  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EC1E33  |.  8BC4          mov     eax, esp
+72EC1E35  |.  83EC 10       sub     esp, 0x10
+72EC1E38  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EC1E3B  |.  8BC4          mov     eax, esp
+72EC1E3D  |.  83EC 10       sub     esp, 0x10
+72EC1E40  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EC1E43  |.  8BC4          mov     eax, esp
+72EC1E45  |.  83EC 10       sub     esp, 0x10
+72EC1E48  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EC1E4B  |.  8BC4          mov     eax, esp
+72EC1E4D  |.  83EC 10       sub     esp, 0x10
+72EC1E50  |.  8BCC          mov     ecx, esp
+72EC1E52  |.  FFB5 ECFAFFFF push    dword ptr ss:[ebp-0x514]
+72EC1E58  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EC1E5B  |.  FFB5 E8FAFFFF push    dword ptr ss:[ebp-0x518]
+72EC1E61  |.  E8 EAF4D7FF   call    72C41350
+72EC1E66  |.  68 24F2AB73   push    73ABF224                         ;  ASCII "svrid : %d is received!!!"
+72EC1E6B  |.  68 B0ECAB73   push    73ABECB0                         ;  ASCII "SyncMgr"
+72EC1E70  |.  68 CCF0AB73   push    73ABF0CC                         ;  ASCII "SyncMgr::doAddMsg"
+72EC1E75  |.  68 B7050000   push    0x5B7
+72EC1E7A  |.  BA 0CEDAB73   mov     edx, 73ABED0C                    ;  ASCII "02_manager\SyncMgr.cpp"
+72EC1E7F  |.  B9 02000000   mov     ecx, 0x2
+72EC1E84  |.  E8 87871700   call    7303A610
+72EC1E89  |.  83C4 70       add     esp, 0x70
+72EC1E8C  |.  81BD F0FAFFFF>cmp     dword ptr ss:[ebp-0x510], 0x2710
+72EC1E96  |.  0F85 180A0000 jnz     72EC28B4
+72EC1E9C  |.  8D8D 00FBFFFF lea     ecx, dword ptr ss:[ebp-0x500]
+72EC1EA2  |.  E8 6959F6FF   call    72E27810
+72EC1EA7  |.  84C0          test    al, al
+72EC1EA9  |.  0F85 050A0000 jnz     72EC28B4
+72EC1EAF  |.  83A5 88FCFFFF>and     dword ptr ss:[ebp-0x378], 0x8
+72EC1EB6  |.  0F57C0        xorps   xmm0, xmm0
+72EC1EB9  |.  66:0F1385 E8F>movlps  qword ptr ss:[ebp-0x518], xmm0
+72EC1EC1  |.  E8 6A1FD5FF   call    72C13E30
+72EC1EC6  |.  6A 01         push    0x1
+72EC1EC8  |.  8D85 C0FAFFFF lea     eax, dword ptr ss:[ebp-0x540]
+72EC1ECE  |.  50            push    eax
+72EC1ECF  |.  E8 0C12F5FF   call    72E130E0
+72EC1ED4  |.  E9 CD090000   jmp     72EC28A6
+72EC1ED9  |>  C785 18FDFFFF>mov     dword ptr ss:[ebp-0x2E8], 0x0
+72EC1EE3  |.  C785 1CFDFFFF>mov     dword ptr ss:[ebp-0x2E4], 0x0
+72EC1EED  |.  83EC 14       sub     esp, 0x14
+72EC1EF0  |.  8D85 68FEFFFF lea     eax, dword ptr ss:[ebp-0x198]
+72EC1EF6  |.  8BCC          mov     ecx, esp
+72EC1EF8  |.  89A5 2CFDFFFF mov     dword ptr ss:[ebp-0x2D4], esp
+72EC1EFE  |.  50            push    eax
+72EC1EFF  |.  E8 1C951700   call    7303B420
+72EC1F04  |.  C645 FC 2E    mov     byte ptr ss:[ebp-0x4], 0x2E
+72EC1F08  |.  E8 E36CD7FF   call    72C38BF0
+72EC1F0D  |.  C645 FC 2D    mov     byte ptr ss:[ebp-0x4], 0x2D
+72EC1F11  |.  E8 CA05F7FF   call    72E324E0
+72EC1F16  |.  8885 30FDFFFF mov     byte ptr ss:[ebp-0x2D0], al
+72EC1F1C  |.  8D8D C0FAFFFF lea     ecx, dword ptr ss:[ebp-0x540]
+72EC1F22  |.  8D85 68FEFFFF lea     eax, dword ptr ss:[ebp-0x198]
+72EC1F28  |.  50            push    eax
+72EC1F29  |.  E8 923AF3FF   call    72DF59C0
+72EC1F2E  |.  80BD 30FDFFFF>cmp     byte ptr ss:[ebp-0x2D0], 0x0
+72EC1F35  |.  75 39         jnz     short 72EC1F70
+72EC1F37  |.  8B7D E0       mov     edi, dword ptr ss:[ebp-0x20]
+72EC1F3A  |.  8B75 E4       mov     esi, dword ptr ss:[ebp-0x1C]
+72EC1F3D  |.  E8 AE6CD7FF   call    72C38BF0
+72EC1F42  |.  51            push    ecx
+72EC1F43  |.  56            push    esi                              ;  WeChatWi.73E2B715
+72EC1F44  |.  57            push    edi                              ;  WeChatWi.73D27884
+72EC1F45  |.  8D85 F8FDFFFF lea     eax, dword ptr ss:[ebp-0x208]
+72EC1F4B  |.  50            push    eax
+72EC1F4C  |.  E8 DFAAF6FF   call    72E2CA30
+72EC1F51  |.  83A5 88FCFFFF>and     dword ptr ss:[ebp-0x378], 0x40
+72EC1F58  |.  C785 F8FAFFFF>mov     dword ptr ss:[ebp-0x508], 0x4
+72EC1F62  |.  84C0          test    al, al
+72EC1F64  |.  75 0A         jnz     short 72EC1F70
+72EC1F66  |.  C785 F8FAFFFF>mov     dword ptr ss:[ebp-0x508], 0x5
+72EC1F70  |>  8D8D 18FDFFFF lea     ecx, dword ptr ss:[ebp-0x2E8]
+72EC1F76  |.  E8 557A1700   call    730399D0
+72EC1F7B  |.^ E9 DCFDFFFF   jmp     72EC1D5C
+72EC1F80  |>  8D8D BCFDFFFF lea     ecx, dword ptr ss:[ebp-0x244]    ;  Cases 2A,42 of switch 72EC1128
+72EC1F86  |.  E8 154F0F00   call    72FB6EA0
+72EC1F8B  |.  8B45 BC       mov     eax, dword ptr ss:[ebp-0x44]
+72EC1F8E  |.  85C0          test    eax, eax
+72EC1F90  |.  75 08         jnz     short 72EC1F9A
+72EC1F92  |.  A1 8041CF73   mov     eax, dword ptr ds:[0x73CF4180]
+72EC1F97  |.  8B40 14       mov     eax, dword ptr ds:[eax+0x14]
+72EC1F9A  |>  6A 00         push    0x0
+
+
+//黑名单
+$ ==>    >0BAF2B40  UNICODE "htehrth"
+$+4      >00000007
+$+8      >00000008
+$+C      >00000000
+$+10     >00000000
+$+14     >00000000
+$+18     >00000000
+$+1C     >00000000
+$+20     >00000000
+$+24     >00000000
+$+28     >0AF67C30  UNICODE "消息已发出，但被对方拒收了。"
+$+2C     >0000000E
+$+30     >00000010
+$+34     >00000000
+$+38     >00000000
+$+3C     >00000000
+$+40     >00000000
+$+44     >04C3DAF0
+$+48     >0000002C
+$+4C     >00000000
+$+50     >00000000
+$+54     >00000000
+$+58     >00000000
+$+5C     >00000000
+$+60     >00000000
+$+64     >00000000
+$+68     >00000000
+$+6C     >00000000
+$+70     >00000000
+$+74     >00000000
+$+78     >00000000
+$+7C     >00000000
+$+80     >00000000
+$+84     >00000000
+$+88     >00000000
+$+8C     >00000000
+$+90     >00000001
+$+94     >00000000
+$+98     >73AE6584  WeChatWi.73AE6584
+$+9C     >04C56990
+$+A0     >00000000
+$+A4     >00000000
+$+A8     >00000000
+$+AC     >00000000
+$+B0     >00000000
+$+B4     >0AC38400
+$+B8     >00000000
+$+BC     >0035DF00
+$+C0     >00000000
+$+C4     >00000000
+$+C8     >00000000
+$+CC     >00000000
+$+D0     >00000000
+$+D4     >00000000
+$+D8     >00000000
+$+DC     >00000000
+$+E0     >00000000
+$+E4     >00000000
+$+E8     >0B9E1A78  UNICODE "a947c096515520cd166bc13dac878619"
+$+EC     >00000020
+$+F0     >00000020
+$+F4     >00000000
+$+F8     >00000000
+$+FC     >00000000
+$+100    >00000000
+$+104    >00000000
+$+108    >00000000
+$+10C    >00000000
+$+110    >00000000
+$+114    >00000000
+$+118    >00000000
+$+11C    >00000000
+$+120    >00000000
+$+124    >0AC30001
+$+128    >00000000
+$+12C    >00000000
+$+130    >00000000
+$+134    >00000000
+$+138    >00000000
+$+13C    >00000000
+$+140    >00000000
+$+144    >00000000
+$+148    >00000000
+$+14C    >00000000
+$+150    >00000000
+$+154    >00000000
+$+158    >00000000
+$+15C    >00000000
+$+160    >00000000
+$+164    >00000000
+$+168    >00000000
+$+16C    >00000000
+$+170    >00000000
+$+174    >00000000
+$+178    >00000000
+$+17C    >00000001
+$+180    >000000FF
+$+184    >0035E701
+$+188    >00000000
+$+18C    >0ABF1B20
+$+190    >00000000
+$+194    >00000000
+$+198    >00000000
+$+19C    >0035E74C
+$+1A0    >0B9E1A28  UNICODE "wxid_a4xqddryyhtu22"
+$+1A4    >00000013
+$+1A8    >00000020
+$+1AC    >00000000
+$+1B0    >00000000
+$+1B4    >0BAF3040  UNICODE "htehrth"
+$+1B8    >00000007
+$+1BC    >00000008
+$+1C0    >00000000
+$+1C4    >00000000
+$+1C8    >00000000
+$+1CC    >00000000
+
+
+
+//被删除好友
+$ ==>    >0B825F78  UNICODE "htehrth"
+$+4      >00000007
+$+8      >00000008
+$+C      >00000000
+$+10     >00000000
+$+14     >00000000
+$+18     >00000000
+$+1C     >00000000
+$+20     >00000000
+$+24     >00000000
+$+28     >04AE5558  ASCII "廪"
+$+2C     >00000062
+$+30     >00000080
+$+34     >00000000
+$+38     >00000000
+$+3C     >00000000
+$+40     >00000000
+$+44     >0BB179F8
+$+48     >0000002C
+$+4C     >00000000
+$+50     >00000000
+$+54     >00000000
+$+58     >00000000
+$+5C     >00000000
+$+60     >00000000
+$+64     >00000000
+$+68     >00000000
+$+6C     >00000000
+$+70     >00000000
+$+74     >00000000
+$+78     >00000000
+$+7C     >00000000
+$+80     >00000000
+$+84     >00000000
+$+88     >00000000
+$+8C     >00000000
+$+90     >00000001
+$+94     >00000000
+$+98     >73AE6584  WeChatWi.73AE6584
+$+9C     >04C57B08
+$+A0     >00000000
+$+A4     >00000000
+$+A8     >00000000
+$+AC     >00000000
+$+B0     >00000000
+$+B4     >0AC36800
+$+B8     >00000000
+$+BC     >0035DF00
+$+C0     >00000000
+$+C4     >00000000
+$+C8     >00000000
+$+CC     >00000000
+$+D0     >00000000
+$+D4     >00000000
+$+D8     >00000000
+$+DC     >00000000
+$+E0     >00000000
+$+E4     >00000000
+$+E8     >0B84DED0  UNICODE "ac0e3e1015ed7b476ec2e6586043dcab"
+$+EC     >00000020
+$+F0     >00000020
+$+F4     >00000000
+$+F8     >00000000
+$+FC     >00000000
+$+100    >00000000
+$+104    >00000000
+$+108    >00000000
+$+10C    >00000000
+$+110    >00000000
+$+114    >00000000
+$+118    >00000000
+$+11C    >00000000
+$+120    >00000000
+$+124    >0AC30001
+$+128    >00000000
+$+12C    >00000000
+$+130    >00000000
+$+134    >00000000
+$+138    >00000000
+$+13C    >00000000
+$+140    >00000000
+$+144    >00000000
+$+148    >00000000
+$+14C    >00000000
+$+150    >00000000
+$+154    >00000000
+$+158    >00000000
+$+15C    >00000000
+$+160    >00000000
+$+164    >00000000
+$+168    >00000000
+$+16C    >00000000
+$+170    >00000000
+$+174    >00000000
+$+178    >00000000
+$+17C    >00000001
+$+180    >000000FF
+$+184    >0035E701
+$+188    >00000000
+$+18C    >0ABF1B20
+$+190    >00000000
+$+194    >00000000
+$+198    >00000000
+$+19C    >0035E74C
+$+1A0    >0B84E1F0  UNICODE "wxid_a4xqddryyhtu22"
+$+1A4    >00000013
+$+1A8    >00000020
+$+1AC    >00000000
+$+1B0    >00000000
+$+1B4    >0AF46FC8  UNICODE "htehrth"
+$+1B8    >00000007
+$+1BC    >00000008
+$+1C0    >00000000
+$+1C4    >00000000
+
+

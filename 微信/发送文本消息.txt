@@ -1,0 +1,515 @@
+726948F0  /$  55            push    ebp
+726948F1  |.  8BEC          mov     ebp, esp
+726948F3  |.  6A FF         push    -0x1
+726948F5  |.  68 996D2E73   push    732E6D99
+726948FA  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+72694900  |.  50            push    eax
+72694901  |.  81EC 400D0000 sub     esp, 0xD40
+72694907  |.  A1 C4506A73   mov     eax, dword ptr ds:[0x736A50C4]
+7269490C  |.  33C5          xor     eax, ebp
+7269490E  |.  8945 EC       mov     dword ptr ss:[ebp-0x14], eax
+72694911  |.  53            push    ebx
+72694912  |.  56            push    esi
+72694913  |.  57            push    edi
+72694914  |.  50            push    eax
+72694915  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+72694918  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+7269491E  |.  8BF9          mov     edi, ecx
+72694920  |.  897D C8       mov     dword ptr ss:[ebp-0x38], edi
+72694923  |.  837F 1C 00    cmp     dword ptr ds:[edi+0x1C], 0x0
+72694927  |.  8D47 18       lea     eax, dword ptr ds:[edi+0x18]
+7269492A  |.  8945 CC       mov     dword ptr ss:[ebp-0x34], eax
+7269492D  |.  0F9EC0        setle   al
+72694930  |.  84C0          test    al, al
+72694932  |.  0F85 2F070000 jnz     72695067
+72694938  |.  8B45 08       mov     eax, dword ptr ss:[ebp+0x8]
+7269493B  |.  8B48 04       mov     ecx, dword ptr ds:[eax+0x4]
+7269493E  |.  8BD1          mov     edx, ecx
+72694940  |.  8B30          mov     esi, dword ptr ds:[eax]
+72694942  |.  2BD6          sub     edx, esi
+72694944  |.  B8 398EE338   mov     eax, 0x38E38E39
+72694949  |.  F7EA          imul    edx
+7269494B  |.  C1FA 03       sar     edx, 0x3
+7269494E  |.  8BC2          mov     eax, edx
+72694950  |.  C1E8 1F       shr     eax, 0x1F
+72694953  |.  03C2          add     eax, edx
+72694955  |.  0F84 0C070000 je      72695067
+7269495B  |.  3BF1          cmp     esi, ecx
+7269495D  |.  0F84 D3060000 je      72695036
+72694963  |.  8D5E 04       lea     ebx, dword ptr ds:[esi+0x4]
+72694966  |>  8B06          /mov     eax, dword ptr ds:[esi]
+72694968  |.  48            |dec     eax                             ;  Switch (cases 1..6)
+72694969  |.  83F8 05       |cmp     eax, 0x5
+7269496C  |.  0F87 AF060000 |ja      72695021
+72694972  |.  FF2485 885069>|jmp     dword ptr ds:[eax*4+0x72695088] ;  WeChatWi.72694979
+72694979  |>  8B03          |mov     eax, dword ptr ds:[ebx]         ;  Case 1 of switch 72694968
+7269497B  |.  85C0          |test    eax, eax
+7269497D  |.  74 06         |je      short 72694985
+7269497F  |.  66:8338 00    |cmp     word ptr ds:[eax], 0x0
+72694983  |.  75 05         |jnz     short 7269498A
+72694985  |>  B8 D8384673   |mov     eax, 734638D8
+7269498A  |>  6A FF         |push    -0x1
+7269498C  |.  50            |push    eax
+7269498D  |.  8D4D 88       |lea     ecx, dword ptr ss:[ebp-0x78]
+72694990  |.  E8 4B6A3B00   |call    72A4B3E0
+72694995  |.  83EC 14       |sub     esp, 0x14
+72694998  |.  C745 FC 00000>|mov     dword ptr ss:[ebp-0x4], 0x0
+7269499F  |.  8D45 88       |lea     eax, dword ptr ss:[ebp-0x78]
+726949A2  |.  8BCC          |mov     ecx, esp
+726949A4  |.  50            |push    eax
+726949A5  |.  E8 766A3B00   |call    72A4B420
+726949AA  |.  E8 C1FEFFFF   |call    72694870
+726949AF  |.  83C4 14       |add     esp, 0x14
+726949B2  |.  84C0          |test    al, al
+726949B4  |.  74 4D         |je      short 72694A03
+726949B6  |.  8B45 08       |mov     eax, dword ptr ss:[ebp+0x8]
+726949B9  |.  8B48 04       |mov     ecx, dword ptr ds:[eax+0x4]
+726949BC  |.  2B08          |sub     ecx, dword ptr ds:[eax]
+726949BE  |.  B8 398EE338   |mov     eax, 0x38E38E39
+726949C3  |.  F7E9          |imul    ecx
+726949C5  |.  C1FA 03       |sar     edx, 0x3
+726949C8  |.  8BC2          |mov     eax, edx
+726949CA  |.  C1E8 1F       |shr     eax, 0x1F
+726949CD  |.  03C2          |add     eax, edx
+726949CF  |.  83F8 01       |cmp     eax, 0x1
+726949D2  |.  0F85 28010000 |jnz     72694B00
+726949D8  |.  6A 00         |push    0x0
+726949DA  |.  6A 00         |push    0x0
+726949DC  |.  6A 00         |push    0x0
+726949DE  |.  68 08030000   |push    0x308
+726949E3  |.  E8 48F62500   |call    728F4030
+726949E8  |.  8BC8          |mov     ecx, eax
+726949EA  |.  E8 C1062600   |call    728F50B0
+726949EF  |.  8D4D 88       |lea     ecx, dword ptr ss:[ebp-0x78]
+726949F2  |.  C745 FC FFFFF>|mov     dword ptr ss:[ebp-0x4], -0x1
+726949F9  |.  E8 A28EFEFF   |call    7267D8A0
+726949FE  |.  E9 1E060000   |jmp     72695021
+72694A03  |>  E8 4888FBFF   |call    7264D250
+72694A08  |.  8B55 CC       |mov     edx, dword ptr ss:[ebp-0x34]
+72694A0B  |.  8D43 14       |lea     eax, dword ptr ds:[ebx+0x14]
+72694A0E  |.  6A 01         |push    0x1
+72694A10  |.  50            |push    eax
+72694A11  |.  53            |push    ebx
+72694A12  |.  8D8D E4F7FFFF |lea     ecx, dword ptr ss:[ebp-0x81C]
+72694A18  |.  E8 035D2100   |call    728AA720                        ;  发送文本消息
+72694A1D  |.  83C4 0C       |add     esp, 0xC
+72694A20  |.  50            |push    eax
+72694A21  |.  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694A27  |.  C645 FC 01    |mov     byte ptr ss:[ebp-0x4], 0x1
+72694A2B  |.  E8 804AF8FF   |call    726194B0
+72694A30  |.  8D8D E4F7FFFF |lea     ecx, dword ptr ss:[ebp-0x81C]
+72694A36  |.  C645 FC 03    |mov     byte ptr ss:[ebp-0x4], 0x3
+72694A3A  |.  E8 E16AF8FF   |call    7261B520
+72694A3F  |.  E8 FC301800   |call    72817B40
+72694A44  |.  8BC8          |mov     ecx, eax
+72694A46  |.  E8 85E23300   |call    729D2CD0
+72694A4B  |.  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694A51  |.  8955 D0       |mov     dword ptr ss:[ebp-0x30], edx
+72694A54  |.  8BF8          |mov     edi, eax
+72694A56  |.  E8 75E23300   |call    729D2CD0
+72694A5B  |.  3BC7          |cmp     eax, edi
+72694A5D  |.  75 09         |jnz     short 72694A68
+72694A5F  |.  3B55 D0       |cmp     edx, dword ptr ss:[ebp-0x30]
+72694A62  |.  0F84 8D000000 |je      72694AF5
+72694A68  |>  8B7D C8       |mov     edi, dword ptr ss:[ebp-0x38]
+72694A6B  |.  8BCF          |mov     ecx, edi
+72694A6D  |.  E8 8E210000   |call    72696C00
+72694A72  |.  84C0          |test    al, al
+72694A74  |.  0F84 7B000000 |je      72694AF5
+72694A7A  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694A80  |.  E8 3B71F8FF   |call    7261BBC0
+72694A85  |.  0F57C0        |xorps   xmm0, xmm0
+72694A88  |.  66:C785 64FFF>|mov     word ptr ss:[ebp-0x9C], 0x0
+72694A91  |.  0F1185 68FFFF>|movups  dqword ptr ss:[ebp-0x98], xmm0
+72694A98  |.  C785 78FFFFFF>|mov     dword ptr ss:[ebp-0x88], 0x0
+72694AA2  |.  8D85 A4FBFFFF |lea     eax, dword ptr ss:[ebp-0x45C]
+72694AA8  |.  C645 FC 05    |mov     byte ptr ss:[ebp-0x4], 0x5
+72694AAC  |.  50            |push    eax
+72694AAD  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694AB3  |.  C785 7CFFFFFF>|mov     dword ptr ss:[ebp-0x84], -0x1
+72694ABD  |.  E8 2E1EF9FF   |call    726268F0
+72694AC2  |.  6A 01         |push    0x1
+72694AC4  |.  8D85 84FDFFFF |lea     eax, dword ptr ss:[ebp-0x27C]
+72694ACA  |.  C645 FC 06    |mov     byte ptr ss:[ebp-0x4], 0x6
+72694ACE  |.  50            |push    eax
+72694ACF  |.  8BCF          |mov     ecx, edi
+72694AD1  |.  E8 8A100000   |call    72695B60
+72694AD6  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694ADC  |.  C645 FC 03    |mov     byte ptr ss:[ebp-0x4], 0x3
+72694AE0  |.  E8 DBC5FBFF   |call    726510C0
+72694AE5  |.  8D45 88       |lea     eax, dword ptr ss:[ebp-0x78]
+72694AE8  |.  50            |push    eax
+72694AE9  |.  E8 72C8FFFF   |call    72691360
+72694AEE  |.  8BC8          |mov     ecx, eax
+72694AF0  |.  E8 CB291800   |call    728174C0
+72694AF5  |>  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694AFB  |.  E8 206AF8FF   |call    7261B520
+72694B00  |>  8D4D 88       |lea     ecx, dword ptr ss:[ebp-0x78]
+72694B03  |.  C745 FC FFFFF>|mov     dword ptr ss:[ebp-0x4], -0x1
+72694B0A  |.  E8 918DFEFF   |call    7267D8A0
+72694B0F  |.  E9 0D050000   |jmp     72695021
+72694B14  |>  53            |push    ebx                             ;  Case 2 of switch 72694968
+72694B15  |.  FF75 CC       |push    dword ptr ss:[ebp-0x34]
+72694B18  |.  8D85 A4FBFFFF |lea     eax, dword ptr ss:[ebp-0x45C]
+72694B1E  |.  50            |push    eax
+72694B1F  |.  51            |push    ecx
+72694B20  |.  E8 2B87FBFF   |call    7264D250
+72694B25  |.  83C4 04       |add     esp, 0x4
+72694B28  |.  8BC8          |mov     ecx, eax
+72694B2A  |.  E8 01562100   |call    728AA130
+72694B2F  |.  C745 FC 07000>|mov     dword ptr ss:[ebp-0x4], 0x7
+72694B36  |.  E8 05301800   |call    72817B40
+72694B3B  |.  8BC8          |mov     ecx, eax
+72694B3D  |.  E8 8EE13300   |call    729D2CD0
+72694B42  |.  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694B48  |.  8955 D0       |mov     dword ptr ss:[ebp-0x30], edx
+72694B4B  |.  8BF8          |mov     edi, eax
+72694B4D  |.  E8 7EE13300   |call    729D2CD0
+72694B52  |.  3BC7          |cmp     eax, edi
+72694B54  |.  75 4B         |jnz     short 72694BA1
+72694B56  |.  3B55 D0       |cmp     edx, dword ptr ss:[ebp-0x30]
+72694B59  |.  75 46         |jnz     short 72694BA1
+72694B5B  |.  E8 C033FAFF   |call    72637F20
+72694B60  |.  BA 0D000000   |mov     edx, 0xD
+72694B65  |.  6A 01         |push    0x1
+72694B67  |.  6A 01         |push    0x1
+72694B69  |.  8D4A 52       |lea     ecx, dword ptr ds:[edx+0x52]
+72694B6C  |.  E8 71899100   |call    72FAD4E2
+72694B71  |.  E8 AA33FAFF   |call    72637F20
+72694B76  |.  BA 10000000   |mov     edx, 0x10
+72694B7B  |.  6A 01         |push    0x1
+72694B7D  |.  6A 01         |push    0x1
+72694B7F  |.  8D4A 4F       |lea     ecx, dword ptr ds:[edx+0x4F]
+72694B82  |.  E8 5B899100   |call    72FAD4E2
+72694B87  |.  83C4 10       |add     esp, 0x10
+72694B8A  |.  C745 FC FFFFF>|mov     dword ptr ss:[ebp-0x4], -0x1
+72694B91  |.  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694B97  |.  E8 8469F8FF   |call    7261B520
+72694B9C  |.  E9 80040000   |jmp     72695021
+72694BA1  |>  8B7D C8       |mov     edi, dword ptr ss:[ebp-0x38]
+72694BA4  |.  8B8F 58040000 |mov     ecx, dword ptr ds:[edi+0x458]
+72694BAA  |.  85C9          |test    ecx, ecx
+72694BAC  |.  75 04         |jnz     short 72694BB2
+72694BAE  |.  B0 01         |mov     al, 0x1
+72694BB0  |.  EB 07         |jmp     short 72694BB9
+72694BB2  |>  8B01          |mov     eax, dword ptr ds:[ecx]
+72694BB4  |.  8B40 24       |mov     eax, dword ptr ds:[eax+0x24]
+72694BB7  |.  FFD0          |call    eax
+72694BB9  |>  84C0          |test    al, al
+72694BBB  |.  74 67         |je      short 72694C24
+72694BBD  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694BC3  |.  E8 F86FF8FF   |call    7261BBC0
+72694BC8  |.  0F57C0        |xorps   xmm0, xmm0
+72694BCB  |.  66:C785 64FFF>|mov     word ptr ss:[ebp-0x9C], 0x0
+72694BD4  |.  0F1185 68FFFF>|movups  dqword ptr ss:[ebp-0x98], xmm0
+72694BDB  |.  C785 78FFFFFF>|mov     dword ptr ss:[ebp-0x88], 0x0
+72694BE5  |.  8D85 A4FBFFFF |lea     eax, dword ptr ss:[ebp-0x45C]
+72694BEB  |.  C645 FC 09    |mov     byte ptr ss:[ebp-0x4], 0x9
+72694BEF  |.  50            |push    eax
+72694BF0  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694BF6  |.  C785 7CFFFFFF>|mov     dword ptr ss:[ebp-0x84], -0x1
+72694C00  |.  E8 EB1CF9FF   |call    726268F0
+72694C05  |.  C645 FC 0A    |mov     byte ptr ss:[ebp-0x4], 0xA
+72694C09  |>  6A 01         |push    0x1
+72694C0B  |.  8D85 84FDFFFF |lea     eax, dword ptr ss:[ebp-0x27C]
+72694C11  |.  8BCF          |mov     ecx, edi
+72694C13  |.  50            |push    eax
+72694C14  |.  E8 470F0000   |call    72695B60
+72694C19  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694C1F  |.  E8 9CC4FBFF   |call    726510C0
+72694C24  |>  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694C2A  |.  C745 FC FFFFF>|mov     dword ptr ss:[ebp-0x4], -0x1
+72694C31  |.  E8 EA68F8FF   |call    7261B520
+72694C36  |.  E9 E6030000   |jmp     72695021
+72694C3B  |>  8BCB          |mov     ecx, ebx                        ;  Case 3 of switch 72694968
+72694C3D  |.  E8 AE853A00   |call    72A3D1F0
+72694C42  |.  84C0          |test    al, al
+72694C44  |.  0F84 D7030000 |je      72695021
+72694C4A  |.  6A 00         |push    0x0
+72694C4C  |.  83EC 14       |sub     esp, 0x14
+72694C4F  |.  8BCC          |mov     ecx, esp
+72694C51  |.  8965 D0       |mov     dword ptr ss:[ebp-0x30], esp
+72694C54  |.  6A FF         |push    -0x1
+72694C56  |.  68 D8384673   |push    734638D8
+72694C5B  |.  E8 80673B00   |call    72A4B3E0
+72694C60  |.  83EC 14       |sub     esp, 0x14
+72694C63  |.  C745 FC 0B000>|mov     dword ptr ss:[ebp-0x4], 0xB
+72694C6A  |.  8BCC          |mov     ecx, esp
+72694C6C  |.  8965 C0       |mov     dword ptr ss:[ebp-0x40], esp
+72694C6F  |.  53            |push    ebx
+72694C70  |.  E8 AB673B00   |call    72A4B420
+72694C75  |.  83EC 14       |sub     esp, 0x14
+72694C78  |.  8BCC          |mov     ecx, esp
+72694C7A  |.  8965 BC       |mov     dword ptr ss:[ebp-0x44], esp
+72694C7D  |.  FF75 CC       |push    dword ptr ss:[ebp-0x34]
+72694C80  |.  E8 9B673B00   |call    72A4B420
+72694C85  |.  8D85 A4FBFFFF |lea     eax, dword ptr ss:[ebp-0x45C]
+72694C8B  |.  C645 FC 0D    |mov     byte ptr ss:[ebp-0x4], 0xD
+72694C8F  |.  50            |push    eax
+72694C90  |.  E8 9B24FAFF   |call    72637130
+72694C95  |.  8BC8          |mov     ecx, eax
+72694C97  |.  C745 FC FFFFF>|mov     dword ptr ss:[ebp-0x4], -0x1
+72694C9E  |.  E8 0D761600   |call    727FC2B0
+72694CA3  |.  C745 FC 0E000>|mov     dword ptr ss:[ebp-0x4], 0xE
+72694CAA  |.  E8 912E1800   |call    72817B40
+72694CAF  |.  8BC8          |mov     ecx, eax
+72694CB1  |.  E8 1AE03300   |call    729D2CD0
+72694CB6  |.  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694CBC  |.  8955 D0       |mov     dword ptr ss:[ebp-0x30], edx
+72694CBF  |.  8BF8          |mov     edi, eax
+72694CC1  |.  E8 0AE03300   |call    729D2CD0
+72694CC6  |.  3BC7          |cmp     eax, edi
+72694CC8  |.  75 09         |jnz     short 72694CD3
+72694CCA  |.  3B55 D0       |cmp     edx, dword ptr ss:[ebp-0x30]
+72694CCD  |.^ 0F84 51FFFFFF |je      72694C24
+72694CD3  |>  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694CD9  |.  E8 F2DF3300   |call    729D2CD0
+72694CDE  |.  8B7D C8       |mov     edi, dword ptr ss:[ebp-0x38]
+72694CE1  |.  8945 9C       |mov     dword ptr ss:[ebp-0x64], eax
+72694CE4  |.  8D45 9C       |lea     eax, dword ptr ss:[ebp-0x64]
+72694CE7  |.  50            |push    eax
+72694CE8  |.  8955 A0       |mov     dword ptr ss:[ebp-0x60], edx
+72694CEB  |.  8D8F 38040000 |lea     ecx, dword ptr ds:[edi+0x438]
+72694CF1  |.  E8 0A200000   |call    72696D00
+72694CF6  |.  8BCF          |mov     ecx, edi
+72694CF8  |.  E8 031F0000   |call    72696C00
+72694CFD  |.  84C0          |test    al, al
+72694CFF  |.^ 0F84 1FFFFFFF |je      72694C24
+72694D05  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694D0B  |.  E8 B06EF8FF   |call    7261BBC0
+72694D10  |.  0F57C0        |xorps   xmm0, xmm0
+72694D13  |.  66:C785 64FFF>|mov     word ptr ss:[ebp-0x9C], 0x0
+72694D1C  |.  0F1185 68FFFF>|movups  dqword ptr ss:[ebp-0x98], xmm0
+72694D23  |.  C785 78FFFFFF>|mov     dword ptr ss:[ebp-0x88], 0x0
+72694D2D  |.  8D85 A4FBFFFF |lea     eax, dword ptr ss:[ebp-0x45C]
+72694D33  |.  C645 FC 10    |mov     byte ptr ss:[ebp-0x4], 0x10
+72694D37  |.  50            |push    eax
+72694D38  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694D3E  |.  C785 7CFFFFFF>|mov     dword ptr ss:[ebp-0x84], -0x1
+72694D48  |.  E8 A31BF9FF   |call    726268F0
+72694D4D  |.  C645 FC 11    |mov     byte ptr ss:[ebp-0x4], 0x11
+72694D51  |.^ E9 B3FEFFFF   |jmp     72694C09
+72694D56  |>  8B7D CC       |mov     edi, dword ptr ss:[ebp-0x34]    ;  Case 4 of switch 72694968
+72694D59  |.  8BCF          |mov     ecx, edi
+72694D5B  |.  E8 50534300   |call    72ACA0B0
+72694D60  |.  84C0          |test    al, al
+72694D62  |.  0F85 B9020000 |jnz     72695021
+72694D68  |.  8BCB          |mov     ecx, ebx
+72694D6A  |.  E8 81843A00   |call    72A3D1F0
+72694D6F  |.  84C0          |test    al, al
+72694D71  |.  0F84 AA020000 |je      72695021
+72694D77  |.  E8 A431FAFF   |call    72637F20
+72694D7C  |.  6A 02         |push    0x2
+72694D7E  |.  E8 DD3B1E00   |call    72878960
+72694D83  |.  6A 00         |push    0x0
+72694D85  |.  83EC 14       |sub     esp, 0x14
+72694D88  |.  8BCC          |mov     ecx, esp
+72694D8A  |.  8965 BC       |mov     dword ptr ss:[ebp-0x44], esp
+72694D8D  |.  6A FF         |push    -0x1
+72694D8F  |.  68 D8384673   |push    734638D8
+72694D94  |.  E8 47663B00   |call    72A4B3E0
+72694D99  |.  6A 02         |push    0x2
+72694D9B  |.  83EC 14       |sub     esp, 0x14
+72694D9E  |.  C745 FC 12000>|mov     dword ptr ss:[ebp-0x4], 0x12
+72694DA5  |.  8BCC          |mov     ecx, esp
+72694DA7  |.  8965 C0       |mov     dword ptr ss:[ebp-0x40], esp
+72694DAA  |.  57            |push    edi
+72694DAB  |.  E8 70663B00   |call    72A4B420
+72694DB0  |.  83EC 14       |sub     esp, 0x14
+72694DB3  |.  8BCC          |mov     ecx, esp
+72694DB5  |.  8965 D0       |mov     dword ptr ss:[ebp-0x30], esp
+72694DB8  |.  6A FF         |push    -0x1
+72694DBA  |.  68 D8384673   |push    734638D8
+72694DBF  |.  E8 1C663B00   |call    72A4B3E0
+72694DC4  |.  83EC 14       |sub     esp, 0x14
+72694DC7  |.  8BCC          |mov     ecx, esp
+72694DC9  |.  8965 C4       |mov     dword ptr ss:[ebp-0x3C], esp
+72694DCC  |.  53            |push    ebx
+72694DCD  |.  E8 4E663B00   |call    72A4B420
+72694DD2  |.  C645 FC 15    |mov     byte ptr ss:[ebp-0x4], 0x15
+72694DD6  |.  E8 153EFBFF   |call    72648BF0
+72694DDB  |.  C745 FC FFFFF>|mov     dword ptr ss:[ebp-0x4], -0x1
+72694DE2  |.  E8 C97F1A00   |call    7283CDB0
+72694DE7  |.  E9 35020000   |jmp     72695021
+72694DEC  |>  8B7D CC       |mov     edi, dword ptr ss:[ebp-0x34]    ;  Case 5 of switch 72694968
+72694DEF  |.  8BCF          |mov     ecx, edi
+72694DF1  |.  E8 BA524300   |call    72ACA0B0
+72694DF6  |.  84C0          |test    al, al
+72694DF8  |.  0F85 23020000 |jnz     72695021
+72694DFE  |.  8BCB          |mov     ecx, ebx
+72694E00  |.  E8 EB833A00   |call    72A3D1F0
+72694E05  |.  84C0          |test    al, al
+72694E07  |.  0F84 14020000 |je      72695021
+72694E0D  |.  8BCB          |mov     ecx, ebx
+72694E0F  |.  E8 2C6A3B00   |call    72A4B840
+72694E14  |.  8BD0          |mov     edx, eax
+72694E16  |.  8D4D D4       |lea     ecx, dword ptr ss:[ebp-0x2C]
+72694E19  |.  E8 B2343C00   |call    72A582D0
+72694E1E  |.  6A 00         |push    0x0
+72694E20  |.  50            |push    eax
+72694E21  |.  8D4D 88       |lea     ecx, dword ptr ss:[ebp-0x78]
+72694E24  |.  E8 07673B00   |call    72A4B530
+72694E29  |.  8D4D D4       |lea     ecx, dword ptr ss:[ebp-0x2C]
+72694E2C  |.  C745 FC 16000>|mov     dword ptr ss:[ebp-0x4], 0x16
+72694E33  |.  E8 88F9F8FF   |call    726247C0
+72694E38  |.  83EC 14       |sub     esp, 0x14
+72694E3B  |.  8D45 88       |lea     eax, dword ptr ss:[ebp-0x78]
+72694E3E  |.  8BCC          |mov     ecx, esp
+72694E40  |.  8965 C4       |mov     dword ptr ss:[ebp-0x3C], esp
+72694E43  |.  50            |push    eax
+72694E44  |.  E8 D7653B00   |call    72A4B420
+72694E49  |.  83EC 14       |sub     esp, 0x14
+72694E4C  |.  8BCC          |mov     ecx, esp
+72694E4E  |.  8965 BC       |mov     dword ptr ss:[ebp-0x44], esp
+72694E51  |.  6A FF         |push    -0x1
+72694E53  |.  68 D8384673   |push    734638D8
+72694E58  |.  E8 83653B00   |call    72A4B3E0
+72694E5D  |.  83EC 14       |sub     esp, 0x14
+72694E60  |.  8BCC          |mov     ecx, esp
+72694E62  |.  8965 C0       |mov     dword ptr ss:[ebp-0x40], esp
+72694E65  |.  53            |push    ebx
+72694E66  |.  E8 B5653B00   |call    72A4B420
+72694E6B  |.  83EC 14       |sub     esp, 0x14
+72694E6E  |.  8BCC          |mov     ecx, esp
+72694E70  |.  8965 D0       |mov     dword ptr ss:[ebp-0x30], esp
+72694E73  |.  57            |push    edi
+72694E74  |.  E8 A7653B00   |call    72A4B420
+72694E79  |.  8D85 A4FBFFFF |lea     eax, dword ptr ss:[ebp-0x45C]
+72694E7F  |.  C645 FC 1A    |mov     byte ptr ss:[ebp-0x4], 0x1A
+72694E83  |.  50            |push    eax
+72694E84  |.  E8 A722FAFF   |call    72637130
+72694E89  |.  8BC8          |mov     ecx, eax
+72694E8B  |.  C645 FC 16    |mov     byte ptr ss:[ebp-0x4], 0x16
+72694E8F  |.  E8 7C811600   |call    727FD010
+72694E94  |.  C645 FC 1B    |mov     byte ptr ss:[ebp-0x4], 0x1B
+72694E98  |.  E8 A32C1800   |call    72817B40
+72694E9D  |.  8BC8          |mov     ecx, eax
+72694E9F  |.  E8 2CDE3300   |call    729D2CD0
+72694EA4  |.  8D8D A4FBFFFF |lea     ecx, dword ptr ss:[ebp-0x45C]
+72694EAA  |.  8955 D0       |mov     dword ptr ss:[ebp-0x30], edx
+72694EAD  |.  8BF8          |mov     edi, eax
+72694EAF  |.  E8 1CDE3300   |call    729D2CD0
+72694EB4  |.  3BC7          |cmp     eax, edi
+72694EB6  |.  75 09         |jnz     short 72694EC1
+72694EB8  |.  3B55 D0       |cmp     edx, dword ptr ss:[ebp-0x30]
+72694EBB  |.^ 0F84 34FCFFFF |je      72694AF5
+72694EC1  |>  8B7D C8       |mov     edi, dword ptr ss:[ebp-0x38]
+72694EC4  |.  8BCF          |mov     ecx, edi
+72694EC6  |.  E8 351D0000   |call    72696C00
+72694ECB  |.  84C0          |test    al, al
+72694ECD  |.^ 0F84 22FCFFFF |je      72694AF5
+72694ED3  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694ED9  |.  E8 E26CF8FF   |call    7261BBC0
+72694EDE  |.  0F57C0        |xorps   xmm0, xmm0
+72694EE1  |.  66:C785 64FFF>|mov     word ptr ss:[ebp-0x9C], 0x0
+72694EEA  |.  0F1185 68FFFF>|movups  dqword ptr ss:[ebp-0x98], xmm0
+72694EF1  |.  C785 78FFFFFF>|mov     dword ptr ss:[ebp-0x88], 0x0
+72694EFB  |.  8D85 A4FBFFFF |lea     eax, dword ptr ss:[ebp-0x45C]
+72694F01  |.  C645 FC 1D    |mov     byte ptr ss:[ebp-0x4], 0x1D
+72694F05  |.  50            |push    eax
+72694F06  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694F0C  |.  C785 7CFFFFFF>|mov     dword ptr ss:[ebp-0x84], -0x1
+72694F16  |.  E8 D519F9FF   |call    726268F0
+72694F1B  |.  6A 01         |push    0x1
+72694F1D  |.  8D85 84FDFFFF |lea     eax, dword ptr ss:[ebp-0x27C]
+72694F23  |.  C645 FC 1E    |mov     byte ptr ss:[ebp-0x4], 0x1E
+72694F27  |.  50            |push    eax
+72694F28  |.  8BCF          |mov     ecx, edi
+72694F2A  |.  E8 310C0000   |call    72695B60
+72694F2F  |.  8D8D 84FDFFFF |lea     ecx, dword ptr ss:[ebp-0x27C]
+72694F35  |.  E8 86C1FBFF   |call    726510C0
+72694F3A  |.^ E9 B6FBFFFF   |jmp     72694AF5
+72694F3F  |>  C745 A4 00000>|mov     dword ptr ss:[ebp-0x5C], 0x0    ;  Case 6 of switch 72694968
+72694F46  |.  C745 A8 00000>|mov     dword ptr ss:[ebp-0x58], 0x0
+72694F4D  |.  C745 AC 00000>|mov     dword ptr ss:[ebp-0x54], 0x0
+72694F54  |.  8D8D C4F9FFFF |lea     ecx, dword ptr ss:[ebp-0x63C]
+72694F5A  |.  C745 FC 1F000>|mov     dword ptr ss:[ebp-0x4], 0x1F
+72694F61  |.  E8 5A6CF8FF   |call    7261BBC0
+72694F66  |.  8D8D B4F2FFFF |lea     ecx, dword ptr ss:[ebp-0xD4C]
+72694F6C  |.  E8 AFE7FAFF   |call    72643720
+72694F71  |.  8D85 B4F2FFFF |lea     eax, dword ptr ss:[ebp-0xD4C]
+72694F77  |.  50            |push    eax
+72694F78  |.  8D85 C4F9FFFF |lea     eax, dword ptr ss:[ebp-0x63C]
+72694F7E  |.  50            |push    eax
+72694F7F  |.  8D45 A4       |lea     eax, dword ptr ss:[ebp-0x5C]
+72694F82  |.  50            |push    eax
+72694F83  |.  83EC 14       |sub     esp, 0x14
+72694F86  |.  8BCC          |mov     ecx, esp
+72694F88  |.  8965 C4       |mov     dword ptr ss:[ebp-0x3C], esp
+72694F8B  |.  53            |push    ebx
+72694F8C  |.  E8 8F643B00   |call    72A4B420
+72694F91  |.  C645 FC 22    |mov     byte ptr ss:[ebp-0x4], 0x22
+72694F95  |.  E8 1683FBFF   |call    7264D2B0
+72694F9A  |.  C645 FC 21    |mov     byte ptr ss:[ebp-0x4], 0x21
+72694F9E  |.  E8 9D021F00   |call    72885240
+72694FA3  |.  84C0          |test    al, al
+72694FA5  |.  74 55         |je      short 72694FFC
+72694FA7  |.  C745 B0 00000>|mov     dword ptr ss:[ebp-0x50], 0x0
+72694FAE  |.  C745 B4 00000>|mov     dword ptr ss:[ebp-0x4C], 0x0
+72694FB5  |.  C745 B8 00000>|mov     dword ptr ss:[ebp-0x48], 0x0
+72694FBC  |.  FF75 CC       |push    dword ptr ss:[ebp-0x34]
+72694FBF  |.  8D4D B0       |lea     ecx, dword ptr ss:[ebp-0x50]
+72694FC2  |.  C645 FC 23    |mov     byte ptr ss:[ebp-0x4], 0x23
+72694FC6  |.  E8 A5C3F8FF   |call    72621370
+72694FCB  |.  83EC 0C       |sub     esp, 0xC
+72694FCE  |.  8D45 B0       |lea     eax, dword ptr ss:[ebp-0x50]
+72694FD1  |.  8BCC          |mov     ecx, esp
+72694FD3  |.  8965 C4       |mov     dword ptr ss:[ebp-0x3C], esp
+72694FD6  |.  50            |push    eax
+72694FD7  |.  E8 34BEFBFF   |call    72650E10
+72694FDC  |.  8D45 A4       |lea     eax, dword ptr ss:[ebp-0x5C]
+72694FDF  |.  C645 FC 24    |mov     byte ptr ss:[ebp-0x4], 0x24
+72694FE3  |.  50            |push    eax
+72694FE4  |.  E8 C782FBFF   |call    7264D2B0
+72694FE9  |.  8BC8          |mov     ecx, eax
+72694FEB  |.  C645 FC 23    |mov     byte ptr ss:[ebp-0x4], 0x23
+72694FEF  |.  E8 5C0F1F00   |call    72885F50
+72694FF4  |.  8D4D B0       |lea     ecx, dword ptr ss:[ebp-0x50]
+72694FF7  |.  E8 B464F8FF   |call    7261B4B0
+72694FFC  |>  8D8D B4F2FFFF |lea     ecx, dword ptr ss:[ebp-0xD4C]
+72695002  |.  E8 49D4FAFF   |call    72642450
+72695007  |.  8D8D C4F9FFFF |lea     ecx, dword ptr ss:[ebp-0x63C]
+7269500D  |.  E8 0E65F8FF   |call    7261B520
+72695012  |.  8D4D A4       |lea     ecx, dword ptr ss:[ebp-0x5C]
+72695015  |.  C745 FC FFFFF>|mov     dword ptr ss:[ebp-0x4], -0x1
+7269501C  |.  E8 FF1FF9FF   |call    72627020
+72695021  |>  8B45 08       |mov     eax, dword ptr ss:[ebp+0x8]     ;  Default case of switch 72694968
+72695024  |.  83C6 24       |add     esi, 0x24
+72695027  |.  83C3 24       |add     ebx, 0x24
+7269502A  |.  3B70 04       |cmp     esi, dword ptr ds:[eax+0x4]
+7269502D  |.^ 0F85 33F9FFFF \jnz     72694966
+72695033  |.  8B7D C8       mov     edi, dword ptr ss:[ebp-0x38]
+72695036  |>  8B8F 58040000 mov     ecx, dword ptr ds:[edi+0x458]
+7269503C  |.  85C9          test    ecx, ecx
+7269503E  |.  74 0B         je      short 7269504B
+72695040  |.  8B01          mov     eax, dword ptr ds:[ecx]
+72695042  |.  8B40 24       mov     eax, dword ptr ds:[eax+0x24]
+72695045  |.  FFD0          call    eax
+72695047  |.  84C0          test    al, al
+72695049  |.  74 18         je      short 72695063
+7269504B  |>  8BCF          mov     ecx, edi
+7269504D  |.  E8 AEF6FFFF   call    72694700
+72695052  |.  8B4F 08       mov     ecx, dword ptr ds:[edi+0x8]
+72695055  |.  85C9          test    ecx, ecx
+72695057  |.  74 0A         je      short 72695063
+72695059  |.  8B01          mov     eax, dword ptr ds:[ecx]
+7269505B  |.  6A 00         push    0x0
+7269505D  |.  6A 00         push    0x0
+7269505F  |.  6A 01         push    0x1
+72695061  |.  FF10          call    dword ptr ds:[eax]
+72695063  |>  B0 01         mov     al, 0x1
+72695065  |.  EB 02         jmp     short 72695069
+72695067  |>  32C0          xor     al, al
+72695069  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+7269506C  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+72695073  |.  59            pop     ecx                              ;  WeChatWi.734D1B94
+72695074  |.  5F            pop     edi                              ;  WeChatWi.734D1B94
+72695075  |.  5E            pop     esi                              ;  WeChatWi.734D1B94
+72695076  |.  5B            pop     ebx                              ;  WeChatWi.734D1B94
+72695077  |.  8B4D EC       mov     ecx, dword ptr ss:[ebp-0x14]
+7269507A  |.  33CD          xor     ecx, ebp
+7269507C  |.  E8 7A81AF00   call    7318D1FB
+72695081  |.  8BE5          mov     esp, ebp
+72695083  |.  5D            pop     ebp                              ;  WeChatWi.734D1B94
+72695084  \.  C2 0400       retn    0x4
+

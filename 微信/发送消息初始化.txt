@@ -1,0 +1,191 @@
+724D52D0  /$  55            push    ebp
+724D52D1  |.  8BEC          mov     ebp, esp
+724D52D3  |.  6A FF         push    -0x1
+724D52D5  |.  68 D8F94E73   push    734EF9D8
+724D52DA  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+724D52E0  |.  50            push    eax
+724D52E1  |.  83EC 2C       sub     esp, 0x2C
+724D52E4  |.  53            push    ebx
+724D52E5  |.  56            push    esi
+724D52E6  |.  57            push    edi
+724D52E7  |.  A1 942B9A73   mov     eax, dword ptr ds:[0x739A2B94]
+724D52EC  |.  33C5          xor     eax, ebp
+724D52EE  |.  50            push    eax
+724D52EF  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+724D52F2  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+724D52F8  |.  8BD9          mov     ebx, ecx
+724D52FA  |.  C745 DC 00000>mov     dword ptr ss:[ebp-0x24], 0x0
+724D5301  |.  C745 E0 00000>mov     dword ptr ss:[ebp-0x20], 0x0
+724D5308  |.  C745 E4 00000>mov     dword ptr ss:[ebp-0x1C], 0x0
+724D530F  |.  8D45 DC       lea     eax, dword ptr ss:[ebp-0x24]     ;  缓冲区
+724D5312  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+724D5319  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D531F  |.  50            push    eax
+724D5320  |.  E8 5BC6FBFF   call    72491980                         ;  发送消息时缓冲区初始化
+724D5325  |.  85C0          test    eax, eax
+724D5327  |.  0F8F 80000000 jg      724D53AD
+724D532D  |.  51            push    ecx
+724D532E  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D5334  |.  8BF9          mov     edi, ecx
+724D5336  |.  68 D0070000   push    0x7D0
+724D533B  |.  8B01          mov     eax, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D533D  |.  FF50 5C       call    dword ptr ds:[eax+0x5C]
+724D5340  |.  8B17          mov     edx, dword ptr ds:[edi]
+724D5342  |.  8BCF          mov     ecx, edi
+724D5344  |.  8BF0          mov     esi, eax
+724D5346  |.  FF52 54       call    dword ptr ds:[edx+0x54]
+724D5349  |.  8B8B 0C070000 mov     ecx, dword ptr ds:[ebx+0x70C]
+724D534F  |.  03F0          add     esi, eax
+724D5351  |.  56            push    esi
+724D5352  |.  8B01          mov     eax, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5354  |.  FF50 70       call    dword ptr ds:[eax+0x70]
+724D5357  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D535D  |.  99            cdq
+724D535E  |.  2BC2          sub     eax, edx
+724D5360  |.  8BF0          mov     esi, eax
+724D5362  |.  8B11          mov     edx, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5364  |.  D1FE          sar     esi, 1
+724D5366  |.  FF52 58       call    dword ptr ds:[edx+0x58]
+724D5369  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D536F  |.  8BF8          mov     edi, eax
+724D5371  |.  2BFE          sub     edi, esi
+724D5373  |.  8B11          mov     edx, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5375  |.  FF52 50       call    dword ptr ds:[edx+0x50]
+724D5378  |.  03C7          add     eax, edi
+724D537A  |.  BA 16040000   mov     edx, 0x416
+724D537F  |.  50            push    eax
+724D5380  |.  83EC 14       sub     esp, 0x14
+724D5383  |.  8BCC          mov     ecx, esp
+724D5385  |.  E8 56A93E00   call    728BFCE0
+724D538A  |.  8BCB          mov     ecx, ebx
+724D538C  |.  E8 2F630000   call    724DB6C0
+724D5391  |.  8B8B E4060000 mov     ecx, dword ptr ds:[ebx+0x6E4]
+724D5397  |.  6A 00         push    0x0
+724D5399  |.  6A 00         push    0x0
+724D539B  |.  FFB3 08070000 push    dword ptr ds:[ebx+0x708]
+724D53A1  |.  E8 DDC07100   call    72BF1483
+724D53A6  |.  32DB          xor     bl, bl
+724D53A8  |.  E9 B9010000   jmp     724D5566
+724D53AD  |>  8B45 DC       mov     eax, dword ptr ss:[ebp-0x24]
+724D53B0  |.  33C9          xor     ecx, ecx
+724D53B2  |.  8B55 E0       mov     edx, dword ptr ss:[ebp-0x20]
+724D53B5  |.  3BC2          cmp     eax, edx
+724D53B7  |.  74 19         je      short 724D53D2
+724D53B9  |.  0f1f80 000000>nop     dword ptr ds:[eax]
+724D53C0  |>  8338 02       /cmp     dword ptr ds:[eax], 0x2
+724D53C3  |.  75 06         |jnz     short 724D53CB
+724D53C5  |.  41            |inc     ecx
+724D53C6  |.  83F9 0B       |cmp     ecx, 0xB
+724D53C9  |.  7D 7F         |jge     short 724D544A
+724D53CB  |>  83C0 24       |add     eax, 0x24
+724D53CE  |.  3BC2          |cmp     eax, edx
+724D53D0  |.^ 75 EE         \jnz     short 724D53C0
+724D53D2  |>  E8 C97D0000   call    724DD1A0
+724D53D7  |.  84C0          test    al, al
+724D53D9  |.  0F84 BD000000 je      724D549C
+724D53DF  |.  51            push    ecx
+724D53E0  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D53E6  |.  8BF9          mov     edi, ecx
+724D53E8  |.  68 D0070000   push    0x7D0
+724D53ED  |.  8B01          mov     eax, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D53EF  |.  FF50 5C       call    dword ptr ds:[eax+0x5C]
+724D53F2  |.  8B17          mov     edx, dword ptr ds:[edi]
+724D53F4  |.  8BCF          mov     ecx, edi
+724D53F6  |.  8BF0          mov     esi, eax
+724D53F8  |.  FF52 54       call    dword ptr ds:[edx+0x54]
+724D53FB  |.  8B8B 0C070000 mov     ecx, dword ptr ds:[ebx+0x70C]
+724D5401  |.  03F0          add     esi, eax
+724D5403  |.  56            push    esi
+724D5404  |.  8B01          mov     eax, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5406  |.  FF50 70       call    dword ptr ds:[eax+0x70]
+724D5409  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D540F  |.  99            cdq
+724D5410  |.  2BC2          sub     eax, edx
+724D5412  |.  8BF0          mov     esi, eax
+724D5414  |.  8B11          mov     edx, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5416  |.  D1FE          sar     esi, 1
+724D5418  |.  FF52 58       call    dword ptr ds:[edx+0x58]
+724D541B  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D5421  |.  8BF8          mov     edi, eax
+724D5423  |.  2BFE          sub     edi, esi
+724D5425  |.  8B11          mov     edx, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5427  |.  FF52 50       call    dword ptr ds:[edx+0x50]
+724D542A  |.  BA 220E0000   mov     edx, 0xE22
+724D542F  |>  03C7          add     eax, edi
+724D5431  |.  50            push    eax
+724D5432  |.  83EC 14       sub     esp, 0x14
+724D5435  |.  8BCC          mov     ecx, esp
+724D5437  |.  E8 A4A83E00   call    728BFCE0
+724D543C  |.  8BCB          mov     ecx, ebx
+724D543E  |.  E8 7D620000   call    724DB6C0
+724D5443  |.  32DB          xor     bl, bl
+724D5445  |.  E9 1C010000   jmp     724D5566
+724D544A  |>  8BBB 08070000 mov     edi, dword ptr ds:[ebx+0x708]
+724D5450  |.  51            push    ecx
+724D5451  |.  8BCF          mov     ecx, edi
+724D5453  |.  68 D0070000   push    0x7D0
+724D5458  |.  8B01          mov     eax, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D545A  |.  FF50 54       call    dword ptr ds:[eax+0x54]
+724D545D  |.  8B17          mov     edx, dword ptr ds:[edi]
+724D545F  |.  8BCF          mov     ecx, edi
+724D5461  |.  8BF0          mov     esi, eax
+724D5463  |.  FF52 5C       call    dword ptr ds:[edx+0x5C]
+724D5466  |.  8B8B 0C070000 mov     ecx, dword ptr ds:[ebx+0x70C]
+724D546C  |.  03F0          add     esi, eax
+724D546E  |.  56            push    esi
+724D546F  |.  8B01          mov     eax, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5471  |.  FF50 70       call    dword ptr ds:[eax+0x70]
+724D5474  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D547A  |.  99            cdq
+724D547B  |.  2BC2          sub     eax, edx
+724D547D  |.  8BF0          mov     esi, eax
+724D547F  |.  8B11          mov     edx, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5481  |.  D1FE          sar     esi, 1
+724D5483  |.  FF52 58       call    dword ptr ds:[edx+0x58]
+724D5486  |.  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+724D548C  |.  8BF8          mov     edi, eax
+724D548E  |.  2BFE          sub     edi, esi
+724D5490  |.  8B11          mov     edx, dword ptr ds:[ecx]          ;  WeChatWi.737586E4
+724D5492  |.  FF52 50       call    dword ptr ds:[edx+0x50]
+724D5495  |.  BA 21040000   mov     edx, 0x421
+724D549A  |.^ EB 93         jmp     short 724D542F
+724D549C  |>  0F57C0        xorps   xmm0, xmm0
+724D549F  |.  C745 D8 00000>mov     dword ptr ss:[ebp-0x28], 0x0
+724D54A6  |.  0F1145 C8     movups  dqword ptr ss:[ebp-0x38], xmm0
+724D54AA  |.  8D45 C8       lea     eax, dword ptr ss:[ebp-0x38]
+724D54AD  |.  C645 FC 01    mov     byte ptr ss:[ebp-0x4], 0x1
+724D54B1  |.  8B8B 00070000 mov     ecx, dword ptr ds:[ebx+0x700]
+724D54B7  |.  50            push    eax                              ;  空缓冲区
+724D54B8  |.  8D45 DC       lea     eax, dword ptr ss:[ebp-0x24]
+724D54BB  |.  81C1 900B0000 add     ecx, 0xB90
+724D54C1  |.  50            push    eax                              ;  内容
+724D54C2  |.  E8 49E9FEFF   call    724C3E10
+724D54C7  |.  84C0          test    al, al
+724D54C9  |.  75 51         jnz     short 724D551C
+724D54CB  |.  8845 F3       mov     byte ptr ss:[ebp-0xD], al
+724D54CE  |.  8B45 C8       mov     eax, dword ptr ss:[ebp-0x38]
+724D54D1  |.  85C0          test    eax, eax
+724D54D3  |.  74 06         je      short 724D54DB
+724D54D5  |.  66:8338 00    cmp     word ptr ds:[eax], 0x0
+724D54D9  |.  75 05         jnz     short 724D54E0
+724D54DB  |>  B8 08897473   mov     eax, 73748908
+724D54E0  |>  83EC 14       sub     esp, 0x14
+724D54E3  |.  8BCC          mov     ecx, esp
+724D54E5  |.  8965 EC       mov     dword ptr ss:[ebp-0x14], esp
+724D54E8  |.  6A FF         push    -0x1
+724D54EA  |.  50            push    eax
+724D54EB  |.  E8 C0983E00   call    728BEDB0
+724D54F0  |.  83EC 14       sub     esp, 0x14
+724D54F3  |.  C645 FC 02    mov     byte ptr ss:[ebp-0x4], 0x2
+724D54F7  |.  BA 0E040000   mov     edx, 0x40E
+724D54FC  |.  8BCC          mov     ecx, esp
+724D54FE  |.  E8 DDA73E00   call    728BFCE0
+724D5503  |.  8A55 F3       mov     dl, byte ptr ss:[ebp-0xD]
+724D5506  |.  C645 FC 01    mov     byte ptr ss:[ebp-0x4], 0x1
+724D550A  |.  8B8B 04070000 mov     ecx, dword ptr ds:[ebx+0x704]
+724D5510  |.  E8 8B610300   call    7250B6A0
+724D5515  |.  83C4 28       add     esp, 0x28
+724D5518  |.  32DB          xor     bl, bl
+724D551A  |.  EB 42         jmp     short 724D555E
+724D551C  |>  8B8B 08070000 mov     ecx, dword ptr ds:[ebx+0x708]
+

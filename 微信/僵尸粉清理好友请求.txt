@@ -1,0 +1,893 @@
+70409740    55              push    ebp
+70409741    8BEC            mov     ebp, esp
+70409743    6A FF           push    -0x1
+70409745    68 2F813971     push    7139812F
+7040974A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+70409750    50              push    eax
+70409751    51              push    ecx
+70409752    53              push    ebx
+70409753    56              push    esi
+70409754    57              push    edi
+70409755    A1 942B8471     mov     eax, dword ptr ds:[0x71842B94]   ; #XßÇ
+7040975A    33C5            xor     eax, ebp
+7040975C    50              push    eax
+7040975D    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+70409760    64:A3 00000000  mov     dword ptr fs:[0], eax
+70409766    8BF1            mov     esi, ecx
+70409768    C745 FC 0100000>mov     dword ptr ss:[ebp-0x4], 0x1
+7040976F    8D7E 18         lea     edi, dword ptr ds:[esi+0x18]
+70409772    8B5D 08         mov     ebx, dword ptr ss:[ebp+0x8]
+70409775    66:C746 10 0001 mov     word ptr ds:[esi+0x10], 0x100
+7040977B    8B03            mov     eax, dword ptr ds:[ebx]
+7040977D    85C0            test    eax, eax
+7040977F    74 06           je      short 70409787
+70409781    66:8338 00      cmp     word ptr ds:[eax], 0x0
+70409785    75 05           jnz     short 7040978C
+70409787    B8 08895E71     mov     eax, 715E8908
+7040978C    FF73 04         push    dword ptr ds:[ebx+0x4]
+7040978F    8BCF            mov     ecx, edi
+70409791    50              push    eax
+70409792    E8 19593500     call    7075F0B0
+70409797    8B45 0C         mov     eax, dword ptr ss:[ebp+0xC]
+7040979A    8946 14         mov     dword ptr ds:[esi+0x14], eax
+7040979D    8B45 10         mov     eax, dword ptr ss:[ebp+0x10]
+704097A0    8946 2C         mov     dword ptr ds:[esi+0x2C], eax
+704097A3    8A45 14         mov     al, byte ptr ss:[ebp+0x14]
+704097A6    8846 30         mov     byte ptr ds:[esi+0x30], al
+704097A9    8A45 1C         mov     al, byte ptr ss:[ebp+0x1C]
+704097AC    8846 31         mov     byte ptr ds:[esi+0x31], al
+704097AF    8B45 18         mov     eax, dword ptr ss:[ebp+0x18]
+704097B2    8946 34         mov     dword ptr ds:[esi+0x34], eax
+704097B5    8B0F            mov     ecx, dword ptr ds:[edi]
+704097B7    85C9            test    ecx, ecx
+704097B9    74 06           je      short 704097C1
+704097BB    66:8339 00      cmp     word ptr ds:[ecx], 0x0
+704097BF    75 05           jnz     short 704097C6
+704097C1    B9 08895E71     mov     ecx, 715E8908
+704097C6    0F1005 E0885E71 movups  xmm0, dqword ptr ds:[0x715E88E0]
+704097CD    83EC 10         sub     esp, 0x10
+704097D0    BA DCC36371     mov     edx, 7163C3DC                    ; 01_ui\contact\AddFriendHelper.cpp
+704097D5    8BC4            mov     eax, esp
+704097D7    83EC 10         sub     esp, 0x10
+704097DA    0F1100          movups  dqword ptr ds:[eax], xmm0
+704097DD    8BC4            mov     eax, esp
+704097DF    83EC 10         sub     esp, 0x10
+704097E2    0F1100          movups  dqword ptr ds:[eax], xmm0
+704097E5    8BC4            mov     eax, esp
+704097E7    83EC 10         sub     esp, 0x10
+704097EA    0F1100          movups  dqword ptr ds:[eax], xmm0
+704097ED    8BC4            mov     eax, esp
+704097EF    83EC 10         sub     esp, 0x10
+704097F2    0F1100          movups  dqword ptr ds:[eax], xmm0
+704097F5    8BC4            mov     eax, esp
+704097F7    83EC 10         sub     esp, 0x10
+704097FA    0F1100          movups  dqword ptr ds:[eax], xmm0
+704097FD    8BC4            mov     eax, esp
+704097FF    68 7CC46371     push    7163C47C                         ; AddFriend %s
+70409804    68 1CC46371     push    7163C41C                         ; AddFriendHelper
+70409809    68 2CC46371     push    7163C42C                         ; AddFriendHelper::AddFriend
+7040980E    8948 08         mov     dword ptr ds:[eax+0x8], ecx
+70409811    B9 02000000     mov     ecx, 0x2
+70409816    68 CB000000     push    0xCB
+7040981B    C600 03         mov     byte ptr ds:[eax], 0x3
+7040981E    E8 DD483500     call    7075E100
+70409823    83C4 70         add     esp, 0x70
+70409826    8BCB            mov     ecx, ebx
+70409828    E8 43815800     call    70991970
+7040982D    84C0            test    al, al
+7040982F    74 16           je      short 70409847
+70409831    8D45 20         lea     eax, dword ptr ss:[ebp+0x20]
+70409834    50              push    eax
+70409835    57              push    edi
+70409836    E8 D5F6EEFF     call    702F8F10
+7040983B    8BC8            mov     ecx, eax
+7040983D    E8 DE8F5800     call    70992820
+70409842    E9 F6000000     jmp     7040993D
+70409847    83EC 18         sub     esp, 0x18
+7040984A    8D4D 34         lea     ecx, dword ptr ss:[ebp+0x34]
+7040984D    8BC4            mov     eax, esp
+7040984F    8965 14         mov     dword ptr ss:[ebp+0x14], esp
+70409852    50              push    eax
+70409853    E8 486FEFFF     call    703007A0                         ; 11111
+70409858    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+7040985C    8B4D 20         mov     ecx, dword ptr ss:[ebp+0x20]
+7040985F    85C9            test    ecx, ecx
+70409861    74 20           je      short 70409883
+70409863    66:8339 00      cmp     word ptr ds:[ecx], 0x0
+70409867    74 1A           je      short 70409883
+70409869    6A 00           push    0x0
+7040986B    51              push    ecx
+7040986C    8D55 2C         lea     edx, dword ptr ss:[ebp+0x2C]
+7040986F    E8 FC033600     call    70769C70
+70409874    8B45 2C         mov     eax, dword ptr ss:[ebp+0x2C]
+70409877    83C4 08         add     esp, 0x8
+7040987A    85C0            test    eax, eax
+7040987C    74 05           je      short 70409883
+7040987E    8038 00         cmp     byte ptr ds:[eax], 0x0
+70409881    75 05           jnz     short 70409888
+70409883    B8 949C5E71     mov     eax, 715E9C94
+70409888    83EC 18         sub     esp, 0x18
+7040988B    8BCC            mov     ecx, esp
+7040988D    8965 1C         mov     dword ptr ss:[ebp+0x1C], esp
+70409890    50              push    eax
+70409891    E8 BA8CECFF     call    702D2550                         ; 11111
+70409896    FF75 18         push    dword ptr ss:[ebp+0x18]
+70409899    83EC 14         sub     esp, 0x14
+7040989C    8BCC            mov     ecx, esp
+7040989E    8965 18         mov     dword ptr ss:[ebp+0x18], esp
+704098A1    6A FF           push    -0x1
+704098A3    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+704098A9    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+704098B0    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+704098B7    68 08895E71     push    715E8908
+704098BC    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+704098C3    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+704098CA    E8 E1573500     call    7075F0B0
+704098CF    6A 01           push    0x1
+704098D1    83EC 14         sub     esp, 0x14
+704098D4    8BCC            mov     ecx, esp
+704098D6    8965 08         mov     dword ptr ss:[ebp+0x8], esp
+704098D9    6A FF           push    -0x1
+704098DB    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+704098E1    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+704098E8    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+704098EF    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+704098F6    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+704098FD    FF37            push    dword ptr ds:[edi]               ; Î¢ÐÅID
+704098FF    E8 AC573500     call    7075F0B0
+70409904    C645 FC 05      mov     byte ptr ss:[ebp-0x4], 0x5
+70409908    A1 20CF8971     mov     eax, dword ptr ds:[0x7189CF20]
+7040990D    85C0            test    eax, eax
+7040990F    75 21           jnz     short 70409932                   ; Ìø
+70409911    6A 48           push    0x48
+70409913    E8 D506B500     call    70F59FED
+70409918    83C4 04         add     esp, 0x4
+7040991B    8945 0C         mov     dword ptr ss:[ebp+0xC], eax
+7040991E    8BC8            mov     ecx, eax
+70409920    C645 FC 06      mov     byte ptr ss:[ebp-0x4], 0x6
+70409924    E8 C70F1200     call    7052A8F0
+70409929    C645 FC 05      mov     byte ptr ss:[ebp-0x4], 0x5
+7040992D    A3 20CF8971     mov     dword ptr ds:[0x7189CF20], eax
+70409932    8BC8            mov     ecx, eax
+70409934    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+70409938    E8 33161200     call    7052AF70                         ; ·¢ËÍ
+7040993D    8B45 20         mov     eax, dword ptr ss:[ebp+0x20]
+70409940    85C0            test    eax, eax
+70409942    74 10           je      short 70409954
+70409944    50              push    eax
+70409945    E8 EA08F500     call    7135A234
+7040994A    83C4 04         add     esp, 0x4
+7040994D    C745 20 0000000>mov     dword ptr ss:[ebp+0x20], 0x0
+70409954    8B45 2C         mov     eax, dword ptr ss:[ebp+0x2C]
+70409957    C745 28 0000000>mov     dword ptr ss:[ebp+0x28], 0x0
+7040995E    C745 24 0000000>mov     dword ptr ss:[ebp+0x24], 0x0
+70409965    85C0            test    eax, eax
+70409967    74 17           je      short 70409980
+70409969    50              push    eax
+7040996A    E8 C508F500     call    7135A234
+7040996F    83C4 04         add     esp, 0x4
+70409972    C745 2C 0000000>mov     dword ptr ss:[ebp+0x2C], 0x0
+70409979    C745 30 0000000>mov     dword ptr ss:[ebp+0x30], 0x0
+70409980    8B45 34         mov     eax, dword ptr ss:[ebp+0x34]
+70409983    85C0            test    eax, eax
+70409985    74 10           je      short 70409997
+70409987    50              push    eax
+70409988    E8 A708F500     call    7135A234
+7040998D    83C4 04         add     esp, 0x4
+70409990    C745 34 0000000>mov     dword ptr ss:[ebp+0x34], 0x0
+70409997    8B45 40         mov     eax, dword ptr ss:[ebp+0x40]
+7040999A    C745 3C 0000000>mov     dword ptr ss:[ebp+0x3C], 0x0
+704099A1    C745 38 0000000>mov     dword ptr ss:[ebp+0x38], 0x0
+704099A8    85C0            test    eax, eax
+704099AA    74 09           je      short 704099B5
+704099AC    50              push    eax
+704099AD    E8 8208F500     call    7135A234
+704099B2    83C4 04         add     esp, 0x4
+704099B5    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+704099B8    64:890D 0000000>mov     dword ptr fs:[0], ecx
+704099BF    59              pop     ecx                              ; WeChatWi.70991900
+704099C0    5F              pop     edi                              ; WeChatWi.70991900
+704099C1    5E              pop     esi                              ; WeChatWi.70991900
+704099C2    5B              pop     ebx                              ; WeChatWi.70991900
+704099C3    8BE5            mov     esp, ebp
+704099C5    5D              pop     ebp                              ; WeChatWi.70991900
+704099C6    C2 4000         retn    0x40
+
+
+
+
+
+71052FC0    55              push    ebp
+71052FC1    8BEC            mov     ebp, esp
+71052FC3    6A FF           push    -0x1
+71052FC5    68 7278FE71     push    71FE7872
+71052FCA    64:A1 00000000  mov     eax, dword ptr fs:[0]
+71052FD0    50              push    eax
+71052FD1    81EC DC000000   sub     esp, 0xDC
+71052FD7    A1 942B4972     mov     eax, dword ptr ds:[0x72492B94]   ; #XßÇ
+71052FDC    33C5            xor     eax, ebp
+71052FDE    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+71052FE1    53              push    ebx
+71052FE2    56              push    esi
+71052FE3    57              push    edi
+71052FE4    50              push    eax
+71052FE5    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+71052FE8    64:A3 00000000  mov     dword ptr fs:[0], eax
+71052FEE    8BF1            mov     esi, ecx
+71052FF0    8B7D 08         mov     edi, dword ptr ss:[ebp+0x8]
+71052FF3    8BCF            mov     ecx, edi
+71052FF5    68 CCE21B72     push    721BE2CC                         ; windowinit
+71052FFA    E8 81916800     call    716DC180
+71052FFF    50              push    eax
+71053000    E8 0990F400     call    71F9C00E
+71053005    83C4 08         add     esp, 0x8
+71053008    85C0            test    eax, eax
+7105300A    75 0E           jnz     short 7105301A
+7105300C    51              push    ecx
+7105300D    8D4E E0         lea     ecx, dword ptr ds:[esi-0x20]
+71053010    E8 EB030000     call    71053400
+71053015    E9 B8030000     jmp     710533D2
+7105301A    68 E4E21B72     push    721BE2E4                         ; click
+7105301F    8BCF            mov     ecx, edi
+71053021    E8 5A916800     call    716DC180
+71053026    50              push    eax
+71053027    E8 E28FF400     call    71F9C00E
+7105302C    83C4 08         add     esp, 0x8
+7105302F    85C0            test    eax, eax
+71053031    0F85 54020000   jnz     7105328B
+71053037    8B8F 08010000   mov     ecx, dword ptr ds:[edi+0x108]
+7105303D    8D95 3CFFFFFF   lea     edx, dword ptr ss:[ebp-0xC4]
+71053043    52              push    edx
+71053044    8B01            mov     eax, dword ptr ds:[ecx]
+71053046    FF50 04         call    dword ptr ds:[eax+0x4]
+71053049    68 50372572     push    72253750                         ; okbtn
+7105304E    8BC8            mov     ecx, eax
+71053050    E8 2B916800     call    716DC180
+71053055    50              push    eax
+71053056    E8 B38FF400     call    71F9C00E
+7105305B    83C4 08         add     esp, 0x8
+7105305E    8D8D 3CFFFFFF   lea     ecx, dword ptr ss:[ebp-0xC4]
+71053064    85C0            test    eax, eax
+71053066    0f94c3          sete    bl
+71053069    E8 AB916800     call    716DC219
+7105306E    84DB            test    bl, bl
+71053070    0F84 8C010000   je      71053202
+71053076    83BE 44030000 0>cmp     dword ptr ds:[esi+0x344], 0x0
+7105307D    0F84 57030000   je      710533DA
+71053083    6A FF           push    -0x1
+71053085    68 08892372     push    72238908
+7105308A    8D8D 28FFFFFF   lea     ecx, dword ptr ss:[ebp-0xD8]
+71053090    E8 1BBD3500     call    713AEDB0
+71053095    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+7105309C    C745 E4 0000000>mov     dword ptr ss:[ebp-0x1C], 0x0
+710530A3    C745 E8 0000000>mov     dword ptr ss:[ebp-0x18], 0x0
+710530AA    C745 EC 0000000>mov     dword ptr ss:[ebp-0x14], 0x0
+710530B1    8D45 E4         lea     eax, dword ptr ss:[ebp-0x1C]
+710530B4    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+710530B8    8B8E 44030000   mov     ecx, dword ptr ds:[esi+0x344]
+710530BE    50              push    eax
+710530BF    E8 BCE8F2FF     call    70F81980
+710530C4    8B4D E8         mov     ecx, dword ptr ss:[ebp-0x18]
+710530C7    B8 398EE338     mov     eax, 0x38E38E39
+710530CC    8B7D E4         mov     edi, dword ptr ss:[ebp-0x1C]
+710530CF    2BCF            sub     ecx, edi
+710530D1    F7E9            imul    ecx
+710530D3    C1FA 03         sar     edx, 0x3
+710530D6    8BC2            mov     eax, edx
+710530D8    C1E8 1F         shr     eax, 0x1F
+710530DB    03C2            add     eax, edx
+710530DD    74 14           je      short 710530F3
+710530DF    833F 01         cmp     dword ptr ds:[edi], 0x1
+710530E2    75 0F           jnz     short 710530F3
+710530E4    8D47 04         lea     eax, dword ptr ds:[edi+0x4]
+710530E7    50              push    eax
+710530E8    8D8D 28FFFFFF   lea     ecx, dword ptr ss:[ebp-0xD8]
+710530EE    E8 EDC13500     call    713AF2E0
+710530F3    8BBD 28FFFFFF   mov     edi, dword ptr ss:[ebp-0xD8]
+710530F9    8D8E 48030000   lea     ecx, dword ptr ds:[esi+0x348]
+710530FF    85FF            test    edi, edi
+71053101    74 08           je      short 7105310B
+71053103    66:833F 00      cmp     word ptr ds:[edi], 0x0
+71053107    8BC7            mov     eax, edi
+71053109    75 05           jnz     short 71053110
+7105310B    B8 08892372     mov     eax, 72238908
+71053110    FFB5 2CFFFFFF   push    dword ptr ss:[ebp-0xD4]          ; WeChatWi.72284E49
+71053116    50              push    eax
+71053117    E8 94BF3500     call    713AF0B0
+7105311C    8D9E 24030000   lea     ebx, dword ptr ds:[esi+0x324]
+71053122    8BCB            mov     ecx, ebx
+71053124    E8 47E85800     call    715E1970
+71053129    84C0            test    al, al
+7105312B    74 3A           je      short 71053167
+7105312D    6A 00           push    0x0
+7105312F    8D86 68030000   lea     eax, dword ptr ds:[esi+0x368]
+71053135    50              push    eax
+71053136    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+71053139    E8 C2BD3500     call    713AEF00
+7105313E    8D45 C4         lea     eax, dword ptr ss:[ebp-0x3C]
+71053141    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+71053145    50              push    eax
+71053146    8D85 28FFFFFF   lea     eax, dword ptr ss:[ebp-0xD8]
+7105314C    50              push    eax
+7105314D    53              push    ebx
+7105314E    E8 BD5DEFFF     call    70F48F10
+71053153    8BC8            mov     ecx, eax
+71053155    E8 36F85800     call    715E2990
+7105315A    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+7105315D    E8 3E9EECFF     call    70F1CFA0
+71053162    E9 83000000     jmp     710531EA
+71053167    83EC 18         sub     esp, 0x18
+7105316A    8BCC            mov     ecx, esp
+7105316C    89A5 24FFFFFF   mov     dword ptr ss:[ebp-0xDC], esp
+71053172    68 949C2372     push    72239C94
+71053177    E8 D4F3ECFF     call    70F22550                         ; 1111
+7105317C    83EC 18         sub     esp, 0x18
+7105317F    C645 FC 03      mov     byte ptr ss:[ebp-0x4], 0x3
+71053183    8D86 68030000   lea     eax, dword ptr ds:[esi+0x368]
+71053189    89A5 1CFFFFFF   mov     dword ptr ss:[ebp-0xE4], esp
+7105318F    8BCC            mov     ecx, esp
+71053191    50              push    eax                              ; 06000000
+71053192    E8 79B7EEFF     call    70F3E910                         ; 11111
+71053197    FFB6 64030000   push    dword ptr ds:[esi+0x364]
+7105319D    85FF            test    edi, edi
+7105319F    74 06           je      short 710531A7
+710531A1    66:833F 00      cmp     word ptr ds:[edi], 0x0
+710531A5    75 05           jnz     short 710531AC
+710531A7    BF 08892372     mov     edi, 72238908
+710531AC    83EC 14         sub     esp, 0x14
+710531AF    8BCC            mov     ecx, esp
+710531B1    89A5 18FFFFFF   mov     dword ptr ss:[ebp-0xE8], esp
+710531B7    6A FF           push    -0x1
+710531B9    57              push    edi                              ; ÄÚÈÝ
+710531BA    E8 F1BB3500     call    713AEDB0                         ; 11111
+710531BF    FFB6 5C030000   push    dword ptr ds:[esi+0x35C]
+710531C5    83EC 14         sub     esp, 0x14
+710531C8    8BCC            mov     ecx, esp
+710531CA    89A5 20FFFFFF   mov     dword ptr ss:[ebp-0xE0], esp
+710531D0    53              push    ebx                              ; Î¢ÐÅID
+710531D1    E8 1ABC3500     call    713AEDF0                         ; 11111
+710531D6    C645 FC 06      mov     byte ptr ss:[ebp-0x4], 0x6
+710531DA    E8 41B5ECFF     call    70F1E720                         ; 11111
+710531DF    8BC8            mov     ecx, eax
+710531E1    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+710531E5    E8 867D1200     call    7117AF70                         ; 11111
+710531EA    8D4D E4         lea     ecx, dword ptr ss:[ebp-0x1C]
+710531ED    E8 2E2AF3FF     call    70F85C20
+710531F2    8D8D 28FFFFFF   lea     ecx, dword ptr ss:[ebp-0xD8]
+710531F8    E8 A39DECFF     call    70F1CFA0
+710531FD    E9 D8010000     jmp     710533DA
+71053202    8B8F 08010000   mov     ecx, dword ptr ds:[edi+0x108]
+71053208    8D95 3CFFFFFF   lea     edx, dword ptr ss:[ebp-0xC4]
+7105320E    52              push    edx
+7105320F    8B01            mov     eax, dword ptr ds:[ecx]
+71053211    FF50 04         call    dword ptr ds:[eax+0x4]
+71053214    68 04212572     push    72252104                         ; cancelbtn
+71053219    8BC8            mov     ecx, eax
+7105321B    E8 608F6800     call    716DC180
+71053220    50              push    eax
+71053221    E8 E88DF400     call    71F9C00E
+71053226    83C4 08         add     esp, 0x8
+71053229    8D8D 3CFFFFFF   lea     ecx, dword ptr ss:[ebp-0xC4]
+7105322F    85C0            test    eax, eax
+71053231    0f94c3          sete    bl
+71053234    E8 E08F6800     call    716DC219
+71053239    84DB            test    bl, bl
+7105323B    75 3F           jnz     short 7105327C
+7105323D    8B8F 08010000   mov     ecx, dword ptr ds:[edi+0x108]
+71053243    8D95 3CFFFFFF   lea     edx, dword ptr ss:[ebp-0xC4]
+71053249    52              push    edx
+7105324A    8B01            mov     eax, dword ptr ds:[ecx]
+7105324C    FF50 04         call    dword ptr ds:[eax+0x4]
+7105324F    68 10E31B72     push    721BE310                         ; closebtn
+71053254    8BC8            mov     ecx, eax
+71053256    E8 258F6800     call    716DC180
+7105325B    50              push    eax
+7105325C    E8 AD8DF400     call    71F9C00E
+71053261    83C4 08         add     esp, 0x8
+71053264    8D8D 3CFFFFFF   lea     ecx, dword ptr ss:[ebp-0xC4]
+7105326A    85C0            test    eax, eax
+7105326C    0f94c3          sete    bl
+7105326F    E8 A58F6800     call    716DC219
+71053274    84DB            test    bl, bl
+71053276    0F84 56010000   je      710533D2
+7105327C    8B46 E0         mov     eax, dword ptr ds:[esi-0x20]
+7105327F    8D4E E0         lea     ecx, dword ptr ds:[esi-0x20]
+71053282    6A 02           push    0x2
+71053284    FF10            call    dword ptr ds:[eax]
+71053286    E9 4F010000     jmp     710533DA
+7105328B    68 1CE72372     push    7223E71C                         ; textchanged
+71053290    8BCF            mov     ecx, edi
+71053292    E8 E98E6800     call    716DC180
+71053297    50              push    eax
+71053298    E8 718DF400     call    71F9C00E
+7105329D    83C4 08         add     esp, 0x8
+710532A0    85C0            test    eax, eax
+710532A2    0F85 2A010000   jnz     710533D2
+710532A8    8B8F 08010000   mov     ecx, dword ptr ds:[edi+0x108]
+710532AE    8D95 3CFFFFFF   lea     edx, dword ptr ss:[ebp-0xC4]
+710532B4    52              push    edx
+710532B5    8B01            mov     eax, dword ptr ds:[ecx]
+710532B7    FF50 04         call    dword ptr ds:[eax+0x4]
+710532BA    68 68EB2372     push    7223EB68                         ; contendEdit
+710532BF    8BC8            mov     ecx, eax
+710532C1    E8 BA8E6800     call    716DC180
+710532C6    50              push    eax
+710532C7    E8 428DF400     call    71F9C00E
+710532CC    83C4 08         add     esp, 0x8
+710532CF    8D8D 3CFFFFFF   lea     ecx, dword ptr ss:[ebp-0xC4]
+710532D5    85C0            test    eax, eax
+710532D7    0f94c3          sete    bl
+710532DA    E8 3A8F6800     call    716DC219
+710532DF    84DB            test    bl, bl
+710532E1    0F84 EB000000   je      710533D2
+710532E7    8B8E 44030000   mov     ecx, dword ptr ds:[esi+0x344]
+710532ED    8D95 3CFFFFFF   lea     edx, dword ptr ss:[ebp-0xC4]
+710532F3    52              push    edx
+710532F4    8B01            mov     eax, dword ptr ds:[ecx]
+710532F6    FF50 3C         call    dword ptr ds:[eax+0x3C]
+710532F9    6A FF           push    -0x1
+710532FB    8BC8            mov     ecx, eax
+710532FD    E8 7E8E6800     call    716DC180
+71053302    50              push    eax
+71053303    8D8D 28FFFFFF   lea     ecx, dword ptr ss:[ebp-0xD8]
+71053309    E8 A2BA3500     call    713AEDB0
+7105330E    8D8D 3CFFFFFF   lea     ecx, dword ptr ss:[ebp-0xC4]
+71053314    C745 FC 0700000>mov     dword ptr ss:[ebp-0x4], 0x7
+7105331B    E8 F98E6800     call    716DC219
+71053320    8B9D 2CFFFFFF   mov     ebx, dword ptr ss:[ebp-0xD4]     ; WeChatWi.72284E49
+71053326    83FB 14         cmp     ebx, 0x14
+71053329    0F8E 91000000   jle     710533C0
+7105332F    83EC 14         sub     esp, 0x14
+71053332    8D85 28FFFFFF   lea     eax, dword ptr ss:[ebp-0xD8]
+71053338    8BCC            mov     ecx, esp
+7105333A    50              push    eax
+7105333B    E8 B0BA3500     call    713AEDF0
+71053340    E8 0BFCFFFF     call    71052F50
+71053345    83C4 14         add     esp, 0x14
+71053348    83F8 28         cmp     eax, 0x28
+7105334B    7E 73           jle     short 710533C0
+7105334D    8B85 28FFFFFF   mov     eax, dword ptr ss:[ebp-0xD8]
+71053353    85C0            test    eax, eax
+71053355    74 06           je      short 7105335D
+71053357    66:8338 00      cmp     word ptr ds:[eax], 0x0
+7105335B    75 05           jnz     short 71053362
+7105335D    B8 08892372     mov     eax, 72238908
+71053362    50              push    eax
+71053363    8D4D C0         lea     ecx, dword ptr ss:[ebp-0x40]
+71053366    E8 6591EEFF     call    70F3C4D0
+7105336B    C645 FC 08      mov     byte ptr ss:[ebp-0x4], 0x8
+7105336F    8D4D C0         lea     ecx, dword ptr ss:[ebp-0x40]
+71053372    8B45 D0         mov     eax, dword ptr ss:[ebp-0x30]
+71053375    48              dec     eax
+71053376    50              push    eax
+71053377    6A 00           push    0x0
+71053379    8D45 D8         lea     eax, dword ptr ss:[ebp-0x28]
+7105337C    50              push    eax
+7105337D    E8 7E5FFAFF     call    70FF9300
+71053382    8BD0            mov     edx, eax
+71053384    C645 FC 09      mov     byte ptr ss:[ebp-0x4], 0x9
+71053388    837A 14 08      cmp     dword ptr ds:[edx+0x14], 0x8
+7105338C    72 02           jb      short 71053390
+7105338E    8B12            mov     edx, dword ptr ds:[edx]
+71053390    8B8E 44030000   mov     ecx, dword ptr ds:[esi+0x344]
+71053396    52              push    edx
+71053397    8B01            mov     eax, dword ptr ds:[ecx]
+71053399    FF50 40         call    dword ptr ds:[eax+0x40]
+7105339C    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+7105339F    C645 FC 08      mov     byte ptr ss:[ebp-0x4], 0x8
+710533A3    E8 58B6EEFF     call    70F3EA00
+710533A8    8B8E 44030000   mov     ecx, dword ptr ds:[esi+0x344]
+710533AE    8D43 FF         lea     eax, dword ptr ds:[ebx-0x1]
+710533B1    50              push    eax
+710533B2    50              push    eax
+710533B3    E8 36386A00     call    716F6BEE
+710533B8    8D4D C0         lea     ecx, dword ptr ss:[ebp-0x40]
+710533BB    E8 40B6EEFF     call    70F3EA00
+710533C0    8D8D 28FFFFFF   lea     ecx, dword ptr ss:[ebp-0xD8]
+710533C6    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+710533CD    E8 CE9BECFF     call    70F1CFA0
+710533D2    57              push    edi
+710533D3    8BCE            mov     ecx, esi
+710533D5    E8 17AF6800     call    716DE2F1
+710533DA    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+710533DD    64:890D 0000000>mov     dword ptr fs:[0], ecx
+710533E4    59              pop     ecx
+710533E5    5F              pop     edi
+710533E6    5E              pop     esi
+710533E7    5B              pop     ebx
+710533E8    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]
+710533EB    33CD            xor     ecx, ebp
+710533ED    E8 B96BB500     call    71BA9FAB
+710533F2    8BE5            mov     esp, ebp
+710533F4    5D              pop     ebp
+710533F5    C2 0400         retn    0x4
+710533F8    CC              int3
+
+
+
+
+710591C0    55              push    ebp                              ; ¼ì²â»Øµ÷
+710591C1    8BEC            mov     ebp, esp
+710591C3    6A FF           push    -0x1
+710591C5    68 C580FE71     push    71FE80C5
+710591CA    64:A1 00000000  mov     eax, dword ptr fs:[0]
+710591D0    50              push    eax
+710591D1    81EC F8030000   sub     esp, 0x3F8
+710591D7    A1 942B4972     mov     eax, dword ptr ds:[0x72492B94]   ; #XßÇ
+710591DC    33C5            xor     eax, ebp
+710591DE    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+710591E1    53              push    ebx
+710591E2    56              push    esi
+710591E3    57              push    edi
+710591E4    50              push    eax
+710591E5    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+710591E8    64:A3 00000000  mov     dword ptr fs:[0], eax
+710591EE    8BF1            mov     esi, ecx
+710591F0    807E 11 00      cmp     byte ptr ds:[esi+0x11], 0x0
+710591F4    8B7D 14         mov     edi, dword ptr ss:[ebp+0x14]
+710591F7    0F84 07050000   je      71059704
+710591FD    837E 2C 00      cmp     dword ptr ds:[esi+0x2C], 0x0
+71059201    0F84 FD040000   je      71059704
+71059207    837E 14 00      cmp     dword ptr ds:[esi+0x14], 0x0
+7105920B    0F84 F3040000   je      71059704
+71059211    E8 9A91ECFF     call    70F223B0
+71059216    8A80 44050000   mov     al, byte ptr ds:[eax+0x544]
+7105921C    84C0            test    al, al
+7105921E    0F84 E0040000   je      71059704
+71059224    807E 10 00      cmp     byte ptr ds:[esi+0x10], 0x0
+71059228    74 1A           je      short 71059244
+7105922A    807E 31 00      cmp     byte ptr ds:[esi+0x31], 0x0
+7105922E    0F84 D0040000   je      71059704
+71059234    8B4E 14         mov     ecx, dword ptr ds:[esi+0x14]
+71059237    8D46 18         lea     eax, dword ptr ds:[esi+0x18]
+7105923A    50              push    eax
+7105923B    8B11            mov     edx, dword ptr ds:[ecx]
+7105923D    FF12            call    dword ptr ds:[edx]
+7105923F    E9 C0040000     jmp     71059704
+71059244    6A 00           push    0x0
+71059246    68 A4994B72     push    724B99A4
+7105924B    68 34984B72     push    724B9834
+71059250    6A 00           push    0x0
+71059252    57              push    edi
+71059253    E8 7C9CF300     call    71F92ED4
+71059258    83C4 14         add     esp, 0x14
+7105925B    85C0            test    eax, eax
+7105925D    0F84 9E000000   je      71059301
+71059263    8378 24 00      cmp     dword ptr ds:[eax+0x24], 0x0
+71059267    8D58 20         lea     ebx, dword ptr ds:[eax+0x20]
+7105926A    0F9EC0          setle   al
+7105926D    84C0            test    al, al
+7105926F    0F85 8C000000   jnz     71059301
+71059275    8D46 18         lea     eax, dword ptr ds:[esi+0x18]
+71059278    8BCB            mov     ecx, ebx
+7105927A    50              push    eax
+7105927B    8985 00FCFFFF   mov     dword ptr ss:[ebp-0x400], eax
+71059281    E8 EA603500     call    713AF370
+71059286    84C0            test    al, al
+71059288    74 77           je      short 71059301
+7105928A    0F1005 E0882372 movups  xmm0, dqword ptr ds:[0x722388E0]
+71059291    83EC 10         sub     esp, 0x10
+71059294    8BCB            mov     ecx, ebx
+71059296    8BC4            mov     eax, esp
+71059298    83EC 10         sub     esp, 0x10
+7105929B    0F1100          movups  dqword ptr ds:[eax], xmm0
+7105929E    8BC4            mov     eax, esp
+710592A0    83EC 10         sub     esp, 0x10
+710592A3    0F1100          movups  dqword ptr ds:[eax], xmm0
+710592A6    8BC4            mov     eax, esp
+710592A8    83EC 10         sub     esp, 0x10
+710592AB    0F1100          movups  dqword ptr ds:[eax], xmm0
+710592AE    8BC4            mov     eax, esp
+710592B0    0F1100          movups  dqword ptr ds:[eax], xmm0
+710592B3    E8 08603500     call    713AF2C0
+710592B8    8B8D 00FCFFFF   mov     ecx, dword ptr ss:[ebp-0x400]
+710592BE    83EC 10         sub     esp, 0x10
+710592C1    8BD4            mov     edx, esp
+710592C3    C602 03         mov     byte ptr ds:[edx], 0x3
+710592C6    8942 08         mov     dword ptr ds:[edx+0x8], eax
+710592C9    E8 F25F3500     call    713AF2C0
+710592CE    83EC 10         sub     esp, 0x10
+710592D1    BA DCC32872     mov     edx, 7228C3DC                    ; 01_ui\contact\AddFriendHelper.cpp
+710592D6    8BCC            mov     ecx, esp
+710592D8    68 00C42872     push    7228C400                         ; User Name Not match : %s %s
+710592DD    68 1CC42872     push    7228C41C                         ; AddFriendHelper
+710592E2    C601 03         mov     byte ptr ds:[ecx], 0x3
+710592E5    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+710592E8    B9 02000000     mov     ecx, 0x2
+710592ED    68 C0C32872     push    7228C3C0                         ; AddFriendHelper::eventProc
+710592F2    6A 47           push    0x47
+710592F4    E8 074E3500     call    713AE100
+710592F9    83C4 70         add     esp, 0x70
+710592FC    E9 03040000     jmp     71059704
+71059301    8B45 08         mov     eax, dword ptr ss:[ebp+0x8]
+71059304    05 59FFFFFF     add     eax, -0xA7                       ; Switch (cases A7..AC)
+71059309    83F8 05         cmp     eax, 0x5
+7105930C    0F87 F2030000   ja      71059704
+71059312    FF2485 24970571 jmp     dword ptr ds:[eax*4+0x71059724]
+71059319    807E 38 00      cmp     byte ptr ds:[esi+0x38], 0x0      ; Case A9 (WM_NCMBUTTONDBLCLK) of switch 71059304
+7105931D    0F84 8F010000   je      710594B2
+71059323    83EC 14         sub     esp, 0x14
+71059326    C646 38 00      mov     byte ptr ds:[esi+0x38], 0x0
+7105932A    8BCC            mov     ecx, esp
+7105932C    89A5 04FCFFFF   mov     dword ptr ss:[ebp-0x3FC], esp
+71059332    6A FF           push    -0x1
+71059334    68 08892372     push    72238908
+71059339    E8 725A3500     call    713AEDB0
+7105933E    6A 00           push    0x0
+71059340    6A 00           push    0x0
+71059342    83EC 14         sub     esp, 0x14
+71059345    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+7105934C    8BCC            mov     ecx, esp
+7105934E    89A5 00FCFFFF   mov     dword ptr ss:[ebp-0x400], esp
+71059354    6A FF           push    -0x1
+71059356    68 08892372     push    72238908
+7105935B    E8 505A3500     call    713AEDB0
+71059360    83EC 14         sub     esp, 0x14
+71059363    8BCC            mov     ecx, esp
+71059365    89A5 FCFBFFFF   mov     dword ptr ss:[ebp-0x404], esp
+7105936B    6A FF           push    -0x1
+7105936D    68 08892372     push    72238908
+71059372    E8 395A3500     call    713AEDB0
+71059377    83EC 14         sub     esp, 0x14
+7105937A    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+7105937E    BA 7D000000     mov     edx, 0x7D
+71059383    89A5 08FCFFFF   mov     dword ptr ss:[ebp-0x3F8], esp
+71059389    8BCC            mov     ecx, esp
+7105938B    E8 50693500     call    713AFCE0
+71059390    83EC 14         sub     esp, 0x14
+71059393    C645 FC 03      mov     byte ptr ss:[ebp-0x4], 0x3
+71059397    BA 0E040000     mov     edx, 0x40E
+7105939C    8BCC            mov     ecx, esp
+7105939E    E8 3D693500     call    713AFCE0
+710593A3    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+710593AA    BA 01000000     mov     edx, 0x1
+710593AF    8B4E 2C         mov     ecx, dword ptr ds:[esi+0x2C]
+710593B2    E8 E93FFAFF     call    70FFD3A0
+710593B7    83C4 6C         add     esp, 0x6C
+710593BA    84C0            test    al, al
+710593BC    0F84 3E030000   je      71059700
+710593C2    E8 E98FECFF     call    70F223B0
+710593C7    8A80 44050000   mov     al, byte ptr ds:[eax+0x544]
+710593CD    84C0            test    al, al
+710593CF    0F84 2F030000   je      71059704
+710593D5    0F1005 E0882372 movups  xmm0, dqword ptr ds:[0x722388E0]
+710593DC    83EC 10         sub     esp, 0x10
+710593DF    83C6 18         add     esi, 0x18
+710593E2    8BC4            mov     eax, esp
+710593E4    8BCE            mov     ecx, esi
+710593E6    83EC 10         sub     esp, 0x10
+710593E9    0F1100          movups  dqword ptr ds:[eax], xmm0
+710593EC    8BC4            mov     eax, esp
+710593EE    83EC 10         sub     esp, 0x10
+710593F1    0F1100          movups  dqword ptr ds:[eax], xmm0
+710593F4    8BC4            mov     eax, esp
+710593F6    83EC 10         sub     esp, 0x10
+710593F9    0F1100          movups  dqword ptr ds:[eax], xmm0
+710593FC    8BC4            mov     eax, esp
+710593FE    83EC 10         sub     esp, 0x10
+71059401    0F1100          movups  dqword ptr ds:[eax], xmm0
+71059404    8BC4            mov     eax, esp
+71059406    0F1100          movups  dqword ptr ds:[eax], xmm0
+71059409    E8 B25E3500     call    713AF2C0
+7105940E    83EC 10         sub     esp, 0x10
+71059411    BA DCC32872     mov     edx, 7228C3DC                    ; 01_ui\contact\AddFriendHelper.cpp
+71059416    8BCC            mov     ecx, esp
+71059418    68 5CC42872     push    7228C45C                         ; ON_NETSCENE_VERIFYUSER_ERR %s
+7105941D    68 1CC42872     push    7228C41C                         ; AddFriendHelper
+71059422    C601 03         mov     byte ptr ds:[ecx], 0x3
+71059425    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+71059428    B9 02000000     mov     ecx, 0x2
+7105942D    68 C0C32872     push    7228C3C0                         ; AddFriendHelper::eventProc
+71059432    6A 57           push    0x57
+71059434    E8 C74C3500     call    713AE100
+71059439    83C4 58         add     esp, 0x58
+7105943C    8BCC            mov     ecx, esp
+7105943E    89A5 0CFCFFFF   mov     dword ptr ss:[ebp-0x3F4], esp
+71059444    68 949C2372     push    72239C94
+71059449    E8 0291ECFF     call    70F22550
+7105944E    83EC 18         sub     esp, 0x18
+71059451    C745 FC 0400000>mov     dword ptr ss:[ebp-0x4], 0x4
+71059458    8BCC            mov     ecx, esp
+7105945A    89A5 08FCFFFF   mov     dword ptr ss:[ebp-0x3F8], esp
+71059460    68 949C2372     push    72239C94
+71059465    E8 E690ECFF     call    70F22550
+7105946A    6A 0E           push    0xE
+7105946C    83EC 14         sub     esp, 0x14
+7105946F    8BCC            mov     ecx, esp
+71059471    89A5 FCFBFFFF   mov     dword ptr ss:[ebp-0x404], esp
+71059477    6A FF           push    -0x1
+71059479    68 08892372     push    72238908
+7105947E    E8 2D593500     call    713AEDB0
+71059483    6A 01           push    0x1
+71059485    83EC 14         sub     esp, 0x14
+71059488    8BCC            mov     ecx, esp
+7105948A    89A5 04FCFFFF   mov     dword ptr ss:[ebp-0x3FC], esp
+71059490    56              push    esi
+71059491    E8 5A593500     call    713AEDF0
+71059496    C645 FC 07      mov     byte ptr ss:[ebp-0x4], 0x7
+7105949A    E8 8152ECFF     call    70F1E720
+7105949F    8BC8            mov     ecx, eax
+710594A1    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+710594A8    E8 C31A1200     call    7117AF70
+710594AD    E9 52020000     jmp     71059704
+710594B2    8D8D 10FCFFFF   lea     ecx, dword ptr ss:[ebp-0x3F0]
+710594B8    E8 73B72E00     call    71344C30
+710594BD    8D85 10FCFFFF   lea     eax, dword ptr ss:[ebp-0x3F0]
+710594C3    C745 FC 0800000>mov     dword ptr ss:[ebp-0x4], 0x8
+710594CA    50              push    eax
+710594CB    83EC 14         sub     esp, 0x14
+710594CE    8D5E 18         lea     ebx, dword ptr ds:[esi+0x18]
+710594D1    8BCC            mov     ecx, esp
+710594D3    89A5 0CFCFFFF   mov     dword ptr ss:[ebp-0x3F4], esp
+710594D9    53              push    ebx
+710594DA    E8 11593500     call    713AEDF0
+710594DF    C645 FC 09      mov     byte ptr ss:[ebp-0x4], 0x9
+710594E3    E8 3852ECFF     call    70F1E720
+710594E8    C645 FC 08      mov     byte ptr ss:[ebp-0x4], 0x8
+710594EC    E8 8F351200     call    7117CA80
+710594F1    85FF            test    edi, edi
+710594F3    0F84 A5000000   je      7105959E
+710594F9    83C7 04         add     edi, 0x4
+710594FC    6A 00           push    0x0
+710594FE    8BCF            mov     ecx, edi
+71059500    E8 5B5B3500     call    713AF060
+71059505    84C0            test    al, al
+71059507    75 1A           jnz     short 71059523
+71059509    8A5E 30         mov     bl, byte ptr ds:[esi+0x30]
+7105950C    83EC 14         sub     esp, 0x14
+7105950F    8BCC            mov     ecx, esp
+71059511    89A5 0CFCFFFF   mov     dword ptr ss:[ebp-0x3F4], esp
+71059517    57              push    edi
+71059518    E8 D3583500     call    713AEDF0
+7105951D    C645 FC 0A      mov     byte ptr ss:[ebp-0x4], 0xA
+71059521    EB 3C           jmp     short 7105955F
+71059523    E8 F851ECFF     call    70F1E720
+71059528    53              push    ebx
+71059529    E8 D2551200     call    7117EB00
+7105952E    8A5E 30         mov     bl, byte ptr ds:[esi+0x30]
+71059531    83EC 14         sub     esp, 0x14
+71059534    89A5 0CFCFFFF   mov     dword ptr ss:[ebp-0x3F4], esp
+7105953A    8BCC            mov     ecx, esp
+7105953C    83F8 02         cmp     eax, 0x2
+7105953F    75 10           jnz     short 71059551
+71059541    BA 2A0D0000     mov     edx, 0xD2A
+71059546    E8 95673500     call    713AFCE0
+7105954B    C645 FC 0B      mov     byte ptr ss:[ebp-0x4], 0xB
+7105954F    EB 0E           jmp     short 7105955F
+71059551    BA 7E0F0000     mov     edx, 0xF7E
+71059556    E8 85673500     call    713AFCE0
+7105955B    C645 FC 0C      mov     byte ptr ss:[ebp-0x4], 0xC
+7105955F    83EC 14         sub     esp, 0x14
+71059562    BA 0E040000     mov     edx, 0x40E
+71059567    8BCC            mov     ecx, esp
+71059569    E8 72673500     call    713AFCE0
+7105956E    C645 FC 08      mov     byte ptr ss:[ebp-0x4], 0x8
+71059572    8AD3            mov     dl, bl
+71059574    8B4E 2C         mov     ecx, dword ptr ds:[esi+0x2C]
+71059577    E8 2421FAFF     call    70FFB6A0
+7105957C    83C4 28         add     esp, 0x28
+7105957F    E8 2C8EECFF     call    70F223B0
+71059584    8A80 44050000   mov     al, byte ptr ds:[eax+0x544]
+7105958A    84C0            test    al, al
+7105958C    74 10           je      short 7105959E
+7105958E    8B4E 14         mov     ecx, dword ptr ds:[esi+0x14]
+71059591    8D56 18         lea     edx, dword ptr ds:[esi+0x18]
+71059594    52              push    edx
+71059595    8B01            mov     eax, dword ptr ds:[ecx]
+71059597    FF50 04         call    dword ptr ds:[eax+0x4]
+7105959A    C646 11 00      mov     byte ptr ds:[esi+0x11], 0x0
+7105959E    8D8D 10FCFFFF   lea     ecx, dword ptr ss:[ebp-0x3F0]
+710595A4    E8 47BF2E00     call    713454F0
+710595A9    E9 56010000     jmp     71059704
+710595AE    8A5E 30         mov     bl, byte ptr ds:[esi+0x30]       ; Case AC (WM_NCXBUTTONUP) of switch 71059304
+710595B1    83EC 14         sub     esp, 0x14
+710595B4    BA 2B0D0000     mov     edx, 0xD2B
+710595B9    89A5 0CFCFFFF   mov     dword ptr ss:[ebp-0x3F4], esp
+710595BF    8BCC            mov     ecx, esp
+710595C1    E8 1A673500     call    713AFCE0
+710595C6    83EC 14         sub     esp, 0x14
+710595C9    C745 FC 0D00000>mov     dword ptr ss:[ebp-0x4], 0xD
+710595D0    BA 0E040000     mov     edx, 0x40E
+710595D5    8BCC            mov     ecx, esp
+710595D7    E8 04673500     call    713AFCE0
+710595DC    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+710595E3    8AD3            mov     dl, bl
+710595E5    8B4E 2C         mov     ecx, dword ptr ds:[esi+0x2C]
+710595E8    E8 B320FAFF     call    70FFB6A0
+710595ED    83C4 28         add     esp, 0x28
+710595F0    E8 BB8DECFF     call    70F223B0
+710595F5    8A80 44050000   mov     al, byte ptr ds:[eax+0x544]
+710595FB    84C0            test    al, al
+710595FD    0F84 01010000   je      71059704
+71059603    8B4E 14         mov     ecx, dword ptr ds:[esi+0x14]
+71059606    8D46 18         lea     eax, dword ptr ds:[esi+0x18]
+71059609    50              push    eax
+7105960A    8B11            mov     edx, dword ptr ds:[ecx]
+7105960C    FF52 04         call    dword ptr ds:[edx+0x4]
+7105960F    E9 EC000000     jmp     71059700
+71059614    83EC 18         sub     esp, 0x18                        ; Case A7 (WM_NCMBUTTONDOWN) of switch 71059304
+71059617    C646 10 01      mov     byte ptr ds:[esi+0x10], 0x1
+7105961B    807E 31 00      cmp     byte ptr ds:[esi+0x31], 0x0
+7105961F    8BCC            mov     ecx, esp
+71059621    68 949C2372     push    72239C94
+71059626    74 0C           je      short 71059634
+71059628    E8 238FECFF     call    70F22550
+7105962D    FF76 34         push    dword ptr ds:[esi+0x34]
+71059630    6A 01           push    0x1
+71059632    EB 0A           jmp     short 7105963E
+71059634    E8 178FECFF     call    70F22550
+71059639    FF76 34         push    dword ptr ds:[esi+0x34]
+7105963C    6A 00           push    0x0
+7105963E    8A5E 30         mov     bl, byte ptr ds:[esi+0x30]
+71059641    8D46 18         lea     eax, dword ptr ds:[esi+0x18]
+71059644    6A 02           push    0x2
+71059646    83EC 14         sub     esp, 0x14
+71059649    8BCC            mov     ecx, esp
+7105964B    50              push    eax
+7105964C    E8 9F573500     call    713AEDF0
+71059651    8B4E 2C         mov     ecx, dword ptr ds:[esi+0x2C]
+71059654    8AD3            mov     dl, bl
+71059656    E8 C5A1FFFF     call    71053820
+7105965B    83C4 38         add     esp, 0x38
+7105965E    8AD8            mov     bl, al
+71059660    E8 4B8DECFF     call    70F223B0
+71059665    8A80 44050000   mov     al, byte ptr ds:[eax+0x544]
+7105966B    84C0            test    al, al
+7105966D    0F84 91000000   je      71059704
+71059673    84DB            test    bl, bl
+71059675    75 03           jnz     short 7105967A
+71059677    885E 11         mov     byte ptr ds:[esi+0x11], bl
+7105967A    C646 10 00      mov     byte ptr ds:[esi+0x10], 0x0
+7105967E    E9 81000000     jmp     71059704
+71059683    807E 38 00      cmp     byte ptr ds:[esi+0x38], 0x0      ; Case A8 (WM_NCMBUTTONUP) of switch 71059304
+71059687    74 15           je      short 7105969E
+71059689    C646 38 00      mov     byte ptr ds:[esi+0x38], 0x0
+7105968D    C646 11 00      mov     byte ptr ds:[esi+0x11], 0x0
+71059691    8B4E 14         mov     ecx, dword ptr ds:[esi+0x14]
+71059694    8D46 18         lea     eax, dword ptr ds:[esi+0x18]
+71059697    50              push    eax
+71059698    8B11            mov     edx, dword ptr ds:[ecx]
+7105969A    FF12            call    dword ptr ds:[edx]
+7105969C    EB 66           jmp     short 71059704
+7105969E    807E 31 00      cmp     byte ptr ds:[esi+0x31], 0x0
+710596A2  ^ 75 ED           jnz     short 71059691
+710596A4    8A5E 30         mov     bl, byte ptr ds:[esi+0x30]
+710596A7    83EC 14         sub     esp, 0x14
+710596AA    BA A9040000     mov     edx, 0x4A9
+710596AF    89A5 0CFCFFFF   mov     dword ptr ss:[ebp-0x3F4], esp
+710596B5    8BCC            mov     ecx, esp
+710596B7    E8 24663500     call    713AFCE0
+710596BC    83EC 14         sub     esp, 0x14
+710596BF    C745 FC 0E00000>mov     dword ptr ss:[ebp-0x4], 0xE
+710596C6    BA 0E040000     mov     edx, 0x40E
+710596CB    8BCC            mov     ecx, esp
+710596CD    E8 0E663500     call    713AFCE0
+710596D2    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+710596D9    8AD3            mov     dl, bl
+710596DB    8B4E 2C         mov     ecx, dword ptr ds:[esi+0x2C]
+710596DE    E8 BD1FFAFF     call    70FFB6A0
+710596E3    83C4 28         add     esp, 0x28
+710596E6    E8 C58CECFF     call    70F223B0
+710596EB    8A80 44050000   mov     al, byte ptr ds:[eax+0x544]
+710596F1    84C0            test    al, al
+710596F3    74 0F           je      short 71059704
+710596F5    8B4E 14         mov     ecx, dword ptr ds:[esi+0x14]
+710596F8    8D46 18         lea     eax, dword ptr ds:[esi+0x18]
+710596FB    50              push    eax
+710596FC    8B11            mov     edx, dword ptr ds:[ecx]
+710596FE    FF12            call    dword ptr ds:[edx]
+71059700    C646 11 00      mov     byte ptr ds:[esi+0x11], 0x0
+71059704    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]      ; Default case of switch 71059304
+71059707    64:890D 0000000>mov     dword ptr fs:[0], ecx
+7105970E    59              pop     ecx
+7105970F    5F              pop     edi
+71059710    5E              pop     esi
+71059711    5B              pop     ebx
+71059712    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]
+71059715    33CD            xor     ecx, ebp
+71059717    E8 8F08B500     call    71BA9FAB
+7105971C    8BE5            mov     esp, ebp
+7105971E    5D              pop     ebp
+7105971F    C2 1000         retn    0x10
+
+

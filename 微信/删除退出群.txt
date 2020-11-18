@@ -1,0 +1,268 @@
+71048EAE    8BCE            mov     ecx, esi
+71048EB0    E8 3BF87400     call    717986F0
+71048EB5    50              push    eax
+71048EB6    E8 433BE700     call    71EBC9FE
+71048EBB    83C4 08         add     esp, 0x8
+71048EBE    85C0            test    eax, eax
+71048EC0    0F85 C0080000   jnz     71049786
+71048EC6    8B8E 08010000   mov     ecx, dword ptr ds:[esi+0x108]
+71048ECC    8D95 58FFFFFF   lea     edx, dword ptr ss:[ebp-0xA8]
+71048ED2    52              push    edx
+71048ED3    8B01            mov     eax, dword ptr ds:[ecx]
+71048ED5    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+71048ED8    FFD0            call    eax
+71048EDA    68 58EC0D72     push    720DEC58                         ; UNICODE "quitRoomBt"
+71048EDF    8BC8            mov     ecx, eax
+71048EE1    E8 0AF87400     call    717986F0
+71048EE6    50              push    eax
+71048EE7    E8 123BE700     call    71EBC9FE
+71048EEC    83C4 08         add     esp, 0x8
+71048EEF    8D8D 58FFFFFF   lea     ecx, dword ptr ss:[ebp-0xA8]
+71048EF5    85C0            test    eax, eax
+71048EF7    0f9485 d3feffff sete    byte ptr ss:[ebp-0x12d]
+71048EFE    E8 86F87400     call    71798789
+71048F03    80BD D3FEFFFF 0>cmp     byte ptr ss:[ebp-0x12D], 0x0
+71048F0A    0F84 62020000   je      71049172
+71048F10    83BF 14030000 0>cmp     dword ptr ds:[edi+0x314], 0x0
+71048F17    0F9EC0          setle   al
+71048F1A    84C0            test    al, al
+71048F1C    0F85 64080000   jnz     71049786
+71048F22    68 68010000     push    0x168
+71048F27    8887 38030000   mov     byte ptr ds:[edi+0x338], al
+71048F2D    E8 E4027500     call    71799216
+71048F32    8BC8            mov     ecx, eax
+71048F34    E8 05037500     call    7179923E
+71048F39    0305 4C793772   add     eax, dword ptr ds:[0x7237794C]
+71048F3F    8BB7 24030000   mov     esi, dword ptr ds:[edi+0x324]
+71048F45    99              cdq
+71048F46    2BC2            sub     eax, edx
+71048F48    D1F8            sar     eax, 1
+71048F4A    68 FA000000     push    0xFA
+71048F4F    2BF0            sub     esi, eax
+71048F51    E8 C0027500     call    71799216
+71048F56    8BC8            mov     ecx, eax
+71048F58    E8 E1027500     call    7179923E
+71048F5D    03C6            add     eax, esi
+71048F5F    68 C8000000     push    0xC8
+71048F64    8985 C0FEFFFF   mov     dword ptr ss:[ebp-0x140], eax
+71048F6A    E8 A7027500     call    71799216
+71048F6F    8BC8            mov     ecx, eax
+71048F71    E8 C8027500     call    7179923E
+71048F76    8B0D 50793772   mov     ecx, dword ptr ds:[0x72377950]
+71048F7C    8BB7 28030000   mov     esi, dword ptr ds:[edi+0x328]
+71048F82    2BC8            sub     ecx, eax
+71048F84    8BC1            mov     eax, ecx
+71048F86    99              cdq
+71048F87    2BC2            sub     eax, edx
+71048F89    D1F8            sar     eax, 1
+71048F8B    6A 3E           push    0x3E
+71048F8D    03F0            add     esi, eax
+71048F8F    E8 82027500     call    71799216
+71048F94    8BC8            mov     ecx, eax
+71048F96    E8 CA027500     call    71799265
+71048F9B    8B0D 247A3772   mov     ecx, dword ptr ds:[0x72377A24]
+71048FA1    2BF0            sub     esi, eax
+71048FA3    89B5 C8FEFFFF   mov     dword ptr ss:[ebp-0x138], esi
+71048FA9    E8 12A80600     call    710B37C0
+71048FAE    3987 3C030000   cmp     dword ptr ds:[edi+0x33C], eax
+71048FB4    0F85 BF000000   jnz     71049079
+71048FBA    6A 00           push    0x0
+71048FBC    E8 FFA70600     call    710B37C0
+71048FC1    8B35 B827FC71   mov     esi, dword ptr ds:[<&USER32.Enab>; user32.EnableWindow
+71048FC7    50              push    eax
+71048FC8    FFD6            call    esi
+71048FCA    83EC 14         sub     esp, 0x14
+71048FCD    8BCC            mov     ecx, esp
+71048FCF    89A5 C4FEFFFF   mov     dword ptr ss:[ebp-0x13C], esp
+71048FD5    6A FF           push    -0x1
+71048FD7    68 10D30D72     push    720DD310
+71048FDC    E8 2FB54300     call    71484510
+71048FE1    6A 00           push    0x0
+71048FE3    6A 00           push    0x0
+71048FE5    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+71048FEC    BA 5F040000     mov     edx, 0x45F
+71048FF1    FFB5 C8FEFFFF   push    dword ptr ss:[ebp-0x138]
+71048FF7    FFB5 C0FEFFFF   push    dword ptr ss:[ebp-0x140]
+71048FFD    83EC 14         sub     esp, 0x14
+71049000    8BCC            mov     ecx, esp
+71049002    E8 39C44300     call    71485440
+71049007    83EC 14         sub     esp, 0x14
+7104900A    8BCC            mov     ecx, esp
+7104900C    6A FF           push    -0x1
+7104900E    68 10D30D72     push    720DD310
+71049013    E8 F8B44300     call    71484510
+71049018    8D4F E0         lea     ecx, dword ptr ds:[edi-0x20]
+7104901B    E8 A0A70600     call    710B37C0
+71049020    BA 01000000     mov     edx, 0x1
+71049025    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+7104902C    8BC8            mov     ecx, eax
+7104902E    E8 AD1C0B00     call    710FACE0
+71049033    83C4 4C         add     esp, 0x4C
+71049036    84C0            test    al, al
+71049038    74 34           je      short 7104906E
+7104903A    6A 58           push    0x58
+7104903C    E8 63BCAC00     call    71B14CA4                         ; 初始化
+71049041    83C4 04         add     esp, 0x4
+71049044    8985 C4FEFFFF   mov     dword ptr ss:[ebp-0x13C], eax
+7104904A    8D8F 10030000   lea     ecx, dword ptr ds:[edi+0x310]
+71049050    51              push    ecx                              ; 群ID
+71049051    8BC8            mov     ecx, eax
+71049053    E8 68252E00     call    7132B5C0                         ; 返回构造
+71049058    50              push    eax
+71049059    6A 00           push    0x0
+7104905B    6A 00           push    0x0
+7104905D    68 17030000     push    0x317
+71049062    E8 39F72D00     call    713287A0                         ; 获取ECX
+71049067    8BC8            mov     ecx, eax
+71049069    E8 B2092E00     call    71329A20                         ; 删除退出群
+7104906E    8B0D 247A3772   mov     ecx, dword ptr ds:[0x72377A24]
+71049074    E9 DD000000     jmp     71049156
+71049079    8D87 10030000   lea     eax, dword ptr ds:[edi+0x310]
+7104907F    50              push    eax
+71049080    E8 3BA4FEFF     call    710334C0
+71049085    8BC8            mov     ecx, eax
+71049087    E8 24160700     call    710BA6B0
+7104908C    8985 C4FEFFFF   mov     dword ptr ss:[ebp-0x13C], eax
+71049092    85C0            test    eax, eax
+71049094    0F84 C6000000   je      71049160
+7104909A    6A 00           push    0x0
+7104909C    8BC8            mov     ecx, eax
+7104909E    E8 1DA70600     call    710B37C0
+710490A3    8B35 B827FC71   mov     esi, dword ptr ds:[<&USER32.Enab>; user32.EnableWindow
+710490A9    50              push    eax
+710490AA    FFD6            call    esi
+710490AC    83EC 14         sub     esp, 0x14
+710490AF    8BCC            mov     ecx, esp
+710490B1    89A5 CCFEFFFF   mov     dword ptr ss:[ebp-0x134], esp
+710490B7    6A FF           push    -0x1
+710490B9    68 10D30D72     push    720DD310
+710490BE    E8 4DB44300     call    71484510
+710490C3    6A 00           push    0x0
+710490C5    6A 00           push    0x0
+710490C7    C745 FC 0100000>mov     dword ptr ss:[ebp-0x4], 0x1
+710490CE    BA 5F040000     mov     edx, 0x45F
+710490D3    FFB5 C8FEFFFF   push    dword ptr ss:[ebp-0x138]
+710490D9    FFB5 C0FEFFFF   push    dword ptr ss:[ebp-0x140]
+710490DF    83EC 14         sub     esp, 0x14
+710490E2    8BCC            mov     ecx, esp
+710490E4    E8 57C34300     call    71485440
+710490E9    83EC 14         sub     esp, 0x14
+710490EC    8BCC            mov     ecx, esp
+710490EE    6A FF           push    -0x1
+710490F0    68 10D30D72     push    720DD310
+710490F5    E8 16B44300     call    71484510
+710490FA    8D4F E0         lea     ecx, dword ptr ds:[edi-0x20]
+710490FD    E8 BEA60600     call    710B37C0
+71049102    BA 01000000     mov     edx, 0x1
+71049107    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+7104910E    8BC8            mov     ecx, eax
+71049110    E8 CB1B0B00     call    710FACE0
+71049115    83C4 4C         add     esp, 0x4C
+71049118    84C0            test    al, al
+7104911A    74 34           je      short 71049150
+7104911C    6A 58           push    0x58
+7104911E    E8 81BBAC00     call    71B14CA4
+71049123    83C4 04         add     esp, 0x4
+71049126    8985 CCFEFFFF   mov     dword ptr ss:[ebp-0x134], eax
+7104912C    8D8F 10030000   lea     ecx, dword ptr ds:[edi+0x310]
+71049132    51              push    ecx
+71049133    8BC8            mov     ecx, eax
+71049135    E8 86242E00     call    7132B5C0
+7104913A    50              push    eax
+7104913B    6A 00           push    0x0
+7104913D    6A 00           push    0x0
+7104913F    68 17030000     push    0x317
+71049144    E8 57F62D00     call    713287A0
+71049149    8BC8            mov     ecx, eax
+7104914B    E8 D0082E00     call    71329A20
+71049150    8B8D C4FEFFFF   mov     ecx, dword ptr ss:[ebp-0x13C]
+71049156    6A 01           push    0x1
+71049158    E8 63A60600     call    710B37C0
+7104915D    50              push    eax
+7104915E    FFD6            call    esi
+71049160    8BB5 BCFEFFFF   mov     esi, dword ptr ss:[ebp-0x144]
+71049166    C687 38030000 0>mov     byte ptr ds:[edi+0x338], 0x1
+7104916D    E9 36010000     jmp     710492A8
+71049172    8B8E 08010000   mov     ecx, dword ptr ds:[esi+0x108]
+71049178    8D95 58FFFFFF   lea     edx, dword ptr ss:[ebp-0xA8]
+7104917E    52              push    edx
+7104917F    8B01            mov     eax, dword ptr ds:[ecx]
+71049181    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+71049184    FFD0            call    eax
+71049186    68 40F80D72     push    720DF840                         ; UNICODE "kickBtn"
+7104918B    8BC8            mov     ecx, eax
+7104918D    E8 5EF57400     call    717986F0
+71049192    50              push    eax
+71049193    E8 6638E700     call    71EBC9FE
+71049198    83C4 08         add     esp, 0x8
+7104919B    8D8D 58FFFFFF   lea     ecx, dword ptr ss:[ebp-0xA8]
+710491A1    85C0            test    eax, eax
+710491A3    0f9485 d3feffff sete    byte ptr ss:[ebp-0x12d]
+710491AA    E8 DAF57400     call    71798789
+710491AF    80BD D3FEFFFF 0>cmp     byte ptr ss:[ebp-0x12D], 0x0
+710491B6    0F84 EC000000   je      710492A8
+710491BC    0F1005 E8D20D72 movups  xmm0, dqword ptr ds:[0x720DD2E8]
+710491C3    83EC 10         sub     esp, 0x10
+710491C6    BA C0F80D72     mov     edx, 720DF8C0                    ; ASCII "01_ui\chatroom\SessionChatRoomDetailWnd.cpp"
+710491CB    8BC4            mov     eax, esp
+710491CD    B9 02000000     mov     ecx, 0x2
+710491D2    83EC 10         sub     esp, 0x10
+710491D5    0F1100          movups  dqword ptr ds:[eax], xmm0
+710491D8    8BC4            mov     eax, esp
+710491DA    83EC 10         sub     esp, 0x10
+710491DD    0F1100          movups  dqword ptr ds:[eax], xmm0
+710491E0    8BC4            mov     eax, esp
+710491E2    83EC 10         sub     esp, 0x10
+710491E5    0F1100          movups  dqword ptr ds:[eax], xmm0
+710491E8    8BC4            mov     eax, esp
+710491EA    83EC 10         sub     esp, 0x10
+710491ED    0F1100          movups  dqword ptr ds:[eax], xmm0
+710491F0    8BC4            mov     eax, esp
+710491F2    83EC 10         sub     esp, 0x10
+710491F5    0F1100          movups  dqword ptr ds:[eax], xmm0
+710491F8    8BC4            mov     eax, esp
+710491FA    68 50F80D72     push    720DF850                         ; ASCII "ChatRoomAnnouncementWnd: show DeleteMemberWnd"
+710491FF    68 80F80D72     push    720DF880                         ; ASCII "SessionChatRoomDetailWnd"
+71049204    68 9CF80D72     push    720DF89C                         ; ASCII "SessionChatRoomDetailWnd::Notify"
+71049209    68 D2000000     push    0xD2
+7104920E    0F1100          movups  dqword ptr ds:[eax], xmm0
+71049211    E8 4AA64300     call    71483860
+71049216    83C4 70         add     esp, 0x70
+71049219    C687 43030000 0>mov     byte ptr ds:[edi+0x343], 0x1
+71049220    6A 00           push    0x0
+71049222    FFB7 3C030000   push    dword ptr ds:[edi+0x33C]
+71049228    FF15 B827FC71   call    dword ptr ds:[<&USER32.EnableWin>; user32.EnableWindow
+7104922E    8D45 E0         lea     eax, dword ptr ss:[ebp-0x20]
+71049231    0F57C0          xorps   xmm0, xmm0
+71049234    50              push    eax
+71049235    FFB7 3C030000   push    dword ptr ds:[edi+0x33C]
+7104923B    0F1145 E0       movups  dqword ptr ss:[ebp-0x20], xmm0
+7104923F    FF15 5829FC71   call    dword ptr ds:[<&USER32.GetWindow>; user32.GetWindowRect
+71049245    68 04050000     push    0x504
+7104924A    E8 55BAAC00     call    71B14CA4
+7104924F    8BD0            mov     edx, eax
+71049251    8995 CCFEFFFF   mov     dword ptr ss:[ebp-0x134], edx
+71049257    83EC 10         sub     esp, 0x10
+7104925A    C745 FC 0200000>mov     dword ptr ss:[ebp-0x4], 0x2
+71049261    0F1045 E0       movups  xmm0, dqword ptr ss:[ebp-0x20]
+71049265    8BCC            mov     ecx, esp
+71049267    8D87 FC020000   lea     eax, dword ptr ds:[edi+0x2FC]
+7104926D    0F1101          movups  dqword ptr ds:[ecx], xmm0
+71049270    8D4F E0         lea     ecx, dword ptr ds:[edi-0x20]
+71049273    F7D9            neg     ecx
+71049275    1BC9            sbb     ecx, ecx
+71049277    23C8            and     ecx, eax
+71049279    8D87 10030000   lea     eax, dword ptr ds:[edi+0x310]
+7104927F    51              push    ecx
+71049280    50              push    eax
+71049281    FF77 E4         push    dword ptr ds:[edi-0x1C]
+71049284    8BCA            mov     ecx, edx
+71049286    E8 75250B00     call    710FB800
+7104928B    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+71049292    8D48 2C         lea     ecx, dword ptr ds:[eax+0x2C]
+71049295    51              push    ecx
+71049296    E8 165A7500     call    7179ECB1
+7104929B    51              push    ecx
+7104929C    E8 1A5A7500     call    7179ECBB
+710492A1    8BC8            mov     ecx, eax
+

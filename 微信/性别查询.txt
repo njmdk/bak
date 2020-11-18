@@ -1,0 +1,267 @@
+72CAE7B0  /$  55            push    ebp
+72CAE7B1  |.  8BEC          mov     ebp, esp
+72CAE7B3  |.  6A FF         push    -0x1
+72CAE7B5  |.  68 180B5E73   push    735E0B18
+72CAE7BA  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+72CAE7C0  |.  50            push    eax
+72CAE7C1  |.  83EC 24       sub     esp, 0x24
+72CAE7C4  |.  56            push    esi
+72CAE7C5  |.  A1 C4509673   mov     eax, dword ptr ds:[0x739650C4]
+72CAE7CA  |.  33C5          xor     eax, ebp
+72CAE7CC  |.  50            push    eax
+72CAE7CD  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+72CAE7D0  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+72CAE7D6  |.  8BF1          mov     esi, ecx
+72CAE7D8  |.  80BE 9C030000>cmp     byte ptr ds:[esi+0x39C], 0x0
+72CAE7DF  |.  0F85 94030000 jnz     72CAEB79
+72CAE7E5  |.  80BE DC030000>cmp     byte ptr ds:[esi+0x3DC], 0x0
+72CAE7EC  |.  0F85 87030000 jnz     72CAEB79
+72CAE7F2  |.  83BE 48010000>cmp     dword ptr ds:[esi+0x148], 0x0
+72CAE7F9  |.  8D86 48010000 lea     eax, dword ptr ds:[esi+0x148]
+72CAE7FF  |.  0F84 74030000 je      72CAEB79
+72CAE805  |.  8378 04 00    cmp     dword ptr ds:[eax+0x4], 0x0
+72CAE809  |.  0F84 6A030000 je      72CAEB79
+72CAE80F  |.  0F57C0        xorps   xmm0, xmm0
+72CAE812  |.  C745 E4 00000>mov     dword ptr ss:[ebp-0x1C], 0x0
+72CAE819  |.  0F1145 D4     movups  dqword ptr ss:[ebp-0x2C], xmm0
+72CAE81D  |.  C745 E8 00000>mov     dword ptr ss:[ebp-0x18], 0x0
+72CAE824  |.  C645 EC 00    mov     byte ptr ss:[ebp-0x14], 0x0
+72CAE828  |.  50            push    eax
+72CAE829  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE82C  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+72CAE833  |.  E8 48780400   call    72CF6080
+72CAE838  |.  6A 04         push    0x4
+72CAE83A  |.  8D86 58010000 lea     eax, dword ptr ds:[esi+0x158]
+72CAE840  |.  C686 9C030000>mov     byte ptr ds:[esi+0x39C], 0x1
+72CAE847  |.  50            push    eax
+72CAE848  |.  6A 04         push    0x4
+72CAE84A  |.  68 B0667B73   push    737B66B0                         ;  m_ImgFlag
+72CAE84F  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE852  |.  E8 A9750400   call    72CF5E00
+72CAE857  |.  6A 04         push    0x4
+72CAE859  |.  8D86 5C010000 lea     eax, dword ptr ds:[esi+0x15C]
+72CAE85F  |.  50            push    eax
+72CAE860  |.  6A 04         push    0x4
+72CAE862  |.  68 BC667B73   push    737B66BC                         ;  m_Sex
+72CAE867  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE86A  |.  E8 91750400   call    72CF5E00
+72CAE86F  |.  6A 04         push    0x4
+72CAE871  |.  8D86 60010000 lea     eax, dword ptr ds:[esi+0x160]
+72CAE877  |.  50            push    eax
+72CAE878  |.  6A 04         push    0x4
+72CAE87A  |.  68 C4667B73   push    737B66C4                         ;  m_ContactType
+72CAE87F  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE882  |.  E8 79750400   call    72CF5E00
+72CAE887  |.  8D86 64010000 lea     eax, dword ptr ds:[esi+0x164]
+72CAE88D  |.  50            push    eax
+72CAE88E  |.  68 7C667B73   push    737B667C                         ;  m_Weibo
+72CAE893  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE896  |.  E8 D5760400   call    72CF5F70
+72CAE89B  |.  6A 04         push    0x4
+72CAE89D  |.  8D86 78010000 lea     eax, dword ptr ds:[esi+0x178]
+72CAE8A3  |.  50            push    eax
+72CAE8A4  |.  6A 04         push    0x4
+72CAE8A6  |.  68 84667B73   push    737B6684                         ;  m_WeiboFlag
+72CAE8AB  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE8AE  |.  E8 4D750400   call    72CF5E00
+72CAE8B3  |.  8D86 7C010000 lea     eax, dword ptr ds:[esi+0x17C]
+72CAE8B9  |.  50            push    eax
+72CAE8BA  |.  68 90667B73   push    737B6690                         ;  m_WeiboNickname
+72CAE8BF  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE8C2  |.  E8 A9760400   call    72CF5F70
+72CAE8C7  |.  6A 04         push    0x4
+72CAE8C9  |.  8D86 90010000 lea     eax, dword ptr ds:[esi+0x190]
+72CAE8CF  |.  50            push    eax
+72CAE8D0  |.  6A 04         push    0x4
+72CAE8D2  |.  68 A0667B73   push    737B66A0                         ;  m_PersonalCard
+72CAE8D7  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE8DA  |.  E8 21750400   call    72CF5E00
+72CAE8DF  |.  8D86 94010000 lea     eax, dword ptr ds:[esi+0x194]
+72CAE8E5  |.  50            push    eax
+72CAE8E6  |.  68 10677B73   push    737B6710                         ;  m_Signature
+72CAE8EB  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE8EE  |.  E8 7D760400   call    72CF5F70
+72CAE8F3  |.  8D86 A8010000 lea     eax, dword ptr ds:[esi+0x1A8]
+72CAE8F9  |.  50            push    eax
+72CAE8FA  |.  68 1C677B73   push    737B671C                         ;  m_Country
+72CAE8FF  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE902  |.  E8 69760400   call    72CF5F70
+72CAE907  |.  8D86 BC010000 lea     eax, dword ptr ds:[esi+0x1BC]
+72CAE90D  |.  50            push    eax
+72CAE90E  |.  68 28677B73   push    737B6728                         ;  m_Province
+72CAE913  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE916  |.  E8 55760400   call    72CF5F70
+72CAE91B  |.  8D86 D0010000 lea     eax, dword ptr ds:[esi+0x1D0]
+72CAE921  |.  50            push    eax
+72CAE922  |.  68 34677B73   push    737B6734                         ;  m_City
+72CAE927  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE92A  |.  E8 41760400   call    72CF5F70
+72CAE92F  |.  6A 04         push    0x4
+72CAE931  |.  8D86 E4010000 lea     eax, dword ptr ds:[esi+0x1E4]
+72CAE937  |.  50            push    eax
+72CAE938  |.  6A 04         push    0x4
+72CAE93A  |.  68 D4667B73   push    737B66D4                         ;  m_Source
+72CAE93F  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE942  |.  E8 B9740400   call    72CF5E00
+72CAE947  |.  8D86 E8010000 lea     eax, dword ptr ds:[esi+0x1E8]
+72CAE94D  |.  50            push    eax
+72CAE94E  |.  68 E0667B73   push    737B66E0                         ;  m_VerifyInfo
+72CAE953  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE956  |.  E8 15760400   call    72CF5F70
+72CAE95B  |.  8D86 FC010000 lea     eax, dword ptr ds:[esi+0x1FC]
+72CAE961  |.  50            push    eax
+72CAE962  |.  68 F0667B73   push    737B66F0                         ;  m_remarkDesc
+72CAE967  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE96A  |.  E8 01760400   call    72CF5F70
+72CAE96F  |.  8D86 10020000 lea     eax, dword ptr ds:[esi+0x210]
+72CAE975  |.  50            push    eax
+72CAE976  |.  68 00677B73   push    737B6700                         ;  m_remarkImgUrl
+72CAE97B  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE97E  |.  E8 ED750400   call    72CF5F70
+72CAE983  |.  6A 04         push    0x4
+72CAE985  |.  8D86 24020000 lea     eax, dword ptr ds:[esi+0x224]
+72CAE98B  |.  50            push    eax
+72CAE98C  |.  6A 04         push    0x4
+72CAE98E  |.  68 70677B73   push    737B6770                         ;  m_BitMask
+72CAE993  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE996  |.  E8 65740400   call    72CF5E00
+72CAE99B  |.  6A 04         push    0x4
+72CAE99D  |.  8D86 28020000 lea     eax, dword ptr ds:[esi+0x228]
+72CAE9A3  |.  50            push    eax
+72CAE9A4  |.  6A 04         push    0x4
+72CAE9A6  |.  68 7C677B73   push    737B677C                         ;  m_BitVal
+72CAE9AB  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE9AE  |.  E8 4D740400   call    72CF5E00
+72CAE9B3  |.  6A 04         push    0x4
+72CAE9B5  |.  8D86 2C020000 lea     eax, dword ptr ds:[esi+0x22C]
+72CAE9BB  |.  50            push    eax
+72CAE9BC  |.  6A 04         push    0x4
+72CAE9BE  |.  68 88677B73   push    737B6788                         ;  m_AddContactScene
+72CAE9C3  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE9C6  |.  E8 35740400   call    72CF5E00
+72CAE9CB  |.  6A 04         push    0x4
+72CAE9CD  |.  8D86 30020000 lea     eax, dword ptr ds:[esi+0x230]
+72CAE9D3  |.  50            push    eax
+72CAE9D4  |.  6A 04         push    0x4
+72CAE9D6  |.  68 9C677B73   push    737B679C                         ;  m_HasWeiXinHdHeadImg
+72CAE9DB  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE9DE  |.  E8 1D740400   call    72CF5E00
+72CAE9E3  |.  6A 04         push    0x4
+72CAE9E5  |.  8D86 34020000 lea     eax, dword ptr ds:[esi+0x234]
+72CAE9EB  |.  50            push    eax
+72CAE9EC  |.  6A 04         push    0x4
+72CAE9EE  |.  68 3C677B73   push    737B673C                         ;  m_Level
+72CAE9F3  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAE9F6  |.  E8 05740400   call    72CF5E00
+72CAE9FB  |.  8D86 38020000 lea     eax, dword ptr ds:[esi+0x238]
+72CAEA01  |.  50            push    eax
+72CAEA02  |.  68 44677B73   push    737B6744                         ;  m_VerifyContent
+72CAEA07  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEA0A  |.  E8 61750400   call    72CF5F70
+72CAEA0F  |.  6A 04         push    0x4
+72CAEA11  |.  8D86 4C020000 lea     eax, dword ptr ds:[esi+0x24C]
+72CAEA17  |.  50            push    eax
+72CAEA18  |.  6A 04         push    0x4
+72CAEA1A  |.  68 54677B73   push    737B6754                         ;  m_AlbumStyle
+72CAEA1F  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEA22  |.  E8 D9730400   call    72CF5E00
+72CAEA27  |.  6A 04         push    0x4
+72CAEA29  |.  8D86 50020000 lea     eax, dword ptr ds:[esi+0x250]
+72CAEA2F  |.  50            push    eax
+72CAEA30  |.  6A 04         push    0x4
+72CAEA32  |.  68 64677B73   push    737B6764                         ;  m_AlbumFlag
+72CAEA37  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEA3A  |.  E8 C1730400   call    72CF5E00
+72CAEA3F  |.  8D86 54020000 lea     eax, dword ptr ds:[esi+0x254]
+72CAEA45  |.  50            push    eax
+72CAEA46  |.  68 E8677B73   push    737B67E8                         ;  m_AlbumBGImgID
+72CAEA4B  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEA4E  |.  E8 1D750400   call    72CF5F70
+72CAEA53  |.  6A 01         push    0x1
+72CAEA55  |.  8D45 F3       lea     eax, dword ptr ss:[ebp-0xD]
+72CAEA58  |.  50            push    eax
+72CAEA59  |.  6A 02         push    0x2
+72CAEA5B  |.  68 F8677B73   push    737B67F8                         ;  m_hasSnsUserInfo
+72CAEA60  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEA63  |.  E8 98730400   call    72CF5E00
+72CAEA68  |.  807D F3 01    cmp     byte ptr ss:[ebp-0xD], 0x1
+72CAEA6C  |.  0f94c0        sete    al
+72CAEA6F  |.  8886 68020000 mov     byte ptr ds:[esi+0x268], al
+72CAEA75  |.  84C0          test    al, al
+72CAEA77  |.  74 5C         je      short 72CAEAD5
+72CAEA79  |.  6A 04         push    0x4
+72CAEA7B  |.  8D86 70020000 lea     eax, dword ptr ds:[esi+0x270]
+72CAEA81  |.  50            push    eax
+72CAEA82  |.  6A 04         push    0x4
+72CAEA84  |.  68 0C687B73   push    737B680C                         ;  SnsFlag
+72CAEA89  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEA8C  |.  E8 6F730400   call    72CF5E00
+72CAEA91  |.  6A 04         push    0x4
+72CAEA93  |.  8D86 90020000 lea     eax, dword ptr ds:[esi+0x290]
+72CAEA99  |.  50            push    eax
+72CAEA9A  |.  6A 04         push    0x4
+72CAEA9C  |.  68 14687B73   push    737B6814                         ;  SnsFlagEx
+72CAEAA1  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEAA4  |.  E8 57730400   call    72CF5E00
+72CAEAA9  |.  6A 08         push    0x8
+72CAEAAB  |.  8D86 88020000 lea     eax, dword ptr ds:[esi+0x288]
+72CAEAB1  |.  50            push    eax
+72CAEAB2  |.  6A 05         push    0x5
+72CAEAB4  |.  68 B4677B73   push    737B67B4                         ;  SnsBGObjectID
+72CAEAB9  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEABC  |.  E8 3F730400   call    72CF5E00
+72CAEAC1  |.  8D86 74020000 lea     eax, dword ptr ds:[esi+0x274]
+72CAEAC7  |.  50            push    eax
+72CAEAC8  |.  68 C4677B73   push    737B67C4                         ;  SnsBGImgID
+72CAEACD  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEAD0  |.  E8 9B740400   call    72CF5F70
+72CAEAD5  |>  8D86 98020000 lea     eax, dword ptr ds:[esi+0x298]
+72CAEADB  |.  50            push    eax
+72CAEADC  |.  68 D0677B73   push    737B67D0                         ;  m_IDCardNum
+72CAEAE1  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEAE4  |.  E8 87740400   call    72CF5F70
+72CAEAE9  |.  8D86 AC020000 lea     eax, dword ptr ds:[esi+0x2AC]
+72CAEAEF  |.  50            push    eax
+72CAEAF0  |.  68 DC677B73   push    737B67DC                         ;  m_RealName
+72CAEAF5  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEAF8  |.  E8 73740400   call    72CF5F70
+72CAEAFD  |.  8D86 C0020000 lea     eax, dword ptr ds:[esi+0x2C0]
+72CAEB03  |.  50            push    eax
+72CAEB04  |.  68 88687B73   push    737B6888                         ;  m_MobileHash
+72CAEB09  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEB0C  |.  E8 5F740400   call    72CF5F70
+72CAEB11  |.  8D86 D4020000 lea     eax, dword ptr ds:[esi+0x2D4]
+72CAEB17  |.  50            push    eax
+72CAEB18  |.  68 98687B73   push    737B6898                         ;  m_MobileFullHash
+72CAEB1D  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEB20  |.  E8 4B740400   call    72CF5F70
+72CAEB25  |.  8D86 E8020000 lea     eax, dword ptr ds:[esi+0x2E8]
+72CAEB2B  |.  50            push    eax
+72CAEB2C  |.  68 AC687B73   push    737B68AC                         ;  m_ExtInfo
+72CAEB31  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEB34  |.  E8 37740400   call    72CF5F70
+72CAEB39  |.  8D86 FC020000 lea     eax, dword ptr ds:[esi+0x2FC]
+72CAEB3F  |.  50            push    eax
+72CAEB40  |.  68 B8687B73   push    737B68B8                         ;  m_Description
+72CAEB45  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEB48  |.  E8 23740400   call    72CF5F70
+72CAEB4D  |.  8D86 10030000 lea     eax, dword ptr ds:[esi+0x310]
+72CAEB53  |.  50            push    eax
+72CAEB54  |.  68 20687B73   push    737B6820                         ;  m_CardImgUrl
+72CAEB59  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEB5C  |.  E8 0F740400   call    72CF5F70
+72CAEB61  |.  8D86 24030000 lea     eax, dword ptr ds:[esi+0x324]
+72CAEB67  |.  50            push    eax
+72CAEB68  |.  51            push    ecx
+72CAEB69  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEB6C  |.  E8 4F730400   call    72CF5EC0
+72CAEB71  |.  8D4D D4       lea     ecx, dword ptr ss:[ebp-0x2C]
+72CAEB74  |.  E8 176F0400   call    72CF5A90
+72CAEB79  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+72CAEB7C  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+72CAEB83  |.  59            pop     ecx
+72CAEB84  |.  5E            pop     esi
+72CAEB85  |.  8BE5          mov     esp, ebp
+72CAEB87  |.  5D            pop     ebp
+72CAEB88  \.  C3            retn
+

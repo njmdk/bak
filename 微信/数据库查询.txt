@@ -1,0 +1,240 @@
+72B288F0  /$  53            push    ebx
+72B288F1  |.  8BDC          mov     ebx, esp
+72B288F3  |.  83EC 08       sub     esp, 0x8
+72B288F6  |.  83E4 F8       and     esp, 0xFFFFFFF8
+72B288F9  |.  83C4 04       add     esp, 0x4
+72B288FC  |.  55            push    ebp
+72B288FD  |.  8B6B 04       mov     ebp, dword ptr ds:[ebx+0x4]
+72B28900  |.  896C24 04     mov     dword ptr ss:[esp+0x4], ebp
+72B28904  |.  8BEC          mov     ebp, esp
+72B28906  |.  6A FF         push    -0x1
+72B28908  |.  68 48FF3E73   push    733EFF48
+72B2890D  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+72B28913  |.  50            push    eax
+72B28914  |.  53            push    ebx
+72B28915  |.  83EC 28       sub     esp, 0x28
+72B28918  |.  56            push    esi
+72B28919  |.  57            push    edi
+72B2891A  |.  A1 C4507B73   mov     eax, dword ptr ds:[0x737B50C4]
+72B2891F  |.  33C5          xor     eax, ebp
+72B28921  |.  50            push    eax
+72B28922  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+72B28925  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+72B2892B  |.  8BF9          mov     edi, ecx
+72B2892D  |.  8B07          mov     eax, dword ptr ds:[edi]
+72B2892F  |.  8B40 20       mov     eax, dword ptr ds:[eax+0x20]
+72B28932  |.  FFD0          call    eax
+72B28934  |.  84C0          test    al, al
+72B28936  |.  75 07         jnz     short 72B2893F
+72B28938  |>  32C0          xor     al, al
+72B2893A  |.  E9 7C020000   jmp     72B28BBB
+72B2893F  |>  8B4B 08       mov     ecx, dword ptr ds:[ebx+0x8]
+72B28942  |.  8379 04 00    cmp     dword ptr ds:[ecx+0x4], 0x0
+72B28946  |.  0F9EC0        setle   al
+72B28949  |.  84C0          test    al, al
+72B2894B  |.^ 75 EB         jnz     short 72B28938
+72B2894D  |.  8B77 64       mov     esi, dword ptr ds:[edi+0x64]
+72B28950  |.  8D47 64       lea     eax, dword ptr ds:[edi+0x64]
+72B28953  |.  51            push    ecx
+72B28954  |.  8D4D E0       lea     ecx, dword ptr ss:[ebp-0x20]
+72B28957  |.  8945 E4       mov     dword ptr ss:[ebp-0x1C], eax
+72B2895A  |.  51            push    ecx
+72B2895B  |.  8BC8          mov     ecx, eax
+72B2895D  |.  E8 FE87C0FF   call    72731160
+72B28962  |.  3930          cmp     dword ptr ds:[eax], esi
+72B28964  |.  74 26         je      short 72B2898C
+72B28966  |.  8B43 08       mov     eax, dword ptr ds:[ebx+0x8]
+72B28969  |.  8B4D E4       mov     ecx, dword ptr ss:[ebp-0x1C]     ;  user32.76B578D7
+72B2896C  |.  50            push    eax
+72B2896D  |.  8D45 DC       lea     eax, dword ptr ss:[ebp-0x24]
+72B28970  |.  50            push    eax
+72B28971  |.  E8 1A1F0000   call    72B2A890
+72B28976  |.  8B45 DC       mov     eax, dword ptr ss:[ebp-0x24]
+72B28979  |.  8B4B 0C       mov     ecx, dword ptr ds:[ebx+0xC]
+72B2897C  |.  83C0 24       add     eax, 0x24
+72B2897F  |.  50            push    eax
+72B28980  |.  E8 AB62DEFF   call    7290EC30
+72B28985  |.  B0 01         mov     al, 0x1
+72B28987  |.  E9 2F020000   jmp     72B28BBB
+72B2898C  |>  0F57C0        xorps   xmm0, xmm0
+72B2898F  |.  C745 D8 00000>mov     dword ptr ss:[ebp-0x28], 0x0
+72B28996  |.  0F1145 C8     movups  dqword ptr ss:[ebp-0x38], xmm0
+72B2899A  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+72B289A1  |.  83EC 14       sub     esp, 0x14
+72B289A4  |.  0F1047 4C     movups  xmm0, dqword ptr ds:[edi+0x4C]
+72B289A8  |.  8B47 5C       mov     eax, dword ptr ds:[edi+0x5C]
+72B289AB  |.  8BCC          mov     ecx, esp
+72B289AD  |.  68 08F06073   push    7360F008                         ;  SELECT * FROM %s WHERE usrName = ?1
+72B289B2  |.  0F1101        movups  dqword ptr ds:[ecx], xmm0
+72B289B5  |.  8941 10       mov     dword ptr ds:[ecx+0x10], eax
+72B289B8  |.  8D45 C8       lea     eax, dword ptr ss:[ebp-0x38]
+72B289BB  |.  50            push    eax
+72B289BC  |.  E8 EF320300   call    72B5BCB0
+72B289C1  |.  83C4 1C       add     esp, 0x1C
+72B289C4  |.  8D4D C8       lea     ecx, dword ptr ss:[ebp-0x38]
+72B289C7  |.  6A 01         push    0x1
+72B289C9  |.  68 A1000000   push    0xA1
+72B289CE  |.  68 64F56073   push    7360F564                         ;  03_service\storage\HeadImgUrlStorage.cpp
+72B289D3  |.  E8 587BC1FF   call    72740530
+72B289D8  |.  50            push    eax                              ;  sql语句
+72B289D9  |.  8BCF          mov     ecx, edi                         ;  ecx=sql对象
+72B289DB  |.  E8 00190100   call    72B3A2E0
+72B289E0  |.  8B37          mov     esi, dword ptr ds:[edi]
+72B289E2  |.  8D4D C8       lea     ecx, dword ptr ss:[ebp-0x38]
+72B289E5  |.  C745 E8 00000>mov     dword ptr ss:[ebp-0x18], 0x0
+72B289EC  |.  E8 3F7BC1FF   call    72740530
+72B289F1  |.  50            push    eax                              ;  sql语句
+72B289F2  |.  8D45 E8       lea     eax, dword ptr ss:[ebp-0x18]
+72B289F5  |.  8BCF          mov     ecx, edi                         ;  ecx=sql对象
+72B289F7  |.  50            push    eax                              ;  缓冲区
+72B289F8  |.  8B46 04       mov     eax, dword ptr ds:[esi+0x4]
+72B289FB  |.  FFD0          call    eax                              ;  执行SQL
+72B289FD  |.  84C0          test    al, al
+72B289FF  |.  75 6F         jnz     short 72B28A70
+72B28A01  |.  0F1005 803357>movups  xmm0, dqword ptr ds:[0x73573380]
+72B28A08  |.  83EC 10       sub     esp, 0x10
+72B28A0B  |.  BA 64F56073   mov     edx, 7360F564                    ;  03_service\storage\HeadImgUrlStorage.cpp
+72B28A10  |.  8BC4          mov     eax, esp
+72B28A12  |.  B9 04000000   mov     ecx, 0x4
+72B28A17  |.  83EC 10       sub     esp, 0x10
+72B28A1A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28A1D  |.  8BC4          mov     eax, esp
+72B28A1F  |.  83EC 10       sub     esp, 0x10
+72B28A22  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28A25  |.  8BC4          mov     eax, esp
+72B28A27  |.  83EC 10       sub     esp, 0x10
+72B28A2A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28A2D  |.  8BC4          mov     eax, esp
+72B28A2F  |.  83EC 10       sub     esp, 0x10
+72B28A32  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28A35  |.  8BC4          mov     eax, esp
+72B28A37  |.  83EC 10       sub     esp, 0x10
+72B28A3A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28A3D  |.  8BC4          mov     eax, esp
+72B28A3F  |.  68 105C6073   push    73605C10                         ;  getByUsrName prepareStmt fail
+72B28A44  |.  68 CCEF6073   push    7360EFCC                         ;  HeadImgStorage
+72B28A49  |.  68 98F46073   push    7360F498                         ;  HeadImgUrlStorage::getByUsrName
+72B28A4E  |.  68 A6000000   push    0xA6
+72B28A53  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28A56  |.  E8 B51B0300   call    72B5A610
+72B28A5B  |.  83C4 70       add     esp, 0x70
+72B28A5E  |.  8BCF          mov     ecx, edi
+72B28A60  |.  6A 01         push    0x1
+72B28A62  |.  E8 391F0100   call    72B3A9A0
+72B28A67  |.  C645 EF 00    mov     byte ptr ss:[ebp-0x11], 0x0
+72B28A6B  |.  E9 40010000   jmp     72B28BB0
+72B28A70  |>  8B43 08       mov     eax, dword ptr ds:[ebx+0x8]
+72B28A73  |.  8B00          mov     eax, dword ptr ds:[eax]
+72B28A75  |.  85C0          test    eax, eax
+72B28A77  |.  74 06         je      short 72B28A7F
+72B28A79  |.  66:8338 00    cmp     word ptr ds:[eax], 0x0
+72B28A7D  |.  75 05         jnz     short 72B28A84
+72B28A7F  |>  B8 D8385773   mov     eax, 735738D8
+72B28A84  |>  8B4D E8       mov     ecx, dword ptr ss:[ebp-0x18]     ;  ecx=缓冲区
+72B28A87  |.  BA 01000000   mov     edx, 0x1
+72B28A8C  |.  6A 02         push    0x2
+72B28A8E  |.  6A 00         push    0x0
+72B28A90  |.  6A FF         push    -0x1
+72B28A92  |.  50            push    eax                              ;  微信ID
+72B28A93  |.  E8 483E2F00   call    72E1C8E0                         ;  查询SQL
+72B28A98  |.  FF75 E8       push    dword ptr ss:[ebp-0x18]          ;  user32.76B5790D
+72B28A9B  |.  E8 E0302F00   call    72E1BB80                         ;  查询SQL
+72B28AA0  |.  83C4 14       add     esp, 0x14
+72B28AA3  |.  8945 E4       mov     dword ptr ss:[ebp-0x1C], eax
+72B28AA6  |.  83F8 64       cmp     eax, 0x64
+72B28AA9  |.  75 2C         jnz     short 72B28AD7
+72B28AAB  |.  FF75 E8       push    dword ptr ss:[ebp-0x18]          ;  user32.76B5790D
+72B28AAE  |.  8B73 0C       mov     esi, dword ptr ds:[ebx+0xC]
+72B28AB1  |.  56            push    esi
+72B28AB2  |.  E8 59FDFFFF   call    72B28810                         ;  获取对象
+72B28AB7  |.  FF73 08       push    dword ptr ds:[ebx+0x8]
+72B28ABA  |.  8D45 DC       lea     eax, dword ptr ss:[ebp-0x24]
+72B28ABD  |.  50            push    eax
+72B28ABE  |.  8D4F 64       lea     ecx, dword ptr ds:[edi+0x64]
+72B28AC1  |.  E8 CA1D0000   call    72B2A890
+72B28AC6  |.  8B4D DC       mov     ecx, dword ptr ss:[ebp-0x24]
+72B28AC9  |.  56            push    esi
+72B28ACA  |.  8D49 24       lea     ecx, dword ptr ds:[ecx+0x24]
+72B28ACD  |.  E8 5E61DEFF   call    7290EC30
+72B28AD2  |.  E9 BD000000   jmp     72B28B94
+72B28AD7  |>  0F1005 803357>movups  xmm0, dqword ptr ds:[0x73573380]
+72B28ADE  |.  83EC 10       sub     esp, 0x10
+72B28AE1  |.  83F8 65       cmp     eax, 0x65
+72B28AE4  |.  8BC4          mov     eax, esp
+72B28AE6  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28AE9  |.  75 43         jnz     short 72B28B2E
+72B28AEB  |.  83EC 10       sub     esp, 0x10
+72B28AEE  |.  B9 01000000   mov     ecx, 0x1
+72B28AF3  |.  8BC4          mov     eax, esp
+72B28AF5  |.  83EC 10       sub     esp, 0x10
+72B28AF8  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28AFB  |.  8BC4          mov     eax, esp
+72B28AFD  |.  83EC 10       sub     esp, 0x10
+72B28B00  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28B03  |.  8BC4          mov     eax, esp
+72B28B05  |.  83EC 10       sub     esp, 0x10
+72B28B08  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28B0B  |.  8BC4          mov     eax, esp
+72B28B0D  |.  83EC 10       sub     esp, 0x10
+72B28B10  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28B13  |.  8BC4          mov     eax, esp
+72B28B15  |.  68 B00A6073   push    73600AB0                         ;  getChatMsgById OK
+72B28B1A  |.  68 CCEF6073   push    7360EFCC                         ;  HeadImgStorage
+72B28B1F  |.  68 98F46073   push    7360F498                         ;  HeadImgUrlStorage::getByUsrName
+72B28B24  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28B27  |.  68 B6000000   push    0xB6
+72B28B2C  |.  EB 59         jmp     short 72B28B87
+72B28B2E  |>  83EC 10       sub     esp, 0x10
+72B28B31  |.  8BC4          mov     eax, esp
+72B28B33  |.  83EC 10       sub     esp, 0x10
+72B28B36  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28B39  |.  8BC4          mov     eax, esp
+72B28B3B  |.  83EC 10       sub     esp, 0x10
+72B28B3E  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28B41  |.  8BC4          mov     eax, esp
+72B28B43  |.  FF77 24       push    dword ptr ds:[edi+0x24]
+72B28B46  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72B28B49  |.  E8 920A3400   call    72E695E0
+72B28B4E  |.  83EC 0C       sub     esp, 0xC
+72B28B51  |.  8BCC          mov     ecx, esp
+72B28B53  |.  6A 01         push    0x1
+72B28B55  |.  8941 08       mov     dword ptr ds:[ecx+0x8], eax
+72B28B58  |.  C601 02       mov     byte ptr ds:[ecx], 0x2
+72B28B5B  |.  8BCF          mov     ecx, edi
+72B28B5D  |.  8B07          mov     eax, dword ptr ds:[edi]
+72B28B5F  |.  8B00          mov     eax, dword ptr ds:[eax]
+72B28B61  |.  FFD0          call    eax
+72B28B63  |.  83EC 10       sub     esp, 0x10
+72B28B66  |.  8BCC          mov     ecx, esp
+72B28B68  |.  50            push    eax
+72B28B69  |.  E8 82FFBFFF   call    72728AF0
+72B28B6E  |.  68 0C0A6073   push    73600A0C                         ;  getChatMsgById sqlite3_step fail fail=%d ,error=%s
+72B28B73  |.  68 CCEF6073   push    7360EFCC                         ;  HeadImgStorage
+72B28B78  |.  68 98F46073   push    7360F498                         ;  HeadImgUrlStorage::getByUsrName
+72B28B7D  |.  68 BA000000   push    0xBA
+72B28B82  |.  B9 04000000   mov     ecx, 0x4
+72B28B87  |>  BA 64F56073   mov     edx, 7360F564                    ;  03_service\storage\HeadImgUrlStorage.cpp
+72B28B8C  |.  E8 7F1A0300   call    72B5A610
+72B28B91  |.  83C4 70       add     esp, 0x70
+72B28B94  |>  FF75 E8       push    dword ptr ss:[ebp-0x18]          ;  user32.76B5790D
+72B28B97  |.  E8 14222F00   call    72E1ADB0                         ;  关闭数据库
+72B28B9C  |.  83C4 04       add     esp, 0x4
+72B28B9F  |.  8BCF          mov     ecx, edi
+72B28BA1  |.  6A 01         push    0x1
+72B28BA3  |.  E8 F81D0100   call    72B3A9A0
+72B28BA8  |.  837D E4 64    cmp     dword ptr ss:[ebp-0x1C], 0x64
+72B28BAC  |.  0f9445 ef     sete    byte ptr ss:[ebp-0x11]
+72B28BB0  |>  8D4D C8       lea     ecx, dword ptr ss:[ebp-0x38]
+72B28BB3  |.  E8 E84CC6FF   call    7278D8A0
+72B28BB8  |.  8A45 EF       mov     al, byte ptr ss:[ebp-0x11]
+72B28BBB  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+72B28BBE  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+72B28BC5  |.  59            pop     ecx                              ;  user32.76B578D7
+72B28BC6  |.  5F            pop     edi                              ;  user32.76B578D7
+72B28BC7  |.  5E            pop     esi                              ;  user32.76B578D7
+72B28BC8  |.  8BE5          mov     esp, ebp
+72B28BCA  |.  5D            pop     ebp                              ;  user32.76B578D7
+72B28BCB  |.  8BE3          mov     esp, ebx
+72B28BCD  |.  5B            pop     ebx                              ;  user32.76B578D7
+72B28BCE  \.  C2 0800       retn    0x8
+

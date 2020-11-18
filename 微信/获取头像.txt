@@ -1,0 +1,149 @@
+72A202C0    55              push    ebp
+72A202C1    8BEC            mov     ebp, esp
+72A202C3    6A FF           push    -0x1
+72A202C5    68 B0575373     push    735357B0
+72A202CA    64:A1 00000000  mov     eax, dword ptr fs:[0]
+72A202D0    50              push    eax
+72A202D1    83EC 78         sub     esp, 0x78
+72A202D4    53              push    ebx
+72A202D5    56              push    esi
+72A202D6    57              push    edi
+72A202D7    A1 C4A09073     mov     eax, dword ptr ds:[0x7390A0C4]
+72A202DC    33C5            xor     eax, ebp
+72A202DE    50              push    eax
+72A202DF    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+72A202E2    64:A3 00000000  mov     dword ptr fs:[0], eax
+72A202E8    8BF9            mov     edi, ecx
+72A202EA    83BF 0C010000 0>cmp     dword ptr ds:[edi+0x10C], 0x0
+72A202F1    C745 F0 0000000>mov     dword ptr ss:[ebp-0x10], 0x0
+72A202F8    0F9EC0          setle   al
+72A202FB    84C0            test    al, al
+72A202FD    0F84 59010000   je      72A2045C
+72A20303    8D4D 80         lea     ecx, dword ptr ss:[ebp-0x80]
+72A20306    E8 B5F0E3FF     call    7285F3C0
+72A2030B    8BC1            mov     eax, ecx
+72A2030D    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+72A20314    50              push    eax                              ; 微信ID
+72A20315    8D47 08         lea     eax, dword ptr ds:[edi+0x8]
+72A20318    50              push    eax                              ; 缓冲区
+72A20319    E8 62A5E8FF     call    728AA880
+72A2031E    8BC8            mov     ecx, eax
+72A20320    E8 BBA10200     call    72A4A4E0                         ; 获取头像
+72A20325    8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+72A20328    50              push    eax
+72A20329    8D4D 80         lea     ecx, dword ptr ss:[ebp-0x80]
+72A2032C    E8 2F80C2FF     call    72648360
+72A20331    50              push    eax
+72A20332    8D8F 08010000   lea     ecx, dword ptr ds:[edi+0x108]
+72A20338    E8 B34C0600     call    72A84FF0
+72A2033D    8B45 DC         mov     eax, dword ptr ss:[ebp-0x24]     ; WeChatWi.72EA7438
+72A20340    85C0            test    eax, eax
+72A20342    74 10           je      short 72A20354
+72A20344    50              push    eax
+72A20345    E8 F1A8AA00     call    734CAC3B
+72A2034A    83C4 04         add     esp, 0x4
+72A2034D    C745 DC 0000000>mov     dword ptr ss:[ebp-0x24], 0x0
+72A20354    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]
+72A20357    C745 E4 0000000>mov     dword ptr ss:[ebp-0x1C], 0x0
+72A2035E    C745 E0 0000000>mov     dword ptr ss:[ebp-0x20], 0x0
+72A20365    85C0            test    eax, eax
+72A20367    74 09           je      short 72A20372
+72A20369    50              push    eax
+72A2036A    E8 CCA8AA00     call    734CAC3B
+72A2036F    83C4 04         add     esp, 0x4
+72A20372    8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+72A20375    50              push    eax
+72A20376    8D4D 80         lea     ecx, dword ptr ss:[ebp-0x80]
+72A20379    E8 A27FC2FF     call    72648320
+72A2037E    50              push    eax
+72A2037F    8D8F F4000000   lea     ecx, dword ptr ds:[edi+0xF4]
+72A20385    E8 664C0600     call    72A84FF0
+72A2038A    8B45 DC         mov     eax, dword ptr ss:[ebp-0x24]     ; WeChatWi.72EA7438
+72A2038D    85C0            test    eax, eax
+72A2038F    74 10           je      short 72A203A1
+72A20391    50              push    eax
+72A20392    E8 A4A8AA00     call    734CAC3B
+72A20397    83C4 04         add     esp, 0x4
+72A2039A    C745 DC 0000000>mov     dword ptr ss:[ebp-0x24], 0x0
+72A203A1    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]
+72A203A4    C745 E4 0000000>mov     dword ptr ss:[ebp-0x1C], 0x0
+72A203AB    C745 E0 0000000>mov     dword ptr ss:[ebp-0x20], 0x0
+72A203B2    85C0            test    eax, eax
+72A203B4    74 09           je      short 72A203BF
+72A203B6    50              push    eax
+72A203B7    E8 7FA8AA00     call    734CAC3B
+72A203BC    83C4 04         add     esp, 0x4
+72A203BF    8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+72A203C2    50              push    eax
+72A203C3    8D4D 80         lea     ecx, dword ptr ss:[ebp-0x80]
+72A203C6    E8 65BBC2FF     call    7264BF30
+72A203CB    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+72A203CF    8B08            mov     ecx, dword ptr ds:[eax]
+72A203D1    85C9            test    ecx, ecx
+72A203D3    74 36           je      short 72A2040B
+72A203D5    66:8339 00      cmp     word ptr ds:[ecx], 0x0
+72A203D9    74 30           je      short 72A2040B
+72A203DB    8D70 0C         lea     esi, dword ptr ds:[eax+0xC]
+72A203DE    6A 00           push    0x0
+72A203E0    51              push    ecx
+72A203E1    8BD6            mov     edx, esi
+72A203E3    E8 88EC0600     call    72A8F070
+72A203E8    8B16            mov     edx, dword ptr ds:[esi]
+72A203EA    83C4 08         add     esp, 0x8
+72A203ED    85D2            test    edx, edx
+72A203EF    74 1A           je      short 72A2040B
+72A203F1    803A 00         cmp     byte ptr ds:[edx], 0x0
+72A203F4    74 15           je      short 72A2040B
+72A203F6    8BCA            mov     ecx, edx
+72A203F8    8D71 01         lea     esi, dword ptr ds:[ecx+0x1]
+72A203FB    0f1f4400 00     nop     dword ptr ds:[eax+eax]
+72A20400    8A01            mov     al, byte ptr ds:[ecx]
+72A20402    41              inc     ecx
+72A20403    84C0            test    al, al
+72A20405  ^ 75 F9           jnz     short 72A20400
+72A20407    2BCE            sub     ecx, esi
+72A20409    EB 07           jmp     short 72A20412
+72A2040B    BA 28056E73     mov     edx, 736E0528
+72A20410    33C9            xor     ecx, ecx
+72A20412    51              push    ecx
+72A20413    52              push    edx
+72A20414    8D8F 1C010000   lea     ecx, dword ptr ds:[edi+0x11C]
+72A2041A    E8 11BCC2FF     call    7264C030
+72A2041F    8B45 DC         mov     eax, dword ptr ss:[ebp-0x24]     ; WeChatWi.72EA7438
+72A20422    85C0            test    eax, eax
+72A20424    74 10           je      short 72A20436
+72A20426    50              push    eax
+72A20427    E8 0FA8AA00     call    734CAC3B
+72A2042C    83C4 04         add     esp, 0x4
+72A2042F    C745 DC 0000000>mov     dword ptr ss:[ebp-0x24], 0x0
+72A20436    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]
+72A20439    C745 E4 0000000>mov     dword ptr ss:[ebp-0x1C], 0x0
+72A20440    C745 E0 0000000>mov     dword ptr ss:[ebp-0x20], 0x0
+72A20447    85C0            test    eax, eax
+72A20449    74 09           je      short 72A20454
+72A2044B    50              push    eax
+72A2044C    E8 EAA7AA00     call    734CAC3B
+72A20451    83C4 04         add     esp, 0x4
+72A20454    8D4D 80         lea     ecx, dword ptr ss:[ebp-0x80]
+72A20457    E8 24B5C3FF     call    7265B980
+72A2045C    8B75 08         mov     esi, dword ptr ss:[ebp+0x8]      ; VoipEngi.74616843
+72A2045F    8BCE            mov     ecx, esi
+72A20461    6A FF           push    -0x1
+72A20463    C706 00000000   mov     dword ptr ds:[esi], 0x0
+72A20469    C746 04 0000000>mov     dword ptr ds:[esi+0x4], 0x0
+72A20470    C746 08 0000000>mov     dword ptr ds:[esi+0x8], 0x0
+72A20477    C746 0C 0000000>mov     dword ptr ds:[esi+0xC], 0x0
+72A2047E    C746 10 0000000>mov     dword ptr ds:[esi+0x10], 0x0
+72A20485    FFB7 08010000   push    dword ptr ds:[edi+0x108]
+72A2048B    E8 80430600     call    72A84810
+72A20490    8BC6            mov     eax, esi
+72A20492    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]      ; WeChatWi.72A631B4
+72A20495    64:890D 0000000>mov     dword ptr fs:[0], ecx
+72A2049C    59              pop     ecx
+72A2049D    5F              pop     edi
+72A2049E    5E              pop     esi
+72A2049F    5B              pop     ebx
+72A204A0    8BE5            mov     esp, ebp
+72A204A2    5D              pop     ebp
+72A204A3    C2 0400         retn    0x4
+

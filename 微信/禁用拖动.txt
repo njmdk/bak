@@ -1,0 +1,508 @@
+71D74CC0    55              push    ebp
+71D74CC1    8BEC            mov     ebp, esp
+71D74CC3    6A FF           push    -0x1
+71D74CC5    68 FA94C672     push    72C694FA
+71D74CCA    64:A1 00000000  mov     eax, dword ptr fs:[0]
+71D74CD0    50              push    eax
+71D74CD1    81EC 68060000   sub     esp, 0x668
+71D74CD7    A1 945B1073     mov     eax, dword ptr ds:[0x73105B94]
+71D74CDC    33C5            xor     eax, ebp
+71D74CDE    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+71D74CE1    53              push    ebx
+71D74CE2    56              push    esi
+71D74CE3    57              push    edi
+71D74CE4    50              push    eax
+71D74CE5    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+71D74CE8    64:A3 00000000  mov     dword ptr fs:[0], eax
+71D74CEE    8BF1            mov     esi, ecx
+71D74CF0    89B5 8CF9FFFF   mov     dword ptr ss:[ebp-0x674], esi
+71D74CF6    8D46 30         lea     eax, dword ptr ds:[esi+0x30]
+71D74CF9    33DB            xor     ebx, ebx
+71D74CFB    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D74D01    8BC8            mov     ecx, eax
+71D74D03    8985 ACF9FFFF   mov     dword ptr ss:[ebp-0x654], eax
+71D74D09    E8 7223F7FF     call    71CE7080
+71D74D0E    85C0            test    eax, eax
+71D74D10    0F84 CD060000   je      71D753E3
+71D74D16    8B4D 10         mov     ecx, dword ptr ss:[ebp+0x10]
+71D74D19    0FBFC1          movsx   eax, cx
+71D74D1C    8985 A0F9FFFF   mov     dword ptr ss:[ebp-0x660], eax
+71D74D22    C1E9 10         shr     ecx, 0x10
+71D74D25    0FBFC1          movsx   eax, cx
+71D74D28    8BCE            mov     ecx, esi
+71D74D2A    8985 A4F9FFFF   mov     dword ptr ss:[ebp-0x65C], eax
+71D74D30    8D85 A0F9FFFF   lea     eax, dword ptr ss:[ebp-0x660]
+71D74D36    50              push    eax
+71D74D37    E8 44CEEBFF     call    71C31B80
+71D74D3C    50              push    eax
+71D74D3D    FF15 D8F7D372   call    dword ptr ds:[<&USER32.ScreenToC>; user32.ScreenToClient
+71D74D43    8D45 E0         lea     eax, dword ptr ss:[ebp-0x20]
+71D74D46    8BCE            mov     ecx, esi
+71D74D48    50              push    eax
+71D74D49    E8 32CEEBFF     call    71C31B80
+71D74D4E    50              push    eax
+71D74D4F    FF15 D4F7D372   call    dword ptr ds:[<&USER32.GetClient>; user32.GetClientRect
+71D74D55    8BCE            mov     ecx, esi
+71D74D57    E8 24CEEBFF     call    71C31B80
+71D74D5C    50              push    eax
+71D74D5D    FF15 94F8D372   call    dword ptr ds:[<&USER32.IsZoomed>>; user32.IsZoomed
+71D74D63    8BB5 A4F9FFFF   mov     esi, dword ptr ss:[ebp-0x65C]
+71D74D69    8B95 A0F9FFFF   mov     edx, dword ptr ss:[ebp-0x660]
+71D74D6F    8B7D E8         mov     edi, dword ptr ss:[ebp-0x18]
+71D74D72    85C0            test    eax, eax
+71D74D74    0F85 C5000000   jnz     71D74E3F
+71D74D7A    8B8D ACF9FFFF   mov     ecx, dword ptr ss:[ebp-0x654]
+71D74D80    E8 1E135E00     call    723560A3
+71D74D85    0F1000          movups  xmm0, dqword ptr ds:[eax]
+71D74D88    8B45 E4         mov     eax, dword ptr ss:[ebp-0x1C]
+71D74D8B    0F1185 90F9FFFF movups  dqword ptr ss:[ebp-0x670], xmm0
+71D74D92    660f73d8 04     psrldq  xmm0, 0x4
+71D74D97    66:0F7EC1       movd    ecx, mm0
+71D74D9B    03C1            add     eax, ecx
+71D74D9D    3BF0            cmp     esi, eax
+71D74D9F    7D 31           jge     short 71D74DD2
+71D74DA1    8B85 90F9FFFF   mov     eax, dword ptr ss:[ebp-0x670]
+71D74DA7    0345 E0         add     eax, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D74DAA    3BD0            cmp     edx, eax
+71D74DAC    7D 08           jge     short 71D74DB6
+71D74DAE    8D43 0D         lea     eax, dword ptr ds:[ebx+0xD]
+71D74DB1    E9 32060000     jmp     71D753E8
+71D74DB6    8B4D E8         mov     ecx, dword ptr ss:[ebp-0x18]
+71D74DB9    33C0            xor     eax, eax
+71D74DBB    2B8D 98F9FFFF   sub     ecx, dword ptr ss:[ebp-0x668]
+71D74DC1    3BD1            cmp     edx, ecx
+71D74DC3    0f9fc0          setg    al
+71D74DC6    8D0445 0C000000 lea     eax, dword ptr ds:[eax*2+0xC]
+71D74DCD    E9 16060000     jmp     71D753E8
+71D74DD2    8B45 EC         mov     eax, dword ptr ss:[ebp-0x14]
+71D74DD5    2B85 9CF9FFFF   sub     eax, dword ptr ss:[ebp-0x664]
+71D74DDB    3BF0            cmp     esi, eax
+71D74DDD    8B85 90F9FFFF   mov     eax, dword ptr ss:[ebp-0x670]
+71D74DE3    7E 33           jle     short 71D74E18
+71D74DE5    0345 E0         add     eax, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D74DE8    8B95 A0F9FFFF   mov     edx, dword ptr ss:[ebp-0x660]
+71D74DEE    3BD0            cmp     edx, eax
+71D74DF0    7D 0A           jge     short 71D74DFC
+71D74DF2    B8 10000000     mov     eax, 0x10
+71D74DF7    E9 EC050000     jmp     71D753E8
+71D74DFC    8B4D E8         mov     ecx, dword ptr ss:[ebp-0x18]
+71D74DFF    33C0            xor     eax, eax
+71D74E01    2B8D 98F9FFFF   sub     ecx, dword ptr ss:[ebp-0x668]
+71D74E07    3BD1            cmp     edx, ecx
+71D74E09    0f9fc0          setg    al
+71D74E0C    8D0445 0F000000 lea     eax, dword ptr ds:[eax*2+0xF]
+71D74E13    E9 D0050000     jmp     71D753E8
+71D74E18    0345 E0         add     eax, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D74E1B    3BD0            cmp     edx, eax
+71D74E1D    7D 0A           jge     short 71D74E29
+71D74E1F    B8 0A000000     mov     eax, 0xA
+71D74E24    E9 BF050000     jmp     71D753E8
+71D74E29    8BC7            mov     eax, edi
+71D74E2B    2B85 98F9FFFF   sub     eax, dword ptr ss:[ebp-0x668]
+71D74E31    3BD0            cmp     edx, eax
+71D74E33    7E 0A           jle     short 71D74E3F
+71D74E35    B8 0B000000     mov     eax, 0xB
+71D74E3A    E9 A9050000     jmp     71D753E8
+71D74E3F    8B8D ACF9FFFF   mov     ecx, dword ptr ss:[ebp-0x654]
+71D74E45    E8 78125E00     call    723560C2
+71D74E4A    0F1000          movups  xmm0, dqword ptr ds:[eax]
+71D74E4D    66:0F7EC0       movd    eax, mm0
+71D74E51    0F1185 90F9FFFF movups  dqword ptr ss:[ebp-0x670], xmm0
+71D74E58    0345 E0         add     eax, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D74E5B    3BD0            cmp     edx, eax
+71D74E5D    0F8C 86000000   jl      71D74EE9
+71D74E63    2BBD 98F9FFFF   sub     edi, dword ptr ss:[ebp-0x668]
+71D74E69    3BD7            cmp     edx, edi
+71D74E6B    7D 7C           jge     short 71D74EE9
+71D74E6D    3BB5 94F9FFFF   cmp     esi, dword ptr ss:[ebp-0x66C]
+71D74E73    7C 74           jl      short 71D74EE9
+71D74E75    8BF9            mov     edi, ecx
+71D74E77    3BB5 9CF9FFFF   cmp     esi, dword ptr ss:[ebp-0x664]
+71D74E7D    7D 6C           jge     short 71D74EEB
+71D74E7F    56              push    esi
+71D74E80    52              push    edx
+71D74E81    E8 0C4C5E00     call    72359A92
+71D74E86    8BF0            mov     esi, eax
+71D74E88    85F6            test    esi, esi
+71D74E8A    74 55           je      short 71D74EE1
+71D74E8C    8B16            mov     edx, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D74E8E    8BCE            mov     ecx, esi
+71D74E90    68 D433EB72     push    72EB33D4                         ; ButtonUI
+71D74E95    FF52 0C         call    dword ptr ds:[edx+0xC]
+71D74E98    50              push    eax
+71D74E99    E8 A0CCE900     call    72C11B3E
+71D74E9E    83C4 08         add     esp, 0x8
+71D74EA1    85C0            test    eax, eax
+71D74EA3    74 3C           je      short 71D74EE1
+71D74EA5    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D74EA7    8BCE            mov     ecx, esi
+71D74EA9    68 60AFEF72     push    72EFAF60                         ; OptionUI
+71D74EAE    FF50 0C         call    dword ptr ds:[eax+0xC]
+71D74EB1    50              push    eax
+71D74EB2    E8 87CCE900     call    72C11B3E
+71D74EB7    83C4 08         add     esp, 0x8
+71D74EBA    85C0            test    eax, eax
+71D74EBC    74 23           je      short 71D74EE1
+71D74EBE    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D74EC0    8BCE            mov     ecx, esi
+71D74EC2    68 C0AFEF72     push    72EFAFC0                         ; TextUI
+71D74EC7    FF50 0C         call    dword ptr ds:[eax+0xC]
+71D74ECA    50              push    eax
+71D74ECB    E8 6ECCE900     call    72C11B3E
+71D74ED0    83C4 08         add     esp, 0x8
+71D74ED3    85C0            test    eax, eax
+71D74ED5    74 0A           je      short 71D74EE1
+71D74ED7    B8 02000000     mov     eax, 0x2
+71D74EDC    E9 07050000     jmp     71D753E8
+71D74EE1    8B95 A0F9FFFF   mov     edx, dword ptr ss:[ebp-0x660]
+71D74EE7    EB 02           jmp     short 71D74EEB
+71D74EE9    8BF9            mov     edi, ecx
+71D74EEB    3B55 E0         cmp     edx, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D74EEE    0F8C 26040000   jl      71D7531A
+71D74EF4    6A 3C           push    0x3C
+71D74EF6    E8 CCF15D00     call    723540C7
+71D74EFB    8BC8            mov     ecx, eax
+71D74EFD    E8 EDF15D00     call    723540EF
+71D74F02    0345 E0         add     eax, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D74F05    8B8D A0F9FFFF   mov     ecx, dword ptr ss:[ebp-0x660]
+71D74F0B    3BC8            cmp     ecx, eax
+71D74F0D    0F8D 07040000   jge     71D7531A
+71D74F13    8B85 A4F9FFFF   mov     eax, dword ptr ss:[ebp-0x65C]
+71D74F19    3B45 E4         cmp     eax, dword ptr ss:[ebp-0x1C]
+71D74F1C    0F8C F8030000   jl      71D7531A
+71D74F22    3B45 EC         cmp     eax, dword ptr ss:[ebp-0x14]
+71D74F25    0F8D EF030000   jge     71D7531A
+71D74F2B    50              push    eax
+71D74F2C    51              push    ecx
+71D74F2D    8BCF            mov     ecx, edi
+71D74F2F    E8 5E4B5E00     call    72359A92
+71D74F34    8BF0            mov     esi, eax
+71D74F36    85F6            test    esi, esi
+71D74F38    0F84 C6020000   je      71D75204
+71D74F3E    8B16            mov     edx, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D74F40    8D85 B0F9FFFF   lea     eax, dword ptr ss:[ebp-0x650]
+71D74F46    50              push    eax
+71D74F47    8BCE            mov     ecx, esi
+71D74F49    FF52 04         call    dword ptr ds:[edx+0x4]
+71D74F4C    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+71D74F53    BB 01000000     mov     ebx, 0x1
+71D74F58    68 2009F172     push    72F10920                         ; user_icon
+71D74F5D    8BC8            mov     ecx, eax
+71D74F5F    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D74F65    E8 36E65D00     call    723535A0
+71D74F6A    50              push    eax
+71D74F6B    E8 CECBE900     call    72C11B3E
+71D74F70    83C4 08         add     esp, 0x8
+71D74F73    85C0            test    eax, eax
+71D74F75    0F84 89020000   je      71D75204
+71D74F7B    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D74F7D    8D8D 34FAFFFF   lea     ecx, dword ptr ss:[ebp-0x5CC]
+71D74F83    51              push    ecx
+71D74F84    8BCE            mov     ecx, esi
+71D74F86    FF50 04         call    dword ptr ds:[eax+0x4]
+71D74F89    895D FC         mov     dword ptr ss:[ebp-0x4], ebx
+71D74F8C    8BC8            mov     ecx, eax
+71D74F8E    BB 03000000     mov     ebx, 0x3
+71D74F93    68 AC09F172     push    72F109AC                         ; session_btn
+71D74F98    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D74F9E    E8 FDE55D00     call    723535A0
+71D74FA3    50              push    eax
+71D74FA4    E8 95CBE900     call    72C11B3E
+71D74FA9    83C4 08         add     esp, 0x8
+71D74FAC    85C0            test    eax, eax
+71D74FAE    0F84 50020000   je      71D75204
+71D74FB4    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D74FB6    8D8D B8FAFFFF   lea     ecx, dword ptr ss:[ebp-0x548]
+71D74FBC    51              push    ecx
+71D74FBD    8BCE            mov     ecx, esi
+71D74FBF    FF50 04         call    dword ptr ds:[eax+0x4]
+71D74FC2    C745 FC 0200000>mov     dword ptr ss:[ebp-0x4], 0x2
+71D74FC9    BB 07000000     mov     ebx, 0x7
+71D74FCE    68 9409F172     push    72F10994                         ; contact_btn
+71D74FD3    8BC8            mov     ecx, eax
+71D74FD5    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D74FDB    E8 C0E55D00     call    723535A0
+71D74FE0    50              push    eax
+71D74FE1    E8 58CBE900     call    72C11B3E
+71D74FE6    83C4 08         add     esp, 0x8
+71D74FE9    85C0            test    eax, eax
+71D74FEB    0F84 13020000   je      71D75204
+71D74FF1    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D74FF3    8D8D 3CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x4C4]
+71D74FF9    51              push    ecx
+71D74FFA    8BCE            mov     ecx, esi
+71D74FFC    FF50 04         call    dword ptr ds:[eax+0x4]
+71D74FFF    C745 FC 0300000>mov     dword ptr ss:[ebp-0x4], 0x3
+71D75006    BB 0F000000     mov     ebx, 0xF
+71D7500B    68 8409F172     push    72F10984                         ; fav_btn
+71D75010    8BC8            mov     ecx, eax
+71D75012    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D75018    E8 83E55D00     call    723535A0
+71D7501D    50              push    eax
+71D7501E    E8 1BCBE900     call    72C11B3E
+71D75023    83C4 08         add     esp, 0x8
+71D75026    85C0            test    eax, eax
+71D75028    0F84 D6010000   je      71D75204
+71D7502E    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D75030    8D8D C0FBFFFF   lea     ecx, dword ptr ss:[ebp-0x440]
+71D75036    51              push    ecx
+71D75037    8BCE            mov     ecx, esi
+71D75039    FF50 04         call    dword ptr ds:[eax+0x4]
+71D7503C    C745 FC 0400000>mov     dword ptr ss:[ebp-0x4], 0x4
+71D75043    BB 1F000000     mov     ebx, 0x1F
+71D75048    68 4823F172     push    72F12348                         ; game_center_btn
+71D7504D    8BC8            mov     ecx, eax
+71D7504F    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D75055    E8 46E55D00     call    723535A0
+71D7505A    50              push    eax
+71D7505B    E8 DECAE900     call    72C11B3E
+71D75060    83C4 08         add     esp, 0x8
+71D75063    85C0            test    eax, eax
+71D75065    0F84 99010000   je      71D75204
+71D7506B    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D7506D    8D8D 44FCFFFF   lea     ecx, dword ptr ss:[ebp-0x3BC]
+71D75073    51              push    ecx
+71D75074    8BCE            mov     ecx, esi
+71D75076    FF50 04         call    dword ptr ds:[eax+0x4]
+71D75079    C745 FC 0500000>mov     dword ptr ss:[ebp-0x4], 0x5
+71D75080    BB 3F000000     mov     ebx, 0x3F
+71D75085    68 18A4EC72     push    72ECA418                         ; totalUpdateCount
+71D7508A    8BC8            mov     ecx, eax
+71D7508C    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D75092    E8 09E55D00     call    723535A0
+71D75097    50              push    eax
+71D75098    E8 A1CAE900     call    72C11B3E
+71D7509D    83C4 08         add     esp, 0x8
+71D750A0    85C0            test    eax, eax
+71D750A2    0F84 5C010000   je      71D75204
+71D750A8    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D750AA    8D8D C8FCFFFF   lea     ecx, dword ptr ss:[ebp-0x338]
+71D750B0    51              push    ecx
+71D750B1    8BCE            mov     ecx, esi
+71D750B3    FF50 04         call    dword ptr ds:[eax+0x4]
+71D750B6    C745 FC 0600000>mov     dword ptr ss:[ebp-0x4], 0x6
+71D750BD    BB 7F000000     mov     ebx, 0x7F
+71D750C2    68 64A4EC72     push    72ECA464                         ; totalUpdateCount2
+71D750C7    8BC8            mov     ecx, eax
+71D750C9    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D750CF    E8 CCE45D00     call    723535A0
+71D750D4    50              push    eax
+71D750D5    E8 64CAE900     call    72C11B3E
+71D750DA    83C4 08         add     esp, 0x8
+71D750DD    85C0            test    eax, eax
+71D750DF    0F84 1F010000   je      71D75204
+71D750E5    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D750E7    8D8D 4CFDFFFF   lea     ecx, dword ptr ss:[ebp-0x2B4]
+71D750ED    51              push    ecx
+71D750EE    8BCE            mov     ecx, esi
+71D750F0    FF50 04         call    dword ptr ds:[eax+0x4]
+71D750F3    C745 FC 0700000>mov     dword ptr ss:[ebp-0x4], 0x7
+71D750FA    BB FF000000     mov     ebx, 0xFF
+71D750FF    68 3408F172     push    72F10834                         ; settingbtn
+71D75104    8BC8            mov     ecx, eax
+71D75106    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D7510C    E8 8FE45D00     call    723535A0
+71D75111    50              push    eax
+71D75112    E8 27CAE900     call    72C11B3E
+71D75117    83C4 08         add     esp, 0x8
+71D7511A    85C0            test    eax, eax
+71D7511C    0F84 E2000000   je      71D75204
+71D75122    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D75124    8D8D D0FDFFFF   lea     ecx, dword ptr ss:[ebp-0x230]
+71D7512A    51              push    ecx
+71D7512B    8BCE            mov     ecx, esi
+71D7512D    FF50 04         call    dword ptr ds:[eax+0x4]
+71D75130    C745 FC 0800000>mov     dword ptr ss:[ebp-0x4], 0x8
+71D75137    BB FF010000     mov     ebx, 0x1FF
+71D7513C    68 3819F172     push    72F11938                         ; handOffBtn
+71D75141    8BC8            mov     ecx, eax
+71D75143    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D75149    E8 52E45D00     call    723535A0
+71D7514E    50              push    eax
+71D7514F    E8 EAC9E900     call    72C11B3E
+71D75154    83C4 08         add     esp, 0x8
+71D75157    85C0            test    eax, eax
+71D75159    0F84 A5000000   je      71D75204
+71D7515F    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D75161    8D8D 54FEFFFF   lea     ecx, dword ptr ss:[ebp-0x1AC]
+71D75167    51              push    ecx
+71D75168    8BCE            mov     ecx, esi
+71D7516A    FF50 04         call    dword ptr ds:[eax+0x4]
+71D7516D    C745 FC 0900000>mov     dword ptr ss:[ebp-0x4], 0x9
+71D75174    BB FF030000     mov     ebx, 0x3FF
+71D75179    68 6819F172     push    72F11968                         ; feedbtn
+71D7517E    8BC8            mov     ecx, eax
+71D75180    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D75186    E8 15E45D00     call    723535A0
+71D7518B    50              push    eax
+71D7518C    E8 ADC9E900     call    72C11B3E
+71D75191    83C4 08         add     esp, 0x8
+71D75194    85C0            test    eax, eax
+71D75196    74 6C           je      short 71D75204
+71D75198    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D7519A    8D8D D8FEFFFF   lea     ecx, dword ptr ss:[ebp-0x128]
+71D751A0    51              push    ecx
+71D751A1    8BCE            mov     ecx, esi
+71D751A3    FF50 04         call    dword ptr ds:[eax+0x4]
+71D751A6    C745 FC 0A00000>mov     dword ptr ss:[ebp-0x4], 0xA
+71D751AD    BB FF070000     mov     ebx, 0x7FF
+71D751B2    68 8815F172     push    72F11588                         ; filelistbtn
+71D751B7    8BC8            mov     ecx, eax
+71D751B9    899D ACF9FFFF   mov     dword ptr ss:[ebp-0x654], ebx
+71D751BF    E8 DCE35D00     call    723535A0
+71D751C4    50              push    eax
+71D751C5    E8 74C9E900     call    72C11B3E
+71D751CA    83C4 08         add     esp, 0x8
+71D751CD    85C0            test    eax, eax
+71D751CF    74 33           je      short 71D75204
+71D751D1    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D751D3    8D8D 5CFFFFFF   lea     ecx, dword ptr ss:[ebp-0xA4]
+71D751D9    51              push    ecx
+71D751DA    8BCE            mov     ecx, esi
+71D751DC    FF50 04         call    dword ptr ds:[eax+0x4]
+71D751DF    68 5019F172     push    72F11950                         ; topstorybtn
+71D751E4    8BC8            mov     ecx, eax
+71D751E6    BB FF0F0000     mov     ebx, 0xFFF
+71D751EB    E8 B0E35D00     call    723535A0
+71D751F0    50              push    eax
+71D751F1    E8 48C9E900     call    72C11B3E
+71D751F6    83C4 08         add     esp, 0x8
+71D751F9    C685 ABF9FFFF 0>mov     byte ptr ss:[ebp-0x655], 0x1
+71D75200    85C0            test    eax, eax
+71D75202    75 07           jnz     short 71D7520B
+71D75204    C685 ABF9FFFF 0>mov     byte ptr ss:[ebp-0x655], 0x0
+71D7520B    F7C3 00080000   test    ebx, 0x800
+71D75211    74 11           je      short 71D75224
+71D75213    8D8D 5CFFFFFF   lea     ecx, dword ptr ss:[ebp-0xA4]
+71D75219    81E3 FFF7FFFF   and     ebx, 0xFFFFF7FF
+71D7521F    E8 15E45D00     call    72353639
+71D75224    F7C3 00040000   test    ebx, 0x400
+71D7522A    74 11           je      short 71D7523D
+71D7522C    8D8D D8FEFFFF   lea     ecx, dword ptr ss:[ebp-0x128]
+71D75232    81E3 FFFBFFFF   and     ebx, 0xFFFFFBFF
+71D75238    E8 FCE35D00     call    72353639
+71D7523D    F7C3 00020000   test    ebx, 0x200
+71D75243    74 11           je      short 71D75256
+71D75245    8D8D 54FEFFFF   lea     ecx, dword ptr ss:[ebp-0x1AC]
+71D7524B    81E3 FFFDFFFF   and     ebx, 0xFFFFFDFF
+71D75251    E8 E3E35D00     call    72353639
+71D75256    F7C3 00010000   test    ebx, 0x100
+71D7525C    74 11           je      short 71D7526F
+71D7525E    8D8D D0FDFFFF   lea     ecx, dword ptr ss:[ebp-0x230]
+71D75264    81E3 FFFEFFFF   and     ebx, 0xFFFFFEFF
+71D7526A    E8 CAE35D00     call    72353639
+71D7526F    84DB            test    bl, bl
+71D75271    79 11           jns     short 71D75284
+71D75273    8D8D 4CFDFFFF   lea     ecx, dword ptr ss:[ebp-0x2B4]
+71D75279    81E3 7FFFFFFF   and     ebx, 0xFFFFFF7F
+71D7527F    E8 B5E35D00     call    72353639
+71D75284    F6C3 40         test    bl, 0x40
+71D75287    74 0E           je      short 71D75297
+71D75289    8D8D C8FCFFFF   lea     ecx, dword ptr ss:[ebp-0x338]
+71D7528F    83E3 BF         and     ebx, 0xFFFFFFBF
+71D75292    E8 A2E35D00     call    72353639
+71D75297    F6C3 20         test    bl, 0x20
+71D7529A    74 0E           je      short 71D752AA
+71D7529C    8D8D 44FCFFFF   lea     ecx, dword ptr ss:[ebp-0x3BC]
+71D752A2    83E3 DF         and     ebx, 0xFFFFFFDF
+71D752A5    E8 8FE35D00     call    72353639
+71D752AA    F6C3 10         test    bl, 0x10
+71D752AD    74 0E           je      short 71D752BD
+71D752AF    8D8D C0FBFFFF   lea     ecx, dword ptr ss:[ebp-0x440]
+71D752B5    83E3 EF         and     ebx, 0xFFFFFFEF
+71D752B8    E8 7CE35D00     call    72353639
+71D752BD    F6C3 08         test    bl, 0x8
+71D752C0    74 0E           je      short 71D752D0
+71D752C2    8D8D 3CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x4C4]
+71D752C8    83E3 F7         and     ebx, 0xFFFFFFF7
+71D752CB    E8 69E35D00     call    72353639
+71D752D0    F6C3 04         test    bl, 0x4
+71D752D3    74 0E           je      short 71D752E3
+71D752D5    8D8D B8FAFFFF   lea     ecx, dword ptr ss:[ebp-0x548]
+71D752DB    83E3 FB         and     ebx, 0xFFFFFFFB
+71D752DE    E8 56E35D00     call    72353639
+71D752E3    F6C3 02         test    bl, 0x2
+71D752E6    74 0E           je      short 71D752F6
+71D752E8    8D8D 34FAFFFF   lea     ecx, dword ptr ss:[ebp-0x5CC]
+71D752EE    83E3 FD         and     ebx, 0xFFFFFFFD
+71D752F1    E8 43E35D00     call    72353639
+71D752F6    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+71D752FD    F6C3 01         test    bl, 0x1
+71D75300    74 0B           je      short 71D7530D
+71D75302    8D8D B0F9FFFF   lea     ecx, dword ptr ss:[ebp-0x650]
+71D75308    E8 2CE35D00     call    72353639
+71D7530D    80BD ABF9FFFF 0>cmp     byte ptr ss:[ebp-0x655], 0x0
+71D75314  ^ 0F85 BDFBFFFF   jnz     71D74ED7
+71D7531A    6A 3C           push    0x3C
+71D7531C    E8 A6ED5D00     call    723540C7
+71D75321    8BC8            mov     ecx, eax
+71D75323    E8 C7ED5D00     call    723540EF
+71D75328    0345 E0         add     eax, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D7532B    3985 A0F9FFFF   cmp     dword ptr ss:[ebp-0x660], eax
+71D75331    7E 3F           jle     short 71D75372
+71D75333    68 36010000     push    0x136
+71D75338    E8 8AED5D00     call    723540C7
+71D7533D    8BC8            mov     ecx, eax
+71D7533F    E8 ABED5D00     call    723540EF
+71D75344    0345 E0         add     eax, dword ptr ss:[ebp-0x20]     ; WeChatWi.7240A1DC
+71D75347    3985 A0F9FFFF   cmp     dword ptr ss:[ebp-0x660], eax
+71D7534D    7D 23           jge     short 71D75372
+71D7534F    83BD A4F9FFFF 0>cmp     dword ptr ss:[ebp-0x65C], 0x0
+71D75356    7E 1A           jle     short 71D75372
+71D75358    6A 18           push    0x18
+71D7535A    E8 68ED5D00     call    723540C7
+71D7535F    8BC8            mov     ecx, eax
+71D75361    E8 B0ED5D00     call    72354116
+71D75366    3985 A4F9FFFF   cmp     dword ptr ss:[ebp-0x65C], eax
+71D7536C  ^ 0F8C 65FBFFFF   jl      71D74ED7
+71D75372    8B9D 8CF9FFFF   mov     ebx, dword ptr ss:[ebp-0x674]
+71D75378    8B8B 840A0000   mov     ecx, dword ptr ds:[ebx+0xA84]
+71D7537E    8B01            mov     eax, dword ptr ds:[ecx]
+71D75380    FF50 48         call    dword ptr ds:[eax+0x48]
+71D75383    8B95 A0F9FFFF   mov     edx, dword ptr ss:[ebp-0x660]
+71D75389    3B10            cmp     edx, dword ptr ds:[eax]
+71D7538B    7C 56           jl      short 71D753E3
+71D7538D    3B55 E8         cmp     edx, dword ptr ss:[ebp-0x18]
+71D75390    7D 51           jge     short 71D753E3
+71D75392    8B85 A4F9FFFF   mov     eax, dword ptr ss:[ebp-0x65C]
+71D75398    3B45 E4         cmp     eax, dword ptr ss:[ebp-0x1C]
+71D7539B    7C 46           jl      short 71D753E3
+71D7539D    3B45 EC         cmp     eax, dword ptr ss:[ebp-0x14]
+71D753A0    7D 41           jge     short 71D753E3
+71D753A2    50              push    eax
+71D753A3    52              push    edx
+71D753A4    8BCF            mov     ecx, edi
+71D753A6    E8 E7465E00     call    72359A92
+71D753AB    8B8B 7C0A0000   mov     ecx, dword ptr ds:[ebx+0xA7C]
+71D753B1    8BF0            mov     esi, eax
+71D753B3    8B11            mov     edx, dword ptr ds:[ecx]
+71D753B5    8B92 E4000000   mov     edx, dword ptr ds:[edx+0xE4]
+71D753BB    FFD2            call    edx
+71D753BD    84C0            test    al, al
+71D753BF    74 22           je      short 71D753E3
+71D753C1    85F6            test    esi, esi
+71D753C3    74 1E           je      short 71D753E3
+71D753C5    8B06            mov     eax, dword ptr ds:[esi]          ; WeChatWi.723F151F
+71D753C7    8BCE            mov     ecx, esi
+71D753C9    68 D433EB72     push    72EB33D4                         ; ButtonUI
+71D753CE    FF50 0C         call    dword ptr ds:[eax+0xC]
+71D753D1    50              push    eax
+71D753D2    E8 67C7E900     call    72C11B3E
+71D753D7    83C4 08         add     esp, 0x8
+71D753DA    85C0            test    eax, eax
+71D753DC    B8 02000000     mov     eax, 0x2
+71D753E1    75 05           jnz     short 71D753E8
+71D753E3    B8 01000000     mov     eax, 0x1
+71D753E8    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+71D753EB    64:890D 0000000>mov     dword ptr fs:[0], ecx
+71D753F2    59              pop     ecx
+71D753F3    5F              pop     edi
+71D753F4    5E              pop     esi
+71D753F5    5B              pop     ebx
+71D753F6    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]     ; WeChatWi.723F6483
+71D753F9    33CD            xor     ecx, ebp
+71D753FB    E8 EDA6AA00     call    7281FAED
+71D75400    8BE5            mov     esp, ebp
+71D75402    5D              pop     ebp
+71D75403    C2 1000         retn    0x10
+

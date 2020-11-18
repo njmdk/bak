@@ -1,0 +1,1495 @@
+01A37B80    55              push    ebp
+01A37B81    8BEC            mov     ebp, esp
+01A37B83    6A FF           push    -0x1
+01A37B85    68 4DB14802     push    0248B14D
+01A37B8A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+01A37B90    50              push    eax
+01A37B91    81EC B40A0000   sub     esp, 0xAB4
+01A37B97    A1 C4108102     mov     eax, dword ptr ds:[0x28110C4]
+01A37B9C    33C5            xor     eax, ebp
+01A37B9E    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+01A37BA1    56              push    esi
+01A37BA2    57              push    edi
+01A37BA3    50              push    eax
+01A37BA4    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+01A37BA7    64:A3 00000000  mov     dword ptr fs:[0], eax
+01A37BAD    8BF9            mov     edi, ecx
+01A37BAF    89BD A0F7FFFF   mov     dword ptr ss:[ebp-0x860], edi
+01A37BB5    8B45 08         mov     eax, dword ptr ss:[ebp+0x8]
+01A37BB8    8B75 14         mov     esi, dword ptr ss:[ebp+0x14]
+01A37BBB    89B5 8CF7FFFF   mov     dword ptr ss:[ebp-0x874], esi
+01A37BC1    C785 98F7FFFF 0>mov     dword ptr ss:[ebp-0x868], 0x0
+01A37BCB    3D A9000000     cmp     eax, 0xA9
+01A37BD0    0F87 D20D0000   ja      01A389A8
+01A37BD6    0F84 680C0000   je      01A38844
+01A37BDC    83C0 EF         add     eax, -0x11
+01A37BDF    3D 97000000     cmp     eax, 0x97
+01A37BE4    0F87 A7160000   ja      01A39291
+01A37BEA    0FB680 C492A301 movzx   eax, byte ptr ds:[eax+0x1A392C4]
+01A37BF1    FF2485 B092A301 jmp     dword ptr ds:[eax*4+0x1A392B0]
+01A37BF8    8B46 0C         mov     eax, dword ptr ds:[esi+0xC]
+01A37BFB    C785 C4F6FFFF 0>mov     dword ptr ss:[ebp-0x93C], 0x0
+01A37C05    C785 C8F6FFFF 0>mov     dword ptr ss:[ebp-0x938], 0x0
+01A37C0F    C785 CCF6FFFF 0>mov     dword ptr ss:[ebp-0x934], 0x0
+01A37C19    C745 FC 0800000>mov     dword ptr ss:[ebp-0x4], 0x8
+01A37C20    C785 FCF6FFFF 0>mov     dword ptr ss:[ebp-0x904], 0x0
+01A37C2A    C785 00F7FFFF 0>mov     dword ptr ss:[ebp-0x900], 0x0
+01A37C34    C785 04F7FFFF 0>mov     dword ptr ss:[ebp-0x8FC], 0x0
+01A37C3E    C645 FC 09      mov     byte ptr ss:[ebp-0x4], 0x9
+01A37C42    8B48 08         mov     ecx, dword ptr ds:[eax+0x8]
+01A37C45    8B40 0C         mov     eax, dword ptr ds:[eax+0xC]
+01A37C48    898D 90F7FFFF   mov     dword ptr ss:[ebp-0x870], ecx
+01A37C4E    8D3481          lea     esi, dword ptr ds:[ecx+eax*4]
+01A37C51    89B5 88F7FFFF   mov     dword ptr ss:[ebp-0x878], esi
+01A37C57    3BCE            cmp     ecx, esi
+01A37C59    0F84 88040000   je      01A380E7
+01A37C5F    90              nop
+01A37C60    C645 FC 0A      mov     byte ptr ss:[ebp-0x4], 0xA
+01A37C64    FF31            push    dword ptr ds:[ecx]
+01A37C66    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A37C69    C745 DC F4E66C0>mov     dword ptr ss:[ebp-0x24], 026CE6F>
+01A37C70    C745 E8 0000000>mov     dword ptr ss:[ebp-0x18], 0x0
+01A37C77    C745 E0 0000000>mov     dword ptr ss:[ebp-0x20], 0x0
+01A37C7E    C745 E4 0000000>mov     dword ptr ss:[ebp-0x1C], 0x0
+01A37C85    C745 EC 0000000>mov     dword ptr ss:[ebp-0x14], 0x0
+01A37C8C    E8 FF115900     call    01FC8E90
+01A37C91    8B45 E4         mov     eax, dword ptr ss:[ebp-0x1C]     ; user32.77D191BE
+01A37C94    85C0            test    eax, eax
+01A37C96    75 08           jnz     short 01A37CA0
+01A37C98    A1 10E58602     mov     eax, dword ptr ds:[0x286E510]
+01A37C9D    8B40 08         mov     eax, dword ptr ds:[eax+0x8]
+01A37CA0    6A 00           push    0x0
+01A37CA2    FF70 04         push    dword ptr ds:[eax+0x4]
+01A37CA5    8D8D 08F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F8]
+01A37CAB    E8 50C61B00     call    01BF4300
+01A37CB0    C645 FC 0C      mov     byte ptr ss:[ebp-0x4], 0xC
+01A37CB4    F645 EC 01      test    byte ptr ss:[ebp-0x14], 0x1
+01A37CB8    0F85 A9000000   jnz     01A37D67
+01A37CBE    8D85 08F7FFFF   lea     eax, dword ptr ss:[ebp-0x8F8]
+01A37CC4    50              push    eax
+01A37CC5    8D85 D4F5FFFF   lea     eax, dword ptr ss:[ebp-0xA2C]
+01A37CCB    50              push    eax
+01A37CCC    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A37CCF    E8 8C1BE0FF     call    01839860
+01A37CD4    8B85 D4F5FFFF   mov     eax, dword ptr ss:[ebp-0xA2C]    ; ntdll.7C9301BB
+01A37CDA    8D8D 08F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F8]
+01A37CE0    51              push    ecx
+01A37CE1    8D8D 40F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8C0]
+01A37CE7    51              push    ecx
+01A37CE8    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A37CEE    C740 24 0400000>mov     dword ptr ds:[eax+0x24], 0x4
+01A37CF5    E8 7619E0FF     call    01839670
+01A37CFA    8B8D 40F7FFFF   mov     ecx, dword ptr ss:[ebp-0x8C0]
+01A37D00    8B85 44F7FFFF   mov     eax, dword ptr ss:[ebp-0x8BC]
+01A37D06    898D 60F7FFFF   mov     dword ptr ss:[ebp-0x8A0], ecx
+01A37D0C    3BC8            cmp     ecx, eax
+01A37D0E    74 27           je      short 01A37D37
+01A37D10    8BF8            mov     edi, eax
+01A37D12    8D8D 60F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8A0]
+01A37D18    E8 7377DCFF     call    017FF490
+01A37D1D    39BD 60F7FFFF   cmp     dword ptr ss:[ebp-0x8A0], edi
+01A37D23  ^ 75 ED           jnz     short 01A37D12
+01A37D25    8BBD A0F7FFFF   mov     edi, dword ptr ss:[ebp-0x860]
+01A37D2B    8B85 44F7FFFF   mov     eax, dword ptr ss:[ebp-0x8BC]
+01A37D31    8B8D 40F7FFFF   mov     ecx, dword ptr ss:[ebp-0x8C0]
+01A37D37    50              push    eax
+01A37D38    51              push    ecx
+01A37D39    8D85 F0F6FFFF   lea     eax, dword ptr ss:[ebp-0x910]
+01A37D3F    50              push    eax
+01A37D40    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A37D46    E8 254EDDFF     call    0180CB70
+01A37D4B    8D8D 08F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F8]
+01A37D51    E8 5A27E2FF     call    0185A4B0
+01A37D56    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A37D59    C645 FC 09      mov     byte ptr ss:[ebp-0x4], 0x9
+01A37D5D    E8 0E0E5900     call    01FC8B70
+01A37D62    E9 61030000     jmp     01A380C8
+01A37D67    8D8D 70FFFFFF   lea     ecx, dword ptr ss:[ebp-0x90]
+01A37D6D    E8 6E96EDFF     call    019113E0
+01A37D72    C645 FC 0D      mov     byte ptr ss:[ebp-0x4], 0xD
+01A37D76    8B45 E0         mov     eax, dword ptr ss:[ebp-0x20]
+01A37D79    8BC8            mov     ecx, eax
+01A37D7B    8B15 10E58602   mov     edx, dword ptr ds:[0x286E510]
+01A37D81    85C0            test    eax, eax
+01A37D83    75 05           jnz     short 01A37D8A
+01A37D85    8B4A 04         mov     ecx, dword ptr ds:[edx+0x4]
+01A37D88    8BC1            mov     eax, ecx
+01A37D8A    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A37D8D    8378 14 10      cmp     dword ptr ds:[eax+0x14], 0x10
+01A37D91    72 02           jb      short 01A37D95
+01A37D93    8B00            mov     eax, dword ptr ds:[eax]
+01A37D95    FF71 08         push    dword ptr ds:[ecx+0x8]
+01A37D98    8D95 08F7FFFF   lea     edx, dword ptr ss:[ebp-0x8F8]
+01A37D9E    50              push    eax
+01A37D9F    8D8D 70FFFFFF   lea     ecx, dword ptr ss:[ebp-0x90]
+01A37DA5    E8 D65E0900     call    01ACDC80
+01A37DAA    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A37DB1    83EC 08         sub     esp, 0x8
+01A37DB4    8D8D 08F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F8]
+01A37DBA    8BC4            mov     eax, esp
+01A37DBC    83EC 10         sub     esp, 0x10
+01A37DBF    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37DC2    8BC4            mov     eax, esp
+01A37DC4    83EC 10         sub     esp, 0x10
+01A37DC7    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37DCA    8BC4            mov     eax, esp
+01A37DCC    83EC 10         sub     esp, 0x10
+01A37DCF    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37DD2    8BC4            mov     eax, esp
+01A37DD4    83EC 10         sub     esp, 0x10
+01A37DD7    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37DDA    8BC4            mov     eax, esp
+01A37DDC    83EC 14         sub     esp, 0x14
+01A37DDF    89A5 84F7FFFF   mov     dword ptr ss:[ebp-0x87C], esp
+01A37DE5    6A FF           push    -0x1
+01A37DE7    6A 00           push    0x0
+01A37DE9    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37DEC    E8 8F5BDDFF     call    0180D980
+01A37DF1    8B8D 84F7FFFF   mov     ecx, dword ptr ss:[ebp-0x87C]
+01A37DF7    50              push    eax
+01A37DF8    E8 83C41B00     call    01BF4280
+01A37DFD    8D8D 90F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA70]
+01A37E03    E8 28001D00     call    01C07E30
+01A37E08    83C4 14         add     esp, 0x14
+01A37E0B    8BC8            mov     ecx, eax
+01A37E0D    C645 FC 0E      mov     byte ptr ss:[ebp-0x4], 0xE
+01A37E11    E8 4A98DCFF     call    01801660
+01A37E16    83EC 10         sub     esp, 0x10
+01A37E19    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A37E1E    8BCC            mov     ecx, esp
+01A37E20    68 683B6402     push    02643B68                         ; ASCII "BatchGetHeadImg success,UserName:%s"
+01A37E25    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A37E2A    C601 02         mov     byte ptr ds:[ecx], 0x2
+01A37E2D    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01A37E30    B9 02000000     mov     ecx, 0x2
+01A37E35    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A37E3A    68 1F010000     push    0x11F
+01A37E3F    E8 ECB61B00     call    01BF3530
+01A37E44    83C4 70         add     esp, 0x70
+01A37E47    C645 FC 0D      mov     byte ptr ss:[ebp-0x4], 0xD
+01A37E4B    8D8D 90F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA70]
+01A37E51    E8 5A26E2FF     call    0185A4B0
+01A37E56    8D85 7CF5FFFF   lea     eax, dword ptr ss:[ebp-0xA84]
+01A37E5C    50              push    eax
+01A37E5D    8D8D 70FFFFFF   lea     ecx, dword ptr ss:[ebp-0x90]
+01A37E63    E8 787EDDFF     call    0180FCE0
+01A37E68    838D 98F7FFFF 0>or      dword ptr ss:[ebp-0x868], 0x1
+01A37E6F    8378 04 00      cmp     dword ptr ds:[eax+0x4], 0x0
+01A37E73    0F9EC0          setle   al
+01A37E76    84C0            test    al, al
+01A37E78    75 30           jnz     short 01A37EAA
+01A37E7A    FFB5 F0F6FFFF   push    dword ptr ss:[ebp-0x910]
+01A37E80    8B97 8C000000   mov     edx, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A37E86    8D85 08F7FFFF   lea     eax, dword ptr ss:[ebp-0x8F8]
+01A37E8C    8B8F 88000000   mov     ecx, dword ptr ds:[edi+0x88]
+01A37E92    50              push    eax
+01A37E93    E8 A8BEEAFF     call    018E3D40
+01A37E98    83C4 08         add     esp, 0x8
+01A37E9B    C685 9FF7FFFF 0>mov     byte ptr ss:[ebp-0x861], 0x1
+01A37EA2    3B87 8C000000   cmp     eax, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A37EA8    75 07           jnz     short 01A37EB1
+01A37EAA    C685 9FF7FFFF 0>mov     byte ptr ss:[ebp-0x861], 0x0
+01A37EB1    83A5 98F7FFFF F>and     dword ptr ss:[ebp-0x868], 0xFFFF>
+01A37EB8    8D8D 7CF5FFFF   lea     ecx, dword ptr ss:[ebp-0xA84]
+01A37EBE    E8 ED25E2FF     call    0185A4B0
+01A37EC3    80BD 9FF7FFFF 0>cmp     byte ptr ss:[ebp-0x861], 0x0
+01A37ECA    0F84 AA010000   je      01A3807A
+01A37ED0    8D85 08F7FFFF   lea     eax, dword ptr ss:[ebp-0x8F8]
+01A37ED6    50              push    eax
+01A37ED7    8D8D C4F6FFFF   lea     ecx, dword ptr ss:[ebp-0x93C]
+01A37EDD    E8 EE6CDCFF     call    017FEBD0
+01A37EE2    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A37EE9    83EC 10         sub     esp, 0x10
+01A37EEC    8D8D 08F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F8]
+01A37EF2    8BC4            mov     eax, esp
+01A37EF4    83EC 10         sub     esp, 0x10
+01A37EF7    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37EFA    8BC4            mov     eax, esp
+01A37EFC    83EC 10         sub     esp, 0x10
+01A37EFF    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37F02    8BC4            mov     eax, esp
+01A37F04    83EC 10         sub     esp, 0x10
+01A37F07    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37F0A    8BC4            mov     eax, esp
+01A37F0C    83EC 10         sub     esp, 0x10
+01A37F0F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37F12    8BC4            mov     eax, esp
+01A37F14    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A37F17    E8 645ADDFF     call    0180D980
+01A37F1C    83EC 10         sub     esp, 0x10
+01A37F1F    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A37F24    8BCC            mov     ecx, esp
+01A37F26    68 683B6402     push    02643B68                         ; ASCII "BatchGetHeadImg success,UserName:%s"
+01A37F2B    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A37F30    C601 02         mov     byte ptr ds:[ecx], 0x2
+01A37F33    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01A37F36    B9 01000000     mov     ecx, 0x1
+01A37F3B    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A37F40    68 23010000     push    0x123
+01A37F45    E8 E6B51B00     call    01BF3530
+01A37F4A    83C4 70         add     esp, 0x70
+01A37F4D    8D85 70FFFFFF   lea     eax, dword ptr ss:[ebp-0x90]
+01A37F53    8D8D FCF6FFFF   lea     ecx, dword ptr ss:[ebp-0x904]
+01A37F59    50              push    eax
+01A37F5A    E8 61680000     call    01A3E7C0
+01A37F5F    8D47 1C         lea     eax, dword ptr ds:[edi+0x1C]
+01A37F62    C785 F8F6FFFF 0>mov     dword ptr ss:[ebp-0x908], 0x0
+01A37F6C    50              push    eax
+01A37F6D    8985 F4F6FFFF   mov     dword ptr ss:[ebp-0x90C], eax
+01A37F73    FF15 40F45002   call    dword ptr ds:[<&KERNEL32.EnterCr>; ntdll.RtlEnterCriticalSection
+01A37F79    C645 FC 0F      mov     byte ptr ss:[ebp-0x4], 0xF
+01A37F7D    8D77 34         lea     esi, dword ptr ds:[edi+0x34]
+01A37F80    8BBD F8F6FFFF   mov     edi, dword ptr ss:[ebp-0x908]    ; ntdll.7C9301BB
+01A37F86    8D85 70FFFFFF   lea     eax, dword ptr ss:[ebp-0x90]
+01A37F8C    8BCE            mov     ecx, esi
+01A37F8E    50              push    eax
+01A37F8F    8D85 08F7FFFF   lea     eax, dword ptr ss:[ebp-0x8F8]
+01A37F95    50              push    eax
+01A37F96    E8 E5650000     call    01A3E580
+01A37F9B    8BC8            mov     ecx, eax
+01A37F9D    E8 BE130000     call    01A39360
+01A37FA2    47              inc     edi
+01A37FA3    89BD F8F6FFFF   mov     dword ptr ss:[ebp-0x908], edi
+01A37FA9    83FF 01         cmp     edi, 0x1
+01A37FAC  ^ 7C D8           jl      short 01A37F86
+01A37FAE    C645 FC 0D      mov     byte ptr ss:[ebp-0x4], 0xD
+01A37FB2    FFB5 F4F6FFFF   push    dword ptr ss:[ebp-0x90C]
+01A37FB8    FF15 3CF45002   call    dword ptr ds:[<&KERNEL32.LeaveCr>; ntdll.RtlLeaveCriticalSection
+01A37FBE    8BBD A0F7FFFF   mov     edi, dword ptr ss:[ebp-0x860]
+01A37FC4    8D85 08F7FFFF   lea     eax, dword ptr ss:[ebp-0x8F8]
+01A37FCA    50              push    eax
+01A37FCB    8BCF            mov     ecx, edi
+01A37FCD    E8 AE480000     call    01A3C880
+01A37FD2    8D85 08F7FFFF   lea     eax, dword ptr ss:[ebp-0x8F8]
+01A37FD8    50              push    eax
+01A37FD9    8D85 DCF5FFFF   lea     eax, dword ptr ss:[ebp-0xA24]
+01A37FDF    50              push    eax
+01A37FE0    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A37FE3    E8 7818E0FF     call    01839860
+01A37FE8    8B85 DCF5FFFF   mov     eax, dword ptr ss:[ebp-0xA24]
+01A37FEE    8D8D 08F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F8]
+01A37FF4    51              push    ecx
+01A37FF5    8D8D 4CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x8B4]
+01A37FFB    51              push    ecx
+01A37FFC    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38002    C740 24 0500000>mov     dword ptr ds:[eax+0x24], 0x5
+01A38009    E8 6216E0FF     call    01839670
+01A3800E    8B8D 4CF7FFFF   mov     ecx, dword ptr ss:[ebp-0x8B4]
+01A38014    8B85 50F7FFFF   mov     eax, dword ptr ss:[ebp-0x8B0]    ; ntdll.7C92E900
+01A3801A    8BB5 88F7FFFF   mov     esi, dword ptr ss:[ebp-0x878]    ; ntdll.7C9301BB
+01A38020    898D 5CF7FFFF   mov     dword ptr ss:[ebp-0x8A4], ecx
+01A38026    3BC8            cmp     ecx, eax
+01A38028    74 2B           je      short 01A38055
+01A3802A    8BF8            mov     edi, eax
+01A3802C    0f1f40 00       nop     dword ptr ds:[eax]
+01A38030    8D8D 5CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x8A4]
+01A38036    E8 5574DCFF     call    017FF490
+01A3803B    39BD 5CF7FFFF   cmp     dword ptr ss:[ebp-0x8A4], edi
+01A38041  ^ 75 ED           jnz     short 01A38030
+01A38043    8BBD A0F7FFFF   mov     edi, dword ptr ss:[ebp-0x860]
+01A38049    8B85 50F7FFFF   mov     eax, dword ptr ss:[ebp-0x8B0]    ; ntdll.7C92E900
+01A3804F    8B8D 4CF7FFFF   mov     ecx, dword ptr ss:[ebp-0x8B4]
+01A38055    50              push    eax
+01A38056    51              push    ecx
+01A38057    8D85 68F7FFFF   lea     eax, dword ptr ss:[ebp-0x898]
+01A3805D    50              push    eax
+01A3805E    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38064    E8 074BDDFF     call    0180CB70
+01A38069    8D8F 88000000   lea     ecx, dword ptr ds:[edi+0x88]
+01A3806F    8D95 08F7FFFF   lea     edx, dword ptr ss:[ebp-0x8F8]
+01A38075    E8 5637EEFF     call    0191B7D0
+01A3807A    8D8D 70FFFFFF   lea     ecx, dword ptr ss:[ebp-0x90]
+01A38080    E8 6B3AECFF     call    018FBAF0
+01A38085    8D8D 08F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F8]
+01A3808B    E8 2024E2FF     call    0185A4B0
+01A38090    C645 FC 09      mov     byte ptr ss:[ebp-0x4], 0x9
+01A38094    8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+01A38097    C745 DC F4E66C0>mov     dword ptr ss:[ebp-0x24], 026CE6F>
+01A3809E    3B05 10E58602   cmp     eax, dword ptr ds:[0x286E510]
+01A380A4    74 1A           je      short 01A380C0
+01A380A6    8B4D E0         mov     ecx, dword ptr ss:[ebp-0x20]
+01A380A9    85C9            test    ecx, ecx
+01A380AB    74 06           je      short 01A380B3
+01A380AD    8B01            mov     eax, dword ptr ds:[ecx]
+01A380AF    6A 01           push    0x1
+01A380B1    FF10            call    dword ptr ds:[eax]
+01A380B3    8B4D E4         mov     ecx, dword ptr ss:[ebp-0x1C]     ; user32.77D191BE
+01A380B6    85C9            test    ecx, ecx
+01A380B8    74 06           je      short 01A380C0
+01A380BA    8B01            mov     eax, dword ptr ds:[ecx]
+01A380BC    6A 01           push    0x1
+01A380BE    FF10            call    dword ptr ds:[eax]
+01A380C0    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A380C3    E8 45938D00     call    0231140D
+01A380C8    8B8D 90F7FFFF   mov     ecx, dword ptr ss:[ebp-0x870]
+01A380CE    83C1 04         add     ecx, 0x4
+01A380D1    898D 90F7FFFF   mov     dword ptr ss:[ebp-0x870], ecx
+01A380D7    3BCE            cmp     ecx, esi
+01A380D9  ^ 0F85 81FBFFFF   jnz     01A37C60
+01A380DF    8BB5 00F7FFFF   mov     esi, dword ptr ss:[ebp-0x900]
+01A380E5    EB 02           jmp     short 01A380E9
+01A380E7    33F6            xor     esi, esi
+01A380E9    8B85 8CF7FFFF   mov     eax, dword ptr ss:[ebp-0x874]    ; WeChatWi.024420C1
+01A380EF    FF70 08         push    dword ptr ds:[eax+0x8]
+01A380F2    E8 C9A3DDFF     call    018124C0
+01A380F7    8BC8            mov     ecx, eax
+01A380F9    E8 32560800     call    01ABD730
+01A380FE    2BB5 FCF6FFFF   sub     esi, dword ptr ss:[ebp-0x904]
+01A38104    B8 89888888     mov     eax, 0x88888889
+01A38109    F7EE            imul    esi
+01A3810B    03D6            add     edx, esi
+01A3810D    C1FA 05         sar     edx, 0x5
+01A38110    8BC2            mov     eax, edx
+01A38112    C1E8 1F         shr     eax, 0x1F
+01A38115    03C2            add     eax, edx
+01A38117    74 0B           je      short 01A38124
+01A38119    8D8D FCF6FFFF   lea     ecx, dword ptr ss:[ebp-0x904]
+01A3811F    E8 9C150000     call    01A396C0
+01A38124    8D47 1C         lea     eax, dword ptr ds:[edi+0x1C]
+01A38127    C785 E8F6FFFF 0>mov     dword ptr ss:[ebp-0x918], 0x0
+01A38131    50              push    eax
+01A38132    8985 E4F6FFFF   mov     dword ptr ss:[ebp-0x91C], eax
+01A38138    FF15 40F45002   call    dword ptr ds:[<&KERNEL32.EnterCr>; ntdll.RtlEnterCriticalSection
+01A3813E    C645 FC 10      mov     byte ptr ss:[ebp-0x4], 0x10
+01A38142    33C0            xor     eax, eax
+01A38144    8BB7 88000000   mov     esi, dword ptr ds:[edi+0x88]
+01A3814A    3BB7 8C000000   cmp     esi, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A38150    0F84 0D020000   je      01A38363
+01A38156    8B0E            mov     ecx, dword ptr ds:[esi]
+01A38158    85C9            test    ecx, ecx
+01A3815A    74 20           je      short 01A3817C
+01A3815C    66:8339 00      cmp     word ptr ds:[ecx], 0x0
+01A38160    74 1A           je      short 01A3817C
+01A38162    6A 01           push    0x1
+01A38164    8D56 0C         lea     edx, dword ptr ds:[esi+0xC]
+01A38167    51              push    ecx
+01A38168    E8 F36E1C00     call    01BFF060
+01A3816D    8B4E 0C         mov     ecx, dword ptr ds:[esi+0xC]
+01A38170    83C4 08         add     esp, 0x8
+01A38173    85C9            test    ecx, ecx
+01A38175    74 05           je      short 01A3817C
+01A38177    8039 00         cmp     byte ptr ds:[ecx], 0x0
+01A3817A    75 05           jnz     short 01A38181
+01A3817C    B9 C0315E02     mov     ecx, 025E31C0
+01A38181    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A38188    83EC 10         sub     esp, 0x10
+01A3818B    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A38190    8BC4            mov     eax, esp
+01A38192    83EC 10         sub     esp, 0x10
+01A38195    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38198    8BC4            mov     eax, esp
+01A3819A    83EC 10         sub     esp, 0x10
+01A3819D    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A381A0    8BC4            mov     eax, esp
+01A381A2    83EC 10         sub     esp, 0x10
+01A381A5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A381A8    8BC4            mov     eax, esp
+01A381AA    83EC 10         sub     esp, 0x10
+01A381AD    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A381B0    8BC4            mov     eax, esp
+01A381B2    83EC 10         sub     esp, 0x10
+01A381B5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A381B8    8BC4            mov     eax, esp
+01A381BA    68 503B6402     push    02643B50                         ; ASCII "scene download fail %s"
+01A381BF    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A381C4    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A381C9    8948 08         mov     dword ptr ds:[eax+0x8], ecx
+01A381CC    B9 04000000     mov     ecx, 0x4
+01A381D1    68 4C010000     push    0x14C
+01A381D6    C600 02         mov     byte ptr ds:[eax], 0x2
+01A381D9    E8 52B31B00     call    01BF3530
+01A381DE    83C4 70         add     esp, 0x70
+01A381E1    8D85 E4F5FFFF   lea     eax, dword ptr ss:[ebp-0xA1C]
+01A381E7    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A381EA    56              push    esi
+01A381EB    50              push    eax
+01A381EC    E8 6F16E0FF     call    01839860
+01A381F1    8B85 E4F5FFFF   mov     eax, dword ptr ss:[ebp-0xA1C]
+01A381F7    8D8F A8000000   lea     ecx, dword ptr ds:[edi+0xA8]
+01A381FD    56              push    esi
+01A381FE    C740 24 0000000>mov     dword ptr ds:[eax+0x24], 0x0
+01A38205    8D85 ECF5FFFF   lea     eax, dword ptr ss:[ebp-0xA14]
+01A3820B    50              push    eax
+01A3820C    E8 4F7FDCFF     call    01800160
+01A38211    8B85 ECF5FFFF   mov     eax, dword ptr ss:[ebp-0xA14]
+01A38217    8D8F A8000000   lea     ecx, dword ptr ds:[edi+0xA8]
+01A3821D    56              push    esi
+01A3821E    FF40 24         inc     dword ptr ds:[eax+0x24]
+01A38221    8D85 20F6FFFF   lea     eax, dword ptr ss:[ebp-0x9E0]
+01A38227    50              push    eax
+01A38228    E8 337FDCFF     call    01800160
+01A3822D    8B85 20F6FFFF   mov     eax, dword ptr ss:[ebp-0x9E0]    ; ntdll.7C9301BB
+01A38233    56              push    esi
+01A38234    8378 24 03      cmp     dword ptr ds:[eax+0x24], 0x3
+01A38238    0F8E 05010000   jle     01A38343
+01A3823E    8D85 2CF6FFFF   lea     eax, dword ptr ss:[ebp-0x9D4]
+01A38244    50              push    eax
+01A38245    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A38248    E8 1316E0FF     call    01839860
+01A3824D    8B85 2CF6FFFF   mov     eax, dword ptr ss:[ebp-0x9D4]
+01A38253    8D8D 2CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x8D4]
+01A38259    56              push    esi
+01A3825A    51              push    ecx
+01A3825B    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38261    C740 24 0400000>mov     dword ptr ds:[eax+0x24], 0x4
+01A38268    E8 0314E0FF     call    01839670
+01A3826D    8B8D 2CF7FFFF   mov     ecx, dword ptr ss:[ebp-0x8D4]    ; ntdll.7C956F10
+01A38273    8B85 30F7FFFF   mov     eax, dword ptr ss:[ebp-0x8D0]
+01A38279    898D 90F7FFFF   mov     dword ptr ss:[ebp-0x870], ecx
+01A3827F    3BC8            cmp     ecx, eax
+01A38281    74 27           je      short 01A382AA
+01A38283    8BF8            mov     edi, eax
+01A38285    8D8D 90F7FFFF   lea     ecx, dword ptr ss:[ebp-0x870]
+01A3828B    E8 0072DCFF     call    017FF490
+01A38290    39BD 90F7FFFF   cmp     dword ptr ss:[ebp-0x870], edi
+01A38296  ^ 75 ED           jnz     short 01A38285
+01A38298    8BBD A0F7FFFF   mov     edi, dword ptr ss:[ebp-0x860]
+01A3829E    8B85 30F7FFFF   mov     eax, dword ptr ss:[ebp-0x8D0]
+01A382A4    8B8D 2CF7FFFF   mov     ecx, dword ptr ss:[ebp-0x8D4]    ; ntdll.7C956F10
+01A382AA    50              push    eax
+01A382AB    51              push    ecx
+01A382AC    8D85 64F7FFFF   lea     eax, dword ptr ss:[ebp-0x89C]
+01A382B2    50              push    eax
+01A382B3    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A382B9    E8 B248DDFF     call    0180CB70
+01A382BE    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A382C5    83EC 10         sub     esp, 0x10
+01A382C8    8BC4            mov     eax, esp
+01A382CA    83EC 10         sub     esp, 0x10
+01A382CD    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A382D0    8BC4            mov     eax, esp
+01A382D2    83EC 10         sub     esp, 0x10
+01A382D5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A382D8    8BC4            mov     eax, esp
+01A382DA    83EC 10         sub     esp, 0x10
+01A382DD    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A382E0    8BC4            mov     eax, esp
+01A382E2    83EC 10         sub     esp, 0x10
+01A382E5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A382E8    8BC4            mov     eax, esp
+01A382EA    83EC 10         sub     esp, 0x10
+01A382ED    8BCC            mov     ecx, esp
+01A382EF    6A 03           push    0x3
+01A382F1    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A382F4    E8 07E6DBFF     call    017F6900
+01A382F9    68 483C6402     push    02643C48                         ; ASCII "user name %s,failed more than %d times"
+01A382FE    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A38303    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A38308    68 54010000     push    0x154
+01A3830D    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A38312    B9 04000000     mov     ecx, 0x4
+01A38317    E8 14B21B00     call    01BF3530
+01A3831C    83C4 70         add     esp, 0x70
+01A3831F    8D85 F4F5FFFF   lea     eax, dword ptr ss:[ebp-0xA0C]
+01A38325    8D8F B8000000   lea     ecx, dword ptr ds:[edi+0xB8]
+01A3832B    56              push    esi
+01A3832C    50              push    eax
+01A3832D    E8 2E15E0FF     call    01839860
+01A38332    FF15 A4F55002   call    dword ptr ds:[<&KERNEL32.GetTick>; kernel32.GetTickCount
+01A38338    8B8D F4F5FFFF   mov     ecx, dword ptr ss:[ebp-0xA0C]
+01A3833E    8941 24         mov     dword ptr ds:[ecx+0x24], eax
+01A38341    EB 0B           jmp     short 01A3834E
+01A38343    8D8F 9C000000   lea     ecx, dword ptr ds:[edi+0x9C]
+01A38349    E8 8268DCFF     call    017FEBD0
+01A3834E    83C6 14         add     esi, 0x14
+01A38351    3BB7 8C000000   cmp     esi, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A38357  ^ 0F85 F9FDFFFF   jnz     01A38156
+01A3835D    8B85 E8F6FFFF   mov     eax, dword ptr ss:[ebp-0x918]    ; ntdll.7C92E900
+01A38363    40              inc     eax
+01A38364    8985 E8F6FFFF   mov     dword ptr ss:[ebp-0x918], eax
+01A3836A    83F8 01         cmp     eax, 0x1
+01A3836D  ^ 0F8C D1FDFFFF   jl      01A38144
+01A38373    8D47 1C         lea     eax, dword ptr ds:[edi+0x1C]
+01A38376    C645 FC 09      mov     byte ptr ss:[ebp-0x4], 0x9
+01A3837A    50              push    eax
+01A3837B    FF15 3CF45002   call    dword ptr ds:[<&KERNEL32.LeaveCr>; ntdll.RtlLeaveCriticalSection
+01A38381    32C9            xor     cl, cl
+01A38383    8D47 64         lea     eax, dword ptr ds:[edi+0x64]
+01A38386    8608            xchg    byte ptr ds:[eax], cl
+01A38388    FFB5 64F7FFFF   push    dword ptr ss:[ebp-0x89C]
+01A3838E    8B97 8C000000   mov     edx, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A38394    51              push    ecx
+01A38395    8B8F 88000000   mov     ecx, dword ptr ds:[edi+0x88]
+01A3839B    E8 100EDCFF     call    017F91B0
+01A383A0    8B87 88000000   mov     eax, dword ptr ds:[edi+0x88]
+01A383A6    83C4 08         add     esp, 0x8
+01A383A9    8BCF            mov     ecx, edi
+01A383AB    8987 8C000000   mov     dword ptr ds:[edi+0x8C], eax
+01A383B1    E8 9A230000     call    01A3A750
+01A383B6    8D8D FCF6FFFF   lea     ecx, dword ptr ss:[ebp-0x904]
+01A383BC    E8 1F44ECFF     call    018FC7E0
+01A383C1    8D8D C4F6FFFF   lea     ecx, dword ptr ss:[ebp-0x93C]
+01A383C7    E8 440EDCFF     call    017F9210
+01A383CC    E9 C00E0000     jmp     01A39291
+01A383D1    E8 DA0DF5FF     call    019891B0
+01A383D6    8A40 60         mov     al, byte ptr ds:[eax+0x60]
+01A383D9    84C0            test    al, al
+01A383DB    0F85 B00E0000   jnz     01A39291
+01A383E1    85F6            test    esi, esi
+01A383E3    0F84 A80E0000   je      01A39291
+01A383E9    8B7E 04         mov     edi, dword ptr ds:[esi+0x4]
+01A383EC    3B7E 08         cmp     edi, dword ptr ds:[esi+0x8]
+01A383EF    0F84 9C0E0000   je      01A39291
+01A383F5    66              datasize:
+01A383F6    66              datasize:
+01A383F7    66:0f1f8400 000>nop     word ptr ds:[eax+eax]
+01A38400    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A38407    83EC 10         sub     esp, 0x10
+01A3840A    8BCF            mov     ecx, edi
+01A3840C    8BC4            mov     eax, esp
+01A3840E    83EC 10         sub     esp, 0x10
+01A38411    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38414    8BC4            mov     eax, esp
+01A38416    83EC 10         sub     esp, 0x10
+01A38419    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A3841C    8BC4            mov     eax, esp
+01A3841E    83EC 10         sub     esp, 0x10
+01A38421    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38424    8BC4            mov     eax, esp
+01A38426    83EC 10         sub     esp, 0x10
+01A38429    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A3842C    8BC4            mov     eax, esp
+01A3842E    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38431    E8 4A55DDFF     call    0180D980
+01A38436    83EC 10         sub     esp, 0x10
+01A38439    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A3843E    8BCC            mov     ecx, esp
+01A38440    68 283C6402     push    02643C28                         ; ASCII "ON_STG_CONTACT_ADD userName %s"
+01A38445    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A3844A    C601 02         mov     byte ptr ds:[ecx], 0x2
+01A3844D    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01A38450    B9 01000000     mov     ecx, 0x1
+01A38455    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A3845A    68 93010000     push    0x193
+01A3845F    E8 CCB01B00     call    01BF3530
+01A38464    83C4 70         add     esp, 0x70
+01A38467    8D8D 6CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x494]
+01A3846D    E8 2E851600     call    01BA09A0
+01A38472    8D85 6CFBFFFF   lea     eax, dword ptr ss:[ebp-0x494]
+01A38478    C745 FC 1100000>mov     dword ptr ss:[ebp-0x4], 0x11
+01A3847F    50              push    eax
+01A38480    83EC 14         sub     esp, 0x14
+01A38483    8BCC            mov     ecx, esp
+01A38485    89A5 64F7FFFF   mov     dword ptr ss:[ebp-0x89C], esp
+01A3848B    57              push    edi
+01A3848C    E8 5FBD1B00     call    01BF41F0
+01A38491    C645 FC 12      mov     byte ptr ss:[ebp-0x4], 0x12
+01A38495    E8 4616DCFF     call    017F9AE0
+01A3849A    C645 FC 11      mov     byte ptr ss:[ebp-0x4], 0x11
+01A3849E    E8 BD48FDFF     call    01A0CD60
+01A384A3    84C0            test    al, al
+01A384A5    0F84 36010000   je      01A385E1
+01A384AB    8B85 A0F7FFFF   mov     eax, dword ptr ss:[ebp-0x860]
+01A384B1    8D8D 28F6FFFF   lea     ecx, dword ptr ss:[ebp-0x9D8]
+01A384B7    83C0 04         add     eax, 0x4
+01A384BA    57              push    edi
+01A384BB    51              push    ecx
+01A384BC    8BC8            mov     ecx, eax
+01A384BE    8985 90F7FFFF   mov     dword ptr ss:[ebp-0x870], eax
+01A384C4    8B30            mov     esi, dword ptr ds:[eax]
+01A384C6    E8 F564DCFF     call    017FE9C0
+01A384CB    3930            cmp     dword ptr ds:[eax], esi
+01A384CD    74 36           je      short 01A38505
+01A384CF    8B8D 90F7FFFF   mov     ecx, dword ptr ss:[ebp-0x870]
+01A384D5    8D85 18F6FFFF   lea     eax, dword ptr ss:[ebp-0x9E8]
+01A384DB    57              push    edi
+01A384DC    50              push    eax
+01A384DD    E8 7E13E0FF     call    01839860
+01A384E2    8B85 18F6FFFF   mov     eax, dword ptr ss:[ebp-0x9E8]
+01A384E8    8BB5 A0F7FFFF   mov     esi, dword ptr ss:[ebp-0x860]
+01A384EE    8378 24 01      cmp     dword ptr ds:[eax+0x24], 0x1
+01A384F2    74 17           je      short 01A3850B
+01A384F4    57              push    edi
+01A384F5    8BCE            mov     ecx, esi
+01A384F7    E8 94420000     call    01A3C790
+01A384FC    84C0            test    al, al
+01A384FE    75 0B           jnz     short 01A3850B
+01A38500    E9 B3000000     jmp     01A385B8
+01A38505    8BB5 A0F7FFFF   mov     esi, dword ptr ss:[ebp-0x860]
+01A3850B    57              push    edi
+01A3850C    8BCE            mov     ecx, esi
+01A3850E    E8 7D420000     call    01A3C790
+01A38513    84C0            test    al, al
+01A38515    74 0C           je      short 01A38523
+01A38517    57              push    edi
+01A38518    8BCE            mov     ecx, esi
+01A3851A    E8 C14B0000     call    01A3D0E0
+01A3851F    84C0            test    al, al
+01A38521    75 64           jnz     short 01A38587
+01A38523    8D46 04         lea     eax, dword ptr ds:[esi+0x4]
+01A38526    8B30            mov     esi, dword ptr ds:[eax]
+01A38528    8D8D 48F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8B8]
+01A3852E    57              push    edi
+01A3852F    51              push    ecx
+01A38530    8BC8            mov     ecx, eax
+01A38532    E8 8964DCFF     call    017FE9C0
+01A38537    3930            cmp     dword ptr ds:[eax], esi
+01A38539    0F84 79000000   je      01A385B8
+01A3853F    8B8D 90F7FFFF   mov     ecx, dword ptr ss:[ebp-0x870]
+01A38545    8D85 74F6FFFF   lea     eax, dword ptr ss:[ebp-0x98C]
+01A3854B    57              push    edi
+01A3854C    50              push    eax
+01A3854D    E8 0E13E0FF     call    01839860
+01A38552    8B85 74F6FFFF   mov     eax, dword ptr ss:[ebp-0x98C]    ; ntdll.7C92E900
+01A38558    8378 24 01      cmp     dword ptr ds:[eax+0x24], 0x1
+01A3855C    75 5A           jnz     short 01A385B8
+01A3855E    8BB5 A0F7FFFF   mov     esi, dword ptr ss:[ebp-0x860]
+01A38564    FFB5 48F7FFFF   push    dword ptr ss:[ebp-0x8B8]
+01A3856A    57              push    edi
+01A3856B    8B96 8C000000   mov     edx, dword ptr ds:[esi+0x8C]
+01A38571    8B8E 88000000   mov     ecx, dword ptr ds:[esi+0x88]
+01A38577    E8 C4B7EAFF     call    018E3D40
+01A3857C    83C4 08         add     esp, 0x8
+01A3857F    3B86 8C000000   cmp     eax, dword ptr ds:[esi+0x8C]
+01A38585    74 31           je      short 01A385B8
+01A38587    8D85 40F5FFFF   lea     eax, dword ptr ss:[ebp-0xAC0]
+01A3858D    50              push    eax
+01A3858E    8D8D 6CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x494]
+01A38594    E8 07BD1600     call    01BA42A0
+01A38599    6A 01           push    0x1
+01A3859B    50              push    eax
+01A3859C    57              push    edi
+01A3859D    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A385A1    E8 DA42E4FF     call    0187C880
+01A385A6    8BC8            mov     ecx, eax
+01A385A8    E8 D32E0000     call    01A3B480
+01A385AD    8D8D 40F5FFFF   lea     ecx, dword ptr ss:[ebp-0xAC0]
+01A385B3    E8 F81EE2FF     call    0185A4B0
+01A385B8    8D8D 6CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x494]
+01A385BE    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+01A385C5    E8 468C1600     call    01BA1210
+01A385CA    8B85 8CF7FFFF   mov     eax, dword ptr ss:[ebp-0x874]    ; WeChatWi.024420C1
+01A385D0    83C7 14         add     edi, 0x14
+01A385D3    3B78 08         cmp     edi, dword ptr ds:[eax+0x8]
+01A385D6  ^ 0F85 24FEFFFF   jnz     01A38400
+01A385DC    E9 B00C0000     jmp     01A39291
+01A385E1    8D8D 6CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x494]
+01A385E7    E8 248C1600     call    01BA1210
+01A385EC    E9 A00C0000     jmp     01A39291
+01A385F1    E8 BA0BF5FF     call    019891B0
+01A385F6    8A40 60         mov     al, byte ptr ds:[eax+0x60]
+01A385F9    84C0            test    al, al
+01A385FB    0F85 900C0000   jnz     01A39291
+01A38601    85F6            test    esi, esi
+01A38603    0F84 880C0000   je      01A39291
+01A38609    8D8D A4F7FFFF   lea     ecx, dword ptr ss:[ebp-0x85C]
+01A3860F    E8 8C831600     call    01BA09A0
+01A38614  - E9 E7986602     jmp     kstEx.040A1F00
+01A38619    CC              int3
+01A3861A    CC              int3
+01A3861B    8B7E 04         mov     edi, dword ptr ds:[esi+0x4]
+01A3861E    3B7E 08         cmp     edi, dword ptr ds:[esi+0x8]
+01A38621    0F84 03020000   je      01A3882A
+01A38627    8B85 A0F7FFFF   mov     eax, dword ptr ss:[ebp-0x860]
+01A3862D    05 D0000000     add     eax, 0xD0
+01A38632    C785 10F6FFFF 0>mov     dword ptr ss:[ebp-0x9F0], 0x0
+01A3863C    C785 14F6FFFF 0>mov     dword ptr ss:[ebp-0x9EC], 0x0
+01A38646    8985 98F7FFFF   mov     dword ptr ss:[ebp-0x868], eax
+01A3864C    0f1f40 00       nop     dword ptr ds:[eax]
+01A38650    8D85 A4F7FFFF   lea     eax, dword ptr ss:[ebp-0x85C]
+01A38656    50              push    eax
+01A38657    83EC 14         sub     esp, 0x14
+01A3865A    8BCC            mov     ecx, esp
+01A3865C    89A5 48F7FFFF   mov     dword ptr ss:[ebp-0x8B8], esp
+01A38662    57              push    edi
+01A38663    E8 88BB1B00     call    01BF41F0
+01A38668    C645 FC 15      mov     byte ptr ss:[ebp-0x4], 0x15
+01A3866C    E8 6F14DCFF     call    017F9AE0
+01A38671    C645 FC 14      mov     byte ptr ss:[ebp-0x4], 0x14
+01A38675    E8 E646FDFF     call    01A0CD60
+01A3867A    C645 FC 16      mov     byte ptr ss:[ebp-0x4], 0x16
+01A3867E    8B85 98F7FFFF   mov     eax, dword ptr ss:[ebp-0x868]
+01A38684    8B30            mov     esi, dword ptr ds:[eax]
+01A38686    8B36            mov     esi, dword ptr ds:[esi]
+01A38688    89B5 A0F7FFFF   mov     dword ptr ss:[ebp-0x860], esi
+01A3868E    3B30            cmp     esi, dword ptr ds:[eax]
+01A38690    0F84 83000000   je      01A38719
+01A38696    8B46 10         mov     eax, dword ptr ds:[esi+0x10]
+01A38699    85C0            test    eax, eax
+01A3869B    74 06           je      short 01A386A3
+01A3869D    66:8338 00      cmp     word ptr ds:[eax], 0x0
+01A386A1    75 05           jnz     short 01A386A8
+01A386A3    B8 E4C86702     mov     eax, 0267C8E4
+01A386A8    50              push    eax
+01A386A9    8BCF            mov     ecx, edi
+01A386AB    E8 B0C01B00     call    01BF4760
+01A386B0    85C0            test    eax, eax
+01A386B2    74 1D           je      short 01A386D1
+01A386B4    8D8D A0F7FFFF   lea     ecx, dword ptr ss:[ebp-0x860]
+01A386BA    E8 D16DDCFF     call    017FF490
+01A386BF    8B85 98F7FFFF   mov     eax, dword ptr ss:[ebp-0x868]
+01A386C5    8BB5 A0F7FFFF   mov     esi, dword ptr ss:[ebp-0x860]
+01A386CB    3B30            cmp     esi, dword ptr ds:[eax]
+01A386CD  ^ 75 C7           jnz     short 01A38696
+01A386CF    EB 48           jmp     short 01A38719
+01A386D1    8D85 68F5FFFF   lea     eax, dword ptr ss:[ebp-0xA98]
+01A386D7    50              push    eax
+01A386D8    8D8D A4F7FFFF   lea     ecx, dword ptr ss:[ebp-0x85C]
+01A386DE    E8 BDBB1600     call    01BA42A0
+01A386E3    6A 00           push    0x0
+01A386E5    50              push    eax
+01A386E6    57              push    edi
+01A386E7    C645 FC 17      mov     byte ptr ss:[ebp-0x4], 0x17
+01A386EB    E8 9041E4FF     call    0187C880
+01A386F0    8BC8            mov     ecx, eax
+01A386F2    E8 892D0000     call    01A3B480
+01A386F7    8D8D 68F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA98]
+01A386FD    C645 FC 16      mov     byte ptr ss:[ebp-0x4], 0x16
+01A38701    E8 AA1DE2FF     call    0185A4B0
+01A38706    8B8D 98F7FFFF   mov     ecx, dword ptr ss:[ebp-0x868]
+01A3870C    8D85 ECF6FFFF   lea     eax, dword ptr ss:[ebp-0x914]
+01A38712    56              push    esi
+01A38713    50              push    eax
+01A38714    E8 3746DDFF     call    0180CD50
+01A38719    8B35 DC118702   mov     esi, dword ptr ds:[0x28711DC]
+01A3871F    3B35 E0118702   cmp     esi, dword ptr ds:[0x28711E0]
+01A38725    0F84 E9000000   je      01A38814
+01A3872B    0f1f4400 00     nop     dword ptr ds:[eax+eax]
+01A38730    8B06            mov     eax, dword ptr ds:[esi]
+01A38732    85C0            test    eax, eax
+01A38734    74 06           je      short 01A3873C
+01A38736    66:8338 00      cmp     word ptr ds:[eax], 0x0
+01A3873A    75 05           jnz     short 01A38741
+01A3873C    B8 E4C86702     mov     eax, 0267C8E4
+01A38741    50              push    eax
+01A38742    8BCF            mov     ecx, edi
+01A38744    E8 17C01B00     call    01BF4760
+01A38749    85C0            test    eax, eax
+01A3874B    74 10           je      short 01A3875D
+01A3874D    83C6 14         add     esi, 0x14
+01A38750    3B35 E0118702   cmp     esi, dword ptr ds:[0x28711E0]
+01A38756  ^ 75 D8           jnz     short 01A38730
+01A38758    E9 B7000000     jmp     01A38814
+01A3875D    8D85 B0F6FFFF   lea     eax, dword ptr ss:[ebp-0x950]
+01A38763    50              push    eax
+01A38764    8D8D A4F7FFFF   lea     ecx, dword ptr ss:[ebp-0x85C]
+01A3876A    E8 31BB1600     call    01BA42A0
+01A3876F    6A 00           push    0x0
+01A38771    50              push    eax
+01A38772    57              push    edi
+01A38773    C645 FC 18      mov     byte ptr ss:[ebp-0x4], 0x18
+01A38777    E8 0441E4FF     call    0187C880
+01A3877C    8BC8            mov     ecx, eax
+01A3877E    E8 FD2C0000     call    01A3B480
+01A38783    C645 FC 16      mov     byte ptr ss:[ebp-0x4], 0x16
+01A38787    8B85 B0F6FFFF   mov     eax, dword ptr ss:[ebp-0x950]
+01A3878D    85C0            test    eax, eax
+01A3878F    74 13           je      short 01A387A4
+01A38791    50              push    eax
+01A38792    E8 8822A000     call    0243AA1F
+01A38797    83C4 04         add     esp, 0x4
+01A3879A    C785 B0F6FFFF 0>mov     dword ptr ss:[ebp-0x950], 0x0
+01A387A4    8B85 BCF6FFFF   mov     eax, dword ptr ss:[ebp-0x944]
+01A387AA    C785 B8F6FFFF 0>mov     dword ptr ss:[ebp-0x948], 0x0
+01A387B4    C785 B4F6FFFF 0>mov     dword ptr ss:[ebp-0x94C], 0x0
+01A387BE    85C0            test    eax, eax
+01A387C0    74 09           je      short 01A387CB
+01A387C2    50              push    eax
+01A387C3    E8 5722A000     call    0243AA1F
+01A387C8    83C4 04         add     esp, 0x4
+01A387CB    8B15 E0118702   mov     edx, dword ptr ds:[0x28711E0]
+01A387D1    8D4E 14         lea     ecx, dword ptr ds:[esi+0x14]
+01A387D4    C685 80F7FFFF 0>mov     byte ptr ss:[ebp-0x880], 0x0
+01A387DB    FFB5 80F7FFFF   push    dword ptr ss:[ebp-0x880]         ; ntdll.7C9301C0
+01A387E1    56              push    esi
+01A387E2    E8 797ADCFF     call    01800260
+01A387E7    8B15 E0118702   mov     edx, dword ptr ds:[0x28711E0]
+01A387ED    83C4 08         add     esp, 0x8
+01A387F0    FFB5 ECF6FFFF   push    dword ptr ss:[ebp-0x914]
+01A387F6    8D4A EC         lea     ecx, dword ptr ds:[edx-0x14]
+01A387F9    51              push    ecx
+01A387FA    E8 B109DCFF     call    017F91B0
+01A387FF    832D E0118702 1>sub     dword ptr ds:[0x28711E0], 0x14
+01A38806    83C4 08         add     esp, 0x8
+01A38809    B9 D0118702     mov     ecx, 028711D0
+01A3880E    57              push    edi
+01A3880F    E8 BC63DCFF     call    017FEBD0
+01A38814    8B85 8CF7FFFF   mov     eax, dword ptr ss:[ebp-0x874]    ; WeChatWi.024420C1
+01A3881A    83C7 14         add     edi, 0x14
+01A3881D    C645 FC 14      mov     byte ptr ss:[ebp-0x4], 0x14
+01A38821    3B78 08         cmp     edi, dword ptr ds:[eax+0x8]
+01A38824  ^ 0F85 26FEFFFF   jnz     01A38650
+01A3882A    8D8D A4F7FFFF   lea     ecx, dword ptr ss:[ebp-0x85C]
+01A38830    E8 DB891600     call    01BA1210
+01A38835    E9 570A0000     jmp     01A39291
+01A3883A    E8 214B0000     call    01A3D360
+01A3883F    E9 4D0A0000     jmp     01A39291
+01A38844    8BB7 88000000   mov     esi, dword ptr ds:[edi+0x88]
+01A3884A    3BB7 8C000000   cmp     esi, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A38850    0F84 18010000   je      01A3896E
+01A38856    8D8F A8000000   lea     ecx, dword ptr ds:[edi+0xA8]
+01A3885C    0f1f40 00       nop     dword ptr ds:[eax]
+01A38860    56              push    esi
+01A38861    8D85 CCF5FFFF   lea     eax, dword ptr ss:[ebp-0xA34]
+01A38867    50              push    eax
+01A38868    E8 F378DCFF     call    01800160
+01A3886D    8B85 CCF5FFFF   mov     eax, dword ptr ss:[ebp-0xA34]
+01A38873    8D8F A8000000   lea     ecx, dword ptr ds:[edi+0xA8]
+01A38879    56              push    esi
+01A3887A    FF40 24         inc     dword ptr ds:[eax+0x24]
+01A3887D    8D85 94F6FFFF   lea     eax, dword ptr ss:[ebp-0x96C]
+01A38883    50              push    eax
+01A38884    E8 D778DCFF     call    01800160
+01A38889    8B85 94F6FFFF   mov     eax, dword ptr ss:[ebp-0x96C]    ; ntdll.7C92E900
+01A3888F    56              push    esi
+01A38890    8378 24 03      cmp     dword ptr ds:[eax+0x24], 0x3
+01A38894    7F 1E           jg      short 01A388B4
+01A38896    8D85 8CF6FFFF   lea     eax, dword ptr ss:[ebp-0x974]
+01A3889C    50              push    eax
+01A3889D    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A388A0    E8 BB0FE0FF     call    01839860
+01A388A5    8B85 8CF6FFFF   mov     eax, dword ptr ss:[ebp-0x974]
+01A388AB    C740 24 0000000>mov     dword ptr ds:[eax+0x24], 0x0
+01A388B2    EB 3E           jmp     short 01A388F2
+01A388B4    8D85 84F6FFFF   lea     eax, dword ptr ss:[ebp-0x97C]
+01A388BA    50              push    eax
+01A388BB    8D8F B8000000   lea     ecx, dword ptr ds:[edi+0xB8]
+01A388C1    E8 9A0FE0FF     call    01839860
+01A388C6    FF15 A4F55002   call    dword ptr ds:[<&KERNEL32.GetTick>; kernel32.GetTickCount
+01A388CC    8B8D 84F6FFFF   mov     ecx, dword ptr ss:[ebp-0x97C]
+01A388D2    56              push    esi
+01A388D3    8941 24         mov     dword ptr ds:[ecx+0x24], eax
+01A388D6    8D85 7CF6FFFF   lea     eax, dword ptr ss:[ebp-0x984]
+01A388DC    50              push    eax
+01A388DD    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A388E0    E8 7B0FE0FF     call    01839860
+01A388E5    8B85 7CF6FFFF   mov     eax, dword ptr ss:[ebp-0x984]
+01A388EB    C740 24 0400000>mov     dword ptr ds:[eax+0x24], 0x4
+01A388F2    56              push    esi
+01A388F3    8D85 24F7FFFF   lea     eax, dword ptr ss:[ebp-0x8DC]
+01A388F9    50              push    eax
+01A388FA    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38900    E8 6B0DE0FF     call    01839670
+01A38905    8B8D 24F7FFFF   mov     ecx, dword ptr ss:[ebp-0x8DC]
+01A3890B    8B85 28F7FFFF   mov     eax, dword ptr ss:[ebp-0x8D8]    ; ntdll.7C92E900
+01A38911    898D 98F7FFFF   mov     dword ptr ss:[ebp-0x868], ecx
+01A38917    3BC8            cmp     ecx, eax
+01A38919    74 2A           je      short 01A38945
+01A3891B    8BF8            mov     edi, eax
+01A3891D    0f1f00          nop     dword ptr ds:[eax]
+01A38920    8D8D 98F7FFFF   lea     ecx, dword ptr ss:[ebp-0x868]
+01A38926    E8 656BDCFF     call    017FF490
+01A3892B    39BD 98F7FFFF   cmp     dword ptr ss:[ebp-0x868], edi
+01A38931  ^ 75 ED           jnz     short 01A38920
+01A38933    8BBD A0F7FFFF   mov     edi, dword ptr ss:[ebp-0x860]
+01A38939    8B85 28F7FFFF   mov     eax, dword ptr ss:[ebp-0x8D8]    ; ntdll.7C92E900
+01A3893F    8B8D 24F7FFFF   mov     ecx, dword ptr ss:[ebp-0x8DC]
+01A38945    50              push    eax
+01A38946    51              push    ecx
+01A38947    8D85 94F7FFFF   lea     eax, dword ptr ss:[ebp-0x86C]
+01A3894D    50              push    eax
+01A3894E    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38954    E8 1742DDFF     call    0180CB70
+01A38959    83C6 14         add     esi, 0x14
+01A3895C    8D8F A8000000   lea     ecx, dword ptr ds:[edi+0xA8]
+01A38962    3BB7 8C000000   cmp     esi, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A38968  ^ 0F85 F2FEFFFF   jnz     01A38860
+01A3896E    FFB5 94F7FFFF   push    dword ptr ss:[ebp-0x86C]
+01A38974    8B97 8C000000   mov     edx, dword ptr ds:[edi+0x8C]     ; ntdll.7C930098
+01A3897A    51              push    ecx
+01A3897B    8B8F 88000000   mov     ecx, dword ptr ds:[edi+0x88]
+01A38981    E8 2A08DCFF     call    017F91B0
+01A38986    8B87 88000000   mov     eax, dword ptr ds:[edi+0x88]
+01A3898C    83C4 08         add     esp, 0x8
+01A3898F    8987 8C000000   mov     dword ptr ds:[edi+0x8C], eax
+01A38995    32C9            xor     cl, cl
+01A38997    8D47 64         lea     eax, dword ptr ds:[edi+0x64]
+01A3899A    8608            xchg    byte ptr ds:[eax], cl
+01A3899C    8BCF            mov     ecx, edi
+01A3899E    E8 AD1D0000     call    01A3A750
+01A389A3    E9 E9080000     jmp     01A39291
+01A389A8    3D 5E010000     cmp     eax, 0x15E
+01A389AD    0F84 9E080000   je      01A39251
+01A389B3    3D 4E030000     cmp     eax, 0x34E
+01A389B8    0F84 B5070000   je      01A39173
+01A389BE    3D 19270000     cmp     eax, 0x2719
+01A389C3    0F85 C8080000   jnz     01A39291
+01A389C9    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A389D0    83EC 10         sub     esp, 0x10
+01A389D3    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A389D8    8BC4            mov     eax, esp
+01A389DA    B9 02000000     mov     ecx, 0x2
+01A389DF    83EC 10         sub     esp, 0x10
+01A389E2    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A389E5    8BC4            mov     eax, esp
+01A389E7    83EC 10         sub     esp, 0x10
+01A389EA    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A389ED    8BC4            mov     eax, esp
+01A389EF    83EC 10         sub     esp, 0x10
+01A389F2    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A389F5    8BC4            mov     eax, esp
+01A389F7    83EC 10         sub     esp, 0x10
+01A389FA    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A389FD    8BC4            mov     eax, esp
+01A389FF    83EC 10         sub     esp, 0x10
+01A38A02    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38A05    8BC4            mov     eax, esp
+01A38A07    68 B83A6402     push    02643AB8                         ; ASCII "receive ON_HTTP_DOWNLOAD_HEAD_IMG msg"
+01A38A0C    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A38A11    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A38A16    68 84000000     push    0x84
+01A38A1B    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38A1E    E8 0DAB1B00     call    01BF3530
+01A38A23    83C4 70         add     esp, 0x70
+01A38A26    8D4F 68         lea     ecx, dword ptr ds:[edi+0x68]
+01A38A29    83C8 FF         or      eax, 0xFFFFFFFF
+01A38A2C    f0:0fc101       lock xadd dword ptr ds:[ecx], eax
+01A38A30    85F6            test    esi, esi
+01A38A32    0F84 59080000   je      01A39291
+01A38A38    8D4E 54         lea     ecx, dword ptr ds:[esi+0x54]
+01A38A3B    E8 D0BB1B00     call    01BF4610
+01A38A40    50              push    eax
+01A38A41    8D4D AC         lea     ecx, dword ptr ss:[ebp-0x54]
+01A38A44    E8 E762DCFF     call    017FED30
+01A38A49    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+01A38A50    C785 34F7FFFF 0>mov     dword ptr ss:[ebp-0x8CC], 0x0
+01A38A5A    C785 38F7FFFF 0>mov     dword ptr ss:[ebp-0x8C8], 0x0
+01A38A64    C785 3CF7FFFF 0>mov     dword ptr ss:[ebp-0x8C4], 0x0
+01A38A6E    68 E4C86702     push    0267C8E4
+01A38A73    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+01A38A76    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+01A38A7A    E8 B162DCFF     call    017FED30
+01A38A7F    68 783A6402     push    02643A78                         ; UNICODE "X-ErrNo: {-?[0-9]+}"
+01A38A84    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+01A38A87    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+01A38A8B    E8 0045DEFF     call    0181CF90
+01A38A90    51              push    ecx
+01A38A91    8D85 34F7FFFF   lea     eax, dword ptr ss:[ebp-0x8CC]
+01A38A97    C785 58F7FFFF 0>mov     dword ptr ss:[ebp-0x8A8], 0x0
+01A38AA1    50              push    eax
+01A38AA2    8D45 AC         lea     eax, dword ptr ss:[ebp-0x54]
+01A38AA5    50              push    eax
+01A38AA6    51              push    ecx
+01A38AA7    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+01A38AAA    E8 71E1FFFF     call    01A36C20
+01A38AAF    83C4 10         add     esp, 0x10
+01A38AB2    84C0            test    al, al
+01A38AB4    74 3C           je      short 01A38AF2
+01A38AB6    8B8D 38F7FFFF   mov     ecx, dword ptr ss:[ebp-0x8C8]    ; ntdll.7C9301BB
+01A38ABC    B8 ABAAAA2A     mov     eax, 0x2AAAAAAB
+01A38AC1    2B8D 34F7FFFF   sub     ecx, dword ptr ss:[ebp-0x8CC]    ; ntdll.7C956F08
+01A38AC7    F7E9            imul    ecx
+01A38AC9    C1FA 02         sar     edx, 0x2
+01A38ACC    8BC2            mov     eax, edx
+01A38ACE    C1E8 1F         shr     eax, 0x1F
+01A38AD1    03C2            add     eax, edx
+01A38AD3    74 1D           je      short 01A38AF2
+01A38AD5    8B85 34F7FFFF   mov     eax, dword ptr ss:[ebp-0x8CC]    ; ntdll.7C956F08
+01A38ADB    8378 14 08      cmp     dword ptr ds:[eax+0x14], 0x8
+01A38ADF    72 02           jb      short 01A38AE3
+01A38AE1    8B00            mov     eax, dword ptr ds:[eax]
+01A38AE3    50              push    eax
+01A38AE4    E8 F11CA000     call    0243A7DA
+01A38AE9    83C4 04         add     esp, 0x4
+01A38AEC    8985 58F7FFFF   mov     dword ptr ss:[ebp-0x8A8], eax
+01A38AF2    8D4F 1C         lea     ecx, dword ptr ds:[edi+0x1C]
+01A38AF5    C785 20F7FFFF 0>mov     dword ptr ss:[ebp-0x8E0], 0x0
+01A38AFF    51              push    ecx
+01A38B00    898D 1CF7FFFF   mov     dword ptr ss:[ebp-0x8E4], ecx
+01A38B06    FF15 40F45002   call    dword ptr ds:[<&KERNEL32.EnterCr>; ntdll.RtlEnterCriticalSection
+01A38B0C    8D4E 10         lea     ecx, dword ptr ds:[esi+0x10]
+01A38B0F    898D 84F7FFFF   mov     dword ptr ss:[ebp-0x87C], ecx
+01A38B15    6A FF           push    -0x1
+01A38B17    FF31            push    dword ptr ds:[ecx]
+01A38B19    0F57C0          xorps   xmm0, xmm0
+01A38B1C    C785 7CF7FFFF 0>mov     dword ptr ss:[ebp-0x884], 0x0
+01A38B26    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38B2C    0F1185 6CF7FFFF movups  dqword ptr ss:[ebp-0x894], xmm0
+01A38B33    E8 C8B81B00     call    01BF4400
+01A38B38    6A FF           push    -0x1
+01A38B3A    FF76 24         push    dword ptr ds:[esi+0x24]          ; kernel32.GetModuleFileNameW
+01A38B3D    0F57C0          xorps   xmm0, xmm0
+01A38B40    C785 ACF6FFFF 0>mov     dword ptr ss:[ebp-0x954], 0x0
+01A38B4A    8D8D 9CF6FFFF   lea     ecx, dword ptr ss:[ebp-0x964]
+01A38B50    0F1185 9CF6FFFF movups  dqword ptr ss:[ebp-0x964], xmm0
+01A38B57    E8 A4B81B00     call    01BF4400
+01A38B5C    81BD 58F7FFFF 2>cmp     dword ptr ss:[ebp-0x8A8], -0x17D>
+01A38B66    C645 FC 05      mov     byte ptr ss:[ebp-0x4], 0x5
+01A38B6A    75 72           jnz     short 01A38BDE
+01A38B6C    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A38B73    83EC 10         sub     esp, 0x10
+01A38B76    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A38B7B    8BC4            mov     eax, esp
+01A38B7D    B9 02000000     mov     ecx, 0x2
+01A38B82    83EC 10         sub     esp, 0x10
+01A38B85    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38B88    8BC4            mov     eax, esp
+01A38B8A    83EC 10         sub     esp, 0x10
+01A38B8D    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38B90    8BC4            mov     eax, esp
+01A38B92    83EC 10         sub     esp, 0x10
+01A38B95    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38B98    8BC4            mov     eax, esp
+01A38B9A    83EC 10         sub     esp, 0x10
+01A38B9D    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38BA0    8BC4            mov     eax, esp
+01A38BA2    83EC 10         sub     esp, 0x10
+01A38BA5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38BA8    8BC4            mov     eax, esp
+01A38BAA    68 503A6402     push    02643A50                         ; ASCII "head is expired,need doBatchGetContact."
+01A38BAF    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A38BB4    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A38BB9    68 BC000000     push    0xBC
+01A38BBE    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38BC1    E8 6AA91B00     call    01BF3530
+01A38BC6    83C4 5C         add     esp, 0x5C
+01A38BC9    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38BCF    8BCC            mov     ecx, esp
+01A38BD1    50              push    eax
+01A38BD2    E8 19B61B00     call    01BF41F0
+01A38BD7    8BCF            mov     ecx, edi
+01A38BD9    E8 C2490000     call    01A3D5A0
+01A38BDE    8B77 74         mov     esi, dword ptr ds:[edi+0x74]
+01A38BE1    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38BE7    51              push    ecx
+01A38BE8    8D8D 38F6FFFF   lea     ecx, dword ptr ss:[ebp-0x9C8]
+01A38BEE    51              push    ecx
+01A38BEF    8D4F 74         lea     ecx, dword ptr ds:[edi+0x74]
+01A38BF2    E8 C95DDCFF     call    017FE9C0
+01A38BF7    3930            cmp     dword ptr ds:[eax], esi
+01A38BF9    0F84 05040000   je      01A39004
+01A38BFF    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38C05    50              push    eax
+01A38C06    8D85 3CF6FFFF   lea     eax, dword ptr ss:[ebp-0x9C4]
+01A38C0C    50              push    eax
+01A38C0D    8D4F 74         lea     ecx, dword ptr ds:[edi+0x74]
+01A38C10    E8 CB75DCFF     call    018001E0
+01A38C15    8B85 9CF6FFFF   mov     eax, dword ptr ss:[ebp-0x964]
+01A38C1B    8B8D 3CF6FFFF   mov     ecx, dword ptr ss:[ebp-0x9C4]
+01A38C21    85C0            test    eax, eax
+01A38C23    74 06           je      short 01A38C2B
+01A38C25    66:8338 00      cmp     word ptr ds:[eax], 0x0
+01A38C29    75 05           jnz     short 01A38C30
+01A38C2B    B8 E4C86702     mov     eax, 0267C8E4
+01A38C30    50              push    eax
+01A38C31    83C1 24         add     ecx, 0x24
+01A38C34    E8 27BB1B00     call    01BF4760
+01A38C39    85C0            test    eax, eax
+01A38C3B    0F85 C3030000   jnz     01A39004
+01A38C41    8BB5 8CF7FFFF   mov     esi, dword ptr ss:[ebp-0x874]    ; WeChatWi.024420C1
+01A38C47    3846 04         cmp     byte ptr ds:[esi+0x4], al
+01A38C4A    0F84 71010000   je      01A38DC1
+01A38C50    8B46 0C         mov     eax, dword ptr ds:[esi+0xC]
+01A38C53    85C0            test    eax, eax
+01A38C55    0F8E 66010000   jle     01A38DC1
+01A38C5B    50              push    eax
+01A38C5C    FF76 4C         push    dword ptr ds:[esi+0x4C]
+01A38C5F    E8 5CEDFFFF     call    01A379C0
+01A38C64    84C0            test    al, al
+01A38C66    0F84 D5030000   je      01A39041
+01A38C6C    8D8D 34FFFFFF   lea     ecx, dword ptr ss:[ebp-0xCC]
+01A38C72    E8 6987EDFF     call    019113E0
+01A38C77    C645 FC 07      mov     byte ptr ss:[ebp-0x4], 0x7
+01A38C7B    8D95 6CF7FFFF   lea     edx, dword ptr ss:[ebp-0x894]
+01A38C81    FF76 0C         push    dword ptr ds:[esi+0xC]
+01A38C84    FF76 4C         push    dword ptr ds:[esi+0x4C]
+01A38C87    E8 F44F0900     call    01ACDC80
+01A38C8C    83C4 08         add     esp, 0x8
+01A38C8F    8D85 34FFFFFF   lea     eax, dword ptr ss:[ebp-0xCC]
+01A38C95    8D4F 7C         lea     ecx, dword ptr ds:[edi+0x7C]
+01A38C98    50              push    eax
+01A38C99    E8 225B0000     call    01A3E7C0
+01A38C9E    8BB5 84F7FFFF   mov     esi, dword ptr ss:[ebp-0x87C]
+01A38CA4    8D85 34FFFFFF   lea     eax, dword ptr ss:[ebp-0xCC]
+01A38CAA    50              push    eax
+01A38CAB    56              push    esi
+01A38CAC    8D4F 34         lea     ecx, dword ptr ds:[edi+0x34]
+01A38CAF    E8 CC580000     call    01A3E580
+01A38CB4    8BC8            mov     ecx, eax
+01A38CB6    E8 A5060000     call    01A39360
+01A38CBB    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38CC1    8BCF            mov     ecx, edi
+01A38CC3    50              push    eax
+01A38CC4    E8 B73B0000     call    01A3C880
+01A38CC9    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A38CD0    83EC 10         sub     esp, 0x10
+01A38CD3    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38CD9    8BC4            mov     eax, esp
+01A38CDB    83EC 10         sub     esp, 0x10
+01A38CDE    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38CE1    8BC4            mov     eax, esp
+01A38CE3    83EC 10         sub     esp, 0x10
+01A38CE6    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38CE9    8BC4            mov     eax, esp
+01A38CEB    83EC 10         sub     esp, 0x10
+01A38CEE    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38CF1    8BC4            mov     eax, esp
+01A38CF3    83EC 10         sub     esp, 0x10
+01A38CF6    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38CF9    8BC4            mov     eax, esp
+01A38CFB    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38CFE    E8 7D4CDDFF     call    0180D980
+01A38D03    83EC 10         sub     esp, 0x10
+01A38D06    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A38D0B    8BCC            mov     ecx, esp
+01A38D0D    68 E03A6402     push    02643AE0                         ; ASCII "http head download success user %s"
+01A38D12    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A38D17    C601 02         mov     byte ptr ds:[ecx], 0x2
+01A38D1A    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01A38D1D    B9 02000000     mov     ecx, 0x2
+01A38D22    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A38D27    68 D6000000     push    0xD6
+01A38D2C    E8 FFA71B00     call    01BF3530
+01A38D31    83C4 70         add     esp, 0x70
+01A38D34    8D85 6CF6FFFF   lea     eax, dword ptr ss:[ebp-0x994]
+01A38D3A    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A38D3D    56              push    esi
+01A38D3E    50              push    eax
+01A38D3F    E8 1C0BE0FF     call    01839860
+01A38D44    8B85 6CF6FFFF   mov     eax, dword ptr ss:[ebp-0x994]    ; ntdll.7C956EB3
+01A38D4A    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38D50    51              push    ecx
+01A38D51    8D8D DCF6FFFF   lea     ecx, dword ptr ss:[ebp-0x924]
+01A38D57    51              push    ecx
+01A38D58    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38D5E    C740 24 0500000>mov     dword ptr ds:[eax+0x24], 0x5
+01A38D65    E8 0609E0FF     call    01839670
+01A38D6A    8B85 DCF6FFFF   mov     eax, dword ptr ss:[ebp-0x924]
+01A38D70    8BB5 E0F6FFFF   mov     esi, dword ptr ss:[ebp-0x920]
+01A38D76    8985 54F7FFFF   mov     dword ptr ss:[ebp-0x8AC], eax
+01A38D7C    3BC6            cmp     eax, esi
+01A38D7E    74 19           je      short 01A38D99
+01A38D80    8D8D 54F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8AC]
+01A38D86    E8 0567DCFF     call    017FF490
+01A38D8B    39B5 54F7FFFF   cmp     dword ptr ss:[ebp-0x8AC], esi
+01A38D91  ^ 75 ED           jnz     short 01A38D80
+01A38D93    8B85 DCF6FFFF   mov     eax, dword ptr ss:[ebp-0x924]
+01A38D99    56              push    esi
+01A38D9A    50              push    eax
+01A38D9B    8D85 34F6FFFF   lea     eax, dword ptr ss:[ebp-0x9CC]
+01A38DA1    50              push    eax
+01A38DA2    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38DA8    E8 C33DDDFF     call    0180CB70
+01A38DAD    8D8D 34FFFFFF   lea     ecx, dword ptr ss:[ebp-0xCC]
+01A38DB3    C645 FC 05      mov     byte ptr ss:[ebp-0x4], 0x5
+01A38DB7    E8 342DECFF     call    018FBAF0
+01A38DBC    E9 FC010000     jmp     01A38FBD
+01A38DC1    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A38DC8    83EC 10         sub     esp, 0x10
+01A38DCB    8BC4            mov     eax, esp
+01A38DCD    83EC 10         sub     esp, 0x10
+01A38DD0    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38DD3    8BC4            mov     eax, esp
+01A38DD5    83EC 10         sub     esp, 0x10
+01A38DD8    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38DDB    8BC4            mov     eax, esp
+01A38DDD    83EC 10         sub     esp, 0x10
+01A38DE0    8BCC            mov     ecx, esp
+01A38DE2    FF76 0C         push    dword ptr ds:[esi+0xC]
+01A38DE5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38DE8    E8 13DBDBFF     call    017F6900
+01A38DED    0FB646 04       movzx   eax, byte ptr ds:[esi+0x4]
+01A38DF1    83EC 10         sub     esp, 0x10
+01A38DF4    8BCC            mov     ecx, esp
+01A38DF6    50              push    eax
+01A38DF7    E8 04DBDBFF     call    017F6900
+01A38DFC    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38E02    E8 794BDDFF     call    0180D980
+01A38E07    83EC 10         sub     esp, 0x10
+01A38E0A    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A38E0F    8BCC            mov     ecx, esp
+01A38E11    68 C43B6402     push    02643BC4                         ; ASCII "http download user name %s,resp->ret %d,downloadSize %d"
+01A38E16    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A38E1B    C601 02         mov     byte ptr ds:[ecx], 0x2
+01A38E1E    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01A38E21    B9 04000000     mov     ecx, 0x4
+01A38E26    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A38E2B    68 DC000000     push    0xDC
+01A38E30    E8 FBA61B00     call    01BF3530
+01A38E35    83C4 70         add     esp, 0x70
+01A38E38    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38E3E    51              push    ecx
+01A38E3F    8D8D 64F6FFFF   lea     ecx, dword ptr ss:[ebp-0x99C]
+01A38E45    51              push    ecx
+01A38E46    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A38E49    E8 120AE0FF     call    01839860
+01A38E4E    8B85 64F6FFFF   mov     eax, dword ptr ss:[ebp-0x99C]
+01A38E54    8D8F B0000000   lea     ecx, dword ptr ds:[edi+0xB0]
+01A38E5A    C740 24 0000000>mov     dword ptr ds:[eax+0x24], 0x0
+01A38E61    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38E67    50              push    eax
+01A38E68    8D85 5CF6FFFF   lea     eax, dword ptr ss:[ebp-0x9A4]
+01A38E6E    50              push    eax
+01A38E6F    E8 EC72DCFF     call    01800160
+01A38E74    8B85 5CF6FFFF   mov     eax, dword ptr ss:[ebp-0x9A4]
+01A38E7A    8D8F B0000000   lea     ecx, dword ptr ds:[edi+0xB0]
+01A38E80    FF40 24         inc     dword ptr ds:[eax+0x24]
+01A38E83    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38E89    50              push    eax
+01A38E8A    8D85 54F6FFFF   lea     eax, dword ptr ss:[ebp-0x9AC]
+01A38E90    50              push    eax
+01A38E91    E8 CA72DCFF     call    01800160
+01A38E96    8B85 54F6FFFF   mov     eax, dword ptr ss:[ebp-0x9AC]
+01A38E9C    8378 24 03      cmp     dword ptr ds:[eax+0x24], 0x3
+01A38EA0    0F8E 17010000   jle     01A38FBD
+01A38EA6    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38EAC    50              push    eax
+01A38EAD    8D85 4CF6FFFF   lea     eax, dword ptr ss:[ebp-0x9B4]
+01A38EB3    50              push    eax
+01A38EB4    8D4F 04         lea     ecx, dword ptr ds:[edi+0x4]
+01A38EB7    E8 A409E0FF     call    01839860
+01A38EBC    8B85 4CF6FFFF   mov     eax, dword ptr ss:[ebp-0x9B4]    ; ntdll.7C956F08
+01A38EC2    83EC 10         sub     esp, 0x10
+01A38EC5    C740 24 0400000>mov     dword ptr ds:[eax+0x24], 0x4
+01A38ECC    8BC4            mov     eax, esp
+01A38ECE    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A38ED5    83EC 10         sub     esp, 0x10
+01A38ED8    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38EDB    8BC4            mov     eax, esp
+01A38EDD    83EC 10         sub     esp, 0x10
+01A38EE0    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38EE3    8BC4            mov     eax, esp
+01A38EE5    83EC 10         sub     esp, 0x10
+01A38EE8    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38EEB    8BC4            mov     eax, esp
+01A38EED    83EC 10         sub     esp, 0x10
+01A38EF0    8BCC            mov     ecx, esp
+01A38EF2    6A 03           push    0x3
+01A38EF4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A38EF7    E8 04DADBFF     call    017F6900
+01A38EFC    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38F02    E8 794ADDFF     call    0180D980
+01A38F07    83EC 10         sub     esp, 0x10
+01A38F0A    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A38F0F    8BCC            mov     ecx, esp
+01A38F11    68 8C3B6402     push    02643B8C                         ; ASCII "user name %s,http download failed more than %d times"
+01A38F16    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A38F1B    C601 02         mov     byte ptr ds:[ecx], 0x2
+01A38F1E    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01A38F21    B9 04000000     mov     ecx, 0x4
+01A38F26    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A38F2B    68 E2000000     push    0xE2
+01A38F30    E8 FBA51B00     call    01BF3530
+01A38F35    83C4 70         add     esp, 0x70
+01A38F38    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38F3E    8D8F B8000000   lea     ecx, dword ptr ds:[edi+0xB8]
+01A38F44    50              push    eax
+01A38F45    8D85 44F6FFFF   lea     eax, dword ptr ss:[ebp-0x9BC]
+01A38F4B    50              push    eax
+01A38F4C    E8 0F09E0FF     call    01839860
+01A38F51    8BB5 44F6FFFF   mov     esi, dword ptr ss:[ebp-0x9BC]    ; ntdll.7C956F10
+01A38F57    FF15 A4F55002   call    dword ptr ds:[<&KERNEL32.GetTick>; kernel32.GetTickCount
+01A38F5D    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A38F63    8946 24         mov     dword ptr ds:[esi+0x24], eax
+01A38F66    51              push    ecx
+01A38F67    8D8D D0F6FFFF   lea     ecx, dword ptr ss:[ebp-0x930]
+01A38F6D    51              push    ecx
+01A38F6E    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38F74    E8 F706E0FF     call    01839670
+01A38F79    8B85 D0F6FFFF   mov     eax, dword ptr ss:[ebp-0x930]
+01A38F7F    8BB5 D4F6FFFF   mov     esi, dword ptr ss:[ebp-0x92C]
+01A38F85    8985 88F7FFFF   mov     dword ptr ss:[ebp-0x878], eax
+01A38F8B    3BC6            cmp     eax, esi
+01A38F8D    74 1A           je      short 01A38FA9
+01A38F8F    90              nop
+01A38F90    8D8D 88F7FFFF   lea     ecx, dword ptr ss:[ebp-0x878]
+01A38F96    E8 F564DCFF     call    017FF490
+01A38F9B    39B5 88F7FFFF   cmp     dword ptr ss:[ebp-0x878], esi
+01A38FA1  ^ 75 ED           jnz     short 01A38F90
+01A38FA3    8B85 D0F6FFFF   mov     eax, dword ptr ss:[ebp-0x930]
+01A38FA9    56              push    esi
+01A38FAA    50              push    eax
+01A38FAB    8D85 D8F6FFFF   lea     eax, dword ptr ss:[ebp-0x928]
+01A38FB1    50              push    eax
+01A38FB2    8D8F C0000000   lea     ecx, dword ptr ds:[edi+0xC0]
+01A38FB8    E8 B33BDDFF     call    0180CB70
+01A38FBD    8D85 6CF7FFFF   lea     eax, dword ptr ss:[ebp-0x894]
+01A38FC3    50              push    eax
+01A38FC4    8D4F 74         lea     ecx, dword ptr ds:[edi+0x74]
+01A38FC7    E8 84C6F7FF     call    019B5650
+01A38FCC    8B8F 80000000   mov     ecx, dword ptr ds:[edi+0x80]
+01A38FD2    B8 89888888     mov     eax, 0x88888889
+01A38FD7    2B4F 7C         sub     ecx, dword ptr ds:[edi+0x7C]
+01A38FDA    F7E9            imul    ecx
+01A38FDC    03D1            add     edx, ecx
+01A38FDE    C1FA 05         sar     edx, 0x5
+01A38FE1    8BC2            mov     eax, edx
+01A38FE3    C1E8 1F         shr     eax, 0x1F
+01A38FE6    03C2            add     eax, edx
+01A38FE8    83F8 0A         cmp     eax, 0xA
+01A38FEB    73 07           jnb     short 01A38FF4
+01A38FED    8B47 68         mov     eax, dword ptr ds:[edi+0x68]
+01A38FF0    85C0            test    eax, eax
+01A38FF2    75 10           jnz     short 01A39004
+01A38FF4    8D4F 7C         lea     ecx, dword ptr ds:[edi+0x7C]
+01A38FF7    E8 C4060000     call    01A396C0
+01A38FFC    8D4F 7C         lea     ecx, dword ptr ds:[edi+0x7C]
+01A38FFF    E8 8C570000     call    01A3E790
+01A39004    8D8D 9CF6FFFF   lea     ecx, dword ptr ss:[ebp-0x964]
+01A3900A    E8 A114E2FF     call    0185A4B0
+01A3900F    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A39015    E8 9614E2FF     call    0185A4B0
+01A3901A    8B85 20F7FFFF   mov     eax, dword ptr ss:[ebp-0x8E0]    ; ntdll.7C956F10
+01A39020    40              inc     eax
+01A39021    8985 20F7FFFF   mov     dword ptr ss:[ebp-0x8E0], eax
+01A39027    83F8 01         cmp     eax, 0x1
+01A3902A    0F8D 0C010000   jge     01A3913C
+01A39030    8BB5 8CF7FFFF   mov     esi, dword ptr ss:[ebp-0x874]    ; WeChatWi.024420C1
+01A39036    8B8D 84F7FFFF   mov     ecx, dword ptr ss:[ebp-0x87C]
+01A3903C  ^ E9 D4FAFFFF     jmp     01A38B15
+01A39041    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A39048    83EC 10         sub     esp, 0x10
+01A3904B    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A39051    8BC4            mov     eax, esp
+01A39053    83EC 10         sub     esp, 0x10
+01A39056    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A39059    8BC4            mov     eax, esp
+01A3905B    83EC 10         sub     esp, 0x10
+01A3905E    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A39061    8BC4            mov     eax, esp
+01A39063    83EC 10         sub     esp, 0x10
+01A39066    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A39069    8BC4            mov     eax, esp
+01A3906B    83EC 10         sub     esp, 0x10
+01A3906E    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A39071    8BC4            mov     eax, esp
+01A39073    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A39076    E8 E585DCFF     call    01801660
+01A3907B    83EC 10         sub     esp, 0x10
+01A3907E    BA 58396402     mov     edx, 02643958                    ; ASCII "02_manager\HeadImageMgr.cpp"
+01A39083    8BF4            mov     esi, esp
+01A39085    B9 02000000     mov     ecx, 0x2
+01A3908A    68 283B6402     push    02643B28                         ; ASCII "headimg data isn't an image,user:[%s]"
+01A3908F    68 90396402     push    02643990                         ; ASCII "HeadImageMgr"
+01A39094    68 A03A6402     push    02643AA0                         ; ASCII "HeadImageMgr::eventProc"
+01A39099    68 C7000000     push    0xC7
+01A3909E    C606 02         mov     byte ptr ds:[esi], 0x2
+01A390A1    8946 08         mov     dword ptr ds:[esi+0x8], eax
+01A390A4    E8 87A41B00     call    01BF3530
+01A390A9    8B85 8CF7FFFF   mov     eax, dword ptr ss:[ebp-0x874]    ; WeChatWi.024420C1
+01A390AF    8D8D B8F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA48]
+01A390B5    83C4 70         add     esp, 0x70
+01A390B8    6A FF           push    -0x1
+01A390BA    6A 00           push    0x0
+01A390BC    FF70 4C         push    dword ptr ds:[eax+0x4C]
+01A390BF    E8 BCB11B00     call    01BF4280
+01A390C4    68 542C5F02     push    025F2C54                         ; UNICODE "<html>"
+01A390C9    8D8D B8F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA48]
+01A390CF    C645 FC 06      mov     byte ptr ss:[ebp-0x4], 0x6
+01A390D3    E8 18B71B00     call    01BF47F0
+01A390D8    84C0            test    al, al
+01A390DA    75 14           jnz     short 01A390F0
+01A390DC    68 1C3B6402     push    02643B1C                         ; UNICODE "<xml>"
+01A390E1    8D8D B8F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA48]
+01A390E7    E8 04B71B00     call    01BF47F0
+01A390EC    84C0            test    al, al
+01A390EE    74 1D           je      short 01A3910D
+01A390F0    807F 0C 00      cmp     byte ptr ds:[edi+0xC], 0x0
+01A390F4    75 17           jnz     short 01A3910D
+01A390F6    8B0D 74D18602   mov     ecx, dword ptr ds:[0x286D174]
+01A390FC    6A 00           push    0x0
+01A390FE    6A 01           push    0x1
+01A39100    68 043B6402     push    02643B04                         ; UNICODE "www.qq.com"
+01A39105    8B01            mov     eax, dword ptr ds:[ecx]
+01A39107    FF10            call    dword ptr ds:[eax]
+01A39109    C647 0C 01      mov     byte ptr ds:[edi+0xC], 0x1
+01A3910D    8D8D B8F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA48]
+01A39113    E8 9813E2FF     call    0185A4B0
+01A39118    8D8D 9CF6FFFF   lea     ecx, dword ptr ss:[ebp-0x964]
+01A3911E    E8 8D13E2FF     call    0185A4B0
+01A39123    8D8D 6CF7FFFF   lea     ecx, dword ptr ss:[ebp-0x894]
+01A39129    E8 8213E2FF     call    0185A4B0
+01A3912E    FFB5 1CF7FFFF   push    dword ptr ss:[ebp-0x8E4]
+01A39134    FF15 3CF45002   call    dword ptr ds:[<&KERNEL32.LeaveCr>; ntdll.RtlLeaveCriticalSection
+01A3913A    EB 17           jmp     short 01A39153
+01A3913C    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+01A39140    FFB5 1CF7FFFF   push    dword ptr ss:[ebp-0x8E4]
+01A39146    FF15 3CF45002   call    dword ptr ds:[<&KERNEL32.LeaveCr>; ntdll.RtlLeaveCriticalSection
+01A3914C    8BCF            mov     ecx, edi
+01A3914E    E8 9D100000     call    01A3A1F0
+01A39153    8D4D C4         lea     ecx, dword ptr ss:[ebp-0x3C]
+01A39156    E8 A58FDCFF     call    01802100
+01A3915B    8D8D 34F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8CC]
+01A39161    E8 DA520000     call    01A3E440
+01A39166    8D4D AC         lea     ecx, dword ptr ss:[ebp-0x54]
+01A39169    E8 928FDCFF     call    01802100
+01A3916E    E9 1E010000     jmp     01A39291
+01A39173    85F6            test    esi, esi
+01A39175    0F84 16010000   je      01A39291
+01A3917B    8BBD 8CF7FFFF   mov     edi, dword ptr ss:[ebp-0x874]    ; WeChatWi.024420C1
+01A39181    8B76 04         mov     esi, dword ptr ds:[esi+0x4]
+01A39184    3B77 08         cmp     esi, dword ptr ds:[edi+0x8]      ; kernel32.GetModuleFileNameW
+01A39187    0F84 04010000   je      01A39291
+01A3918D    0f1f00          nop     dword ptr ds:[eax]
+01A39190    8B4E 04         mov     ecx, dword ptr ds:[esi+0x4]
+01A39193    83F9 05         cmp     ecx, 0x5
+01A39196    7C 63           jl      short 01A391FB
+01A39198    8B06            mov     eax, dword ptr ds:[esi]
+01A3919A    6A 05           push    0x5
+01A3919C    68 08CC5E02     push    025ECC08                         ; UNICODE "@qy_g"
+01A391A1    8D0448          lea     eax, dword ptr ds:[eax+ecx*2]
+01A391A4    83C0 F6         add     eax, -0xA
+01A391A7    50              push    eax
+01A391A8    E8 0D27A000     call    0243B8BA
+01A391AD    83C4 0C         add     esp, 0xC
+01A391B0    85C0            test    eax, eax
+01A391B2    0F94C0          sete    al
+01A391B5    84C0            test    al, al
+01A391B7    74 42           je      short 01A391FB
+01A391B9    56              push    esi
+01A391BA    E8 91E5DBFF     call    017F7750
+01A391BF    8BC8            mov     ecx, eax
+01A391C1    E8 4AAE2300     call    01C74010
+01A391C6    85C0            test    eax, eax
+01A391C8    0F84 75000000   je      01A39243
+01A391CE    8D8D 54F5FFFF   lea     ecx, dword ptr ss:[ebp-0xAAC]
+01A391D4    51              push    ecx
+01A391D5    8BC8            mov     ecx, eax
+01A391D7    E8 74EBF7FF     call    019B7D50
+01A391DC    6A 00           push    0x0
+01A391DE    50              push    eax
+01A391DF    56              push    esi
+01A391E0    C745 FC 1900000>mov     dword ptr ss:[ebp-0x4], 0x19
+01A391E7    E8 9436E4FF     call    0187C880
+01A391EC    8BC8            mov     ecx, eax
+01A391EE    E8 8D220000     call    01A3B480
+01A391F3    8D8D 54F5FFFF   lea     ecx, dword ptr ss:[ebp-0xAAC]
+01A391F9    EB 3C           jmp     short 01A39237
+01A391FB    56              push    esi
+01A391FC    E8 4FE5DBFF     call    017F7750
+01A39201    8BC8            mov     ecx, eax
+01A39203    E8 387E2300     call    01C71040
+01A39208    85C0            test    eax, eax
+01A3920A    74 37           je      short 01A39243
+01A3920C    8D8D A4F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA5C]
+01A39212    51              push    ecx
+01A39213    8BC8            mov     ecx, eax
+01A39215    E8 36FEDBFF     call    017F9050
+01A3921A    6A 00           push    0x0
+01A3921C    50              push    eax
+01A3921D    56              push    esi
+01A3921E    C745 FC 1A00000>mov     dword ptr ss:[ebp-0x4], 0x1A
+01A39225    E8 5636E4FF     call    0187C880
+01A3922A    8BC8            mov     ecx, eax
+01A3922C    E8 4F220000     call    01A3B480
+01A39231    8D8D A4F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA5C]
+01A39237    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+01A3923E    E8 6D12E2FF     call    0185A4B0
+01A39243    83C6 14         add     esi, 0x14
+01A39246    3B77 08         cmp     esi, dword ptr ds:[edi+0x8]      ; kernel32.GetModuleFileNameW
+01A39249  ^ 0F85 41FFFFFF   jnz     01A39190
+01A3924F    EB 40           jmp     short 01A39291
+01A39251    6A FF           push    -0x1
+01A39253    FF76 04         push    dword ptr ds:[esi+0x4]
+01A39256    0F57C0          xorps   xmm0, xmm0
+01A39259    C785 0CF6FFFF 0>mov     dword ptr ss:[ebp-0x9F4], 0x0
+01A39263    8D8D FCF5FFFF   lea     ecx, dword ptr ss:[ebp-0xA04]
+01A39269    0F1185 FCF5FFFF movups  dqword ptr ss:[ebp-0xA04], xmm0
+01A39270    E8 8BB11B00     call    01BF4400
+01A39275    8D8F 94000000   lea     ecx, dword ptr ds:[edi+0x94]
+01A3927B    8D95 FCF5FFFF   lea     edx, dword ptr ss:[ebp-0xA04]
+01A39281    E8 AA700000     call    01A40330
+01A39286    8D8D FCF5FFFF   lea     ecx, dword ptr ss:[ebp-0xA04]
+01A3928C    E8 1F12E2FF     call    0185A4B0
+01A39291    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+01A39294    64:890D 0000000>mov     dword ptr fs:[0], ecx
+01A3929B    59              pop     ecx                              ; user32.77D191BE
+01A3929C    5F              pop     edi                              ; user32.77D191BE
+01A3929D    5E              pop     esi                              ; user32.77D191BE
+01A3929E    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]
+01A392A1    33CD            xor     ecx, ebp
+01A392A3    E8 EF618D00     call    0230F497
+01A392A8    8BE5            mov     esp, ebp
+01A392AA    5D              pop     ebp                              ; user32.77D191BE
+01A392AB    C2 1000         retn    0x10
+

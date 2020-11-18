@@ -1,0 +1,207 @@
+6A1E8950    55              push    ebp
+6A1E8951    8BEC            mov     ebp, esp
+6A1E8953    6A FF           push    -0x1
+6A1E8955    68 A4A7D26A     push    6AD2A7A4
+6A1E895A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+6A1E8960    50              push    eax
+6A1E8961    83EC 30         sub     esp, 0x30
+6A1E8964    56              push    esi
+6A1E8965    57              push    edi
+6A1E8966    A1 C4500D6B     mov     eax, dword ptr ds:[0x6B0D50C4]
+6A1E896B    33C5            xor     eax, ebp
+6A1E896D    50              push    eax
+6A1E896E    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+6A1E8971    64:A3 00000000  mov     dword ptr fs:[0], eax
+6A1E8977    8BF9            mov     edi, ecx
+6A1E8979    897D F0         mov     dword ptr ss:[ebp-0x10], edi
+6A1E897C    0F1005 8033E96A movups  xmm0, dqword ptr ds:[0x6AE93380]
+6A1E8983    83EC 10         sub     esp, 0x10
+6A1E8986    8BC4            mov     eax, esp
+6A1E8988    83EC 10         sub     esp, 0x10
+6A1E898B    0F1100          movups  dqword ptr ds:[eax], xmm0
+6A1E898E    8BC4            mov     eax, esp
+6A1E8990    83EC 10         sub     esp, 0x10
+6A1E8993    0F1100          movups  dqword ptr ds:[eax], xmm0
+6A1E8996    8BC4            mov     eax, esp
+6A1E8998    83EC 10         sub     esp, 0x10
+6A1E899B    0F1100          movups  dqword ptr ds:[eax], xmm0
+6A1E899E    8BC4            mov     eax, esp
+6A1E89A0    83EC 10         sub     esp, 0x10
+6A1E89A3    8BCC            mov     ecx, esp
+6A1E89A5    FF75 08         push    dword ptr ss:[ebp+0x8]
+6A1E89A8    0F1100          movups  dqword ptr ds:[eax], xmm0
+6A1E89AB    E8 4001E6FF     call    6A048AF0
+6A1E89B0    8B75 0C         mov     esi, dword ptr ss:[ebp+0xC]
+6A1E89B3    83EC 10         sub     esp, 0x10
+6A1E89B6    8BCC            mov     ecx, esp
+6A1E89B8    56              push    esi
+6A1E89B9    E8 3201E6FF     call    6A048AF0
+6A1E89BE    68 58BBEE6A     push    6AEEBB58                         ; ASCII "retCode = %d event = %d"
+6A1E89C3    68 50B3EE6A     push    6AEEB350                         ; ASCII "LoginWnd"
+6A1E89C8    68 70BBEE6A     push    6AEEBB70                         ; ASCII "LoginWnd::handleLoginFail"
+6A1E89CD    68 33070000     push    0x733
+6A1E89D2    BA DCB2EE6A     mov     edx, 6AEEB2DC                    ; ASCII "01_ui\LoginWnd.cpp"
+6A1E89D7    B9 02000000     mov     ecx, 0x2
+6A1E89DC    E8 2F1C2900     call    6A47A610
+6A1E89E1    0F57C0          xorps   xmm0, xmm0
+6A1E89E4    C745 E8 0000000>mov     dword ptr ss:[ebp-0x18], 0x0
+6A1E89EB    83C4 70         add     esp, 0x70
+6A1E89EE    0F1145 D8       movups  dqword ptr ss:[ebp-0x28], xmm0
+6A1E89F2    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+6A1E89F9    83FE A1         cmp     esi, -0x5F
+6A1E89FC    7F 29           jg      short 6A1E8A27
+6A1E89FE    74 20           je      short 6A1E8A20
+6A1E8A00    81FE 00CBF3FF   cmp     esi, 0xFFF3CB00
+6A1E8A06    74 11           je      short 6A1E8A19
+6A1E8A08    81FE 33FFFFFF   cmp     esi, -0xCD
+6A1E8A0E    74 05           je      short 6A1E8A15
+6A1E8A10    83FE 96         cmp     esi, -0x6A
+6A1E8A13    75 1C           jnz     short 6A1E8A31
+6A1E8A15    6A 7E           push    0x7E
+6A1E8A17    EB 2B           jmp     short 6A1E8A44
+6A1E8A19    68 0C040000     push    0x40C
+6A1E8A1E    EB 24           jmp     short 6A1E8A44
+6A1E8A20    68 37100000     push    0x1037
+6A1E8A25    EB 1D           jmp     short 6A1E8A44
+6A1E8A27    83FE B5         cmp     esi, -0x4B
+6A1E8A2A    74 13           je      short 6A1E8A3F
+6A1E8A2C    83FE DE         cmp     esi, -0x22
+6A1E8A2F    74 07           je      short 6A1E8A38
+6A1E8A31    68 0D040000     push    0x40D
+6A1E8A36    EB 0C           jmp     short 6A1E8A44
+6A1E8A38    68 B8000000     push    0xB8
+6A1E8A3D    EB 05           jmp     short 6A1E8A44
+6A1E8A3F    68 0B040000     push    0x40B
+6A1E8A44    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+6A1E8A47    E8 54362900     call    6A47C0A0
+6A1E8A4C    83EC 14         sub     esp, 0x14
+6A1E8A4F    C687 98040000 0>mov     byte ptr ds:[edi+0x498], 0x1
+6A1E8A56    8B7D D8         mov     edi, dword ptr ss:[ebp-0x28]     ; esi=U´íÎóÌáÊ¾(83Î´ÄÜµÇÂ½)
+6A1E8A59    8BCC            mov     ecx, esp                         ; ErrorCode=[ebp+8]
+6A1E8A5B    8965 0C         mov     dword ptr ss:[ebp+0xC], esp
+6A1E8A5E    C645 0B 00      mov     byte ptr ss:[ebp+0xB], 0x0
+6A1E8A62    6A FF           push    -0x1
+6A1E8A64    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+6A1E8A6A    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+6A1E8A71    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+6A1E8A78    57              push    edi
+6A1E8A79    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+6A1E8A80    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+6A1E8A87    E8 A42B2900     call    6A47B630
+6A1E8A8C    83EC 14         sub     esp, 0x14
+6A1E8A8F    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+6A1E8A93    BA 0E040000     mov     edx, 0x40E
+6A1E8A98    8BCC            mov     ecx, esp
+6A1E8A9A    E8 D1362900     call    6A47C170
+6A1E8A9F    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]
+6A1E8AA2    8A55 0B         mov     dl, byte ptr ss:[ebp+0xB]
+6A1E8AA5    C645 FC 00      mov     byte ptr ss:[ebp-0x4], 0x0
+6A1E8AA9    8B49 04         mov     ecx, dword ptr ds:[ecx+0x4]
+6A1E8AAC    E8 3F07F2FF     call    6A1091F0
+6A1E8AB1    A1 3823136B     mov     eax, dword ptr ds:[0x6B132338]
+6A1E8AB6    83C4 28         add     esp, 0x28
+6A1E8AB9    85C0            test    eax, eax
+6A1E8ABB    74 11           je      short 6A1E8ACE
+6A1E8ABD    50              push    eax
+6A1E8ABE    FF15 6C34DC6A   call    dword ptr ds:[<&KERNEL32.CloseHa>; kernel32.CloseHandle
+6A1E8AC4    C705 3823136B 0>mov     dword ptr ds:[0x6B132338], 0x0
+6A1E8ACE    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]
+6A1E8AD1    E8 8AD7FFFF     call    6A1E6260
+6A1E8AD6    0F57C0          xorps   xmm0, xmm0
+6A1E8AD9    C745 D4 0000000>mov     dword ptr ss:[ebp-0x2C], 0x0
+6A1E8AE0    0F1145 C4       movups  dqword ptr ss:[ebp-0x3C], xmm0
+6A1E8AE4    56              push    esi
+6A1E8AE5    56              push    esi
+6A1E8AE6    8D45 C4         lea     eax, dword ptr ss:[ebp-0x3C]
+6A1E8AE9    68 E8B4EE6A     push    6AEEB4E8                         ; UNICODE "eventId: %d, ret: %d"
+6A1E8AEE    50              push    eax
+6A1E8AEF    E8 BC312900     call    6A47BCB0
+6A1E8AF4    8B75 C4         mov     esi, dword ptr ss:[ebp-0x3C]
+6A1E8AF7    83C4 10         add     esp, 0x10
+6A1E8AFA    6A 01           push    0x1
+6A1E8AFC    6A 01           push    0x1
+6A1E8AFE    83EC 14         sub     esp, 0x14
+6A1E8B01    8BCC            mov     ecx, esp
+6A1E8B03    8965 08         mov     dword ptr ss:[ebp+0x8], esp
+6A1E8B06    6A FF           push    -0x1
+6A1E8B08    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+6A1E8B0E    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+6A1E8B15    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+6A1E8B1C    56              push    esi
+6A1E8B1D    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+6A1E8B24    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+6A1E8B2B    E8 002B2900     call    6A47B630
+6A1E8B30    C645 FC 03      mov     byte ptr ss:[ebp-0x4], 0x3
+6A1E8B34    A1 3049146B     mov     eax, dword ptr ds:[0x6B144930]
+6A1E8B39    A8 01           test    al, 0x1
+6A1E8B3B    75 22           jnz     short 6A1E8B5F
+6A1E8B3D    83C8 01         or      eax, 0x1
+6A1E8B40    A3 3049146B     mov     dword ptr ds:[0x6B144930], eax
+6A1E8B45    C645 FC 04      mov     byte ptr ss:[ebp-0x4], 0x4
+6A1E8B49    E8 52E10B00     call    6A2A6CA0
+6A1E8B4E    68 60A9DA6A     push    6ADAA960
+6A1E8B53    E8 334A9D00     call    6ABBD58B
+6A1E8B58    83C4 04         add     esp, 0x4
+6A1E8B5B    C645 FC 03      mov     byte ptr ss:[ebp-0x4], 0x3
+6A1E8B5F    68 AF2B0000     push    0x2BAF
+6A1E8B64    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+6A1E8B68    E8 B3E20B00     call    6A2A6E20
+6A1E8B6D    6A 01           push    0x1
+6A1E8B6F    6A 01           push    0x1
+6A1E8B71    83EC 14         sub     esp, 0x14
+6A1E8B74    8BCC            mov     ecx, esp
+6A1E8B76    8965 08         mov     dword ptr ss:[ebp+0x8], esp
+6A1E8B79    6A FF           push    -0x1
+6A1E8B7B    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+6A1E8B81    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+6A1E8B88    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+6A1E8B8F    68 DC72E96A     push    6AE972DC                         ; UNICODE "1"
+6A1E8B94    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+6A1E8B9B    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+6A1E8BA2    E8 892A2900     call    6A47B630
+6A1E8BA7    C645 FC 05      mov     byte ptr ss:[ebp-0x4], 0x5
+6A1E8BAB    A1 3049146B     mov     eax, dword ptr ds:[0x6B144930]
+6A1E8BB0    A8 01           test    al, 0x1
+6A1E8BB2    75 22           jnz     short 6A1E8BD6
+6A1E8BB4    83C8 01         or      eax, 0x1
+6A1E8BB7    A3 3049146B     mov     dword ptr ds:[0x6B144930], eax
+6A1E8BBC    C645 FC 06      mov     byte ptr ss:[ebp-0x4], 0x6
+6A1E8BC0    E8 DBE00B00     call    6A2A6CA0
+6A1E8BC5    68 60A9DA6A     push    6ADAA960
+6A1E8BCA    E8 BC499D00     call    6ABBD58B
+6A1E8BCF    83C4 04         add     esp, 0x4
+6A1E8BD2    C645 FC 05      mov     byte ptr ss:[ebp-0x4], 0x5
+6A1E8BD6    68 AE2B0000     push    0x2BAE
+6A1E8BDB    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+6A1E8BDF    E8 3CE20B00     call    6A2A6E20
+6A1E8BE4    85F6            test    esi, esi
+6A1E8BE6    74 09           je      short 6A1E8BF1
+6A1E8BE8    56              push    esi
+6A1E8BE9    E8 7DFBAF00     call    6ACE876B
+6A1E8BEE    83C4 04         add     esp, 0x4
+6A1E8BF1    8B45 D0         mov     eax, dword ptr ss:[ebp-0x30]
+6A1E8BF4    85C0            test    eax, eax
+6A1E8BF6    74 09           je      short 6A1E8C01
+6A1E8BF8    50              push    eax
+6A1E8BF9    E8 6DFBAF00     call    6ACE876B
+6A1E8BFE    83C4 04         add     esp, 0x4
+6A1E8C01    85FF            test    edi, edi
+6A1E8C03    74 09           je      short 6A1E8C0E
+6A1E8C05    57              push    edi
+6A1E8C06    E8 60FBAF00     call    6ACE876B
+6A1E8C0B    83C4 04         add     esp, 0x4
+6A1E8C0E    8B45 E4         mov     eax, dword ptr ss:[ebp-0x1C]
+6A1E8C11    85C0            test    eax, eax
+6A1E8C13    74 09           je      short 6A1E8C1E
+6A1E8C15    50              push    eax
+6A1E8C16    E8 50FBAF00     call    6ACE876B
+6A1E8C1B    83C4 04         add     esp, 0x4
+6A1E8C1E    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+6A1E8C21    64:890D 0000000>mov     dword ptr fs:[0], ecx
+6A1E8C28    59              pop     ecx                              ; WeChatWi.6AD54988
+6A1E8C29    5F              pop     edi                              ; WeChatWi.6AD54988
+6A1E8C2A    5E              pop     esi                              ; WeChatWi.6AD54988
+6A1E8C2B    8BE5            mov     esp, ebp
+6A1E8C2D    5D              pop     ebp                              ; WeChatWi.6AD54988
+6A1E8C2E    C2 0800         retn    0x8
+

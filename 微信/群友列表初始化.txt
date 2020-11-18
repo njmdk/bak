@@ -1,0 +1,67 @@
+7274A841   /EB 24             jmp     short 7274A867
+7274A843   |85C9              test    ecx, ecx
+7274A845   |74 20             je      short 7274A867
+7274A847   |8B01              mov     eax, dword ptr ds:[ecx]
+7274A849   |6A 00             push    0x0
+7274A84B   |6A 00             push    0x0
+7274A84D   |6A 15             push    0x15
+7274A84F   |FF10              call    dword ptr ds:[eax]
+7274A851   |EB 14             jmp     short 7274A867
+7274A853   |8B4F 08           mov     ecx, dword ptr ds:[edi+0x8]
+7274A856   |85C9              test    ecx, ecx
+7274A858   |74 0A             je      short 7274A864
+7274A85A   |8B01              mov     eax, dword ptr ds:[ecx]
+7274A85C   |6A 00             push    0x0
+7274A85E   |6A 00             push    0x0
+7274A860   |6A 15             push    0x15
+7274A862   |FF10              call    dword ptr ds:[eax]
+7274A864   |8D77 30           lea     esi, dword ptr ds:[edi+0x30]
+7274A867   \83EC 18           sub     esp, 0x18
+7274A86A    8BCC              mov     ecx, esp
+7274A86C    68 B01F6973       push    73691FB0                         ; ASCII " ChatViewModel::setTalke 2"
+7274A871    E8 3AF4F9FF       call    726E9CB0
+7274A876    8D8D B8FBFFFF     lea     ecx, dword ptr ss:[ebp-0x448]
+7274A87C    E8 5FBB3B00       call    72B063E0
+7274A881    8BCE              mov     ecx, esi
+7274A883    E8 F8931A00       call    728F3C80
+7274A888    84C0              test    al, al
+7274A88A    74 1D             je      short 7274A8A9
+7274A88C    C687 30040000 01  mov     byte ptr ds:[edi+0x430], 0x1
+7274A893    E8 B857F8FF       call    726D0050
+7274A898    8D47 18           lea     eax, dword ptr ds:[edi+0x18]
+7274A89B    50                push    eax
+7274A89C    E8 1FFE1900       call    728EA6C0                         ; 初始化群信息
+7274A8A1    8887 31040000     mov     byte ptr ds:[edi+0x431], al
+7274A8A7    EB 09             jmp     short 7274A8B2
+7274A8A9    66:C787 30040000 >mov     word ptr ds:[edi+0x430], 0x0
+7274A8B2    83EC 18           sub     esp, 0x18
+7274A8B5    8BCC              mov     ecx, esp
+7274A8B7    68 941F6973       push    73691F94                         ; ASCII " ChatViewModel::setTalke 4"
+7274A8BC    E8 EFF3F9FF       call    726E9CB0
+7274A8C1    8D8D B8FBFFFF     lea     ecx, dword ptr ss:[ebp-0x448]
+7274A8C7    E8 14BB3B00       call    72B063E0
+7274A8CC    C785 C8FBFFFF 000>mov     dword ptr ss:[ebp-0x438], 0x0
+7274A8D6    C785 CCFBFFFF 000>mov     dword ptr ss:[ebp-0x434], 0x0
+7274A8E0    C785 D0FBFFFF 000>mov     dword ptr ss:[ebp-0x430], 0x0
+7274A8EA    FF73 18           push    dword ptr ds:[ebx+0x18]
+7274A8ED    8D85 C8FBFFFF     lea     eax, dword ptr ss:[ebp-0x438]
+7274A8F3    C645 FC 07        mov     byte ptr ss:[ebp-0x4], 0x7
+7274A8F7    50                push    eax
+7274A8F8    6A 00             push    0x0
+7274A8FA    FF73 0C           push    dword ptr ds:[ebx+0xC]
+7274A8FD    8D47 18           lea     eax, dword ptr ds:[edi+0x18]
+7274A900    83EC 14           sub     esp, 0x14
+7274A903    8BCC              mov     ecx, esp
+7274A905    50                push    eax
+7274A906    E8 25773B00       call    72B02030
+7274A90B    8B8F 68040000     mov     ecx, dword ptr ds:[edi+0x468]
+7274A911    8B01              mov     eax, dword ptr ds:[ecx]
+7274A913    FF50 08           call    dword ptr ds:[eax+0x8]
+7274A916    8D85 C8FBFFFF     lea     eax, dword ptr ss:[ebp-0x438]
+7274A91C    8BCF              mov     ecx, edi
+7274A91E    50                push    eax
+7274A91F    E8 AC260000       call    7274CFD0
+7274A924    83EC 18           sub     esp, 0x18
+7274A927    8BCC              mov     ecx, esp
+7274A929    68 E81F6973       push    73691FE8                         ; ASCII " ChatViewModel::setTalke 6"
+

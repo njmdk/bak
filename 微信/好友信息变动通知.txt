@@ -1,0 +1,742 @@
+72D5ED10  /$  55            push    ebp
+72D5ED11  |.  8BEC          mov     ebp, esp
+72D5ED13  |.  6A FF         push    -0x1
+72D5ED15  |.  68 59237A73   push    737A2359
+72D5ED1A  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+72D5ED20  |.  50            push    eax
+72D5ED21  |.  81EC 44010000 sub     esp, 0x144
+72D5ED27  |.  A1 C450B373   mov     eax, dword ptr ds:[0x73B350C4]   ;  戏q
+72D5ED2C  |.  33C5          xor     eax, ebp
+72D5ED2E  |.  8945 F0       mov     dword ptr ss:[ebp-0x10], eax
+72D5ED31  |.  56            push    esi
+72D5ED32  |.  57            push    edi
+72D5ED33  |.  50            push    eax
+72D5ED34  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+72D5ED37  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+72D5ED3D  |.  8B7D 08       mov     edi, dword ptr ss:[ebp+0x8]
+72D5ED40  |.  C785 BCFEFFFF>mov     dword ptr ss:[ebp-0x144], 0x0
+72D5ED4A  |.  A1 581BB973   mov     eax, dword ptr ds:[0x73B91B58]
+72D5ED4F  |.  A8 01         test    al, 0x1
+72D5ED51  |.  75 28         jnz     short 72D5ED7B
+72D5ED53  |.  83C8 01       or      eax, 0x1
+72D5ED56  |.  A3 581BB973   mov     dword ptr ds:[0x73B91B58], eax
+72D5ED5B  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+72D5ED62  |.  E8 B9970E00   call    72E48520
+72D5ED67  |.  68 C0A28073   push    7380A2C0
+72D5ED6C  |.  E8 1AE88B00   call    7361D58B
+72D5ED71  |.  83C4 04       add     esp, 0x4
+72D5ED74  |.  C745 FC FFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+72D5ED7B  |>  803D 741BB973>cmp     byte ptr ds:[0x73B91B74], 0x0
+72D5ED82  |.  0F84 B8030000 je      72D5F140
+72D5ED88  |.  85FF          test    edi, edi
+72D5ED8A  |.  0F84 B0030000 je      72D5F140
+72D5ED90  |.  8B57 04       mov     edx, dword ptr ds:[edi+0x4]
+72D5ED93  |.  85D2          test    edx, edx
+72D5ED95  |.  75 08         jnz     short 72D5ED9F
+72D5ED97  |.  A1 E435B973   mov     eax, dword ptr ds:[0x73B935E4]
+72D5ED9C  |.  8B50 04       mov     edx, dword ptr ds:[eax+0x4]
+72D5ED9F  |>  0F1005 80338F>movups  xmm0, dqword ptr ds:[0x738F3380]
+72D5EDA6  |.  83EC 10       sub     esp, 0x10
+72D5EDA9  |.  8BC4          mov     eax, esp
+72D5EDAB  |.  83EC 10       sub     esp, 0x10
+72D5EDAE  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EDB1  |.  8BC4          mov     eax, esp
+72D5EDB3  |.  83EC 10       sub     esp, 0x10
+72D5EDB6  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EDB9  |.  8BC4          mov     eax, esp
+72D5EDBB  |.  83EC 10       sub     esp, 0x10
+72D5EDBE  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EDC1  |.  8BC4          mov     eax, esp
+72D5EDC3  |.  83EC 10       sub     esp, 0x10
+72D5EDC6  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EDC9  |.  8BC4          mov     eax, esp
+72D5EDCB  |.  83EC 10       sub     esp, 0x10
+72D5EDCE  |.  8BCC          mov     ecx, esp
+72D5EDD0  |.  FF72 14       push    dword ptr ds:[edx+0x14]
+72D5EDD3  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EDD6  |.  E8 F59CD4FF   call    72AA8AD0
+72D5EDDB  |.  68 E4EF9573   push    7395EFE4                         ;  cmdList count = %d
+72D5EDE0  |.  68 B0EC9573   push    7395ECB0                         ;  SyncMgr
+72D5EDE5  |.  68 C4EF9573   push    7395EFC4                         ;  SyncMgr::proccessSyncCmdList
+72D5EDEA  |.  68 07020000   push    0x207
+72D5EDEF  |.  BA 0CED9573   mov     edx, 7395ED0C                    ;  02_manager\SyncMgr.cpp
+72D5EDF4  |.  B9 01000000   mov     ecx, 0x1
+72D5EDF9  |.  E8 12B81700   call    72EDA610
+72D5EDFE  |.  8B57 04       mov     edx, dword ptr ds:[edi+0x4]
+72D5EE01  |.  83C4 70       add     esp, 0x70
+72D5EE04  |.  85D2          test    edx, edx
+72D5EE06  |.  75 08         jnz     short 72D5EE10
+72D5EE08  |.  A1 E435B973   mov     eax, dword ptr ds:[0x73B935E4]
+72D5EE0D  |.  8B50 04       mov     edx, dword ptr ds:[eax+0x4]
+72D5EE10  |>  0F1005 80338F>movups  xmm0, dqword ptr ds:[0x738F3380]
+72D5EE17  |.  83EC 10       sub     esp, 0x10
+72D5EE1A  |.  8BC4          mov     eax, esp
+72D5EE1C  |.  83EC 10       sub     esp, 0x10
+72D5EE1F  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EE22  |.  8BC4          mov     eax, esp
+72D5EE24  |.  83EC 10       sub     esp, 0x10
+72D5EE27  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EE2A  |.  8BC4          mov     eax, esp
+72D5EE2C  |.  83EC 10       sub     esp, 0x10
+72D5EE2F  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EE32  |.  8BC4          mov     eax, esp
+72D5EE34  |.  83EC 10       sub     esp, 0x10
+72D5EE37  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EE3A  |.  8BC4          mov     eax, esp
+72D5EE3C  |.  83EC 10       sub     esp, 0x10
+72D5EE3F  |.  8BCC          mov     ecx, esp
+72D5EE41  |.  FF72 08       push    dword ptr ds:[edx+0x8]           ;  qbcore.6F574B71
+72D5EE44  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EE47  |.  E8 A49CD4FF   call    72AA8AF0
+72D5EE4C  |.  68 B0EF9573   push    7395EFB0                         ;  cmdList size = %d
+72D5EE51  |.  68 B0EC9573   push    7395ECB0                         ;  SyncMgr
+72D5EE56  |.  68 C4EF9573   push    7395EFC4                         ;  SyncMgr::proccessSyncCmdList
+72D5EE5B  |.  68 08020000   push    0x208
+72D5EE60  |.  BA 0CED9573   mov     edx, 7395ED0C                    ;  02_manager\SyncMgr.cpp
+72D5EE65  |.  B9 01000000   mov     ecx, 0x1
+72D5EE6A  |.  E8 A1B71700   call    72EDA610
+72D5EE6F  |.  8B47 04       mov     eax, dword ptr ds:[edi+0x4]
+72D5EE72  |.  83C4 70       add     esp, 0x70
+72D5EE75  |.  8B15 E435B973 mov     edx, dword ptr ds:[0x73B935E4]
+72D5EE7B  |.  8BC8          mov     ecx, eax
+72D5EE7D  |.  85C0          test    eax, eax
+72D5EE7F  |.  75 03         jnz     short 72D5EE84
+72D5EE81  |.  8B4A 04       mov     ecx, dword ptr ds:[edx+0x4]
+72D5EE84  |>  8B49 14       mov     ecx, dword ptr ds:[ecx+0x14]
+72D5EE87  |.  85C0          test    eax, eax
+72D5EE89  |.  75 03         jnz     short 72D5EE8E
+72D5EE8B  |.  8B42 04       mov     eax, dword ptr ds:[edx+0x4]
+72D5EE8E  |>  3B48 08       cmp     ecx, dword ptr ds:[eax+0x8]
+72D5EE91  |.  74 62         je      short 72D5EEF5
+72D5EE93  |.  0F1005 80338F>movups  xmm0, dqword ptr ds:[0x738F3380]
+72D5EE9A  |.  83EC 10       sub     esp, 0x10
+72D5EE9D  |.  BA 0CED9573   mov     edx, 7395ED0C                    ;  02_manager\SyncMgr.cpp
+72D5EEA2  |.  8BC4          mov     eax, esp
+72D5EEA4  |.  B9 02000000   mov     ecx, 0x2
+72D5EEA9  |.  83EC 10       sub     esp, 0x10
+72D5EEAC  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EEAF  |.  8BC4          mov     eax, esp
+72D5EEB1  |.  83EC 10       sub     esp, 0x10
+72D5EEB4  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EEB7  |.  8BC4          mov     eax, esp
+72D5EEB9  |.  83EC 10       sub     esp, 0x10
+72D5EEBC  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EEBF  |.  8BC4          mov     eax, esp
+72D5EEC1  |.  83EC 10       sub     esp, 0x10
+72D5EEC4  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EEC7  |.  8BC4          mov     eax, esp
+72D5EEC9  |.  83EC 10       sub     esp, 0x10
+72D5EECC  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EECF  |.  8BC4          mov     eax, esp
+72D5EED1  |.  68 70F09573   push    7395F070                         ;  sync resp is illegal
+72D5EED6  |.  68 B0EC9573   push    7395ECB0                         ;  SyncMgr
+72D5EEDB  |.  68 C4EF9573   push    7395EFC4                         ;  SyncMgr::proccessSyncCmdList
+72D5EEE0  |.  68 0B020000   push    0x20B
+72D5EEE5  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5EEE8  |.  E8 23B71700   call    72EDA610
+72D5EEED  |.  83C4 70       add     esp, 0x70
+72D5EEF0  |.  E9 4B020000   jmp     72D5F140
+72D5EEF5  |>  33D2          xor     edx, edx
+72D5EEF7  |.  C785 B0FEFFFF>mov     dword ptr ss:[ebp-0x150], 0x0
+72D5EF01  |.  8995 B4FEFFFF mov     dword ptr ss:[ebp-0x14C], edx
+72D5EF07  |.  8995 B8FEFFFF mov     dword ptr ss:[ebp-0x148], edx
+72D5EF0D  |.  8BCF          mov     ecx, edi
+72D5EF0F  |.  C745 FC 01000>mov     dword ptr ss:[ebp-0x4], 0x1
+72D5EF16  |.  33F6          xor     esi, esi
+72D5EF18  |.  E8 438B0000   call    72D67A60
+72D5EF1D  |.  3970 08       cmp     dword ptr ds:[eax+0x8], esi
+72D5EF20  |.  0F8E 05010000 jle     72D5F02B
+72D5EF26  |>  8BCF          /mov     ecx, edi
+72D5EF28  |.  E8 338B0000   |call    72D67A60
+72D5EF2D  |.  8B40 04       |mov     eax, dword ptr ds:[eax+0x4]
+72D5EF30  |.  8B04B0        |mov     eax, dword ptr ds:[eax+esi*4]
+72D5EF33  |.  C745 DC 480F9>|mov     dword ptr ss:[ebp-0x24], 739F0F>
+72D5EF3A  |.  C745 E8 00000>|mov     dword ptr ss:[ebp-0x18], 0x0
+72D5EF41  |.  C745 E4 00000>|mov     dword ptr ss:[ebp-0x1C], 0x0
+72D5EF48  |.  C745 E0 00000>|mov     dword ptr ss:[ebp-0x20], 0x0
+72D5EF4F  |.  C745 EC 00000>|mov     dword ptr ss:[ebp-0x14], 0x0
+72D5EF56  |.  C645 FC 03    |mov     byte ptr ss:[ebp-0x4], 0x3
+72D5EF5A  |.  8B48 08       |mov     ecx, dword ptr ds:[eax+0x8]
+72D5EF5D  |.  83F9 02       |cmp     ecx, 0x2
+72D5EF60  |.  74 0E         |je      short 72D5EF70
+72D5EF62  |.  83F9 11       |cmp     ecx, 0x11
+72D5EF65  |.  74 09         |je      short 72D5EF70
+72D5EF67  |.  8BC8          |mov     ecx, eax
+72D5EF69  |.  E8 F2010000   |call    72D5F160
+72D5EF6E  |.  EB 79         |jmp     short 72D5EFE9
+72D5EF70  |>  0F57C0        |xorps   xmm0, xmm0
+72D5EF73  |.  C785 C0FEFFFF>|mov     dword ptr ss:[ebp-0x140], 739F3>
+72D5EF7D  |.  8D8D C0FEFFFF |lea     ecx, dword ptr ss:[ebp-0x140]
+72D5EF83  |.  0F1185 FCFEFF>|movups  dqword ptr ss:[ebp-0x104], xmm0
+72D5EF8A  |.  E8 51B15400   |call    732AA0E0
+72D5EF8F  |.  C645 FC 04    |mov     byte ptr ss:[ebp-0x4], 0x4
+72D5EF93  |.  8B40 04       |mov     eax, dword ptr ds:[eax+0x4]
+72D5EF96  |.  8BC8          |mov     ecx, eax
+72D5EF98  |.  8B15 DC35B973 |mov     edx, dword ptr ds:[0x73B935DC]
+72D5EF9E  |.  85C0          |test    eax, eax
+72D5EFA0  |.  75 05         |jnz     short 72D5EFA7
+72D5EFA2  |.  8B4A 04       |mov     ecx, dword ptr ds:[edx+0x4]
+72D5EFA5  |.  8BC1          |mov     eax, ecx
+72D5EFA7  |>  8B40 04       |mov     eax, dword ptr ds:[eax+0x4]
+72D5EFAA  |.  8378 14 10    |cmp     dword ptr ds:[eax+0x14], 0x10
+72D5EFAE  |.  72 02         |jb      short 72D5EFB2
+72D5EFB0  |.  8B00          |mov     eax, dword ptr ds:[eax]
+72D5EFB2  |>  FF71 08       |push    dword ptr ds:[ecx+0x8]
+72D5EFB5  |.  8D8D C0FEFFFF |lea     ecx, dword ptr ss:[ebp-0x140]
+72D5EFBB  |.  50            |push    eax
+72D5EFBC  |.  E8 68048C00   |call    7361F429
+72D5EFC1  |.  8D8D C0FEFFFF |lea     ecx, dword ptr ss:[ebp-0x140]
+72D5EFC7  |.  E8 24620000   |call    72D651F0
+72D5EFCC  |.  8D85 C0FEFFFF |lea     eax, dword ptr ss:[ebp-0x140]
+72D5EFD2  |.  50            |push    eax
+72D5EFD3  |.  8D8D B0FEFFFF |lea     ecx, dword ptr ss:[ebp-0x150]
+72D5EFD9  |.  E8 A2740000   |call    72D66480
+72D5EFDE  |.  8D8D C0FEFFFF |lea     ecx, dword ptr ss:[ebp-0x140]
+72D5EFE4  |.  E8 37B35400   |call    732AA320
+72D5EFE9  |>  C645 FC 01    |mov     byte ptr ss:[ebp-0x4], 0x1
+72D5EFED  |.  8D45 DC       |lea     eax, dword ptr ss:[ebp-0x24]
+72D5EFF0  |.  C745 DC 480F9>|mov     dword ptr ss:[ebp-0x24], 739F0F>
+72D5EFF7  |.  3B05 DC35B973 |cmp     eax, dword ptr ds:[0x73B935DC]
+72D5EFFD  |.  74 0D         |je      short 72D5F00C
+72D5EFFF  |.  8B4D E0       |mov     ecx, dword ptr ss:[ebp-0x20]    ;  WeChatWi.73B50000
+72D5F002  |.  85C9          |test    ecx, ecx
+72D5F004  |.  74 06         |je      short 72D5F00C
+72D5F006  |.  8B01          |mov     eax, dword ptr ds:[ecx]
+72D5F008  |.  6A 01         |push    0x1
+72D5F00A  |.  FF10          |call    dword ptr ds:[eax]
+72D5F00C  |>  8D4D DC       |lea     ecx, dword ptr ss:[ebp-0x24]
+72D5F00F  |.  E8 39018C00   |call    7361F14D
+72D5F014  |.  8BCF          |mov     ecx, edi
+72D5F016  |.  46            |inc     esi
+72D5F017  |.  E8 448A0000   |call    72D67A60
+72D5F01C  |.  3B70 08       |cmp     esi, dword ptr ds:[eax+0x8]
+72D5F01F  |.^ 0F8C 01FFFFFF \jl      72D5EF26
+72D5F025  |.  8B95 B4FEFFFF mov     edx, dword ptr ss:[ebp-0x14C]
+72D5F02B  |>  2B95 B0FEFFFF sub     edx, dword ptr ss:[ebp-0x150]
+72D5F031  |.  B8 49B4C2E6   mov     eax, 0xE6C2B449
+72D5F036  |.  8995 BCFEFFFF mov     dword ptr ss:[ebp-0x144], edx
+72D5F03C  |.  F7EA          imul    edx
+72D5F03E  |.  0395 BCFEFFFF add     edx, dword ptr ss:[ebp-0x144]
+72D5F044  |.  C1FA 08       sar     edx, 0x8
+72D5F047  |.  8BC2          mov     eax, edx
+72D5F049  |.  C1E8 1F       shr     eax, 0x1F
+72D5F04C  |.  03C2          add     eax, edx
+72D5F04E  |.  74 3A         je      short 72D5F08A
+72D5F050  |.  833D 4C22B973>cmp     dword ptr ds:[0x73B9224C], 0x0
+72D5F057  |.  75 24         jnz     short 72D5F07D
+72D5F059  |.  6A 40         push    0x40
+72D5F05B  |.  E8 DDE18B00   call    7361D23D
+72D5F060  |.  83C4 04       add     esp, 0x4
+72D5F063  |.  8985 BCFEFFFF mov     dword ptr ss:[ebp-0x144], eax
+72D5F069  |.  8BC8          mov     ecx, eax
+72D5F06B  |.  C645 FC 05    mov     byte ptr ss:[ebp-0x4], 0x5
+72D5F06F  |.  E8 4C60F6FF   call    72CC50C0
+72D5F074  |.  C645 FC 01    mov     byte ptr ss:[ebp-0x4], 0x1
+72D5F078  |.  A3 4C22B973   mov     dword ptr ds:[0x73B9224C], eax
+72D5F07D  |>  51            push    ecx
+72D5F07E  |.  8D85 B0FEFFFF lea     eax, dword ptr ss:[ebp-0x150]
+72D5F084  |.  50            push    eax
+72D5F085  |.  E8 3676F6FF   call    72CC66C0
+72D5F08A  |>  E8 416A0000   call    72D65AD0
+72D5F08F  |.  A1 9422B973   mov     eax, dword ptr ds:[0x73B92294]   ;  嗪
+72D5F094  |.  85C0          test    eax, eax
+72D5F096  |.  75 27         jnz     short 72D5F0BF
+72D5F098  |.  68 84000000   push    0x84
+72D5F09D  |.  E8 9BE18B00   call    7361D23D
+72D5F0A2  |.  83C4 04       add     esp, 0x4
+72D5F0A5  |.  8985 BCFEFFFF mov     dword ptr ss:[ebp-0x144], eax
+72D5F0AB  |.  8BC8          mov     ecx, eax
+72D5F0AD  |.  C645 FC 06    mov     byte ptr ss:[ebp-0x4], 0x6
+72D5F0B1  |.  E8 7A4E0200   call    72D83F30
+72D5F0B6  |.  C645 FC 01    mov     byte ptr ss:[ebp-0x4], 0x1
+72D5F0BA  |.  A3 9422B973   mov     dword ptr ds:[0x73B92294], eax   ;  嗪
+72D5F0BF  |>  6A 00         push    0x0                              ;  esi=1时好友列表变动通知
+72D5F0C1  |.  6A 00         push    0x0
+72D5F0C3  |.  6A 00         push    0x0
+72D5F0C5  |.  68 B0030000   push    0x3B0
+72D5F0CA  |.  8BC8          mov     ecx, eax
+72D5F0CC  |.  E8 DF5F0200   call    72D850B0
+72D5F0D1  |.  0F1005 80338F>movups  xmm0, dqword ptr ds:[0x738F3380]
+72D5F0D8  |.  83EC 10       sub     esp, 0x10
+72D5F0DB  |.  BA 0CED9573   mov     edx, 7395ED0C                    ;  02_manager\SyncMgr.cpp
+72D5F0E0  |.  8BC4          mov     eax, esp
+72D5F0E2  |.  B9 01000000   mov     ecx, 0x1
+72D5F0E7  |.  83EC 10       sub     esp, 0x10
+72D5F0EA  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5F0ED  |.  8BC4          mov     eax, esp
+72D5F0EF  |.  83EC 10       sub     esp, 0x10
+72D5F0F2  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5F0F5  |.  8BC4          mov     eax, esp
+72D5F0F7  |.  83EC 10       sub     esp, 0x10
+72D5F0FA  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5F0FD  |.  8BC4          mov     eax, esp
+72D5F0FF  |.  83EC 10       sub     esp, 0x10
+72D5F102  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5F105  |.  8BC4          mov     eax, esp
+72D5F107  |.  83EC 10       sub     esp, 0x10
+72D5F10A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5F10D  |.  8BC4          mov     eax, esp
+72D5F10F  |.  68 58F09573   push    7395F058                         ;  proccessSyncCmdList end
+72D5F114  |.  68 B0EC9573   push    7395ECB0                         ;  SyncMgr
+72D5F119  |.  68 C4EF9573   push    7395EFC4                         ;  SyncMgr::proccessSyncCmdList
+72D5F11E  |.  68 2C020000   push    0x22C
+72D5F123  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72D5F126  |.  E8 E5B41700   call    72EDA610
+72D5F12B  |.  83C4 70       add     esp, 0x70
+72D5F12E  |.  8D8D B0FEFFFF lea     ecx, dword ptr ss:[ebp-0x150]
+72D5F134  |.  C745 FC 07000>mov     dword ptr ss:[ebp-0x4], 0x7
+72D5F13B  |.  E8 2030F6FF   call    72CC2160
+72D5F140  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+72D5F143  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+72D5F14A  |.  59            pop     ecx                              ;  0032DB28
+72D5F14B  |.  5F            pop     edi                              ;  0032DB28
+72D5F14C  |.  5E            pop     esi                              ;  0032DB28
+72D5F14D  |.  8B4D F0       mov     ecx, dword ptr ss:[ebp-0x10]
+72D5F150  |.  33CD          xor     ecx, ebp
+72D5F152  |.  E8 A4E08B00   call    7361D1FB
+72D5F157  |.  8BE5          mov     esp, ebp
+72D5F159  |.  5D            pop     ebp                              ;  0032DB28
+72D5F15A  \.  C2 0400       retn    0x4
+
+
+
+
+71973F08  |. /74 23         |je      short 71973F2D
+71973F0A  |. |8D45 AC       |lea     eax, dword ptr ss:[ebp-0x54]
+71973F0D  |. |8BCE          |mov     ecx, esi
+71973F0F  |. |50            |push    eax
+71973F10  |. |E8 2BEAC3FF   |call    715B2940
+71973F15  |. |834D EC 01    |or      dword ptr ss:[ebp-0x14], 0x1
+71973F19  |. |8BC8          |mov     ecx, eax
+71973F1B  |. |68 D8CF3E72   |push    723ECFD8                        ;  @stranger
+71973F20  |. |E8 FB7B0500   |call    719CBB20
+71973F25  |. |C645 F3 01    |mov     byte ptr ss:[ebp-0xD], 0x1
+71973F29  |. |84C0          |test    al, al
+71973F2B  |. |74 04         |je      short 71973F31
+71973F2D  |> \C645 F3 00    |mov     byte ptr ss:[ebp-0xD], 0x0
+71973F31  |>  8B45 EC       |mov     eax, dword ptr ss:[ebp-0x14]
+71973F34  |.  A8 01         |test    al, 0x1
+71973F36  |.  74 0E         |je      short 71973F46
+71973F38  |.  83E0 FE       |and     eax, 0xFFFFFFFE
+71973F3B  |.  8D4D AC       |lea     ecx, dword ptr ss:[ebp-0x54]
+71973F3E  |.  8945 EC       |mov     dword ptr ss:[ebp-0x14], eax
+71973F41  |.  E8 5A99C8FF   |call    715FD8A0
+71973F46  |>  807D F3 00    |cmp     byte ptr ss:[ebp-0xD], 0x0
+71973F4A  |.  74 0C         |je      short 71973F58
+71973F4C  |.  8D46 30       |lea     eax, dword ptr ds:[esi+0x30]
+71973F4F  |.  50            |push    eax
+71973F50  |.  8D4D C0       |lea     ecx, dword ptr ss:[ebp-0x40]
+71973F53  |.  E8 18D4C2FF   |call    715A1370
+71973F58  |>  8D46 08       |lea     eax, dword ptr ds:[esi+0x8]
+71973F5B  |.  C786 3C010000>|mov     dword ptr ds:[esi+0x13C], 0x1
+71973F65  |.  8B75 E8       |mov     esi, dword ptr ss:[ebp-0x18]
+71973F68  |.  8BCE          |mov     ecx, esi
+71973F6A  |.  50            |push    eax
+71973F6B  |.  E8 20F1FFFF   |call    71973090
+71973F70  |.  84C0          |test    al, al
+71973F72  |.  8D45 E4       |lea     eax, dword ptr ss:[ebp-0x1C]
+71973F75  |.  50            |push    eax
+71973F76  |.  74 0A         |je      short 71973F82
+71973F78  |.  8D4D CC       |lea     ecx, dword ptr ss:[ebp-0x34]
+71973F7B  |.  E8 A02EC6FF   |call    715D6E20
+71973F80  |.  EB 0D         |jmp     short 71973F8F
+71973F82  |>  8D4D D8       |lea     ecx, dword ptr ss:[ebp-0x28]
+71973F85  |.  E8 962EC6FF   |call    715D6E20
+71973F8A  |.  EB 03         |jmp     short 71973F8F
+71973F8C  |>  8B75 E8       |mov     esi, dword ptr ss:[ebp-0x18]
+71973F8F  |>  43            |inc     ebx
+71973F90  |.  3BDF          |cmp     ebx, edi
+71973F92  |.^ 0F8C 1EFFFFFF \jl      71973EB6
+71973F98  |>  6A 00         push    0x0
+71973F9A  |.  8D45 C0       lea     eax, dword ptr ss:[ebp-0x40]
+71973F9D  |.  8BCE          mov     ecx, esi
+71973F9F  |.  50            push    eax
+71973FA0  |.  E8 8B040000   call    71974430
+71973FA5  |.  6A 00         push    0x0
+71973FA7  |.  8D45 D8       lea     eax, dword ptr ss:[ebp-0x28]
+71973FAA  |.  8BCE          mov     ecx, esi
+71973FAC  |.  50            push    eax
+71973FAD  |.  E8 DEF2FFFF   call    71973290
+71973FB2  |.  6A 00         push    0x0
+71973FB4  |.  8D45 CC       lea     eax, dword ptr ss:[ebp-0x34]
+71973FB7  |.  8BCE          mov     ecx, esi
+71973FB9  |.  50            push    eax
+71973FBA  |.  E8 41F7FFFF   call    71973700                         ;  好友信息变动通知
+71973FBF  |.  8B5D DC       mov     ebx, dword ptr ss:[ebp-0x24]
+71973FC2  |.  33F6          xor     esi, esi
+71973FC4  |.  8B45 D8       mov     eax, dword ptr ss:[ebp-0x28]
+71973FC7  |.  2BD8          sub     ebx, eax
+71973FC9  |.  C1FB 02       sar     ebx, 0x2
+71973FCC  |.  85DB          test    ebx, ebx
+71973FCE  |.  7E 24         jle     short 71973FF4
+71973FD0  |>  8B3CB0        /mov     edi, dword ptr ds:[eax+esi*4]
+71973FD3  |.  85FF          |test    edi, edi
+71973FD5  |.  74 18         |je      short 71973FEF
+71973FD7  |.  8BCF          |mov     ecx, edi
+71973FD9  |.  E8 9286FFFF   |call    7196C670
+71973FDE  |.  68 E0030000   |push    0x3E0
+71973FE3  |.  57            |push    edi
+71973FE4  |.  E8 23927900   |call    7210D20C
+71973FE9  |.  8B45 D8       |mov     eax, dword ptr ss:[ebp-0x28]
+71973FEC  |.  83C4 08       |add     esp, 0x8
+71973FEF  |>  46            |inc     esi
+71973FF0  |.  3BF3          |cmp     esi, ebx
+71973FF2  |.^ 7C DC         \jl      short 71973FD0
+71973FF4  |>  8B5D D0       mov     ebx, dword ptr ss:[ebp-0x30]
+71973FF7  |.  33F6          xor     esi, esi
+71973FF9  |.  8B4D CC       mov     ecx, dword ptr ss:[ebp-0x34]
+71973FFC  |.  2BD9          sub     ebx, ecx
+71973FFE  |.  C1FB 02       sar     ebx, 0x2
+71974001  |.  85DB          test    ebx, ebx
+71974003  |.  7E 24         jle     short 71974029
+71974005  |>  8B3CB1        /mov     edi, dword ptr ds:[ecx+esi*4]
+71974008  |.  85FF          |test    edi, edi
+7197400A  |.  74 18         |je      short 71974024
+7197400C  |.  8BCF          |mov     ecx, edi
+7197400E  |.  E8 5D86FFFF   |call    7196C670
+71974013  |.  68 E0030000   |push    0x3E0
+71974018  |.  57            |push    edi
+71974019  |.  E8 EE917900   |call    7210D20C
+7197401E  |.  8B4D CC       |mov     ecx, dword ptr ss:[ebp-0x34]
+71974021  |.  83C4 08       |add     esp, 0x8
+71974024  |>  46            |inc     esi
+71974025  |.  3BF3          |cmp     esi, ebx
+71974027  |.^ 7C DC         \jl      short 71974005
+71974029  |>  85C9          test    ecx, ecx
+7197402B  |.  74 14         je      short 71974041
+7197402D  |.  8B45 D4       mov     eax, dword ptr ss:[ebp-0x2C]
+71974030  |.  2BC1          sub     eax, ecx
+71974032  |.  6A 04         push    0x4
+71974034  |.  C1F8 02       sar     eax, 0x2
+71974037  |.  50            push    eax
+71974038  |.  51            push    ecx
+71974039  |.  E8 222EC2FF   call    71596E60
+7197403E  |.  83C4 0C       add     esp, 0xC
+71974041  |>  8B75 C0       mov     esi, dword ptr ss:[ebp-0x40]
+71974044  |.  85F6          test    esi, esi
+71974046  |.  74 30         je      short 71974078
+71974048  |.  FF75 08       push    dword ptr ss:[ebp+0x8]
+7197404B  |.  8B55 C4       mov     edx, dword ptr ss:[ebp-0x3C]
+7197404E  |.  51            push    ecx
+7197404F  |.  8BCE          mov     ecx, esi
+71974051  |.  E8 FA73C2FF   call    7159B450
+71974056  |.  8B4D C8       mov     ecx, dword ptr ss:[ebp-0x38]
+71974059  |.  B8 67666666   mov     eax, 0x66666667
+7197405E  |.  2BCE          sub     ecx, esi
+71974060  |.  F7E9          imul    ecx
+71974062  |.  6A 14         push    0x14
+71974064  |.  C1FA 03       sar     edx, 0x3
+71974067  |.  8BC2          mov     eax, edx
+71974069  |.  C1E8 1F       shr     eax, 0x1F
+7197406C  |.  03C2          add     eax, edx
+7197406E  |.  50            push    eax
+7197406F  |.  56            push    esi
+71974070  |.  E8 EB2DC2FF   call    71596E60
+71974075  |.  83C4 14       add     esp, 0x14
+71974078  |>  8B4D D8       mov     ecx, dword ptr ss:[ebp-0x28]
+7197407B  |.  85C9          test    ecx, ecx
+7197407D  |.  74 14         je      short 71974093
+7197407F  |.  8B45 E0       mov     eax, dword ptr ss:[ebp-0x20]
+71974082  |.  2BC1          sub     eax, ecx
+71974084  |.  6A 04         push    0x4
+71974086  |.  C1F8 02       sar     eax, 0x2
+71974089  |.  50            push    eax
+7197408A  |.  51            push    ecx
+7197408B  |.  E8 D02DC2FF   call    71596E60
+71974090  |.  83C4 0C       add     esp, 0xC
+71974093  |>  B0 01         mov     al, 0x1
+71974095  |.  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+71974098  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+7197409F  |.  59            pop     ecx                              ;  WeChatWi.71973FBF
+719740A0  |.  5F            pop     edi                              ;  WeChatWi.71973FBF
+719740A1  |.  5E            pop     esi                              ;  WeChatWi.71973FBF
+719740A2  |.  5B            pop     ebx                              ;  WeChatWi.71973FBF
+719740A3  |.  8BE5          mov     esp, ebp
+719740A5  |.  5D            pop     ebp                              ;  WeChatWi.71973FBF
+719740A6  \.  C2 0800       retn    0x8
+
+
+
+
+
+
+
+71AF3700    55              push    ebp
+71AF3701    8BEC            mov     ebp, esp
+71AF3703    6A FF           push    -0x1
+71AF3705    68 D80E4272     push    72420ED8
+71AF370A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+71AF3710    50              push    eax
+71AF3711    83EC 24         sub     esp, 0x24
+71AF3714    53              push    ebx
+71AF3715    56              push    esi
+71AF3716    57              push    edi
+71AF3717    A1 C4507A72     mov     eax, dword ptr ds:[0x727A50C4]
+71AF371C    33C5            xor     eax, ebp
+71AF371E    50              push    eax
+71AF371F    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+71AF3722    64:A3 00000000  mov     dword ptr fs:[0], eax
+71AF3728    8BD9            mov     ebx, ecx
+71AF372A    895D EC         mov     dword ptr ss:[ebp-0x14], ebx
+71AF372D    8B03            mov     eax, dword ptr ds:[ebx]
+71AF372F    8B40 20         mov     eax, dword ptr ds:[eax+0x20]
+71AF3732    FFD0            call    eax
+71AF3734    84C0            test    al, al
+71AF3736    0F84 91000000   je      71AF37CD
+71AF373C    8B7D 08         mov     edi, dword ptr ss:[ebp+0x8]      ; gdi32.762F54E9
+71AF373F    8B07            mov     eax, dword ptr ds:[edi]
+71AF3741    3B47 04         cmp     eax, dword ptr ds:[edi+0x4]
+71AF3744    0F84 83000000   je      71AF37CD
+71AF374A    807D 0C 00      cmp     byte ptr ss:[ebp+0xC], 0x0
+71AF374E    0F84 8F000000   je      71AF37E3
+71AF3754    6A 00           push    0x0
+71AF3756    68 A3030000     push    0x3A3
+71AF375B    68 60695F72     push    725F6960                         ; 03_service\storage\ContactStorage.cpp
+71AF3760    68 486C5F72     push    725F6C48                         ; UPDATE Contact SET Alias = ?2,EncryptUserName = ?3,DelFlag = ?4,Type = ?5,VerifyFlag = ?6,Reserved1 = ?7,Reserved2 = ?8,Remark = ?11,NickName = ?12,LabelIDList = ?13,DomainList = ?14,ChatRoomType = ?15,PYInitial = ?16,QuanPin = ?17,RemarkPYInitial = ?18,R
+71AF3765    8BCB            mov     ecx, ebx
+71AF3767    E8 746B0300     call    71B2A2E0
+71AF376C    84C0            test    al, al
+71AF376E    75 73           jnz     short 71AF37E3
+71AF3770    0F1005 80335672 movups  xmm0, dqword ptr ds:[0x72563380]
+71AF3777    83EC 10         sub     esp, 0x10
+71AF377A    BA 60695F72     mov     edx, 725F6960                    ; 03_service\storage\ContactStorage.cpp
+71AF377F    8BC4            mov     eax, esp
+71AF3781    B9 04000000     mov     ecx, 0x4
+71AF3786    83EC 10         sub     esp, 0x10
+71AF3789    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF378C    8BC4            mov     eax, esp
+71AF378E    83EC 10         sub     esp, 0x10
+71AF3791    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3794    8BC4            mov     eax, esp
+71AF3796    83EC 10         sub     esp, 0x10
+71AF3799    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF379C    8BC4            mov     eax, esp
+71AF379E    83EC 10         sub     esp, 0x10
+71AF37A1    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF37A4    8BC4            mov     eax, esp
+71AF37A6    83EC 10         sub     esp, 0x10
+71AF37A9    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF37AC    8BC4            mov     eax, esp
+71AF37AE    68 A8F75E72     push    725EF7A8                         ; updateList beginTransation fail
+71AF37B3    68 A8695F72     push    725F69A8                         ; ContactStorage
+71AF37B8    68 D0735F72     push    725F73D0                         ; ContactStorage::updateList
+71AF37BD    68 A5030000     push    0x3A5
+71AF37C2    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF37C5    E8 466E0500     call    71B4A610
+71AF37CA    83C4 70         add     esp, 0x70
+71AF37CD    32C0            xor     al, al
+71AF37CF    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+71AF37D2    64:890D 0000000>mov     dword ptr fs:[0], ecx
+71AF37D9    59              pop     ecx
+71AF37DA    5F              pop     edi
+71AF37DB    5E              pop     esi
+71AF37DC    5B              pop     ebx
+71AF37DD    8BE5            mov     esp, ebp
+71AF37DF    5D              pop     ebp
+71AF37E0    C2 0800         retn    0x8
+71AF37E3    8B03            mov     eax, dword ptr ds:[ebx]
+71AF37E5    8D4D F0         lea     ecx, dword ptr ss:[ebp-0x10]
+71AF37E8    68 486C5F72     push    725F6C48                         ; UPDATE Contact SET Alias = ?2,EncryptUserName = ?3,DelFlag = ?4,Type = ?5,VerifyFlag = ?6,Reserved1 = ?7,Reserved2 = ?8,Remark = ?11,NickName = ?12,LabelIDList = ?13,DomainList = ?14,ChatRoomType = ?15,PYInitial = ?16,QuanPin = ?17,RemarkPYInitial = ?18,R
+71AF37ED    51              push    ecx
+71AF37EE    8BCB            mov     ecx, ebx
+71AF37F0    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+71AF37F3    FFD0            call    eax
+71AF37F5    84C0            test    al, al
+71AF37F7    0F85 86000000   jnz     71AF3883
+71AF37FD    0F1005 80335672 movups  xmm0, dqword ptr ds:[0x72563380]
+71AF3804    83EC 10         sub     esp, 0x10
+71AF3807    BA 60695F72     mov     edx, 725F6960                    ; 03_service\storage\ContactStorage.cpp
+71AF380C    8BC4            mov     eax, esp
+71AF380E    B9 04000000     mov     ecx, 0x4
+71AF3813    83EC 10         sub     esp, 0x10
+71AF3816    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3819    8BC4            mov     eax, esp
+71AF381B    83EC 10         sub     esp, 0x10
+71AF381E    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3821    8BC4            mov     eax, esp
+71AF3823    83EC 10         sub     esp, 0x10
+71AF3826    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3829    8BC4            mov     eax, esp
+71AF382B    83EC 10         sub     esp, 0x10
+71AF382E    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3831    8BC4            mov     eax, esp
+71AF3833    83EC 10         sub     esp, 0x10
+71AF3836    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3839    8BC4            mov     eax, esp
+71AF383B    68 EC735F72     push    725F73EC                         ; updateList prepareInsertStmt fail
+71AF3840    68 A8695F72     push    725F69A8                         ; ContactStorage
+71AF3845    68 D0735F72     push    725F73D0                         ; ContactStorage::updateList
+71AF384A    68 AC030000     push    0x3AC
+71AF384F    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3852    E8 B96D0500     call    71B4A610
+71AF3857    83C4 70         add     esp, 0x70
+71AF385A    807D 0C 00      cmp     byte ptr ss:[ebp+0xC], 0x0
+71AF385E  ^ 0F84 69FFFFFF   je      71AF37CD
+71AF3864    6A 00           push    0x0
+71AF3866    8BCB            mov     ecx, ebx
+71AF3868    E8 33710300     call    71B2A9A0
+71AF386D    32C0            xor     al, al
+71AF386F    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+71AF3872    64:890D 0000000>mov     dword ptr fs:[0], ecx
+71AF3879    59              pop     ecx
+71AF387A    5F              pop     edi
+71AF387B    5E              pop     esi
+71AF387C    5B              pop     ebx
+71AF387D    8BE5            mov     esp, ebp
+71AF387F    5D              pop     ebp
+71AF3880    C2 0800         retn    0x8
+71AF3883    8B37            mov     esi, dword ptr ds:[edi]
+71AF3885    3B77 04         cmp     esi, dword ptr ds:[edi+0x4]
+71AF3888    8B7D F0         mov     edi, dword ptr ss:[ebp-0x10]
+71AF388B    0F84 28010000   je      71AF39B9
+71AF3891    8B45 08         mov     eax, dword ptr ss:[ebp+0x8]      ; gdi32.762F54E9
+71AF3894    8B1E            mov     ebx, dword ptr ds:[esi]
+71AF3896    85DB            test    ebx, ebx
+71AF3898    0F84 0C010000   je      71AF39AA
+71AF389E    8B43 48         mov     eax, dword ptr ds:[ebx+0x48]
+71AF38A1    8B7D EC         mov     edi, dword ptr ss:[ebp-0x14]
+71AF38A4    24 03           and     al, 0x3
+71AF38A6    0FB6C0          movzx   eax, al                          ; 好友信息变动通知
+71AF38A9    8BCF            mov     ecx, edi
+71AF38AB    F7D8            neg     eax
+71AF38AD    53              push    ebx
+71AF38AE    1BC0            sbb     eax, eax
+71AF38B0    83C0 02         add     eax, 0x2
+71AF38B3    8983 40010000   mov     dword ptr ds:[ebx+0x140], eax
+71AF38B9    E8 E2140000     call    71AF4DA0
+71AF38BE    53              push    ebx
+71AF38BF    8BCF            mov     ecx, edi
+71AF38C1    E8 3A110000     call    71AF4A00
+71AF38C6    FF75 F0         push    dword ptr ss:[ebp-0x10]
+71AF38C9    53              push    ebx
+71AF38CA    E8 51F1FFFF     call    71AF2A20
+71AF38CF    84C0            test    al, al
+71AF38D1    0F84 B4000000   je      71AF398B
+71AF38D7    FF75 F0         push    dword ptr ss:[ebp-0x10]
+71AF38DA    E8 A1823100     call    71E0BB80
+71AF38DF    83C4 04         add     esp, 0x4
+71AF38E2    83F8 65         cmp     eax, 0x65
+71AF38E5    0F84 A0000000   je      71AF398B
+71AF38EB    8D45 D4         lea     eax, dword ptr ss:[ebp-0x2C]
+71AF38EE    8BCB            mov     ecx, ebx
+71AF38F0    50              push    eax
+71AF38F1    E8 4AF0C3FF     call    71732940
+71AF38F6    8BD0            mov     edx, eax
+71AF38F8    83EC 10         sub     esp, 0x10
+71AF38FB    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+71AF3902    0F1005 80335672 movups  xmm0, dqword ptr ds:[0x72563380]
+71AF3909    8BCC            mov     ecx, esp
+71AF390B    83EC 10         sub     esp, 0x10
+71AF390E    0F1101          movups  dqword ptr ds:[ecx], xmm0
+71AF3911    8BCC            mov     ecx, esp
+71AF3913    83EC 10         sub     esp, 0x10
+71AF3916    8BC4            mov     eax, esp
+71AF3918    0F1101          movups  dqword ptr ds:[ecx], xmm0
+71AF391B    8BCA            mov     ecx, edx
+71AF391D    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3920    E8 0BCCC3FF     call    71730530
+71AF3925    83EC 10         sub     esp, 0x10
+71AF3928    8BCC            mov     ecx, esp
+71AF392A    C601 02         mov     byte ptr ds:[ecx], 0x2
+71AF392D    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+71AF3930    FF77 24         push    dword ptr ds:[edi+0x24]
+71AF3933    E8 A85C3600     call    71E595E0
+71AF3938    83EC 0C         sub     esp, 0xC
+71AF393B    8BCC            mov     ecx, esp
+71AF393D    6A 01           push    0x1
+71AF393F    C601 02         mov     byte ptr ds:[ecx], 0x2
+71AF3942    8941 08         mov     dword ptr ds:[ecx+0x8], eax
+71AF3945    8BCF            mov     ecx, edi
+71AF3947    8B07            mov     eax, dword ptr ds:[edi]
+71AF3949    FF10            call    dword ptr ds:[eax]
+71AF394B    83EC 10         sub     esp, 0x10
+71AF394E    8BCC            mov     ecx, esp
+71AF3950    50              push    eax
+71AF3951    E8 9A51C2FF     call    71718AF0
+71AF3956    68 10745F72     push    725F7410                         ; updateList sqlite3_step fail =%d ,error=%s usrName = %s
+71AF395B    68 A8695F72     push    725F69A8                         ; ContactStorage
+71AF3960    68 D0735F72     push    725F73D0                         ; ContactStorage::updateList
+71AF3965    68 C2030000     push    0x3C2
+71AF396A    BA 60695F72     mov     edx, 725F6960                    ; 03_service\storage\ContactStorage.cpp
+71AF396F    B9 04000000     mov     ecx, 0x4
+71AF3974    E8 976C0500     call    71B4A610
+71AF3979    83C4 70         add     esp, 0x70
+71AF397C    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+71AF3983    8D4D D4         lea     ecx, dword ptr ss:[ebp-0x2C]
+71AF3986    E8 159FC8FF     call    7177D8A0
+71AF398B    8B7D F0         mov     edi, dword ptr ss:[ebp-0x10]
+71AF398E    85FF            test    edi, edi
+71AF3990    74 15           je      short 71AF39A7
+71AF3992    57              push    edi
+71AF3993    E8 F8743100     call    71E0AE90
+71AF3998    83C4 04         add     esp, 0x4
+71AF399B    57              push    edi
+71AF399C    E8 BF753100     call    71E0AF60
+71AF39A1    8B7D F0         mov     edi, dword ptr ss:[ebp-0x10]
+71AF39A4    83C4 04         add     esp, 0x4
+71AF39A7    8B45 08         mov     eax, dword ptr ss:[ebp+0x8]      ; gdi32.762F54E9
+71AF39AA    83C6 04         add     esi, 0x4
+71AF39AD    3B70 04         cmp     esi, dword ptr ds:[eax+0x4]
+71AF39B0  ^ 0F85 DEFEFFFF   jnz     71AF3894
+71AF39B6    8B5D EC         mov     ebx, dword ptr ss:[ebp-0x14]
+71AF39B9    57              push    edi
+71AF39BA    E8 F1733100     call    71E0ADB0
+71AF39BF    83C4 04         add     esp, 0x4
+71AF39C2    807D 0C 00      cmp     byte ptr ss:[ebp+0xC], 0x0
+71AF39C6    0F84 80000000   je      71AF3A4C
+71AF39CC    6A 00           push    0x0
+71AF39CE    8BCB            mov     ecx, ebx
+71AF39D0    E8 CB6F0300     call    71B2A9A0
+71AF39D5    84C0            test    al, al
+71AF39D7    75 73           jnz     short 71AF3A4C
+71AF39D9    0F1005 80335672 movups  xmm0, dqword ptr ds:[0x72563380]
+71AF39E0    83EC 10         sub     esp, 0x10
+71AF39E3    BA 60695F72     mov     edx, 725F6960                    ; 03_service\storage\ContactStorage.cpp
+71AF39E8    8BC4            mov     eax, esp
+71AF39EA    B9 04000000     mov     ecx, 0x4
+71AF39EF    83EC 10         sub     esp, 0x10
+71AF39F2    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF39F5    8BC4            mov     eax, esp
+71AF39F7    83EC 10         sub     esp, 0x10
+71AF39FA    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF39FD    8BC4            mov     eax, esp
+71AF39FF    83EC 10         sub     esp, 0x10
+71AF3A02    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3A05    8BC4            mov     eax, esp
+71AF3A07    83EC 10         sub     esp, 0x10
+71AF3A0A    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3A0D    8BC4            mov     eax, esp
+71AF3A0F    83EC 10         sub     esp, 0x10
+71AF3A12    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3A15    8BC4            mov     eax, esp
+71AF3A17    68 88F95E72     push    725EF988                         ; updateList commitTransation fail
+71AF3A1C    68 A8695F72     push    725F69A8                         ; ContactStorage
+71AF3A21    68 D0735F72     push    725F73D0                         ; ContactStorage::updateList
+71AF3A26    68 CB030000     push    0x3CB
+71AF3A2B    0F1100          movups  dqword ptr ds:[eax], xmm0
+71AF3A2E    E8 DD6B0500     call    71B4A610
+71AF3A33    83C4 70         add     esp, 0x70
+71AF3A36    32C0            xor     al, al
+71AF3A38    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+71AF3A3B    64:890D 0000000>mov     dword ptr fs:[0], ecx
+71AF3A42    59              pop     ecx
+71AF3A43    5F              pop     edi
+71AF3A44    5E              pop     esi
+71AF3A45    5B              pop     ebx
+71AF3A46    8BE5            mov     esp, ebp
+71AF3A48    5D              pop     ebp
+71AF3A49    C2 0800         retn    0x8
+71AF3A4C    FF75 08         push    dword ptr ss:[ebp+0x8]           ; gdi32.762F54E9
+71AF3A4F    6A 12           push    0x12
+71AF3A51    E8 DA1F0000     call    71AF5A30
+71AF3A56    B0 01           mov     al, 0x1
+71AF3A58    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+71AF3A5B    64:890D 0000000>mov     dword ptr fs:[0], ecx
+71AF3A62    59              pop     ecx
+71AF3A63    5F              pop     edi
+71AF3A64    5E              pop     esi
+71AF3A65    5B              pop     ebx
+71AF3A66    8BE5            mov     esp, ebp
+71AF3A68    5D              pop     ebp
+71AF3A69    C2 0800         retn    0x8
+

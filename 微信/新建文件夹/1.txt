@@ -1,0 +1,194 @@
+01A01390    55              push    ebp
+01A01391    8BEC            mov     ebp, esp
+01A01393    6A FF           push    -0x1
+01A01395    68 645D4802     push    02485D64
+01A0139A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+01A013A0    50              push    eax
+01A013A1    81EC 04050000   sub     esp, 0x504
+01A013A7    A1 C4108102     mov     eax, dword ptr ds:[0x28110C4]
+01A013AC    33C5            xor     eax, ebp
+01A013AE    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+01A013B1    56              push    esi
+01A013B2    57              push    edi
+01A013B3    50              push    eax
+01A013B4    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+01A013B7    64:A3 00000000  mov     dword ptr fs:[0], eax
+01A013BD    A1 B8C18602     mov     eax, dword ptr ds:[0x286C1B8]
+01A013C2    8B75 08         mov     esi, dword ptr ss:[ebp+0x8]      ; WeChat.00470006
+01A013C5    8B7D 0C         mov     edi, dword ptr ss:[ebp+0xC]
+01A013C8    C785 04FBFFFF 0>mov     dword ptr ss:[ebp-0x4FC], 0x0
+01A013D2    A8 01           test    al, 0x1
+01A013D4    75 28           jnz     short 01A013FE
+01A013D6    83C8 01         or      eax, 0x1
+01A013D9    A3 B8C18602     mov     dword ptr ds:[0x286C1B8], eax
+01A013DE    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+01A013E5    E8 C6D51600     call    01B6E9B0
+01A013EA    68 80824F02     push    024F8280
+01A013EF    E8 50E49000     call    0230F844
+01A013F4    83C4 04         add     esp, 0x4
+01A013F7    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+01A013FE    803D D4C18602 0>cmp     byte ptr ds:[0x286C1D4], 0x0
+01A01405    0F84 1B020000   je      01A01626
+01A0140B    8B4F 24         mov     ecx, dword ptr ds:[edi+0x24]
+01A0140E    85C9            test    ecx, ecx                         ; user32.77D2934B
+01A01410    75 08           jnz     short 01A0141A
+01A01412    A1 80D88602     mov     eax, dword ptr ds:[0x286D880]
+01A01417    8B48 24         mov     ecx, dword ptr ds:[eax+0x24]
+01A0141A    8B49 04         mov     ecx, dword ptr ds:[ecx+0x4]
+01A0141D    6A 09           push    0x9
+01A0141F    6A 00           push    0x0
+01A01421    68 08986302     push    02639808
+01A01426    E8 95DFDFFF     call    017FF3C0
+01A0142B    837F 34 00      cmp     dword ptr ds:[edi+0x34], 0x0
+01A0142F    0F86 94010000   jbe     01A015C9
+01A01435    85C0            test    eax, eax
+01A01437    0F8E 8C010000   jle     01A015C9
+01A0143D    0F57C0          xorps   xmm0, xmm0
+01A01440    C785 D4FEFFFF 0>mov     dword ptr ss:[ebp-0x12C], 026DDD>
+01A0144A    8D8D D4FEFFFF   lea     ecx, dword ptr ss:[ebp-0x12C]
+01A01450    0F1185 10FFFFFF movups  dqword ptr ss:[ebp-0xF0], xmm0
+01A01457    E8 A4745A00     call    01FA8900
+01A0145C    8BC1            mov     eax, ecx                         ; user32.77D2934B
+01A0145E    C745 FC 0100000>mov     dword ptr ss:[ebp-0x4], 0x1
+01A01465    50              push    eax
+01A01466    57              push    edi
+01A01467    E8 04120000     call    01A02670
+01A0146C    8B47 24         mov     eax, dword ptr ds:[edi+0x24]
+01A0146F    85C0            test    eax, eax
+01A01471    75 08           jnz     short 01A0147B
+01A01473    A1 80D88602     mov     eax, dword ptr ds:[0x286D880]
+01A01478    8B40 24         mov     eax, dword ptr ds:[eax+0x24]
+01A0147B    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A0147E    8378 10 00      cmp     dword ptr ds:[eax+0x10], 0x0
+01A01482    75 5D           jnz     short 01A014E1
+01A01484    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A0148B    83EC 10         sub     esp, 0x10
+01A0148E    BA 380A6402     mov     edx, 02640A38                    ; ASCII "02_manager\ChatRoomMgr.cpp"
+01A01493    8BC4            mov     eax, esp
+01A01495    B9 04000000     mov     ecx, 0x4
+01A0149A    83EC 10         sub     esp, 0x10
+01A0149D    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A014A0    8BC4            mov     eax, esp
+01A014A2    83EC 10         sub     esp, 0x10
+01A014A5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A014A8    8BC4            mov     eax, esp
+01A014AA    83EC 10         sub     esp, 0x10
+01A014AD    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A014B0    8BC4            mov     eax, esp
+01A014B2    83EC 10         sub     esp, 0x10
+01A014B5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A014B8    8BC4            mov     eax, esp
+01A014BA    83EC 10         sub     esp, 0x10
+01A014BD    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A014C0    8BC4            mov     eax, esp
+01A014C2    68 F40B6402     push    02640BF4                         ; ASCII "CreatChatRoom failed"
+01A014C7    68 780A6402     push    02640A78                         ; ASCII "ChatRoomMgr"
+01A014CC    68 D00B6402     push    02640BD0                         ; ASCII "ChatRoomMgr::onCreatChatRoomSucc"
+01A014D1    68 B2010000     push    0x1B2
+01A014D6    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A014D9    E8 52201F00     call    01BF3530
+01A014DE    83C4 70         add     esp, 0x70
+01A014E1    8D8D 0CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x4F4]
+01A014E7    E8 B4F41900     call    01BA09A0
+01A014EC    8D85 D4FEFFFF   lea     eax, dword ptr ss:[ebp-0x12C]
+01A014F2    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+01A014F6    50              push    eax
+01A014F7    8D8D 0CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x4F4]
+01A014FD    E8 9E091A00     call    01BA1EA0
+01A01502    8D85 F0FAFFFF   lea     eax, dword ptr ss:[ebp-0x510]
+01A01508    50              push    eax
+01A01509    8D8D 0CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x4F4]
+01A0150F    E8 4CE8E0FF     call    0180FD60
+01A01514  - E9 771E6A02     jmp     kstEx.040A3390
+01A01519    CC              int3
+01A0151A    8378 04 00      cmp     dword ptr ds:[eax+0x4], 0x0
+01A0151E    0f9e85 0bfbffff setle   byte ptr ss:[ebp-0x4f5]
+01A01525    E8 868FE5FF     call    0185A4B0
+01A0152A    80BD 0BFBFFFF 0>cmp     byte ptr ss:[ebp-0x4F5], 0x0
+01A01531    74 5D           je      short 01A01590
+01A01533    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A0153A    83EC 10         sub     esp, 0x10
+01A0153D    BA 380A6402     mov     edx, 02640A38                    ; ASCII "02_manager\ChatRoomMgr.cpp"
+01A01542    8BC4            mov     eax, esp
+01A01544    B9 04000000     mov     ecx, 0x4
+01A01549    83EC 10         sub     esp, 0x10
+01A0154C    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A0154F    8BC4            mov     eax, esp
+01A01551    83EC 10         sub     esp, 0x10
+01A01554    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A01557    8BC4            mov     eax, esp
+01A01559    83EC 10         sub     esp, 0x10
+01A0155C    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A0155F    8BC4            mov     eax, esp
+01A01561    83EC 10         sub     esp, 0x10
+01A01564    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A01567    8BC4            mov     eax, esp
+01A01569    83EC 10         sub     esp, 0x10
+01A0156C    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A0156F    8BC4            mov     eax, esp
+01A01571    68 F40B6402     push    02640BF4                         ; ASCII "CreatChatRoom failed"
+01A01576    68 780A6402     push    02640A78                         ; ASCII "ChatRoomMgr"
+01A0157B    68 D00B6402     push    02640BD0                         ; ASCII "ChatRoomMgr::onCreatChatRoomSucc"
+01A01580    68 B8010000     push    0x1B8
+01A01585    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A01588    E8 A31F1F00     call    01BF3530
+01A0158D    83C4 70         add     esp, 0x70
+01A01590    8D85 0CFBFFFF   lea     eax, dword ptr ss:[ebp-0x4F4]
+01A01596    6A 01           push    0x1
+01A01598    50              push    eax
+01A01599    E8 129F0400     call    01A4B4B0
+01A0159E    8BC8            mov     ecx, eax
+01A015A0    E8 5B841A00     call    01BA9A00
+01A015A5    56              push    esi
+01A015A6    8D8D 0CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x4F4]
+01A015AC    E8 AFE7E0FF     call    0180FD60
+01A015B1    8D8D 0CFBFFFF   lea     ecx, dword ptr ss:[ebp-0x4F4]
+01A015B7    E8 54FC1900     call    01BA1210
+01A015BC    8D8D D4FEFFFF   lea     ecx, dword ptr ss:[ebp-0x12C]
+01A015C2    E8 79755A00     call    01FA8B40
+01A015C7    EB 6D           jmp     short 01A01636
+01A015C9    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A015D0    83EC 10         sub     esp, 0x10
+01A015D3    BA 380A6402     mov     edx, 02640A38                    ; ASCII "02_manager\ChatRoomMgr.cpp"
+01A015D8    8BC4            mov     eax, esp
+01A015DA    B9 04000000     mov     ecx, 0x4
+01A015DF    83EC 10         sub     esp, 0x10
+01A015E2    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A015E5    8BC4            mov     eax, esp
+01A015E7    83EC 10         sub     esp, 0x10
+01A015EA    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A015ED    8BC4            mov     eax, esp
+01A015EF    83EC 10         sub     esp, 0x10
+01A015F2    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A015F5    8BC4            mov     eax, esp
+01A015F7    83EC 10         sub     esp, 0x10
+01A015FA    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A015FD    8BC4            mov     eax, esp
+01A015FF    83EC 10         sub     esp, 0x10
+01A01602    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A01605    8BC4            mov     eax, esp
+01A01607    68 F40B6402     push    02640BF4                         ; ASCII "CreatChatRoom failed"
+01A0160C    68 780A6402     push    02640A78                         ; ASCII "ChatRoomMgr"
+01A01611    68 D00B6402     push    02640BD0                         ; ASCII "ChatRoomMgr::onCreatChatRoomSucc"
+01A01616    68 AA010000     push    0x1AA
+01A0161B    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A0161E    E8 0D1F1F00     call    01BF3530
+01A01623    83C4 70         add     esp, 0x70
+01A01626    6A FF           push    -0x1
+01A01628    6A 00           push    0x0
+01A0162A    68 C0315E02     push    025E31C0
+01A0162F    8BCE            mov     ecx, esi
+01A01631    E8 4A2C1F00     call    01BF4280
+01A01636    8BC6            mov     eax, esi
+01A01638    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+01A0163B    64:890D 0000000>mov     dword ptr fs:[0], ecx            ; user32.77D2934B
+01A01642    59              pop     ecx                              ; user32.77D2934B
+01A01643    5F              pop     edi
+01A01644    5E              pop     esi
+01A01645    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]     ; ntdll.7C9573EC
+01A01648    33CD            xor     ecx, ebp
+01A0164A    E8 48DE9000     call    0230F497
+01A0164F    8BE5            mov     esp, ebp
+01A01651    5D              pop     ebp
+01A01652    C2 0800         retn    0x8
+

@@ -1,0 +1,448 @@
+01AF4380    55              push    ebp
+01AF4381    8BEC            mov     ebp, esp
+01AF4383    6A FF           push    -0x1
+01AF4385    68 1C934902     push    0249931C
+01AF438A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+01AF4390    50              push    eax
+01AF4391    83EC 18         sub     esp, 0x18
+01AF4394    53              push    ebx
+01AF4395    56              push    esi
+01AF4396    57              push    edi
+01AF4397    A1 C4108102     mov     eax, dword ptr ds:[0x28110C4]
+01AF439C    33C5            xor     eax, ebp
+01AF439E    50              push    eax
+01AF439F    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+01AF43A2    64:A3 00000000  mov     dword ptr fs:[0], eax
+01AF43A8    8BF9            mov     edi, ecx
+01AF43AA    8B5D 0C         mov     ebx, dword ptr ss:[ebp+0xC]
+01AF43AD    C745 F0 0000000>mov     dword ptr ss:[ebp-0x10], 0x0
+01AF43B4    83EC 10         sub     esp, 0x10
+01AF43B7    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+01AF43BE    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01AF43C5    8BC4            mov     eax, esp
+01AF43C7    83EC 10         sub     esp, 0x10
+01AF43CA    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF43CD    8BC4            mov     eax, esp
+01AF43CF    83EC 10         sub     esp, 0x10
+01AF43D2    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF43D5    8BC4            mov     eax, esp
+01AF43D7    83EC 10         sub     esp, 0x10
+01AF43DA    8BCC            mov     ecx, esp
+01AF43DC    FF75 28         push    dword ptr ss:[ebp+0x28]
+01AF43DF    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF43E2    E8 1925D0FF     call    017F6900
+01AF43E7    83EC 10         sub     esp, 0x10
+01AF43EA    8BCC            mov     ecx, esp
+01AF43EC    53              push    ebx
+01AF43ED    E8 0E25D0FF     call    017F6900
+01AF43F2    83EC 10         sub     esp, 0x10
+01AF43F5    8BCC            mov     ecx, esp
+01AF43F7    FF75 08         push    dword ptr ss:[ebp+0x8]
+01AF43FA    E8 0125D0FF     call    017F6900
+01AF43FF    68 043B6502     push    02653B04                         ; ASCII "onGYNetEnd(errType:%d, errCode:%d, sceneID:%d)"
+01AF4404    68 4C946502     push    0265944C                         ; ASCII "NetSceneGetA8Key"
+01AF4409    68 08956502     push    02659508                         ; ASCII "NetSceneGetA8Key::onGYNetEnd"
+01AF440E    68 99000000     push    0x99
+01AF4413    BA DC946502     mov     edx, 026594DC                    ; ASCII "03_service\net\scene\NetSceneGetA8Key.cpp"
+01AF4418    B9 02000000     mov     ecx, 0x2
+01AF441D    E8 0EF10F00     call    01BF3530
+01AF4422    83C4 70         add     esp, 0x70
+01AF4425    85DB            test    ebx, ebx
+01AF4427    0F84 FE000000   je      01AF452B
+01AF442D    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01AF4434    83EC 10         sub     esp, 0x10
+01AF4437    8BC4            mov     eax, esp
+01AF4439    83EC 10         sub     esp, 0x10
+01AF443C    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF443F    8BC4            mov     eax, esp
+01AF4441    83EC 10         sub     esp, 0x10
+01AF4444    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF4447    8BC4            mov     eax, esp
+01AF4449    83EC 10         sub     esp, 0x10
+01AF444C    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF444F    8BC4            mov     eax, esp
+01AF4451    83EC 10         sub     esp, 0x10
+01AF4454    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF4457    8BC4            mov     eax, esp
+01AF4459    83EC 10         sub     esp, 0x10
+01AF445C    8BCC            mov     ecx, esp
+01AF445E    53              push    ebx
+01AF445F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF4462    E8 9924D0FF     call    017F6900
+01AF4467    68 404A6502     push    02654A40
+01AF446C    68 4C946502     push    0265944C                         ; ASCII "NetSceneGetA8Key"
+01AF4471    68 08956502     push    02659508                         ; ASCII "NetSceneGetA8Key::onGYNetEnd"
+01AF4476    68 9C000000     push    0x9C
+01AF447B    BA DC946502     mov     edx, 026594DC                    ; ASCII "03_service\net\scene\NetSceneGetA8Key.cpp"
+01AF4480    B9 04000000     mov     ecx, 0x4
+01AF4485    E8 A6F00F00     call    01BF3530
+01AF448A    6A 58           push    0x58
+01AF448C    E8 48B08100     call    0230F4D9
+01AF4491    83C4 74         add     esp, 0x74
+01AF4494    8BF0            mov     esi, eax
+01AF4496    8975 F0         mov     dword ptr ss:[ebp-0x10], esi
+01AF4499    8B8F 3C010000   mov     ecx, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF449F    6A 00           push    0x0
+01AF44A1    FF71 08         push    dword ptr ds:[ecx+0x8]
+01AF44A4    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01AF44A7    E8 54FE0F00     call    01BF4300
+01AF44AC    8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+01AF44AF    8BCE            mov     ecx, esi
+01AF44B1    50              push    eax
+01AF44B2    E8 89CBFBFF     call    01AB1040
+01AF44B7    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01AF44BA    8BF0            mov     esi, eax
+01AF44BC    E8 EF5FD6FF     call    0185A4B0
+01AF44C1    8B8F 70010000   mov     ecx, dword ptr ds:[edi+0x170]    ; WeChatWi.017B0000
+01AF44C7    894E 1C         mov     dword ptr ds:[esi+0x1C], ecx
+01AF44CA    8B8F 78010000   mov     ecx, dword ptr ds:[edi+0x178]    ; ntdll.7C92DC0C
+01AF44D0    894E 48         mov     dword ptr ds:[esi+0x48], ecx
+01AF44D3    8B0D C8C88602   mov     ecx, dword ptr ds:[0x286C8C8]
+01AF44D9    85C9            test    ecx, ecx
+01AF44DB    75 27           jnz     short 01AF4504
+01AF44DD    68 84000000     push    0x84
+01AF44E2    E8 F2AF8100     call    0230F4D9
+01AF44E7    83C4 04         add     esp, 0x4
+01AF44EA    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+01AF44ED    8BC8            mov     ecx, eax
+01AF44EF    C645 FC 01      mov     byte ptr ss:[ebp-0x4], 0x1
+01AF44F3    E8 78A1FBFF     call    01AAE670
+01AF44F8    8BC8            mov     ecx, eax
+01AF44FA    C645 FC 00      mov     byte ptr ss:[ebp-0x4], 0x0
+01AF44FE    890D C8C88602   mov     dword ptr ds:[0x286C8C8], ecx
+01AF4504    56              push    esi
+01AF4505    8BC3            mov     eax, ebx
+01AF4507    99              cdq
+01AF4508    52              push    edx
+01AF4509    50              push    eax
+01AF450A    68 4C010000     push    0x14C
+01AF450F    E8 DCB2FBFF     call    01AAF7F0
+01AF4514    FFB7 C0000000   push    dword ptr ds:[edi+0xC0]
+01AF451A    E8 A1DFD1FF     call    018124C0
+01AF451F    8BC8            mov     ecx, eax
+01AF4521    E8 0A92FCFF     call    01ABD730
+01AF4526    E9 D9030000     jmp     01AF4904
+01AF452B    68 A0000000     push    0xA0
+01AF4530    E8 A4AF8100     call    0230F4D9
+01AF4535    83C4 04         add     esp, 0x4
+01AF4538    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+01AF453B    8BC8            mov     ecx, eax
+01AF453D    E8 EEF3FFFF     call    01AF3930
+01AF4542    8BF0            mov     esi, eax
+01AF4544    8B87 40010000   mov     eax, dword ptr ds:[edi+0x140]    ; WeChatWi.0280A0A8
+01AF454A    8D4E 04         lea     ecx, dword ptr ds:[esi+0x4]
+01AF454D    85C0            test    eax, eax
+01AF454F    74 06           je      short 01AF4557
+01AF4551    66:8338 00      cmp     word ptr ds:[eax], 0x0
+01AF4555    75 05           jnz     short 01AF455C
+01AF4557    B8 E4C86702     mov     eax, 0267C8E4
+01AF455C    FFB7 44010000   push    dword ptr ds:[edi+0x144]
+01AF4562    50              push    eax
+01AF4563    E8 98FE0F00     call    01BF4400
+01AF4568    8B87 68010000   mov     eax, dword ptr ds:[edi+0x168]
+01AF456E    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01AF4571    8946 18         mov     dword ptr ds:[esi+0x18], eax
+01AF4574    8B87 6C010000   mov     eax, dword ptr ds:[edi+0x16C]    ; ntdll.7C930365
+01AF457A    8946 1C         mov     dword ptr ds:[esi+0x1C], eax
+01AF457D    8B87 70010000   mov     eax, dword ptr ds:[edi+0x170]    ; WeChatWi.017B0000
+01AF4583    8946 20         mov     dword ptr ds:[esi+0x20], eax
+01AF4586    8B87 78010000   mov     eax, dword ptr ds:[edi+0x178]    ; ntdll.7C92DC0C
+01AF458C    8986 9C000000   mov     dword ptr ds:[esi+0x9C], eax
+01AF4592    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4598    6A 00           push    0x0
+01AF459A    FF70 08         push    dword ptr ds:[eax+0x8]
+01AF459D    E8 5EFD0F00     call    01BF4300
+01AF45A2  - E9 A9EE5A02     jmp     kstEx.040A3450
+01AF45A7    CC              int3
+01AF45A8    85DB            test    ebx, ebx
+01AF45AA    74 08           je      short 01AF45B4
+01AF45AC    66:833B 00      cmp     word ptr ds:[ebx], 0x0
+01AF45B0    8BC3            mov     eax, ebx
+01AF45B2    75 05           jnz     short 01AF45B9
+01AF45B4    B8 E4C86702     mov     eax, 0267C8E4
+01AF45B9    FF75 E0         push    dword ptr ss:[ebp-0x20]
+01AF45BC    50              push    eax
+01AF45BD    E8 3EFE0F00     call    01BF4400
+01AF45C2    85DB            test    ebx, ebx
+01AF45C4    74 09           je      short 01AF45CF
+01AF45C6    53              push    ebx
+01AF45C7    E8 53649400     call    0243AA1F
+01AF45CC    83C4 04         add     esp, 0x4
+01AF45CF    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]     ; user32.77D191F1
+01AF45D2    85C0            test    eax, eax
+01AF45D4    74 09           je      short 01AF45DF
+01AF45D6    50              push    eax
+01AF45D7    E8 43649400     call    0243AA1F
+01AF45DC    83C4 04         add     esp, 0x4
+01AF45DF    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF45E5    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01AF45E8    6A 00           push    0x0
+01AF45EA    FF70 2C         push    dword ptr ds:[eax+0x2C]
+01AF45ED    E8 0EFD0F00     call    01BF4300
+01AF45F2    8B5D DC         mov     ebx, dword ptr ss:[ebp-0x24]
+01AF45F5    8D4E 38         lea     ecx, dword ptr ds:[esi+0x38]
+01AF45F8    85DB            test    ebx, ebx
+01AF45FA    74 08           je      short 01AF4604
+01AF45FC    66:833B 00      cmp     word ptr ds:[ebx], 0x0
+01AF4600    8BC3            mov     eax, ebx
+01AF4602    75 05           jnz     short 01AF4609
+01AF4604    B8 E4C86702     mov     eax, 0267C8E4
+01AF4609    FF75 E0         push    dword ptr ss:[ebp-0x20]
+01AF460C    50              push    eax
+01AF460D    E8 EEFD0F00     call    01BF4400
+01AF4612    85DB            test    ebx, ebx
+01AF4614    74 09           je      short 01AF461F
+01AF4616    53              push    ebx
+01AF4617    E8 03649400     call    0243AA1F
+01AF461C    83C4 04         add     esp, 0x4
+01AF461F    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]     ; user32.77D191F1
+01AF4622    85C0            test    eax, eax
+01AF4624    74 09           je      short 01AF462F
+01AF4626    50              push    eax
+01AF4627    E8 F3639400     call    0243AA1F
+01AF462C    83C4 04         add     esp, 0x4
+01AF462F    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4635    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01AF4638    6A 00           push    0x0
+01AF463A    FF70 0C         push    dword ptr ds:[eax+0xC]
+01AF463D    E8 BEFC0F00     call    01BF4300
+01AF4642    8B5D DC         mov     ebx, dword ptr ss:[ebp-0x24]
+01AF4645    8D4E 4C         lea     ecx, dword ptr ds:[esi+0x4C]
+01AF4648    85DB            test    ebx, ebx
+01AF464A    74 08           je      short 01AF4654
+01AF464C    66:833B 00      cmp     word ptr ds:[ebx], 0x0
+01AF4650    8BC3            mov     eax, ebx
+01AF4652    75 05           jnz     short 01AF4659
+01AF4654    B8 E4C86702     mov     eax, 0267C8E4
+01AF4659    FF75 E0         push    dword ptr ss:[ebp-0x20]
+01AF465C    50              push    eax
+01AF465D    E8 9EFD0F00     call    01BF4400
+01AF4662    85DB            test    ebx, ebx
+01AF4664    74 09           je      short 01AF466F
+01AF4666    53              push    ebx
+01AF4667    E8 B3639400     call    0243AA1F
+01AF466C    83C4 04         add     esp, 0x4
+01AF466F    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]     ; user32.77D191F1
+01AF4672    85C0            test    eax, eax
+01AF4674    74 09           je      short 01AF467F
+01AF4676    50              push    eax
+01AF4677    E8 A3639400     call    0243AA1F
+01AF467C    83C4 04         add     esp, 0x4
+01AF467F    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4685    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01AF4688    6A 00           push    0x0
+01AF468A    8B40 1C         mov     eax, dword ptr ds:[eax+0x1C]
+01AF468D    8946 60         mov     dword ptr ds:[esi+0x60], eax
+01AF4690    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4696    FF70 10         push    dword ptr ds:[eax+0x10]
+01AF4699    E8 62FC0F00     call    01BF4300
+01AF469E    8B5D DC         mov     ebx, dword ptr ss:[ebp-0x24]
+01AF46A1    8D4E 64         lea     ecx, dword ptr ds:[esi+0x64]
+01AF46A4    85DB            test    ebx, ebx
+01AF46A6    74 08           je      short 01AF46B0
+01AF46A8    66:833B 00      cmp     word ptr ds:[ebx], 0x0
+01AF46AC    8BC3            mov     eax, ebx
+01AF46AE    75 05           jnz     short 01AF46B5
+01AF46B0    B8 E4C86702     mov     eax, 0267C8E4
+01AF46B5    FF75 E0         push    dword ptr ss:[ebp-0x20]
+01AF46B8    50              push    eax
+01AF46B9    E8 42FD0F00     call    01BF4400
+01AF46BE    85DB            test    ebx, ebx
+01AF46C0    74 09           je      short 01AF46CB
+01AF46C2    53              push    ebx
+01AF46C3    E8 57639400     call    0243AA1F
+01AF46C8    83C4 04         add     esp, 0x4
+01AF46CB    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]     ; user32.77D191F1
+01AF46CE    85C0            test    eax, eax
+01AF46D0    74 09           je      short 01AF46DB
+01AF46D2    50              push    eax
+01AF46D3    E8 47639400     call    0243AA1F
+01AF46D8    83C4 04         add     esp, 0x4
+01AF46DB    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF46E1    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01AF46E4    6A 00           push    0x0
+01AF46E6    FF70 14         push    dword ptr ds:[eax+0x14]
+01AF46E9    E8 12FC0F00     call    01BF4300
+01AF46EE    8B5D DC         mov     ebx, dword ptr ss:[ebp-0x24]
+01AF46F1    8D4E 78         lea     ecx, dword ptr ds:[esi+0x78]
+01AF46F4    85DB            test    ebx, ebx
+01AF46F6    74 08           je      short 01AF4700
+01AF46F8    66:833B 00      cmp     word ptr ds:[ebx], 0x0
+01AF46FC    8BC3            mov     eax, ebx
+01AF46FE    75 05           jnz     short 01AF4705
+01AF4700    B8 E4C86702     mov     eax, 0267C8E4
+01AF4705    FF75 E0         push    dword ptr ss:[ebp-0x20]
+01AF4708    50              push    eax
+01AF4709    E8 F2FC0F00     call    01BF4400
+01AF470E    85DB            test    ebx, ebx
+01AF4710    74 09           je      short 01AF471B
+01AF4712    53              push    ebx
+01AF4713    E8 07639400     call    0243AA1F
+01AF4718    83C4 04         add     esp, 0x4
+01AF471B    8B45 E8         mov     eax, dword ptr ss:[ebp-0x18]     ; user32.77D191F1
+01AF471E    85C0            test    eax, eax
+01AF4720    74 09           je      short 01AF472B
+01AF4722    50              push    eax
+01AF4723    E8 F7629400     call    0243AA1F
+01AF4728    83C4 04         add     esp, 0x4
+01AF472B    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4731    8B0D 9CD78602   mov     ecx, dword ptr ds:[0x286D79C]
+01AF4737    8B40 18         mov     eax, dword ptr ds:[eax+0x18]
+01AF473A    85C0            test    eax, eax
+01AF473C    75 03           jnz     short 01AF4741
+01AF473E    8B41 18         mov     eax, dword ptr ds:[ecx+0x18]
+01AF4741    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01AF4744    8986 8C000000   mov     dword ptr ds:[esi+0x8C], eax
+01AF474A    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4750    8B40 24         mov     eax, dword ptr ds:[eax+0x24]
+01AF4753    85C0            test    eax, eax
+01AF4755    75 03           jnz     short 01AF475A
+01AF4757    8B41 24         mov     eax, dword ptr ds:[ecx+0x24]
+01AF475A    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01AF475D    8986 90000000   mov     dword ptr ds:[esi+0x90], eax
+01AF4763    8B97 3C010000   mov     edx, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4769    8B42 50         mov     eax, dword ptr ds:[edx+0x50]
+01AF476C    85C0            test    eax, eax
+01AF476E    75 03           jnz     short 01AF4773
+01AF4770    8B41 50         mov     eax, dword ptr ds:[ecx+0x50]
+01AF4773    8378 08 00      cmp     dword ptr ds:[eax+0x8], 0x0
+01AF4777    76 2F           jbe     short 01AF47A8
+01AF4779    8B42 50         mov     eax, dword ptr ds:[edx+0x50]
+01AF477C    85C0            test    eax, eax
+01AF477E    75 03           jnz     short 01AF4783
+01AF4780    8B41 50         mov     eax, dword ptr ds:[ecx+0x50]
+01AF4783    8B58 08         mov     ebx, dword ptr ds:[eax+0x8]
+01AF4786    8B42 50         mov     eax, dword ptr ds:[edx+0x50]
+01AF4789    85C0            test    eax, eax
+01AF478B    75 03           jnz     short 01AF4790
+01AF478D    8B41 50         mov     eax, dword ptr ds:[ecx+0x50]
+01AF4790    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01AF4793    8378 14 10      cmp     dword ptr ds:[eax+0x14], 0x10
+01AF4797    72 02           jb      short 01AF479B
+01AF4799    8B00            mov     eax, dword ptr ds:[eax]
+01AF479B    53              push    ebx
+01AF479C    50              push    eax
+01AF479D    8D8E 94000000   lea     ecx, dword ptr ds:[esi+0x94]
+01AF47A3    E8 8822F5FF     call    01A46A30
+01AF47A8    8B0D C8C88602   mov     ecx, dword ptr ds:[0x286C8C8]
+01AF47AE    85C9            test    ecx, ecx
+01AF47B0    75 27           jnz     short 01AF47D9
+01AF47B2    68 84000000     push    0x84
+01AF47B7    E8 1DAD8100     call    0230F4D9
+01AF47BC    83C4 04         add     esp, 0x4
+01AF47BF    8945 F0         mov     dword ptr ss:[ebp-0x10], eax
+01AF47C2    8BC8            mov     ecx, eax
+01AF47C4    C645 FC 02      mov     byte ptr ss:[ebp-0x4], 0x2
+01AF47C8    E8 A39EFBFF     call    01AAE670
+01AF47CD    8BC8            mov     ecx, eax
+01AF47CF    C645 FC 00      mov     byte ptr ss:[ebp-0x4], 0x0
+01AF47D3    890D C8C88602   mov     dword ptr ds:[0x286C8C8], ecx
+01AF47D9    8B47 44         mov     eax, dword ptr ds:[edi+0x44]
+01AF47DC    56              push    esi
+01AF47DD    99              cdq
+01AF47DE    52              push    edx
+01AF47DF    50              push    eax
+01AF47E0    68 4B010000     push    0x14B
+01AF47E5    E8 06B0FBFF     call    01AAF7F0
+01AF47EA    8B8F 40010000   mov     ecx, dword ptr ds:[edi+0x140]    ; WeChatWi.0280A0A8
+01AF47F0    85C9            test    ecx, ecx
+01AF47F2    74 26           je      short 01AF481A
+01AF47F4    66:8339 00      cmp     word ptr ds:[ecx], 0x0
+01AF47F8    74 20           je      short 01AF481A
+01AF47FA    6A 01           push    0x1
+01AF47FC    51              push    ecx
+01AF47FD    8D97 4C010000   lea     edx, dword ptr ds:[edi+0x14C]
+01AF4803    E8 58A81000     call    01BFF060
+01AF4808    8B8F 4C010000   mov     ecx, dword ptr ds:[edi+0x14C]
+01AF480E    83C4 08         add     esp, 0x8
+01AF4811    85C9            test    ecx, ecx
+01AF4813    74 05           je      short 01AF481A
+01AF4815    8039 00         cmp     byte ptr ds:[ecx], 0x0
+01AF4818    75 05           jnz     short 01AF481F
+01AF481A    B9 C0315E02     mov     ecx, 025E31C0
+01AF481F    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01AF4826    83EC 10         sub     esp, 0x10
+01AF4829    BA DC946502     mov     edx, 026594DC                    ; ASCII "03_service\net\scene\NetSceneGetA8Key.cpp"
+01AF482E    8BC4            mov     eax, esp
+01AF4830    83EC 10         sub     esp, 0x10
+01AF4833    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF4836    8BC4            mov     eax, esp
+01AF4838    83EC 10         sub     esp, 0x10
+01AF483B    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF483E    8BC4            mov     eax, esp
+01AF4840    83EC 10         sub     esp, 0x10
+01AF4843    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF4846    8BC4            mov     eax, esp
+01AF4848    83EC 10         sub     esp, 0x10
+01AF484B    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF484E    8BC4            mov     eax, esp
+01AF4850    83EC 10         sub     esp, 0x10
+01AF4853    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF4856    8BC4            mov     eax, esp
+01AF4858    68 04966502     push    02659604                         ; ASCII "NetSceneGetA8Key Success srcurl:%s "
+01AF485D    68 4C946502     push    0265944C                         ; ASCII "NetSceneGetA8Key"
+01AF4862    68 08956502     push    02659508                         ; ASCII "NetSceneGetA8Key::onGYNetEnd"
+01AF4867    8948 08         mov     dword ptr ds:[eax+0x8], ecx
+01AF486A    B9 02000000     mov     ecx, 0x2
+01AF486F    68 D0000000     push    0xD0
+01AF4874    C600 02         mov     byte ptr ds:[eax], 0x2
+01AF4877    E8 B4EC0F00     call    01BF3530
+01AF487C    8B87 3C010000   mov     eax, dword ptr ds:[edi+0x13C]    ; WeChatWi.0280A030
+01AF4882    83C4 70         add     esp, 0x70
+01AF4885    8B48 08         mov     ecx, dword ptr ds:[eax+0x8]
+01AF4888    8379 14 10      cmp     dword ptr ds:[ecx+0x14], 0x10
+01AF488C    72 02           jb      short 01AF4890
+01AF488E    8B09            mov     ecx, dword ptr ds:[ecx]
+01AF4890    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01AF4897    83EC 10         sub     esp, 0x10
+01AF489A    BA DC946502     mov     edx, 026594DC                    ; ASCII "03_service\net\scene\NetSceneGetA8Key.cpp"
+01AF489F    8BC4            mov     eax, esp
+01AF48A1    83EC 10         sub     esp, 0x10
+01AF48A4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF48A7    8BC4            mov     eax, esp
+01AF48A9    83EC 10         sub     esp, 0x10
+01AF48AC    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF48AF    8BC4            mov     eax, esp
+01AF48B1    83EC 10         sub     esp, 0x10
+01AF48B4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF48B7    8BC4            mov     eax, esp
+01AF48B9    83EC 10         sub     esp, 0x10
+01AF48BC    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF48BF    8BC4            mov     eax, esp
+01AF48C1    83EC 10         sub     esp, 0x10
+01AF48C4    0F1100          movups  dqword ptr ds:[eax], xmm0
+01AF48C7    8BC4            mov     eax, esp
+01AF48C9    68 DC956502     push    026595DC                         ; ASCII "NetSceneGetA8Key Success resultUrl:%s "
+01AF48CE    68 4C946502     push    0265944C                         ; ASCII "NetSceneGetA8Key"
+01AF48D3    68 08956502     push    02659508                         ; ASCII "NetSceneGetA8Key::onGYNetEnd"
+01AF48D8    8948 08         mov     dword ptr ds:[eax+0x8], ecx
+01AF48DB    B9 02000000     mov     ecx, 0x2
+01AF48E0    68 D1000000     push    0xD1
+01AF48E5    C600 02         mov     byte ptr ds:[eax], 0x2
+01AF48E8    E8 43EC0F00     call    01BF3530
+01AF48ED    83C4 70         add     esp, 0x70
+01AF48F0    FFB7 C0000000   push    dword ptr ds:[edi+0xC0]
+01AF48F6    E8 C5DBD1FF     call    018124C0
+01AF48FB    8BC8            mov     ecx, eax
+01AF48FD    E8 2E8EFCFF     call    01ABD730
+01AF4902    33DB            xor     ebx, ebx
+01AF4904    8B4D 24         mov     ecx, dword ptr ss:[ebp+0x24]
+01AF4907    83F9 10         cmp     ecx, 0x10
+01AF490A    72 0F           jb      short 01AF491B
+01AF490C    6A 01           push    0x1
+01AF490E    41              inc     ecx
+01AF490F    51              push    ecx
+01AF4910    FF75 10         push    dword ptr ss:[ebp+0x10]
+01AF4913    E8 5803D0FF     call    017F4C70
+01AF4918    83C4 0C         add     esp, 0xC
+01AF491B    8BC3            mov     eax, ebx
+01AF491D    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+01AF4920    64:890D 0000000>mov     dword ptr fs:[0], ecx
+01AF4927    59              pop     ecx                              ; user32.77D191BE
+01AF4928    5F              pop     edi                              ; user32.77D191BE
+01AF4929    5E              pop     esi                              ; user32.77D191BE
+01AF492A    5B              pop     ebx                              ; user32.77D191BE
+01AF492B    8BE5            mov     esp, ebp
+01AF492D    5D              pop     ebp                              ; user32.77D191BE
+01AF492E    C2 2800         retn    0x28
+

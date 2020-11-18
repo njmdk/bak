@@ -1,0 +1,75 @@
+71C47860    55              push    ebp
+71C47861    8BEC            mov     ebp, esp
+71C47863    6A FF           push    -0x1
+71C47865    68 C8ACC472     push    72C4ACC8
+71C4786A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+71C47870    50              push    eax
+71C47871    83EC 2C         sub     esp, 0x2C
+71C47874    56              push    esi                              ; WeChatRe.70FD62B0
+71C47875    57              push    edi                              ; WeChatRe.70AC4448
+71C47876    A1 945B1073     mov     eax, dword ptr ds:[0x73105B94]
+71C4787B    33C5            xor     eax, ebp
+71C4787D    50              push    eax
+71C4787E    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+71C47881    64:A3 00000000  mov     dword ptr fs:[0], eax
+71C47887    8BF1            mov     esi, ecx
+71C47889    8B8E 40070000   mov     ecx, dword ptr ds:[esi+0x740]
+71C4788F    FF75 10         push    dword ptr ss:[ebp+0x10]
+71C47892    8B01            mov     eax, dword ptr ds:[ecx]
+71C47894    FF90 EC000000   call    dword ptr ds:[eax+0xEC]
+71C4789A    8B45 08         mov     eax, dword ptr ss:[ebp+0x8]
+71C4789D    8B10            mov     edx, dword ptr ds:[eax]
+71C4789F    85D2            test    edx, edx                         ; WeChatRe.70FD636C
+71C478A1    74 06           je      short 71C478A9
+71C478A3    66:833A 00      cmp     word ptr ds:[edx], 0x0
+71C478A7    75 05           jnz     short 71C478AE
+71C478A9    BA 80D8EA72     mov     edx, 72EAD880
+71C478AE    8B8E 28070000   mov     ecx, dword ptr ds:[esi+0x728]
+71C478B4    52              push    edx                              ; WeChatRe.70FD636C
+71C478B5    8B01            mov     eax, dword ptr ds:[ecx]
+71C478B7    FF50 40         call    dword ptr ds:[eax+0x40]          ; ÁÐ±íÇÐ»»
+71C478BA    8B7D 0C         mov     edi, dword ptr ss:[ebp+0xC]
+71C478BD    85FF            test    edi, edi                         ; WeChatRe.70AC4448
+71C478BF    0F8E 00010000   jle     71C479C5
+71C478C5    0F57C0          xorps   xmm0, xmm0
+71C478C8    C745 DC 0000000>mov     dword ptr ss:[ebp-0x24], 0x0
+71C478CF    0F1145 CC       movups  dqword ptr ss:[ebp-0x34], xmm0
+71C478D3    BA 24040000     mov     edx, 0x424
+71C478D8    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+71C478DF    8D4D E0         lea     ecx, dword ptr ss:[ebp-0x20]
+71C478E2    E8 09053E00     call    72027DF0
+71C478E7    8B00            mov     eax, dword ptr ds:[eax]
+71C478E9    85C0            test    eax, eax
+71C478EB    74 06           je      short 71C478F3
+71C478ED    66:8338 00      cmp     word ptr ds:[eax], 0x0
+71C478F1    75 05           jnz     short 71C478F8
+71C478F3    B8 80D8EA72     mov     eax, 72EAD880
+71C478F8    57              push    edi                              ; WeChatRe.70AC4448
+71C478F9    50              push    eax
+71C478FA    8D45 CC         lea     eax, dword ptr ss:[ebp-0x34]
+71C478FD    50              push    eax
+71C478FE    E8 9DFF3D00     call    720278A0
+71C47903    8B45 E0         mov     eax, dword ptr ss:[ebp-0x20]
+71C47906    83C4 0C         add     esp, 0xC
+71C47909    85C0            test    eax, eax
+71C4790B    74 10           je      short 71C4791D
+71C4790D    50              push    eax
+71C4790E    E8 2C0BFC00     call    72C0843F
+71C47913    83C4 04         add     esp, 0x4
+71C47916    C745 E0 0000000>mov     dword ptr ss:[ebp-0x20], 0x0
+71C4791D    8B45 EC         mov     eax, dword ptr ss:[ebp-0x14]
+71C47920    C745 E8 0000000>mov     dword ptr ss:[ebp-0x18], 0x0
+71C47927    C745 E4 0000000>mov     dword ptr ss:[ebp-0x1C], 0x0
+71C4792E    85C0            test    eax, eax
+71C47930    74 17           je      short 71C47949
+71C47932    50              push    eax
+71C47933    E8 070BFC00     call    72C0843F
+71C47938    83C4 04         add     esp, 0x4
+71C4793B    C745 EC 0000000>mov     dword ptr ss:[ebp-0x14], 0x0
+71C47942    C745 F0 0000000>mov     dword ptr ss:[ebp-0x10], 0x0
+71C47949    8B8E 2C070000   mov     ecx, dword ptr ds:[esi+0x72C]
+71C4794F    6A 01           push    0x1
+71C47951    8B01            mov     eax, dword ptr ds:[ecx]
+71C47953    FF90 EC000000   call    dword ptr ds:[eax+0xEC]
+71C47959    8B7D CC         mov     edi, dword ptr ss:[ebp-0x34]
+

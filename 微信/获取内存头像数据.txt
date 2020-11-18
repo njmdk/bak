@@ -1,0 +1,231 @@
+72EA6FA0  /$  53            push    ebx
+72EA6FA1  |.  8BDC          mov     ebx, esp
+72EA6FA3  |.  83EC 08       sub     esp, 0x8
+72EA6FA6  |.  83E4 F8       and     esp, 0xFFFFFFF8
+72EA6FA9  |.  83C4 04       add     esp, 0x4
+72EA6FAC  |.  55            push    ebp
+72EA6FAD  |.  8B6B 04       mov     ebp, dword ptr ds:[ebx+0x4]
+72EA6FB0  |.  896C24 04     mov     dword ptr ss:[esp+0x4], ebp
+72EA6FB4  |.  8BEC          mov     ebp, esp
+72EA6FB6  |.  6A FF         push    -0x1
+72EA6FB8  |.  68 08007B73   push    737B0008
+72EA6FBD  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+72EA6FC3  |.  50            push    eax
+72EA6FC4  |.  53            push    ebx
+72EA6FC5  |.  83EC 20       sub     esp, 0x20
+72EA6FC8  |.  56            push    esi
+72EA6FC9  |.  57            push    edi
+72EA6FCA  |.  A1 C450B373   mov     eax, dword ptr ds:[0x73B350C4]
+72EA6FCF  |.  33C5          xor     eax, ebp
+72EA6FD1  |.  50            push    eax
+72EA6FD2  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+72EA6FD5  |.  64:A3 0000000>mov     dword ptr fs:[0], eax
+72EA6FDB  |.  8BF9          mov     edi, ecx
+72EA6FDD  |.  8B07          mov     eax, dword ptr ds:[edi]
+72EA6FDF  |.  8B40 20       mov     eax, dword ptr ds:[eax+0x20]
+72EA6FE2  |.  FFD0          call    eax
+72EA6FE4  |.  84C0          test    al, al
+72EA6FE6  |.  75 07         jnz     short 72EA6FEF
+72EA6FE8  |>  32C0          xor     al, al
+72EA6FEA  |.  E9 58020000   jmp     72EA7247
+72EA6FEF  |>  8B43 08       mov     eax, dword ptr ds:[ebx+0x8]
+72EA6FF2  |.  8378 04 00    cmp     dword ptr ds:[eax+0x4], 0x0
+72EA6FF6  |.  0F9EC0        setle   al
+72EA6FF9  |.  84C0          test    al, al
+72EA6FFB  |.^ 75 EB         jnz     short 72EA6FE8
+72EA6FFD  |.  0F57C0        xorps   xmm0, xmm0
+72EA7000  |.  C745 E0 00000>mov     dword ptr ss:[ebp-0x20], 0x0
+72EA7007  |.  0F1145 D0     movups  dqword ptr ss:[ebp-0x30], xmm0
+72EA700B  |.  C745 FC 00000>mov     dword ptr ss:[ebp-0x4], 0x0
+72EA7012  |.  83EC 14       sub     esp, 0x14
+72EA7015  |.  0F1047 4C     movups  xmm0, dqword ptr ds:[edi+0x4C]
+72EA7019  |.  8B47 5C       mov     eax, dword ptr ds:[edi+0x5C]
+72EA701C  |.  8BCC          mov     ecx, esp
+72EA701E  |.  68 08F09873   push    7398F008                         ;  SELECT * FROM %s WHERE usrName = ?1
+72EA7023  |.  0F1101        movups  dqword ptr ds:[ecx], xmm0
+72EA7026  |.  8941 10       mov     dword ptr ds:[ecx+0x10], eax
+72EA7029  |.  8D45 D0       lea     eax, dword ptr ss:[ebp-0x30]
+72EA702C  |.  50            push    eax
+72EA702D  |.  E8 7E4C0300   call    72EDBCB0
+72EA7032  |.  8B75 D0       mov     esi, dword ptr ss:[ebp-0x30]
+72EA7035  |.  83C4 1C       add     esp, 0x1C
+72EA7038  |.  85F6          test    esi, esi
+72EA703A  |.  74 2A         je      short 72EA7066
+72EA703C  |.  66:833E 00    cmp     word ptr ds:[esi], 0x0
+72EA7040  |.  74 24         je      short 72EA7066
+72EA7042  |.  6A 01         push    0x1
+72EA7044  |.  51            push    ecx
+72EA7045  |.  8D55 DC       lea     edx, dword ptr ss:[ebp-0x24]
+72EA7048  |.  8BCE          mov     ecx, esi
+72EA704A  |.  E8 D1F30300   call    72EE6420
+72EA704F  |.  8B45 DC       mov     eax, dword ptr ss:[ebp-0x24]
+72EA7052  |.  83C4 08       add     esp, 0x8
+72EA7055  |.  85C0          test    eax, eax
+72EA7057  |.  74 0A         je      short 72EA7063
+72EA7059  |.  8038 00       cmp     byte ptr ds:[eax], 0x0
+72EA705C  |.  74 05         je      short 72EA7063
+72EA705E  |.  8B75 D0       mov     esi, dword ptr ss:[ebp-0x30]
+72EA7061  |.  EB 08         jmp     short 72EA706B
+72EA7063  |>  8B75 D0       mov     esi, dword ptr ss:[ebp-0x30]
+72EA7066  |>  B8 00E59F73   mov     eax, 739FE500
+72EA706B  |>  6A 01         push    0x1
+72EA706D  |.  68 29010000   push    0x129
+72EA7072  |.  68 70F09873   push    7398F070                         ;  03_service\storage\HeadImgStorage.cpp
+72EA7077  |.  50            push    eax
+72EA7078  |.  8BCF          mov     ecx, edi
+72EA707A  |.  E8 61320100   call    72EBA2E0
+72EA707F  |.  C745 E8 00000>mov     dword ptr ss:[ebp-0x18], 0x0
+72EA7086  |.  85F6          test    esi, esi
+72EA7088  |.  74 22         je      short 72EA70AC
+72EA708A  |.  66:833E 00    cmp     word ptr ds:[esi], 0x0
+72EA708E  |.  74 1C         je      short 72EA70AC
+72EA7090  |.  6A 01         push    0x1
+72EA7092  |.  51            push    ecx
+72EA7093  |.  8D55 DC       lea     edx, dword ptr ss:[ebp-0x24]
+72EA7096  |.  8BCE          mov     ecx, esi
+72EA7098  |.  E8 83F30300   call    72EE6420
+72EA709D  |.  8B4D DC       mov     ecx, dword ptr ss:[ebp-0x24]
+72EA70A0  |.  83C4 08       add     esp, 0x8
+72EA70A3  |.  85C9          test    ecx, ecx
+72EA70A5  |.  74 05         je      short 72EA70AC
+72EA70A7  |.  8039 00       cmp     byte ptr ds:[ecx], 0x0
+72EA70AA  |.  75 05         jnz     short 72EA70B1
+72EA70AC  |>  B9 00E59F73   mov     ecx, 739FE500
+72EA70B1  |>  8B07          mov     eax, dword ptr ds:[edi]
+72EA70B3  |.  51            push    ecx
+72EA70B4  |.  8D4D E8       lea     ecx, dword ptr ss:[ebp-0x18]
+72EA70B7  |.  51            push    ecx
+72EA70B8  |.  8B40 04       mov     eax, dword ptr ds:[eax+0x4]
+72EA70BB  |.  8BCF          mov     ecx, edi
+72EA70BD  |.  FFD0          call    eax
+72EA70BF  |.  84C0          test    al, al
+72EA70C1  |.  75 6F         jnz     short 72EA7132
+72EA70C3  |.  0F1005 80338F>movups  xmm0, dqword ptr ds:[0x738F3380]
+72EA70CA  |.  83EC 10       sub     esp, 0x10
+72EA70CD  |.  BA 70F09873   mov     edx, 7398F070                    ;  03_service\storage\HeadImgStorage.cpp
+72EA70D2  |.  8BC4          mov     eax, esp
+72EA70D4  |.  B9 04000000   mov     ecx, 0x4
+72EA70D9  |.  83EC 10       sub     esp, 0x10
+72EA70DC  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA70DF  |.  8BC4          mov     eax, esp
+72EA70E1  |.  83EC 10       sub     esp, 0x10
+72EA70E4  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA70E7  |.  8BC4          mov     eax, esp
+72EA70E9  |.  83EC 10       sub     esp, 0x10
+72EA70EC  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA70EF  |.  8BC4          mov     eax, esp
+72EA70F1  |.  83EC 10       sub     esp, 0x10
+72EA70F4  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA70F7  |.  8BC4          mov     eax, esp
+72EA70F9  |.  83EC 10       sub     esp, 0x10
+72EA70FC  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA70FF  |.  8BC4          mov     eax, esp
+72EA7101  |.  68 105C9873   push    73985C10                         ;  getByUsrName prepareStmt fail
+72EA7106  |.  68 CCEF9873   push    7398EFCC                         ;  HeadImgStorage
+72EA710B  |.  68 50F09873   push    7398F050                         ;  HeadImgStorage::getByUsrName
+72EA7110  |.  68 2E010000   push    0x12E
+72EA7115  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA7118  |.  E8 F3340300   call    72EDA610
+72EA711D  |.  83C4 70       add     esp, 0x70
+72EA7120  |.  8BCF          mov     ecx, edi
+72EA7122  |.  6A 01         push    0x1
+72EA7124  |.  E8 77380100   call    72EBA9A0
+72EA7129  |.  C645 EF 00    mov     byte ptr ss:[ebp-0x11], 0x0
+72EA712D  |.  E9 0A010000   jmp     72EA723C
+72EA7132  |>  8B43 08       mov     eax, dword ptr ds:[ebx+0x8]
+72EA7135  |.  8B00          mov     eax, dword ptr ds:[eax]
+72EA7137  |.  85C0          test    eax, eax
+72EA7139  |.  74 06         je      short 72EA7141
+72EA713B  |.  66:8338 00    cmp     word ptr ds:[eax], 0x0
+72EA713F  |.  75 05         jnz     short 72EA7146
+72EA7141  |>  B8 D8388F73   mov     eax, 738F38D8
+72EA7146  |>  8B4D E8       mov     ecx, dword ptr ss:[ebp-0x18]     ;  user32.7583790D
+72EA7149  |.  BA 01000000   mov     edx, 0x1
+72EA714E  |.  6A 02         push    0x2
+72EA7150  |.  6A 00         push    0x0
+72EA7152  |.  6A FF         push    -0x1
+72EA7154  |.  50            push    eax
+72EA7155  |.  E8 86572F00   call    7319C8E0
+72EA715A  |.  FF75 E8       push    dword ptr ss:[ebp-0x18]          ;  user32.7583790D
+72EA715D  |.  E8 1E4A2F00   call    7319BB80
+72EA7162  |.  8BF0          mov     esi, eax
+72EA7164  |.  83C4 14       add     esp, 0x14
+72EA7167  |.  83FE 64       cmp     esi, 0x64
+72EA716A  |.  75 10         jnz     short 72EA717C
+72EA716C  |.  FF75 E8       push    dword ptr ss:[ebp-0x18]          ;  user32.7583790D
+72EA716F  |.  FF73 0C       push    dword ptr ds:[ebx+0xC]
+72EA7172  |.  E8 49F8FFFF   call    72EA69C0                         ;  获取内存头像数据
+72EA7177  |.  E9 A5000000   jmp     72EA7221
+72EA717C  |>  0F1005 80338F>movups  xmm0, dqword ptr ds:[0x738F3380]
+72EA7183  |.  83EC 10       sub     esp, 0x10
+72EA7186  |.  8BC4          mov     eax, esp
+72EA7188  |.  83EC 10       sub     esp, 0x10
+72EA718B  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA718E  |.  8BC4          mov     eax, esp
+72EA7190  |.  83EC 10       sub     esp, 0x10
+72EA7193  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA7196  |.  8BC4          mov     eax, esp
+72EA7198  |.  83EC 10       sub     esp, 0x10
+72EA719B  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA719E  |.  8BC4          mov     eax, esp
+72EA71A0  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA71A3  |.  83FE 65       cmp     esi, 0x65
+72EA71A6  |.  75 29         jnz     short 72EA71D1
+72EA71A8  |.  83EC 10       sub     esp, 0x10
+72EA71AB  |.  8D4E 9C       lea     ecx, dword ptr ds:[esi-0x64]
+72EA71AE  |.  8BC4          mov     eax, esp
+72EA71B0  |.  83EC 10       sub     esp, 0x10
+72EA71B3  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA71B6  |.  8BC4          mov     eax, esp
+72EA71B8  |.  68 B00A9873   push    73980AB0                         ;  getChatMsgById OK
+72EA71BD  |.  68 CCEF9873   push    7398EFCC                         ;  HeadImgStorage
+72EA71C2  |.  68 50F09873   push    7398F050                         ;  HeadImgStorage::getByUsrName
+72EA71C7  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+72EA71CA  |.  68 3D010000   push    0x13D
+72EA71CF  |.  EB 43         jmp     short 72EA7214
+72EA71D1  |>  FF77 24       push    dword ptr ds:[edi+0x24]
+72EA71D4  |.  E8 07243400   call    731E95E0
+72EA71D9  |.  8BC8          mov     ecx, eax
+72EA71DB  |.  83EC 0C       sub     esp, 0xC
+72EA71DE  |.  8BC4          mov     eax, esp
+72EA71E0  |.  6A 01         push    0x1
+72EA71E2  |.  8948 08       mov     dword ptr ds:[eax+0x8], ecx
+72EA71E5  |.  8BCF          mov     ecx, edi
+72EA71E7  |.  C600 02       mov     byte ptr ds:[eax], 0x2
+72EA71EA  |.  8B07          mov     eax, dword ptr ds:[edi]
+72EA71EC  |.  8B00          mov     eax, dword ptr ds:[eax]
+72EA71EE  |.  FFD0          call    eax
+72EA71F0  |.  83EC 10       sub     esp, 0x10
+72EA71F3  |.  8BCC          mov     ecx, esp
+72EA71F5  |.  50            push    eax
+72EA71F6  |.  E8 F518C0FF   call    72AA8AF0
+72EA71FB  |.  68 0C0A9873   push    73980A0C                         ;  getChatMsgById sqlite3_step fail fail=%d ,error=%s
+72EA7200  |.  68 CCEF9873   push    7398EFCC                         ;  HeadImgStorage
+72EA7205  |.  68 50F09873   push    7398F050                         ;  HeadImgStorage::getByUsrName
+72EA720A  |.  68 41010000   push    0x141
+72EA720F  |.  B9 04000000   mov     ecx, 0x4
+72EA7214  |>  BA 70F09873   mov     edx, 7398F070                    ;  03_service\storage\HeadImgStorage.cpp
+72EA7219  |.  E8 F2330300   call    72EDA610
+72EA721E  |.  83C4 70       add     esp, 0x70
+72EA7221  |>  FF75 E8       push    dword ptr ss:[ebp-0x18]          ;  user32.7583790D
+72EA7224  |.  E8 873B2F00   call    7319ADB0
+72EA7229  |.  83C4 04       add     esp, 0x4
+72EA722C  |.  8BCF          mov     ecx, edi
+72EA722E  |.  6A 01         push    0x1
+72EA7230  |.  E8 6B370100   call    72EBA9A0
+72EA7235  |.  83FE 64       cmp     esi, 0x64
+72EA7238  |.  0f9445 ef     sete    byte ptr ss:[ebp-0x11]
+72EA723C  |>  8D4D D0       lea     ecx, dword ptr ss:[ebp-0x30]
+72EA723F  |.  E8 5C66C6FF   call    72B0D8A0
+72EA7244  |.  8A45 EF       mov     al, byte ptr ss:[ebp-0x11]
+72EA7247  |>  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+72EA724A  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+72EA7251  |.  59            pop     ecx                              ;  user32.758378D7
+72EA7252  |.  5F            pop     edi                              ;  user32.758378D7
+72EA7253  |.  5E            pop     esi                              ;  user32.758378D7
+72EA7254  |.  8BE5          mov     esp, ebp
+72EA7256  |.  5D            pop     ebp                              ;  user32.758378D7
+72EA7257  |.  8BE3          mov     esp, ebx
+72EA7259  |.  5B            pop     ebx                              ;  user32.758378D7
+72EA725A  \.  C2 0800       retn    0x8
+

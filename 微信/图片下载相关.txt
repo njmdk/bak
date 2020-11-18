@@ -1,0 +1,204 @@
+71F11151  |>  8B45 EC       mov     eax, dword ptr ss:[ebp-0x14]     ;  Case 3 of switch 71F11128
+71F11154  |.  C1E8 07       shr     eax, 0x7
+71F11157  |.  A8 01         test    al, 0x1
+71F11159  |.  0F84 170C0000 je      71F11D76                         ;  0
+71F1115F  |.  8B45 BC       mov     eax, dword ptr ss:[ebp-0x44]
+71F11162  |.  85C0          test    eax, eax
+71F11164  |.  75 08         jnz     short 71F1116E                   ;  1
+71F11166  |.  A1 8041D472   mov     eax, dword ptr ds:[0x72D44180]
+71F1116B  |.  8B40 14       mov     eax, dword ptr ds:[eax+0x14]
+71F1116E  |>  FF70 04       push    dword ptr ds:[eax+0x4]
+71F11171  |.  8D8D 78FFFFFF lea     ecx, dword ptr ss:[ebp-0x88]
+71F11177  |.  E8 E430D5FF   call    71C64260
+71F1117C  |.  C645 FC 14    mov     byte ptr ss:[ebp-0x4], 0x14
+71F11180  |.  E8 AB2CD5FF   call    71C63E30
+71F11185  |.  8D8D C0FAFFFF lea     ecx, dword ptr ss:[ebp-0x540]
+71F1118B  |.  E8 708EF4FF   call    71E5A000
+71F11190  |.  8B45 C8       mov     eax, dword ptr ss:[ebp-0x38]
+71F11193  |.  85C0          test    eax, eax
+71F11195  |.  75 08         jnz     short 71F1119F                   ;  1
+71F11197  |.  A1 8041D472   mov     eax, dword ptr ds:[0x72D44180]
+71F1119C  |.  8B40 20       mov     eax, dword ptr ds:[eax+0x20]
+71F1119F  |>  8378 08 00    cmp     dword ptr ds:[eax+0x8], 0x0
+71F111A3  |.  75 40         jnz     short 71F111E5                   ;  1
+71F111A5  |.  6A 00         push    0x0
+71F111A7  |.  8D85 C0FAFFFF lea     eax, dword ptr ss:[ebp-0x540]
+71F111AD  |.  6A 02         push    0x2
+71F111AF  |.  50            push    eax
+71F111B0  |.  E8 7B2CD5FF   call    71C63E30
+71F111B5  |.  8BC8          mov     ecx, eax
+71F111B7  |.  E8 6486F4FF   call    71E59820
+71F111BC  |.  83A5 88FCFFFF>and     dword ptr ss:[ebp-0x378], 0x40
+71F111C3  |.  84C0          test    al, al
+71F111C5  |.  74 0F         je      short 71F111D6
+71F111C7  |.  C785 F8FAFFFF>mov     dword ptr ss:[ebp-0x508], 0x4
+71F111D1  |.  E9 D2000000   jmp     71F112A8
+71F111D6  |>  C785 F8FAFFFF>mov     dword ptr ss:[ebp-0x508], 0x5
+71F111E0  |.  E9 C3000000   jmp     71F112A8
+71F111E5  |>  6A 68         push    0x68
+71F111E7  |.  E8 51C08B00   call    727CD23D
+71F111EC  |.  8BD0          mov     edx, eax
+71F111EE  |.  83C4 04       add     esp, 0x4
+71F111F1  |.  8995 2CFDFFFF mov     dword ptr ss:[ebp-0x2D4], edx
+71F111F7  |.  C645 FC 15    mov     byte ptr ss:[ebp-0x4], 0x15
+71F111FB  |.  8B4D C8       mov     ecx, dword ptr ss:[ebp-0x38]
+71F111FE  |.  85C9          test    ecx, ecx
+71F11200  |.  75 08         jnz     short 71F1120A                   ;  1
+71F11202  |.  A1 8041D472   mov     eax, dword ptr ds:[0x72D44180]
+71F11207  |.  8B48 20       mov     ecx, dword ptr ds:[eax+0x20]
+71F1120A  |>  FF71 08       push    dword ptr ds:[ecx+0x8]
+71F1120D  |.  8BCA          mov     ecx, edx
+71F1120F  |.  E8 7C590200   call    71F36B90
+71F11214  |.  C645 FC 14    mov     byte ptr ss:[ebp-0x4], 0x14
+71F11218  |.  8BF8          mov     edi, eax
+71F1121A  |.  8B4D C8       mov     ecx, dword ptr ss:[ebp-0x38]
+71F1121D  |.  8BD1          mov     edx, ecx
+71F1121F  |.  8B35 8041D472 mov     esi, dword ptr ds:[0x72D44180]
+71F11225  |.  85C9          test    ecx, ecx
+71F11227  |.  75 05         jnz     short 71F1122E                   ;  1
+71F11229  |.  8B56 20       mov     edx, dword ptr ds:[esi+0x20]     ;  WeChatWi.722CAD0E
+71F1122C  |.  8BCA          mov     ecx, edx
+71F1122E  |>  8B41 04       mov     eax, dword ptr ds:[ecx+0x4]
+71F11231  |.  8378 14 10    cmp     dword ptr ds:[eax+0x14], 0x10
+71F11235  |.  72 02         jb      short 71F11239                   ;  0
+71F11237  |.  8B00          mov     eax, dword ptr ds:[eax]
+71F11239  |>  FF72 08       push    dword ptr ds:[edx+0x8]
+71F1123C  |.  8BCF          mov     ecx, edi
+71F1123E  |.  50            push    eax
+71F1123F  |.  E8 9C5C0200   call    71F36EE0
+71F11244  |.  8D85 DCFCFFFF lea     eax, dword ptr ss:[ebp-0x324]
+71F1124A  |.  50            push    eax
+71F1124B  |.  8D8D C0FAFFFF lea     ecx, dword ptr ss:[ebp-0x540]
+71F11251  |.  E8 BA55D5FF   call    71C66810
+71F11256  |.  8BD0          mov     edx, eax
+71F11258  |.  C645 FC 16    mov     byte ptr ss:[ebp-0x4], 0x16
+71F1125C  |.  8D8D F0FCFFFF lea     ecx, dword ptr ss:[ebp-0x310]
+71F11262  |.  E8 79761600   call    720788E0
+71F11267  |.  50            push    eax
+71F11268  |.  8D4F 08       lea     ecx, dword ptr ds:[edi+0x8]
+71F1126B  |.  E8 F0A51700   call    7208B860
+71F11270  |.  8D8D F0FCFFFF lea     ecx, dword ptr ss:[ebp-0x310]
+71F11276  |.  E8 25C6DAFF   call    71CBD8A0
+71F1127B  |.  8D8D DCFCFFFF lea     ecx, dword ptr ss:[ebp-0x324]
+71F11281  |.  C645 FC 14    mov     byte ptr ss:[ebp-0x4], 0x14
+71F11285  |.  E8 16C6DAFF   call    71CBD8A0
+71F1128A  |.  57            push    edi
+71F1128B  |.  FFB5 ECFAFFFF push    dword ptr ss:[ebp-0x514]         ;  WeChatWi.722E0C74
+71F11291  |.  FFB5 E8FAFFFF push    dword ptr ss:[ebp-0x518]
+71F11297  |.  68 14270000   push    0x2714
+71F1129C  |.  E8 8F2D0200   call    71F34030
+71F112A1  |.  8BC8          mov     ecx, eax
+71F112A3  |.  E8 083E0200   call    71F350B0
+71F112A8  |>  E8 F329DAFF   call    71CB3CA0
+71F112AD  |.  8BC8          mov     ecx, eax
+71F112AF  |.  E8 2CC9F7FF   call    71E8DBE0                         ;  检测自动下载图时间
+71F112B4  |.  84C0          test    al, al
+71F112B6  |.  75 32         jnz     short 71F112EA                   ;  1
+71F112B8  |.  6A 01         push    0x1
+71F112BA  |.  6A 01         push    0x1
+71F112BC  |.  83EC 14       sub     esp, 0x14
+71F112BF  |.  8BCC          mov     ecx, esp
+71F112C1  |.  89A5 2CFDFFFF mov     dword ptr ss:[ebp-0x2D4], esp
+71F112C7  |.  6A FF         push    -0x1
+71F112C9  |.  68 DC72AA72   push    72AA72DC                         ;  1
+71F112CE  |.  E8 0DA11700   call    7208B3E0
+71F112D3  |.  C645 FC 17    mov     byte ptr ss:[ebp-0x4], 0x17
+71F112D7  |.  E8 446CD6FF   call    71C77F20
+71F112DC  |.  68 1A3B0000   push    0x3B1A
+71F112E1  |.  C645 FC 14    mov     byte ptr ss:[ebp-0x4], 0x14
+71F112E5  |.  E8 365BFAFF   call    71EB6E20
+71F112EA  |>  6A 00         push    0x0
+71F112EC  |.  8D85 60FFFFFF lea     eax, dword ptr ss:[ebp-0xA0]
+71F112F2  |.  50            push    eax
+71F112F3  |.  8D8D F0FCFFFF lea     ecx, dword ptr ss:[ebp-0x310]
+71F112F9  |.  E8 32A21700   call    7208B530
+71F112FE  |.  8D8D C0FAFFFF lea     ecx, dword ptr ss:[ebp-0x540]
+71F11304  |.  C645 FC 18    mov     byte ptr ss:[ebp-0x4], 0x18
+71F11308  |.  51            push    ecx
+71F11309  |.  50            push    eax
+71F1130A  |.  E8 716CD6FF   call    71C77F80
+71F1130F  |.  8BC8          mov     ecx, eax
+71F11311  |.  E8 CA6AF7FF   call    71E87DE0
+71F11316  |.  8D8D F0FCFFFF lea     ecx, dword ptr ss:[ebp-0x310]
+71F1131C  |.  8885 30FDFFFF mov     byte ptr ss:[ebp-0x2D0], al
+71F11322  |.  C645 FC 14    mov     byte ptr ss:[ebp-0x4], 0x14
+71F11326  |.  E8 75C5DAFF   call    71CBD8A0
+71F1132B  |.  80BD 30FDFFFF>cmp     byte ptr ss:[ebp-0x2D0], 0x0
+71F11332  |.  0F84 C4000000 je      71F113FC                         ;  1
+71F11338  |.  0F1005 8033AA>movups  xmm0, dqword ptr ds:[0x72AA3380]
+71F1133F  |.  83EC 10       sub     esp, 0x10
+71F11342  |.  8BC4          mov     eax, esp
+71F11344  |.  83EC 10       sub     esp, 0x10
+71F11347  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+71F1134A  |.  8BC4          mov     eax, esp
+71F1134C  |.  83EC 10       sub     esp, 0x10
+71F1134F  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+71F11352  |.  8BC4          mov     eax, esp
+71F11354  |.  83EC 10       sub     esp, 0x10
+71F11357  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+71F1135A  |.  8BC4          mov     eax, esp
+71F1135C  |.  83EC 10       sub     esp, 0x10
+71F1135F  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+71F11362  |.  8BC4          mov     eax, esp
+71F11364  |.  83EC 14       sub     esp, 0x14
+71F11367  |.  8BCC          mov     ecx, esp
+71F11369  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+71F1136C  |.  6A 00         push    0x0
+71F1136E  |.  8D85 60FFFFFF lea     eax, dword ptr ss:[ebp-0xA0]
+71F11374  |.  50            push    eax
+71F11375  |.  E8 B6A11700   call    7208B530
+71F1137A  |.  8D8D F0FCFFFF lea     ecx, dword ptr ss:[ebp-0x310]
+71F11380  |.  E8 BBD91800   call    7209ED40
+71F11385  |.  83C4 14       add     esp, 0x14
+71F11388  |.  8BC8          mov     ecx, eax
+71F1138A  |.  C645 FC 19    mov     byte ptr ss:[ebp-0x4], 0x19
+71F1138E  |.  E8 6D2AD5FF   call    71C63E00
+71F11393  |.  83EC 10       sub     esp, 0x10
+71F11396  |.  BA 0CEDB072   mov     edx, 72B0ED0C                    ;  02_manager\SyncMgr.cpp
+71F1139B  |.  8BCC          mov     ecx, esp
+71F1139D  |.  68 88F0B072   push    72B0F088                         ;  delay,talker:%s
+71F113A2  |.  68 B0ECB072   push    72B0ECB0                         ;  SyncMgr
+71F113A7  |.  C601 02       mov     byte ptr ds:[ecx], 0x2
+71F113AA  |.  8941 08       mov     dword ptr ds:[ecx+0x8], eax
+71F113AD  |.  B9 02000000   mov     ecx, 0x2
+71F113B2  |.  68 CCF0B072   push    72B0F0CC                         ;  SyncMgr::doAddMsg
+71F113B7  |.  68 62040000   push    0x462
+71F113BC  |.  E8 4F921700   call    7208A610
+71F113C1  |.  83C4 70       add     esp, 0x70
+71F113C4  |.  C645 FC 14    mov     byte ptr ss:[ebp-0x4], 0x14
+71F113C8  |.  8D8D F0FCFFFF lea     ecx, dword ptr ss:[ebp-0x310]
+71F113CE  |.  E8 CDC4DAFF   call    71CBD8A0
+
+
+
+
+
+71E8DBE0  /$  55            push    ebp
+71E8DBE1  |.  8BEC          mov     ebp, esp
+71E8DBE3  |.  6A FF         push    -0x1
+71E8DBE5  |.  68 63789472   push    72947863
+71E8DBEA  |.  64:A1 0000000>mov     eax, dword ptr fs:[0]
+71E8DBF0  |.  50            push    eax                              ;  WeChatWi.72D54BF8
+71E8DBF1  |.  81EC 8C000000 sub     esp, 0x8C
+71E8DBF7  |.  53            push    ebx
+71E8DBF8  |.  56            push    esi
+71E8DBF9  |.  57            push    edi                              ;  WeChatWi.72D54BD0
+71E8DBFA  |.  A1 C450CE72   mov     eax, dword ptr ds:[0x72CE50C4]
+71E8DBFF  |.  33C5          xor     eax, ebp
+71E8DC01  |.  50            push    eax                              ;  WeChatWi.72D54BF8
+71E8DC02  |.  8D45 F4       lea     eax, dword ptr ss:[ebp-0xC]
+71E8DC05  |.  64:A3 0000000>mov     dword ptr fs:[0], eax            ;  WeChatWi.72D54BF8
+71E8DC0B  |.  81C1 98000000 add     ecx, 0x98
+71E8DC11  |.  8379 10 00    cmp     dword ptr ds:[ecx+0x10], 0x0
+71E8DC15      75 14         jnz     short 71E8DC2B                   ;  检测自动下载时间
+71E8DC17  |.  B0 01         mov     al, 0x1
+71E8DC19  |.  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+71E8DC1C  |.  64:890D 00000>mov     dword ptr fs:[0], ecx            ;  WeChatWi.72D54BF8
+71E8DC23  |.  59            pop     ecx                              ;  WeChatWi.71F21753
+71E8DC24  |.  5F            pop     edi                              ;  WeChatWi.71F21753
+71E8DC25  |.  5E            pop     esi                              ;  WeChatWi.71F21753
+71E8DC26  |.  5B            pop     ebx                              ;  WeChatWi.71F21753
+71E8DC27  |.  8BE5          mov     esp, ebp
+71E8DC29  |.  5D            pop     ebp                              ;  WeChatWi.71F21753
+71E8DC2A  |.  C3            retn
+

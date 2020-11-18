@@ -1,0 +1,259 @@
+719BA3A4  |.  E8 077A0000   call    719C1DB0
+719BA3A9  |>  8BCB          mov     ecx, ebx                         ;  WeChatWi.728D4980
+719BA3AB  |.  C643 3C 00    mov     byte ptr ds:[ebx+0x3C], 0x0
+719BA3AF  |.  E8 3C700000   call    719C13F0
+719BA3B4  |.  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+719BA3B7  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+719BA3BE  |.  59            pop     ecx                              ;  002DE9B4
+719BA3BF  |.  5F            pop     edi                              ;  002DE9B4
+719BA3C0  |.  5E            pop     esi                              ;  002DE9B4
+719BA3C1  |.  5B            pop     ebx                              ;  002DE9B4
+719BA3C2  |.  8BE5          mov     esp, ebp
+719BA3C4  |.  5D            pop     ebp                              ;  002DE9B4
+719BA3C5  |.  C2 1000       retn    0x10
+719BA3C8  |>  8B55 14       mov     edx, dword ptr ss:[ebp+0x14]     ;  Case 158 of switch 719B9F51
+719BA3CB  |.  85D2          test    edx, edx
+719BA3CD  |.  0F84 CF0B0000 je      719BAFA2
+719BA3D3  |.  807A 04 00    cmp     byte ptr ds:[edx+0x4], 0x0
+719BA3D7  |.  0F84 F3000000 je      719BA4D0
+719BA3DD  |.  8B73 18       mov     esi, dword ptr ds:[ebx+0x18]
+719BA3E0  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA3E3  |.  50            push    eax
+719BA3E4  |.  8D45 08       lea     eax, dword ptr ss:[ebp+0x8]
+719BA3E7  |.  50            push    eax
+719BA3E8  |.  8D4B 18       lea     ecx, dword ptr ds:[ebx+0x18]
+719BA3EB  |.  E8 60C9E2FF   call    717E6D50
+719BA3F0  |.  3930          cmp     dword ptr ds:[eax], esi
+719BA3F2  |.  74 0C         je      short 719BA400
+719BA3F4  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA3F7  |.  50            push    eax
+719BA3F8  |.  8D4B 18       lea     ecx, dword ptr ds:[ebx+0x18]
+719BA3FB  |.  E8 007B0000   call    719C1F00
+719BA400  |>  8B73 60       mov     esi, dword ptr ds:[ebx+0x60]
+719BA403  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA406  |.  50            push    eax
+719BA407  |.  8D45 08       lea     eax, dword ptr ss:[ebp+0x8]
+719BA40A  |.  50            push    eax
+719BA40B  |.  8D4B 60       lea     ecx, dword ptr ds:[ebx+0x60]
+719BA40E  |.  E8 3DC9E2FF   call    717E6D50
+719BA413  |.  3930          cmp     dword ptr ds:[eax], esi
+719BA415  |.  74 0C         je      short 719BA423
+719BA417  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA41A  |.  50            push    eax
+719BA41B  |.  8D4B 60       lea     ecx, dword ptr ds:[ebx+0x60]
+719BA41E  |.  E8 CD780000   call    719C1CF0
+719BA423  |>  0F1005 803362>movups  xmm0, dqword ptr ds:[0x72623380]
+719BA42A  |.  83EC 10       sub     esp, 0x10
+719BA42D  |.  8BC4          mov     eax, esp
+719BA42F  |.  83EC 10       sub     esp, 0x10
+719BA432  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA435  |.  8BC4          mov     eax, esp
+719BA437  |.  83EC 10       sub     esp, 0x10
+719BA43A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA43D  |.  8BC4          mov     eax, esp
+719BA43F  |.  83EC 10       sub     esp, 0x10
+719BA442  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA445  |.  8BC4          mov     eax, esp
+719BA447  |.  83EC 10       sub     esp, 0x10
+719BA44A  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA44D  |.  8BC4          mov     eax, esp
+719BA44F  |.  83EC 10       sub     esp, 0x10
+719BA452  |.  8BCC          mov     ecx, esp
+719BA454  |.  FF75 F0       push    dword ptr ss:[ebp-0x10]
+719BA457  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA45A  |.  FF75 EC       push    dword ptr ss:[ebp-0x14]
+719BA45D  |.  E8 EE6EE5FF   call    71811350
+719BA462  |.  68 C41E6872   push    72681EC4                         ;  download attach faild. msgId=%d
+719BA467  |.  68 B81E6872   push    72681EB8                         ;  AppMsgMgr
+719BA46C  |.  68 A01E6872   push    72681EA0                         ;  AppMsgMgr::eventProc
+719BA471  |.  68 E2000000   push    0xE2
+719BA476  |.  BA 841E6872   mov     edx, 72681E84                    ;  02_manager\AppMsgMgr.cpp
+719BA47B  |.  B9 04000000   mov     ecx, 0x4
+719BA480  |.  E8 8B012500   call    71C0A610
+719BA485  |.  83C4 70       add     esp, 0x70
+719BA488  |.  6A 00         push    0x0
+719BA48A  |.  6A 00         push    0x0
+719BA48C  |.  6A 01         push    0x1
+719BA48E  |.  6A 00         push    0x0
+719BA490  |.  6A 00         push    0x0
+719BA492  |.  83EC 14       sub     esp, 0x14
+719BA495  |.  8BCC          mov     ecx, esp
+719BA497  |.  6A FF         push    -0x1
+719BA499  |.  68 D8386272   push    726238D8
+719BA49E  |.  E8 3D0F2500   call    71C0B3E0
+719BA4A3  |.  8B45 14       mov     eax, dword ptr ss:[ebp+0x14]
+719BA4A6  |.  B9 05000000   mov     ecx, 0x5
+719BA4AB  |.  FF75 F0       push    dword ptr ss:[ebp-0x10]
+719BA4AE  |.  FF75 EC       push    dword ptr ss:[ebp-0x14]
+719BA4B1  |.  8A50 06       mov     dl, byte ptr ds:[eax+0x6]
+719BA4B4  |.  E8 B7E50100   call    719D8A70
+719BA4B9  |.  83C4 30       add     esp, 0x30
+719BA4BC  |.  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+719BA4BF  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+719BA4C6  |.  59            pop     ecx                              ;  002DE9B4
+719BA4C7  |.  5F            pop     edi                              ;  002DE9B4
+719BA4C8  |.  5E            pop     esi                              ;  002DE9B4
+719BA4C9  |.  5B            pop     ebx                              ;  002DE9B4
+719BA4CA  |.  8BE5          mov     esp, ebp
+719BA4CC  |.  5D            pop     ebp                              ;  002DE9B4
+719BA4CD  |.  C2 1000       retn    0x10
+719BA4D0  |>  807A 05 00    cmp     byte ptr ds:[edx+0x5], 0x0
+719BA4D4  |.  0F84 EE010000 je      719BA6C8
+719BA4DA  |.  8B73 60       mov     esi, dword ptr ds:[ebx+0x60]
+719BA4DD  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA4E0  |.  50            push    eax
+719BA4E1  |.  8D45 08       lea     eax, dword ptr ss:[ebp+0x8]
+719BA4E4  |.  50            push    eax
+719BA4E5  |.  8D4B 60       lea     ecx, dword ptr ds:[ebx+0x60]
+719BA4E8  |.  E8 63C8E2FF   call    717E6D50
+719BA4ED  |.  3930          cmp     dword ptr ds:[eax], esi
+719BA4EF  |.  74 0C         je      short 719BA4FD
+719BA4F1  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA4F4  |.  50            push    eax
+719BA4F5  |.  8D4B 60       lea     ecx, dword ptr ds:[ebx+0x60]
+719BA4F8  |.  E8 F3770000   call    719C1CF0
+719BA4FD  |>  8B73 18       mov     esi, dword ptr ds:[ebx+0x18]
+719BA500  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA503  |.  83C3 18       add     ebx, 0x18
+719BA506  |.  C645 08 00    mov     byte ptr ss:[ebp+0x8], 0x0
+719BA50A  |.  50            push    eax
+719BA50B  |.  8D45 10       lea     eax, dword ptr ss:[ebp+0x10]
+719BA50E  |.  8BCB          mov     ecx, ebx                         ;  WeChatWi.728D4980
+719BA510  |.  50            push    eax
+719BA511  |.  E8 3AC8E2FF   call    717E6D50
+719BA516  |.  3930          cmp     dword ptr ds:[eax], esi
+719BA518  |.  74 50         je      short 719BA56A
+719BA51A  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA51D  |.  8BCB          mov     ecx, ebx                         ;  WeChatWi.728D4980
+719BA51F  |.  50            push    eax
+719BA520  |.  8D45 0C       lea     eax, dword ptr ss:[ebp+0xC]
+719BA523  |.  50            push    eax
+719BA524  |.  E8 B7CFE9FF   call    718574E0
+719BA529  |.  8B45 0C       mov     eax, dword ptr ss:[ebp+0xC]
+719BA52C  |.  8BCB          mov     ecx, ebx                         ;  WeChatWi.728D4980
+719BA52E  |.  8378 18 00    cmp     dword ptr ds:[eax+0x18], 0x0
+719BA532  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA535  |.  50            push    eax
+719BA536  |.  8D45 0C       lea     eax, dword ptr ss:[ebp+0xC]
+719BA539  |.  50            push    eax
+719BA53A  |.  75 11         jnz     short 719BA54D
+719BA53C  |.  E8 9FCFE9FF   call    718574E0
+719BA541  |.  8B45 0C       mov     eax, dword ptr ss:[ebp+0xC]
+719BA544  |.  C740 18 03000>mov     dword ptr ds:[eax+0x18], 0x3
+719BA54B  |.  EB 1D         jmp     short 719BA56A
+719BA54D  |>  E8 8ECFE9FF   call    718574E0
+719BA552  |.  8B45 0C       mov     eax, dword ptr ss:[ebp+0xC]
+719BA555  |.  8BCB          mov     ecx, ebx                         ;  WeChatWi.728D4980
+719BA557  |.  8B70 18       mov     esi, dword ptr ds:[eax+0x18]
+719BA55A  |.  8D45 EC       lea     eax, dword ptr ss:[ebp-0x14]
+719BA55D  |.  50            push    eax
+719BA55E  |.  E8 9D790000   call    719C1F00
+719BA563  |.  83FE 02       cmp     esi, 0x2
+719BA566  |.  0f9445 08     sete    byte ptr ss:[ebp+0x8]
+719BA56A  |>  8B75 14       mov     esi, dword ptr ss:[ebp+0x14]
+719BA56D  |.  8D4D D0       lea     ecx, dword ptr ss:[ebp-0x30]
+719BA570  |.  83C6 18       add     esi, 0x18
+719BA573  |.  56            push    esi
+719BA574  |.  E8 A70E2500   call    71C0B420
+719BA579  |.  C745 FC 05000>mov     dword ptr ss:[ebp-0x4], 0x5
+719BA580  |.  807D 08 00    cmp     byte ptr ss:[ebp+0x8], 0x0
+719BA584  |.  0F84 8F000000 je      719BA619
+719BA58A  |.  68 4C1F6872   push    72681F4C                         ;  .tmp
+719BA58F  |.  8D4D D0       lea     ecx, dword ptr ss:[ebp-0x30]
+719BA592  |.  E8 D9142500   call    71C0BA70
+719BA597  |.  84C0          test    al, al
+719BA599  |.  75 7E         jnz     short 719BA619
+719BA59B  |.  68 4C1F6872   push    72681F4C                         ;  .tmp
+719BA5A0  |.  8D4D D0       lea     ecx, dword ptr ss:[ebp-0x30]
+719BA5A3  |.  E8 08122500   call    71C0B7B0
+719BA5A8  |.  8D55 D0       lea     edx, dword ptr ss:[ebp-0x30]
+719BA5AB  |.  8BCE          mov     ecx, esi
+719BA5AD  |.  E8 7EED2300   call    71BF9330
+719BA5B2  |.  84C0          test    al, al
+719BA5B4  |.  75 63         jnz     short 719BA619
+719BA5B6  |.  0F1005 803362>movups  xmm0, dqword ptr ds:[0x72623380]
+719BA5BD  |.  83EC 10       sub     esp, 0x10
+719BA5C0  |.  8BC4          mov     eax, esp
+719BA5C2  |.  83EC 10       sub     esp, 0x10
+719BA5C5  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA5C8  |.  8BC4          mov     eax, esp
+719BA5CA  |.  83EC 10       sub     esp, 0x10
+719BA5CD  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA5D0  |.  8BC4          mov     eax, esp
+719BA5D2  |.  83EC 10       sub     esp, 0x10
+719BA5D5  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA5D8  |.  8BC4          mov     eax, esp
+719BA5DA  |.  83EC 10       sub     esp, 0x10
+719BA5DD  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA5E0  |.  8BC4          mov     eax, esp
+719BA5E2  |.  83EC 10       sub     esp, 0x10
+719BA5E5  |.  8BCC          mov     ecx, esp
+719BA5E7  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA5EA  |.  8D45 D0       lea     eax, dword ptr ss:[ebp-0x30]
+719BA5ED  |.  50            push    eax
+719BA5EE  |.  E8 BD7AE4FF   call    718020B0
+719BA5F3  |.  68 341F6872   push    72681F34                         ;  change FileName err!,%s
+719BA5F8  |.  68 B81E6872   push    72681EB8                         ;  AppMsgMgr
+719BA5FD  |.  68 A01E6872   push    72681EA0                         ;  AppMsgMgr::eventProc
+719BA602  |.  68 12010000   push    0x112
+719BA607  |.  BA 841E6872   mov     edx, 72681E84                    ;  02_manager\AppMsgMgr.cpp
+719BA60C  |.  B9 02000000   mov     ecx, 0x2
+719BA611  |.  E8 FAFF2400   call    71C0A610
+719BA616  |.  83C4 70       add     esp, 0x70
+719BA619  |>  0F1005 803362>movups  xmm0, dqword ptr ds:[0x72623380]
+719BA620  |.  83EC 10       sub     esp, 0x10
+719BA623  |.  8BC4          mov     eax, esp
+719BA625  |.  83EC 10       sub     esp, 0x10
+719BA628  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA62B  |.  8BC4          mov     eax, esp
+719BA62D  |.  83EC 10       sub     esp, 0x10
+719BA630  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA633  |.  8BC4          mov     eax, esp
+719BA635  |.  83EC 10       sub     esp, 0x10
+719BA638  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA63B  |.  8BC4          mov     eax, esp
+719BA63D  |.  83EC 10       sub     esp, 0x10
+719BA640  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA643  |.  8BC4          mov     eax, esp
+719BA645  |.  83EC 10       sub     esp, 0x10
+719BA648  |.  8BCC          mov     ecx, esp                         ;  ÎÄ¼þÂ·¾¶:[esp+0x0C]
+719BA64A  |.  FF75 F0       push    dword ptr ss:[ebp-0x10]
+719BA64D  |.  0F1100        movups  dqword ptr ds:[eax], xmm0
+719BA650  |.  FF75 EC       push    dword ptr ss:[ebp-0x14]
+719BA653  |.  E8 F86CE5FF   call    71811350
+719BA658  |.  68 141F6872   push    72681F14                         ;  download attach ok. msgId=%d
+719BA65D  |.  68 B81E6872   push    72681EB8                         ;  AppMsgMgr
+719BA662  |.  68 A01E6872   push    72681EA0                         ;  AppMsgMgr::eventProc
+719BA667  |.  68 16010000   push    0x116
+719BA66C  |.  BA 841E6872   mov     edx, 72681E84                    ;  02_manager\AppMsgMgr.cpp
+719BA671  |.  B9 02000000   mov     ecx, 0x2
+719BA676  |.  E8 95FF2400   call    71C0A610
+719BA67B  |.  83C4 70       add     esp, 0x70
+719BA67E  |.  8D45 D0       lea     eax, dword ptr ss:[ebp-0x30]
+719BA681  |.  6A 00         push    0x0
+719BA683  |.  FF75 08       push    dword ptr ss:[ebp+0x8]
+719BA686  |.  6A 01         push    0x1
+719BA688  |.  6A 00         push    0x0
+719BA68A  |.  6A 00         push    0x0
+719BA68C  |.  83EC 14       sub     esp, 0x14
+719BA68F  |.  8BCC          mov     ecx, esp
+719BA691  |.  50            push    eax
+719BA692  |.  E8 890D2500   call    71C0B420
+719BA697  |.  FF75 F0       push    dword ptr ss:[ebp-0x10]
+719BA69A  |.  32D2          xor     dl, dl
+719BA69C  |.  B9 02000000   mov     ecx, 0x2
+719BA6A1  |.  FF75 EC       push    dword ptr ss:[ebp-0x14]
+719BA6A4  |.  E8 C7E30100   call    719D8A70
+719BA6A9  |.  83C4 30       add     esp, 0x30
+719BA6AC  |.  8D4D D0       lea     ecx, dword ptr ss:[ebp-0x30]
+719BA6AF  |.  E8 EC31E8FF   call    7183D8A0
+719BA6B4  |.  8B4D F4       mov     ecx, dword ptr ss:[ebp-0xC]
+719BA6B7  |.  64:890D 00000>mov     dword ptr fs:[0], ecx
+719BA6BE  |.  59            pop     ecx                              ;  002DE9B4
+719BA6BF  |.  5F            pop     edi                              ;  002DE9B4
+719BA6C0  |.  5E            pop     esi                              ;  002DE9B4
+719BA6C1  |.  5B            pop     ebx                              ;  002DE9B4
+719BA6C2  |.  8BE5          mov     esp, ebp
+719BA6C4  |.  5D            pop     ebp                              ;  002DE9B4
+719BA6C5  |.  C2 1000       retn    0x10
+

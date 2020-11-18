@@ -1,0 +1,1373 @@
+01A8BBED   /E9 EE080000     jmp     01A8C4E0
+01A8BBF2   |E8 B9AFDAFF     call    01836BB0
+01A8BBF7   |8D85 00FBFFFF   lea     eax, dword ptr ss:[ebp-0x500]
+01A8BBFD   |50              push    eax
+01A8BBFE   |8D45 90         lea     eax, dword ptr ss:[ebp-0x70]
+01A8BC01   |50              push    eax
+01A8BC02   |E8 F9F60000     call    01A9B300
+01A8BC07   |E9 E3080000     jmp     01A8C4EF
+01A8BC0C   |8D85 00FBFFFF   lea     eax, dword ptr ss:[ebp-0x500]
+01A8BC12   |50              push    eax
+01A8BC13   |8D45 90         lea     eax, dword ptr ss:[ebp-0x70]
+01A8BC16   |50              push    eax
+01A8BC17   |E8 14FCDDFF     call    0186B830
+01A8BC1C   |8BC8            mov     ecx, eax
+01A8BC1E   |E8 0D330100     call    01A9EF30
+01A8BC23   |E9 C7080000     jmp     01A8C4EF
+01A8BC28   |E8 435BD7FF     call    01801770
+01A8BC2D   |8A40 14         mov     al, byte ptr ds:[eax+0x14]
+01A8BC30   |84C0            test    al, al
+01A8BC32   |0F84 B7080000   je      01A8C4EF
+01A8BC38   |8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8BC3B   |85C0            test    eax, eax
+01A8BC3D   |75 08           jnz     short 01A8BC47
+01A8BC3F   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8BC44   |8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8BC47   |FF70 04         push    dword ptr ds:[eax+0x4]
+01A8BC4A   |8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01A8BC4D   |E8 6E5ED7FF     call    01801AC0
+01A8BC52   |C645 FC 1A      mov     byte ptr ss:[ebp-0x4], 0x1A
+01A8BC56   |8B45 94         mov     eax, dword ptr ss:[ebp-0x6C]     ; user32.77D18830
+01A8BC59   |85C0            test    eax, eax
+01A8BC5B   |75 08           jnz     short 01A8BC65
+01A8BC5D   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8BC62   |8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A8BC65   |FF70 04         push    dword ptr ds:[eax+0x4]
+01A8BC68   |8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8BC6E   |E8 4D5ED7FF     call    01801AC0
+01A8BC73   |8D8D 1CFDFFFF   lea     ecx, dword ptr ss:[ebp-0x2E4]
+01A8BC79   |C645 FC 1B      mov     byte ptr ss:[ebp-0x4], 0x1B
+01A8BC7D   |E8 5E4B0000     call    01A907E0
+01A8BC82   |C645 FC 1C      mov     byte ptr ss:[ebp-0x4], 0x1C
+01A8BC86   |8D75 D8         lea     esi, dword ptr ss:[ebp-0x28]
+01A8BC89   |837D EC 10      cmp     dword ptr ss:[ebp-0x14], 0x10
+01A8BC8D   |C785 24FDFFFF 0>mov     dword ptr ss:[ebp-0x2DC], 0x0
+01A8BC97   |0F4375 D8       cmovnb  esi, dword ptr ss:[ebp-0x28]     ; user32.77D4048F
+01A8BC9B   |E8 10D5EFFF     call    019891B0
+01A8BCA0   |8D85 24FDFFFF   lea     eax, dword ptr ss:[ebp-0x2DC]
+01A8BCA6   |50              push    eax
+01A8BCA7   |8D85 1CFDFFFF   lea     eax, dword ptr ss:[ebp-0x2E4]
+01A8BCAD   |50              push    eax
+01A8BCAE   |56              push    esi
+01A8BCAF   |E8 6C240000     call    01A8E120
+01A8BCB4   |84C0            test    al, al
+01A8BCB6   |75 5D           jnz     short 01A8BD15
+01A8BCB8   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8BCBF   |83EC 10         sub     esp, 0x10
+01A8BCC2   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8BCC7   |8BC4            mov     eax, esp
+01A8BCC9   |B9 03000000     mov     ecx, 0x3
+01A8BCCE   |83EC 10         sub     esp, 0x10
+01A8BCD1   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BCD4   |8BC4            mov     eax, esp
+01A8BCD6   |83EC 10         sub     esp, 0x10
+01A8BCD9   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BCDC   |8BC4            mov     eax, esp
+01A8BCDE   |83EC 10         sub     esp, 0x10
+01A8BCE1   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BCE4   |8BC4            mov     eax, esp
+01A8BCE6   |83EC 10         sub     esp, 0x10
+01A8BCE9   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BCEC   |8BC4            mov     eax, esp
+01A8BCEE   |83EC 10         sub     esp, 0x10
+01A8BCF1   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BCF4   |8BC4            mov     eax, esp
+01A8BCF6   |68 E0846402     push    026484E0                         ; ASCII "parseStatusNotifyXml failed"
+01A8BCFB   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8BD00   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8BD05   |68 93040000     push    0x493
+01A8BD0A   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BD0D   |E8 1E781600     call    01BF3530
+01A8BD12   |83C4 70         add     esp, 0x70
+01A8BD15   |8B85 24FDFFFF   mov     eax, dword ptr ss:[ebp-0x2DC]
+01A8BD1B   |83F8 04         cmp     eax, 0x4
+01A8BD1E   |0F85 A3000000   jnz     01A8BDC7
+01A8BD24   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8BD2B   |83EC 10         sub     esp, 0x10
+01A8BD2E   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8BD33   |8BC4            mov     eax, esp
+01A8BD35   |B9 02000000     mov     ecx, 0x2
+01A8BD3A   |83EC 10         sub     esp, 0x10
+01A8BD3D   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BD40   |8BC4            mov     eax, esp
+01A8BD42   |83EC 10         sub     esp, 0x10
+01A8BD45   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BD48   |8BC4            mov     eax, esp
+01A8BD4A   |83EC 10         sub     esp, 0x10
+01A8BD4D   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BD50   |8BC4            mov     eax, esp
+01A8BD52   |83EC 10         sub     esp, 0x10
+01A8BD55   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BD58   |8BC4            mov     eax, esp
+01A8BD5A   |83EC 10         sub     esp, 0x10
+01A8BD5D   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BD60   |8BC4            mov     eax, esp
+01A8BD62   |68 B8846402     push    026484B8                         ; ASCII "get MM_STATUSNOTIFY_CHATLISTRESP msg"
+01A8BD67   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8BD6C   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8BD71   |68 98040000     push    0x498
+01A8BD76   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BD79   |E8 B2771600     call    01BF3530
+01A8BD7E   |83C4 70         add     esp, 0x70
+01A8BD81   |E8 2AD4EFFF     call    019891B0
+01A8BD86   |8078 46 00      cmp     byte ptr ds:[eax+0x46], 0x0
+01A8BD8A   |75 1E           jnz     short 01A8BDAA
+01A8BD8C   |8D85 1CFDFFFF   lea     eax, dword ptr ss:[ebp-0x2E4]
+01A8BD92   |6A 01           push    0x1
+01A8BD94   |50              push    eax
+01A8BD95   |E8 16D4EFFF     call    019891B0
+01A8BD9A   |8BC8            mov     ecx, eax
+01A8BD9C   |E8 8F120000     call    01A8D030
+01A8BDA1   |E8 0AD4EFFF     call    019891B0
+01A8BDA6   |C640 46 01      mov     byte ptr ds:[eax+0x46], 0x1
+01A8BDAA   |803D 5FD18602 0>cmp     byte ptr ds:[0x286D15F], 0x0
+01A8BDB1   |74 7B           je      short 01A8BE2E
+01A8BDB3   |8B0D 74D18602   mov     ecx, dword ptr ds:[0x286D174]
+01A8BDB9   |6A 00           push    0x0
+01A8BDBB   |68 60846402     push    02648460                         ; UNICODE "Receive chat List success save to db finish"
+01A8BDC0   |8B01            mov     eax, dword ptr ds:[ecx]
+01A8BDC2   |FF50 20         call    dword ptr ds:[eax+0x20]
+01A8BDC5   |EB 67           jmp     short 01A8BE2E
+01A8BDC7   |83F8 01         cmp     eax, 0x1
+01A8BDCA   |74 0A           je      short 01A8BDD6
+01A8BDCC   |83F8 02         cmp     eax, 0x2
+01A8BDCF   |74 05           je      short 01A8BDD6
+01A8BDD1   |83F8 05         cmp     eax, 0x5
+01A8BDD4   |75 1F           jnz     short 01A8BDF5
+01A8BDD6   |83BD 20FDFFFF 0>cmp     dword ptr ss:[ebp-0x2E0], 0x0
+01A8BDDD   |76 16           jbe     short 01A8BDF5
+01A8BDDF   |8D4D 90         lea     ecx, dword ptr ss:[ebp-0x70]
+01A8BDE2   |8BD0            mov     edx, eax
+01A8BDE4   |51              push    ecx
+01A8BDE5   |8D8D 1CFDFFFF   lea     ecx, dword ptr ss:[ebp-0x2E4]
+01A8BDEB   |E8 80E4FFFF     call    01A8A270
+01A8BDF0   |83C4 04         add     esp, 0x4
+01A8BDF3   |EB 39           jmp     short 01A8BE2E
+01A8BDF5   |83F8 07         cmp     eax, 0x7
+01A8BDF8   |74 0A           je      short 01A8BE04
+01A8BDFA   |83F8 08         cmp     eax, 0x8
+01A8BDFD   |74 05           je      short 01A8BE04
+01A8BDFF   |83F8 09         cmp     eax, 0x9
+01A8BE02   |75 2A           jnz     short 01A8BE2E
+01A8BE04   |83EC 18         sub     esp, 0x18
+01A8BE07   |8D45 D8         lea     eax, dword ptr ss:[ebp-0x28]
+01A8BE0A   |8BCC            mov     ecx, esp
+01A8BE0C   |89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8BE12   |6A 00           push    0x0
+01A8BE14   |50              push    eax
+01A8BE15   |E8 E6841600     call    01BF4300
+01A8BE1A   |C645 FC 1D      mov     byte ptr ss:[ebp-0x4], 0x1D
+01A8BE1E   |E8 4DC2DEFF     call    01878070
+01A8BE23   |8BC8            mov     ecx, eax
+01A8BE25   |C645 FC 1C      mov     byte ptr ss:[ebp-0x4], 0x1C
+01A8BE29   |E8 52041F00     call    01C7C280
+01A8BE2E   |8D8D 1CFDFFFF   lea     ecx, dword ptr ss:[ebp-0x2E4]
+01A8BE34   |E8 57500000     call    01A90E90
+01A8BE39   |6A 20           push    0x20
+01A8BE3B   |6A 01           push    0x1
+01A8BE3D   |FFB5 1CFDFFFF   push    dword ptr ss:[ebp-0x2E4]
+01A8BE43   |E8 288ED6FF     call    017F4C70
+01A8BE48   |83C4 0C         add     esp, 0xC
+01A8BE4B   |8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8BE51   |E8 CA61D7FF     call    01802020
+01A8BE56   |8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01A8BE59   |E8 C261D7FF     call    01802020
+01A8BE5E   |E9 3D090000     jmp     01A8C7A0
+01A8BE63   |8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8BE66   |85C0            test    eax, eax
+01A8BE68   |75 08           jnz     short 01A8BE72
+01A8BE6A   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8BE6F   |8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8BE72   |FF70 04         push    dword ptr ds:[eax+0x4]
+01A8BE75   |8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01A8BE78   |E8 435CD7FF     call    01801AC0
+01A8BE7D   |C645 FC 1E      mov     byte ptr ss:[ebp-0x4], 0x1E
+01A8BE81   |8B45 94         mov     eax, dword ptr ss:[ebp-0x6C]     ; user32.77D18830
+01A8BE84   |85C0            test    eax, eax
+01A8BE86   |75 08           jnz     short 01A8BE90
+01A8BE88   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8BE8D   |8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A8BE90   |FF70 04         push    dword ptr ds:[eax+0x4]
+01A8BE93   |8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8BE99   |E8 225CD7FF     call    01801AC0
+01A8BE9E   |8D8D 40FBFFFF   lea     ecx, dword ptr ss:[ebp-0x4C0]
+01A8BEA4   |C645 FC 1F      mov     byte ptr ss:[ebp-0x4], 0x1F
+01A8BEA8   |E8 5369FEFF     call    01A72800
+01A8BEAD   |84C0            test    al, al
+01A8BEAF   |0F84 93000000   je      01A8BF48
+01A8BEB5   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8BEBC   |83EC 10         sub     esp, 0x10
+01A8BEBF   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8BEC4   |8BC4            mov     eax, esp
+01A8BEC6   |B9 02000000     mov     ecx, 0x2
+01A8BECB   |83EC 10         sub     esp, 0x10
+01A8BECE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BED1   |8BC4            mov     eax, esp
+01A8BED3   |83EC 10         sub     esp, 0x10
+01A8BED6   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BED9   |8BC4            mov     eax, esp
+01A8BEDB   |83EC 10         sub     esp, 0x10
+01A8BEDE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BEE1   |8BC4            mov     eax, esp
+01A8BEE3   |83EC 10         sub     esp, 0x10
+01A8BEE6   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BEE9   |8BC4            mov     eax, esp
+01A8BEEB   |83EC 10         sub     esp, 0x10
+01A8BEEE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BEF1   |8BC4            mov     eax, esp
+01A8BEF3   |68 1CDD6302     push    0263DD1C                         ; ASCII "receive a text msg, is TxNews"
+01A8BEF8   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8BEFD   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8BF02   |68 B6040000     push    0x4B6
+01A8BF07   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BF0A   |E8 21761600     call    01BF3530
+01A8BF0F   |83C4 70         add     esp, 0x70
+01A8BF12   |8D8D E0F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA20]
+01A8BF18   |E8 7335D9FF     call    0181F490
+01A8BF1D   |C645 FC 20      mov     byte ptr ss:[ebp-0x4], 0x20
+01A8BF21   |E8 3A70D8FF     call    01812F60
+01A8BF26   |8D85 E0F5FFFF   lea     eax, dword ptr ss:[ebp-0xA20]
+01A8BF2C   |50              push    eax
+01A8BF2D   |8D85 00FBFFFF   lea     eax, dword ptr ss:[ebp-0x500]
+01A8BF33   |50              push    eax
+01A8BF34   |8D45 90         lea     eax, dword ptr ss:[ebp-0x70]
+01A8BF37   |50              push    eax
+01A8BF38   |E8 C387F4FF     call    019D4700
+01A8BF3D   |8D8D E0F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA20]
+01A8BF43   |E8 C822D9FF     call    0181E210
+01A8BF48   |8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8BF4E   |E8 CD60D7FF     call    01802020
+01A8BF53   |8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01A8BF56   |E9 8B050000     jmp     01A8C4E6
+01A8BF5B   |8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8BF5E   |85C0            test    eax, eax
+01A8BF60   |75 08           jnz     short 01A8BF6A
+01A8BF62   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8BF67   |8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8BF6A   |FF70 04         push    dword ptr ds:[eax+0x4]
+01A8BF6D   |8D8D 48FFFFFF   lea     ecx, dword ptr ss:[ebp-0xB8]
+01A8BF73   |E8 485BD7FF     call    01801AC0
+01A8BF78   |C645 FC 21      mov     byte ptr ss:[ebp-0x4], 0x21
+01A8BF7C   |8B45 94         mov     eax, dword ptr ss:[ebp-0x6C]     ; user32.77D18830
+01A8BF7F   |85C0            test    eax, eax
+01A8BF81   |75 08           jnz     short 01A8BF8B
+01A8BF83   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8BF88   |8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A8BF8B   |FF70 04         push    dword ptr ds:[eax+0x4]
+01A8BF8E   |8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8BF94   |E8 275BD7FF     call    01801AC0
+01A8BF99   |83EC 10         sub     esp, 0x10
+01A8BF9C   |C645 FC 22      mov     byte ptr ss:[ebp-0x4], 0x22
+01A8BFA0   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8BFA7   |8BC4            mov     eax, esp
+01A8BFA9   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8BFAE   |83EC 10         sub     esp, 0x10
+01A8BFB1   |B9 02000000     mov     ecx, 0x2
+01A8BFB6   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BFB9   |8BC4            mov     eax, esp
+01A8BFBB   |83EC 10         sub     esp, 0x10
+01A8BFBE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BFC1   |8BC4            mov     eax, esp
+01A8BFC3   |83EC 10         sub     esp, 0x10
+01A8BFC6   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BFC9   |8BC4            mov     eax, esp
+01A8BFCB   |83EC 10         sub     esp, 0x10
+01A8BFCE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BFD1   |8BC4            mov     eax, esp
+01A8BFD3   |83EC 10         sub     esp, 0x10
+01A8BFD6   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BFD9   |8BC4            mov     eax, esp
+01A8BFDB   |68 08DD6302     push    0263DD08                         ; ASCII "receive a app msg"
+01A8BFE0   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8BFE5   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8BFEA   |68 C0040000     push    0x4C0
+01A8BFEF   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8BFF2   |E8 39751600     call    01BF3530
+01A8BFF7   |83C4 70         add     esp, 0x70
+01A8BFFA   |8D8D E0F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA20]
+01A8C000   |E8 8B34D9FF     call    0181F490
+01A8C005   |C645 FC 23      mov     byte ptr ss:[ebp-0x4], 0x23
+01A8C009   |E8 526FD8FF     call    01812F60
+01A8C00E   |8D85 E0F5FFFF   lea     eax, dword ptr ss:[ebp-0xA20]
+01A8C014   |50              push    eax
+01A8C015   |8D85 00FBFFFF   lea     eax, dword ptr ss:[ebp-0x500]
+01A8C01B   |50              push    eax
+01A8C01C   |8D45 90         lea     eax, dword ptr ss:[ebp-0x70]
+01A8C01F   |50              push    eax
+01A8C020   |E8 DB86F4FF     call    019D4700
+01A8C025   |83BD 5CF6FFFF 0>cmp     dword ptr ss:[ebp-0x9A4], 0x6
+01A8C02C   |75 6B           jnz     short 01A8C099
+01A8C02E   |6A FF           push    -0x1
+01A8C030   |68 58846402     push    02648458                         ; UNICODE "bat"
+01A8C035   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C038   |E8 73811600     call    01BF41B0
+01A8C03D   |8BB5 18FDFFFF   mov     esi, dword ptr ss:[ebp-0x2E8]    ; ntdll.7C93003D
+01A8C043   |8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+01A8C046   |83CE 04         or      esi, 0x4
+01A8C049   |8D8D 10F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F0]
+01A8C04F   |50              push    eax
+01A8C050   |89B5 18FDFFFF   mov     dword ptr ss:[ebp-0x2E8], esi
+01A8C056   |E8 35861600     call    01BF4690
+01A8C05B   |84C0            test    al, al
+01A8C05D   |75 31           jnz     short 01A8C090
+01A8C05F   |6A FF           push    -0x1
+01A8C061   |68 58856402     push    02648558                         ; UNICODE "exe"
+01A8C066   |8D8D F4FCFFFF   lea     ecx, dword ptr ss:[ebp-0x30C]
+01A8C06C   |E8 3F811600     call    01BF41B0
+01A8C071   |8D85 F4FCFFFF   lea     eax, dword ptr ss:[ebp-0x30C]
+01A8C077   |83CE 08         or      esi, 0x8
+01A8C07A   |50              push    eax
+01A8C07B   |8D8D 10F7FFFF   lea     ecx, dword ptr ss:[ebp-0x8F0]
+01A8C081   |89B5 18FDFFFF   mov     dword ptr ss:[ebp-0x2E8], esi
+01A8C087   |E8 04861600     call    01BF4690
+01A8C08C   |84C0            test    al, al
+01A8C08E   |74 09           je      short 01A8C099
+01A8C090   |C685 30FDFFFF 0>mov     byte ptr ss:[ebp-0x2D0], 0x1
+01A8C097   |EB 07           jmp     short 01A8C0A0
+01A8C099   |C685 30FDFFFF 0>mov     byte ptr ss:[ebp-0x2D0], 0x0
+01A8C0A0   |8B85 18FDFFFF   mov     eax, dword ptr ss:[ebp-0x2E8]    ; ntdll.7C93003D
+01A8C0A6   |A8 08           test    al, 0x8
+01A8C0A8   |74 1A           je      short 01A8C0C4
+01A8C0AA   |83E0 F7         and     eax, 0xFFFFFFF7
+01A8C0AD   |8D8D F4FCFFFF   lea     ecx, dword ptr ss:[ebp-0x30C]
+01A8C0B3   |8985 18FDFFFF   mov     dword ptr ss:[ebp-0x2E8], eax
+01A8C0B9   |E8 F2E3DCFF     call    0185A4B0
+01A8C0BE   |8B85 18FDFFFF   mov     eax, dword ptr ss:[ebp-0x2E8]    ; ntdll.7C93003D
+01A8C0C4   |A8 04           test    al, 0x4
+01A8C0C6   |74 08           je      short 01A8C0D0
+01A8C0C8   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C0CB   |E8 E0E3DCFF     call    0185A4B0
+01A8C0D0   |80BD 30FDFFFF 0>cmp     byte ptr ss:[ebp-0x2D0], 0x0
+01A8C0D7   |0F84 D9010000   je      01A8C2B6
+01A8C0DD   |8D8D 80FDFFFF   lea     ecx, dword ptr ss:[ebp-0x280]
+01A8C0E3   |E8 C8D7D6FF     call    017F98B0
+01A8C0E8   |83EC 10         sub     esp, 0x10
+01A8C0EB   |C645 FC 24      mov     byte ptr ss:[ebp-0x4], 0x24
+01A8C0EF   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8C0F6   |8BC4            mov     eax, esp
+01A8C0F8   |83EC 10         sub     esp, 0x10
+01A8C0FB   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C0FE   |8BC4            mov     eax, esp
+01A8C100   |83EC 10         sub     esp, 0x10
+01A8C103   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C106   |8BC4            mov     eax, esp
+01A8C108   |83EC 10         sub     esp, 0x10
+01A8C10B   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C10E   |8BC4            mov     eax, esp
+01A8C110   |83EC 10         sub     esp, 0x10
+01A8C113   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C116   |8BC4            mov     eax, esp
+01A8C118   |83EC 14         sub     esp, 0x14
+01A8C11B   |8BCC            mov     ecx, esp
+01A8C11D   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C120   |6A 00           push    0x0
+01A8C122   |8D85 78FFFFFF   lea     eax, dword ptr ss:[ebp-0x88]
+01A8C128   |50              push    eax
+01A8C129   |E8 D2811600     call    01BF4300
+01A8C12E   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C131   |E8 FABC1700     call    01C07E30
+01A8C136   |83C4 14         add     esp, 0x14
+01A8C139   |8BC8            mov     ecx, eax
+01A8C13B   |C645 FC 25      mov     byte ptr ss:[ebp-0x4], 0x25
+01A8C13F   |E8 1C55D7FF     call    01801660
+01A8C144   |83EC 10         sub     esp, 0x10
+01A8C147   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8C14C   |8BCC            mov     ecx, esp
+01A8C14E   |68 38856402     push    02648538                         ; ASCII "insert a system msg,fromeUsr:%s"
+01A8C153   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8C158   |C601 02         mov     byte ptr ds:[ecx], 0x2
+01A8C15B   |8941 08         mov     dword ptr ds:[ecx+0x8], eax
+01A8C15E   |B9 02000000     mov     ecx, 0x2
+01A8C163   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8C168   |68 C8040000     push    0x4C8
+01A8C16D   |E8 BE731600     call    01BF3530
+01A8C172   |83C4 70         add     esp, 0x70
+01A8C175   |C645 FC 24      mov     byte ptr ss:[ebp-0x4], 0x24
+01A8C179   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C17C   |E8 2FE3DCFF     call    0185A4B0
+01A8C181   |8D85 80FDFFFF   lea     eax, dword ptr ss:[ebp-0x280]
+01A8C187   |50              push    eax
+01A8C188   |83EC 18         sub     esp, 0x18
+01A8C18B   |8D85 78FFFFFF   lea     eax, dword ptr ss:[ebp-0x88]
+01A8C191   |8BCC            mov     ecx, esp
+01A8C193   |89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8C199   |50              push    eax
+01A8C19A   |E8 2159D7FF     call    01801AC0
+01A8C19F   |C645 FC 26      mov     byte ptr ss:[ebp-0x4], 0x26
+01A8C1A3   |E8 08D0EFFF     call    019891B0
+01A8C1A8   |C645 FC 24      mov     byte ptr ss:[ebp-0x4], 0x24
+01A8C1AC   |E8 4F3D0000     call    01A8FF00
+01A8C1B1   |84C0            test    al, al
+01A8C1B3   |0F84 F2000000   je      01A8C2AB
+01A8C1B9   |8B45 B4         mov     eax, dword ptr ss:[ebp-0x4C]
+01A8C1BC   |8378 10 00      cmp     dword ptr ds:[eax+0x10], 0x0
+01A8C1C0   |74 24           je      short 01A8C1E6
+01A8C1C2   |83EC 14         sub     esp, 0x14
+01A8C1C5   |8BCC            mov     ecx, esp
+01A8C1C7   |6A 00           push    0x0
+01A8C1C9   |50              push    eax
+01A8C1CA   |E8 31811600     call    01BF4300
+01A8C1CF   |E8 EC201E00     call    01C6E2C0
+01A8C1D4   |83C4 14         add     esp, 0x14
+01A8C1D7   |84C0            test    al, al
+01A8C1D9   |74 0B           je      short 01A8C1E6
+01A8C1DB   |8B8D 20FDFFFF   mov     ecx, dword ptr ss:[ebp-0x2E0]    ; WeChatWi.0264FCCC
+01A8C1E1   |E9 B9000000     jmp     01A8C29F
+01A8C1E6   |8D8D 00FBFFFF   lea     ecx, dword ptr ss:[ebp-0x500]
+01A8C1EC   |E8 8FE5DDFF     call    0186A780
+01A8C1F1   |85C0            test    eax, eax
+01A8C1F3   |0F8E A0000000   jle     01A8C299
+01A8C1F9   |81A5 24FFFFFF 8>and     dword ptr ss:[ebp-0xDC], 0x80
+01A8C203   |8985 90FDFFFF   mov     dword ptr ss:[ebp-0x270], eax
+01A8C209   |8B85 3CFBFFFF   mov     eax, dword ptr ss:[ebp-0x4C4]
+01A8C20F   |48              dec     eax
+01A8C210   |C685 34FEFFFF 0>mov     byte ptr ss:[ebp-0x1CC], 0x0
+01A8C217   |8985 BCFDFFFF   mov     dword ptr ss:[ebp-0x244], eax
+01A8C21D   |8B85 00FBFFFF   mov     eax, dword ptr ss:[ebp-0x500]
+01A8C223   |8985 80FDFFFF   mov     dword ptr ss:[ebp-0x280], eax
+01A8C229   |8B85 04FBFFFF   mov     eax, dword ptr ss:[ebp-0x4FC]
+01A8C22F   |8985 84FDFFFF   mov     dword ptr ss:[ebp-0x27C], eax
+01A8C235   |8B85 0CFBFFFF   mov     eax, dword ptr ss:[ebp-0x4F4]    ; WeChatWi.021305E3
+01A8C23B   |C1E8 02         shr     eax, 0x2
+01A8C23E   |24 01           and     al, 0x1
+01A8C240   |74 09           je      short 01A8C24B
+01A8C242   |838D 8CFDFFFF 0>or      dword ptr ss:[ebp-0x274], 0x4
+01A8C249   |EB 07           jmp     short 01A8C252
+01A8C24B   |83A5 8CFDFFFF F>and     dword ptr ss:[ebp-0x274], 0xFFFF>
+01A8C252   |E8 3954D7FF     call    01801690
+01A8C257   |6A 00           push    0x0
+01A8C259   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C25C   |8D70 04         lea     esi, dword ptr ds:[eax+0x4]
+01A8C25F   |8D85 60FFFFFF   lea     eax, dword ptr ss:[ebp-0xA0]
+01A8C265   |50              push    eax
+01A8C266   |E8 95801600     call    01BF4300
+01A8C26B   |8BC8            mov     ecx, eax
+01A8C26D   |C645 FC 27      mov     byte ptr ss:[ebp-0x4], 0x27
+01A8C271   |FF75 5A         push    dword ptr ss:[ebp+0x5A]
+01A8C274   |8B06            mov     eax, dword ptr ds:[esi]
+01A8C276   |FF75 BC         push    dword ptr ss:[ebp-0x44]
+01A8C279   |51              push    ecx
+01A8C27A   |8B40 3C         mov     eax, dword ptr ds:[eax+0x3C]
+01A8C27D   |8BCE            mov     ecx, esi
+01A8C27F   |FFD0            call    eax
+01A8C281   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C284   |8985 00FBFFFF   mov     dword ptr ss:[ebp-0x500], eax
+01A8C28A   |8995 04FBFFFF   mov     dword ptr ss:[ebp-0x4FC], edx
+01A8C290   |C645 FC 24      mov     byte ptr ss:[ebp-0x4], 0x24
+01A8C294   |E8 17E2DCFF     call    0185A4B0
+01A8C299   |8B8D 24FDFFFF   mov     ecx, dword ptr ss:[ebp-0x2DC]
+01A8C29F   |8D85 80FDFFFF   lea     eax, dword ptr ss:[ebp-0x280]
+01A8C2A5   |50              push    eax
+01A8C2A6   |E8 7582D7FF     call    01804520
+01A8C2AB   |8D8D 80FDFFFF   lea     ecx, dword ptr ss:[ebp-0x280]
+01A8C2B1   |E8 CACFD6FF     call    017F9280
+01A8C2B6   |8D8D E0F5FFFF   lea     ecx, dword ptr ss:[ebp-0xA20]
+01A8C2BC   |E8 4F1FD9FF     call    0181E210
+01A8C2C1   |8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8C2C7   |E8 545DD7FF     call    01802020
+01A8C2CC   |8D8D 48FFFFFF   lea     ecx, dword ptr ss:[ebp-0xB8]
+01A8C2D2   |E9 0F020000     jmp     01A8C4E6
+01A8C2D7   |8B4D A4         mov     ecx, dword ptr ss:[ebp-0x5C]
+01A8C2DA   |85C9            test    ecx, ecx
+01A8C2DC   |75 08           jnz     short 01A8C2E6
+01A8C2DE   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8C2E3   |8B48 14         mov     ecx, dword ptr ds:[eax+0x14]
+01A8C2E6   |8B49 04         mov     ecx, dword ptr ds:[ecx+0x4]
+01A8C2E9   |8379 14 10      cmp     dword ptr ds:[ecx+0x14], 0x10
+01A8C2ED   |72 02           jb      short 01A8C2F1
+01A8C2EF   |8B09            mov     ecx, dword ptr ds:[ecx]
+01A8C2F1   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8C2F8   |83EC 10         sub     esp, 0x10
+01A8C2FB   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8C300   |8BC4            mov     eax, esp
+01A8C302   |83EC 10         sub     esp, 0x10
+01A8C305   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C308   |8BC4            mov     eax, esp
+01A8C30A   |83EC 10         sub     esp, 0x10
+01A8C30D   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C310   |8BC4            mov     eax, esp
+01A8C312   |83EC 10         sub     esp, 0x10
+01A8C315   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C318   |8BC4            mov     eax, esp
+01A8C31A   |83EC 10         sub     esp, 0x10
+01A8C31D   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C320   |8BC4            mov     eax, esp
+01A8C322   |83EC 10         sub     esp, 0x10
+01A8C325   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C328   |8BC4            mov     eax, esp
+01A8C32A   |68 28856402     push    02648528                         ; ASCII "voip msg = %s"
+01A8C32F   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8C334   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8C339   |8948 08         mov     dword ptr ds:[eax+0x8], ecx
+01A8C33C   |B9 01000000     mov     ecx, 0x1
+01A8C341   |68 E3040000     push    0x4E3
+01A8C346   |C600 02         mov     byte ptr ds:[eax], 0x2
+01A8C349   |E8 E2711600     call    01BF3530
+01A8C34E   |83C4 70         add     esp, 0x70
+01A8C351   |8D4D 90         lea     ecx, dword ptr ss:[ebp-0x70]
+01A8C354   |E8 87505200     call    01FB13E0
+01A8C359   |6A 68           push    0x68
+01A8C35B   |8BF8            mov     edi, eax
+01A8C35D   |E8 77318800     call    0230F4D9
+01A8C362   |83C4 04         add     esp, 0x4
+01A8C365   |8985 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], eax
+01A8C36B   |57              push    edi
+01A8C36C   |8BC8            mov     ecx, eax
+01A8C36E   |C645 FC 28      mov     byte ptr ss:[ebp-0x4], 0x28
+01A8C372   |E8 394F0200     call    01AB12B0
+01A8C377   |8BF0            mov     esi, eax
+01A8C379   |C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8C37D   |57              push    edi
+01A8C37E   |8D4D 90         lea     ecx, dword ptr ss:[ebp-0x70]
+01A8C381   |FF76 30         push    dword ptr ds:[esi+0x30]
+01A8C384   |E8 D8538800     call    02311761
+01A8C389   |56              push    esi
+01A8C38A   |6A 00           push    0x0
+01A8C38C   |6A 00           push    0x0
+01A8C38E   |68 09010000     push    0x109
+01A8C393   |E8 D8230200     call    01AAE770
+01A8C398   |8BC8            mov     ecx, eax
+01A8C39A   |E8 51340200     call    01AAF7F0
+01A8C39F   |E9 FC030000     jmp     01A8C7A0
+01A8C3A4   |8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8C3A7   |85C0            test    eax, eax
+01A8C3A9   |75 08           jnz     short 01A8C3B3
+01A8C3AB   |A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8C3B0   |8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8C3B3   |FF70 04         push    dword ptr ds:[eax+0x4]
+01A8C3B6   |8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8C3BC   |E8 FF56D7FF     call    01801AC0
+01A8C3C1   |83EC 10         sub     esp, 0x10
+01A8C3C4   |C645 FC 29      mov     byte ptr ss:[ebp-0x4], 0x29
+01A8C3C8   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8C3CF   |8BC4            mov     eax, esp
+01A8C3D1   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8C3D6   |83EC 10         sub     esp, 0x10
+01A8C3D9   |B9 02000000     mov     ecx, 0x2
+01A8C3DE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C3E1   |8BC4            mov     eax, esp
+01A8C3E3   |83EC 10         sub     esp, 0x10
+01A8C3E6   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C3E9   |8BC4            mov     eax, esp
+01A8C3EB   |83EC 10         sub     esp, 0x10
+01A8C3EE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C3F1   |8BC4            mov     eax, esp
+01A8C3F3   |83EC 10         sub     esp, 0x10
+01A8C3F6   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C3F9   |8BC4            mov     eax, esp
+01A8C3FB   |83EC 10         sub     esp, 0x10
+01A8C3FE   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C401   |8BC4            mov     eax, esp
+01A8C403   |68 F4DC6302     push    0263DCF4                         ; ASCII "receive a emoji msg"
+01A8C408   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8C40D   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8C412   |68 EE040000     push    0x4EE
+01A8C417   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C41A   |E8 11711600     call    01BF3530
+01A8C41F   |83C4 70         add     esp, 0x70
+01A8C422   |8D8D F8FDFFFF   lea     ecx, dword ptr ss:[ebp-0x208]
+01A8C428   |E8 737DD9FF     call    018241A0
+01A8C42D   |6A 00           push    0x0
+01A8C42F   |8D85 78FFFFFF   lea     eax, dword ptr ss:[ebp-0x88]
+01A8C435   |50              push    eax
+01A8C436   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C439   |E8 C27E1600     call    01BF4300
+01A8C43E   |8BF0            mov     esi, eax
+01A8C440   |C645 FC 2B      mov     byte ptr ss:[ebp-0x4], 0x2B
+01A8C444   |E8 E784D9FF     call    01824930
+01A8C449   |8D85 F8FDFFFF   lea     eax, dword ptr ss:[ebp-0x208]
+01A8C44F   |50              push    eax
+01A8C450   |56              push    esi
+01A8C451   |E8 DAA9F8FF     call    01A16E30
+01A8C456   |84C0            test    al, al
+01A8C458   |C645 FC 2A      mov     byte ptr ss:[ebp-0x4], 0x2A
+01A8C45C   |8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C45F   |0f9485 30fdffff sete    byte ptr ss:[ebp-0x2d0]
+01A8C466   |E8 45E0DCFF     call    0185A4B0
+01A8C46B   |80BD 30FDFFFF 0>cmp     byte ptr ss:[ebp-0x2D0], 0x0
+01A8C472   |0F84 DE030000   je      01A8C856
+01A8C478   |0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8C47F   |83EC 10         sub     esp, 0x10
+01A8C482   |BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8C487   |8BC4            mov     eax, esp
+01A8C489   |B9 04000000     mov     ecx, 0x4
+01A8C48E   |83EC 10         sub     esp, 0x10
+01A8C491   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C494   |8BC4            mov     eax, esp
+01A8C496   |83EC 10         sub     esp, 0x10
+01A8C499   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C49C   |8BC4            mov     eax, esp
+01A8C49E   |83EC 10         sub     esp, 0x10
+01A8C4A1   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C4A4   |8BC4            mov     eax, esp
+01A8C4A6   |83EC 10         sub     esp, 0x10
+01A8C4A9   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C4AC   |8BC4            mov     eax, esp
+01A8C4AE   |83EC 10         sub     esp, 0x10
+01A8C4B1   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C4B4   |8BC4            mov     eax, esp
+01A8C4B6   |68 DCDC6302     push    0263DCDC                         ; ASCII "getEmojiInfoByXml err"
+01A8C4BB   |68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8C4C0   |68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8C4C5   |68 F2040000     push    0x4F2
+01A8C4CA   |0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8C4CD   |E8 5E701600     call    01BF3530
+01A8C4D2   |83C4 70         add     esp, 0x70
+01A8C4D5   |8D8D F8FDFFFF   lea     ecx, dword ptr ss:[ebp-0x208]
+01A8C4DB   |E8 B07FD9FF     call    01824490
+01A8C4E0   \8D8D 78FFFFFF   lea     ecx, dword ptr ss:[ebp-0x88]
+01A8C4E6    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8C4EA    E8 315BD7FF     call    01802020
+01A8C4EF    E8 BCCCEFFF     call    019891B0
+01A8C4F4    8B40 24         mov     eax, dword ptr ds:[eax+0x24]
+01A8C4F7    8985 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], eax
+01A8C4FD    E8 AECCEFFF     call    019891B0
+01A8C502    8BF8            mov     edi, eax
+01A8C504    8D85 40FBFFFF   lea     eax, dword ptr ss:[ebp-0x4C0]
+01A8C50A    50              push    eax
+01A8C50B    8D4F 24         lea     ecx, dword ptr ds:[edi+0x24]
+01A8C50E    E8 ED3BD7FF     call    01800100
+01A8C513    8B7F 24         mov     edi, dword ptr ds:[edi+0x24]
+01A8C516    8BF0            mov     esi, eax
+01A8C518    3BF7            cmp     esi, edi
+01A8C51A    74 22           je      short 01A8C53E
+01A8C51C    8B46 10         mov     eax, dword ptr ds:[esi+0x10]
+01A8C51F    85C0            test    eax, eax
+01A8C521    74 06           je      short 01A8C529
+01A8C523    66:8338 00      cmp     word ptr ds:[eax], 0x0
+01A8C527    75 05           jnz     short 01A8C52E
+01A8C529    B8 E4C86702     mov     eax, 0267C8E4
+01A8C52E    50              push    eax
+01A8C52F    8D8D 40FBFFFF   lea     ecx, dword ptr ss:[ebp-0x4C0]
+01A8C535    E8 26821600     call    01BF4760
+01A8C53A    85C0            test    eax, eax
+01A8C53C    79 02           jns     short 01A8C540
+01A8C53E    8BF7            mov     esi, edi
+01A8C540    3BB5 2CFDFFFF   cmp     esi, dword ptr ss:[ebp-0x2D4]
+01A8C546    74 58           je      short 01A8C5A0
+01A8C548    E8 63CCEFFF     call    019891B0
+01A8C54D    8BF8            mov     edi, eax
+01A8C54F    8D85 40FBFFFF   lea     eax, dword ptr ss:[ebp-0x4C0]
+01A8C555    50              push    eax
+01A8C556    8D4F 24         lea     ecx, dword ptr ds:[edi+0x24]
+01A8C559    E8 A23BD7FF     call    01800100
+01A8C55E    8B7F 24         mov     edi, dword ptr ds:[edi+0x24]
+01A8C561    8BF0            mov     esi, eax
+01A8C563    3BF7            cmp     esi, edi
+01A8C565    74 22           je      short 01A8C589
+01A8C567    8B46 10         mov     eax, dword ptr ds:[esi+0x10]
+01A8C56A    85C0            test    eax, eax
+01A8C56C    74 06           je      short 01A8C574
+01A8C56E    66:8338 00      cmp     word ptr ds:[eax], 0x0
+01A8C572    75 05           jnz     short 01A8C579
+01A8C574    B8 E4C86702     mov     eax, 0267C8E4
+01A8C579    50              push    eax
+01A8C57A    8D8D 40FBFFFF   lea     ecx, dword ptr ss:[ebp-0x4C0]
+01A8C580    E8 DB811600     call    01BF4760
+01A8C585    85C0            test    eax, eax
+01A8C587    79 02           jns     short 01A8C58B
+01A8C589    8BF7            mov     esi, edi
+01A8C58B    8D85 2CFDFFFF   lea     eax, dword ptr ss:[ebp-0x2D4]
+01A8C591    56              push    esi
+01A8C592    50              push    eax
+01A8C593    E8 18CCEFFF     call    019891B0
+01A8C598    8D48 24         lea     ecx, dword ptr ds:[eax+0x24]
+01A8C59B    E8 70420000     call    01A90810
+01A8C5A0    8B85 28FBFFFF   mov     eax, dword ptr ss:[ebp-0x4D8]
+01A8C5A6    8985 14FDFFFF   mov     dword ptr ss:[ebp-0x2EC], eax
+01A8C5AC    8B85 2CFBFFFF   mov     eax, dword ptr ss:[ebp-0x4D4]
+01A8C5B2    8985 18FDFFFF   mov     dword ptr ss:[ebp-0x2E8], eax
+01A8C5B8    E8 F3CBEFFF     call    019891B0
+01A8C5BD    8B70 0C         mov     esi, dword ptr ds:[eax+0xC]
+01A8C5C0    8D85 14FDFFFF   lea     eax, dword ptr ss:[ebp-0x2EC]
+01A8C5C6    50              push    eax
+01A8C5C7    8D85 2CFDFFFF   lea     eax, dword ptr ss:[ebp-0x2D4]
+01A8C5CD    50              push    eax
+01A8C5CE    E8 DDCBEFFF     call    019891B0
+01A8C5D3    8D48 0C         lea     ecx, dword ptr ds:[eax+0xC]
+01A8C5D6    E8 D5D4DDFF     call    01869AB0
+01A8C5DB    3930            cmp     dword ptr ds:[eax], esi
+01A8C5DD    0F85 32090000   jnz     01A8CF15
+01A8C5E3    8B45 B4         mov     eax, dword ptr ss:[ebp-0x4C]
+01A8C5E6    8378 10 00      cmp     dword ptr ds:[eax+0x10], 0x0
+01A8C5EA    0F84 E9080000   je      01A8CED9
+01A8C5F0    83EC 14         sub     esp, 0x14
+01A8C5F3    8BCC            mov     ecx, esp
+01A8C5F5    6A 00           push    0x0
+01A8C5F7    50              push    eax
+01A8C5F8    E8 037D1600     call    01BF4300
+01A8C5FD    E8 BE1C1E00     call    01C6E2C0
+01A8C602    83C4 14         add     esp, 0x14
+01A8C605    84C0            test    al, al
+01A8C607    0F84 CC080000   je      01A8CED9
+01A8C60D    6A 00           push    0x0
+01A8C60F    FF75 B4         push    dword ptr ss:[ebp-0x4C]
+01A8C612    8D8D F4FCFFFF   lea     ecx, dword ptr ss:[ebp-0x30C]
+01A8C618    E8 E37C1600     call    01BF4300
+01A8C61D    8B45 94         mov     eax, dword ptr ss:[ebp-0x6C]     ; user32.77D18830
+01A8C620    85C0            test    eax, eax
+01A8C622    75 08           jnz     short 01A8C62C
+01A8C624    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8C629    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A8C62C    6A 00           push    0x0
+01A8C62E    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8C631    8D8D 08FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2F8]
+01A8C637    E8 C47C1600     call    01BF4300
+01A8C63C    8D85 48FFFFFF   lea     eax, dword ptr ss:[ebp-0xB8]
+01A8C642    C645 FC 3F      mov     byte ptr ss:[ebp-0x4], 0x3F
+01A8C646    50              push    eax
+01A8C647    E8 2451D7FF     call    01801770
+01A8C64C    8BC8            mov     ecx, eax
+01A8C64E    E8 0D2B0E00     call    01B6F160
+01A8C653    6A 00           push    0x0
+01A8C655    50              push    eax
+01A8C656    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C659    E8 A27C1600     call    01BF4300
+01A8C65E    8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+01A8C661    50              push    eax
+01A8C662    8D8D 08FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2F8]
+01A8C668    E8 23801600     call    01BF4690
+01A8C66D    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C670    8885 30FDFFFF   mov     byte ptr ss:[ebp-0x2D0], al
+01A8C676    E8 35DEDCFF     call    0185A4B0
+01A8C67B    8D8D 48FFFFFF   lea     ecx, dword ptr ss:[ebp-0xB8]
+01A8C681    E8 9A59D7FF     call    01802020
+01A8C686    80BD 30FDFFFF 0>cmp     byte ptr ss:[ebp-0x2D0], 0x0
+01A8C68D    74 33           je      short 01A8C6C2
+01A8C68F    8B45 A0         mov     eax, dword ptr ss:[ebp-0x60]     ; user32.77D189CD
+01A8C692    85C0            test    eax, eax
+01A8C694    75 08           jnz     short 01A8C69E
+01A8C696    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8C69B    8B40 10         mov     eax, dword ptr ds:[eax+0x10]
+01A8C69E    6A 00           push    0x0
+01A8C6A0    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8C6A3    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C6A6    E8 557C1600     call    01BF4300
+01A8C6AB    8D45 DC         lea     eax, dword ptr ss:[ebp-0x24]
+01A8C6AE    50              push    eax
+01A8C6AF    8D8D 08FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2F8]
+01A8C6B5    E8 767F1600     call    01BF4630
+01A8C6BA    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C6BD    E8 EEDDDCFF     call    0185A4B0
+01A8C6C2    8D85 00FBFFFF   lea     eax, dword ptr ss:[ebp-0x500]
+01A8C6C8    50              push    eax
+01A8C6C9    8D8D 80FDFFFF   lea     ecx, dword ptr ss:[ebp-0x280]
+01A8C6CF    E8 ECABD6FF     call    017F72C0
+01A8C6D4    8D85 80FDFFFF   lea     eax, dword ptr ss:[ebp-0x280]
+01A8C6DA    C645 FC 40      mov     byte ptr ss:[ebp-0x4], 0x40
+01A8C6DE    50              push    eax
+01A8C6DF    8D45 90         lea     eax, dword ptr ss:[ebp-0x70]
+01A8C6E2    50              push    eax
+01A8C6E3    E8 68B0D6FF     call    017F7750
+01A8C6E8    8BC8            mov     ecx, eax
+01A8C6EA    E8 E11D1E00     call    01C6E4D0
+01A8C6EF    84C0            test    al, al
+01A8C6F1    74 7A           je      short 01A8C76D
+01A8C6F3    E8 B8CAEFFF     call    019891B0
+01A8C6F8    8BC8            mov     ecx, eax
+01A8C6FA    E8 81C6FFFF     call    01A88D80
+01A8C6FF    8B30            mov     esi, dword ptr ds:[eax]
+01A8C701    8D85 C0FDFFFF   lea     eax, dword ptr ss:[ebp-0x240]
+01A8C707    50              push    eax
+01A8C708    8D85 2CFDFFFF   lea     eax, dword ptr ss:[ebp-0x2D4]
+01A8C70E    50              push    eax
+01A8C70F    E8 9CCAEFFF     call    019891B0
+01A8C714    8BC8            mov     ecx, eax
+01A8C716    E8 65C6FFFF     call    01A88D80
+01A8C71B    8BC8            mov     ecx, eax
+01A8C71D    E8 9E22D7FF     call    017FE9C0
+01A8C722    3930            cmp     dword ptr ds:[eax], esi
+01A8C724    75 47           jnz     short 01A8C76D
+01A8C726    8D85 08FDFFFF   lea     eax, dword ptr ss:[ebp-0x2F8]
+01A8C72C    50              push    eax
+01A8C72D    8D85 C0FDFFFF   lea     eax, dword ptr ss:[ebp-0x240]
+01A8C733    50              push    eax
+01A8C734    8D8D 38FFFFFF   lea     ecx, dword ptr ss:[ebp-0xC8]
+01A8C73A    E8 714F0000     call    01A916B0
+01A8C73F    50              push    eax
+01A8C740    8D85 28FDFFFF   lea     eax, dword ptr ss:[ebp-0x2D8]
+01A8C746    C645 FC 41      mov     byte ptr ss:[ebp-0x4], 0x41
+01A8C74A    50              push    eax
+01A8C74B    E8 60CAEFFF     call    019891B0
+01A8C750    8BC8            mov     ecx, eax
+01A8C752    E8 29C6FFFF     call    01A88D80
+01A8C757    8BC8            mov     ecx, eax
+01A8C759    E8 02E0E4FF     call    018DA760
+01A8C75E    8D8D 38FFFFFF   lea     ecx, dword ptr ss:[ebp-0xC8]
+01A8C764    C645 FC 40      mov     byte ptr ss:[ebp-0x4], 0x40
+01A8C768    E8 433BD7FF     call    018002B0
+01A8C76D    8B8D 20FDFFFF   mov     ecx, dword ptr ss:[ebp-0x2E0]    ; WeChatWi.0264FCCC
+01A8C773    8D85 80FDFFFF   lea     eax, dword ptr ss:[ebp-0x280]
+01A8C779    50              push    eax
+01A8C77A    E8 A17DD7FF     call    01804520
+01A8C77F    8D8D 80FDFFFF   lea     ecx, dword ptr ss:[ebp-0x280]
+01A8C785    E8 F6CAD6FF     call    017F9280
+01A8C78A    8D8D 08FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2F8]
+01A8C790    E8 1BDDDCFF     call    0185A4B0
+01A8C795    8D8D F4FCFFFF   lea     ecx, dword ptr ss:[ebp-0x30C]
+01A8C79B    E8 10DDDCFF     call    0185A4B0
+01A8C7A0    8D8D E0FCFFFF   lea     ecx, dword ptr ss:[ebp-0x320]
+01A8C7A6    E8 05DDDCFF     call    0185A4B0
+01A8C7AB    8D8D 60FFFFFF   lea     ecx, dword ptr ss:[ebp-0xA0]
+01A8C7B1    E8 6A58D7FF     call    01802020
+01A8C7B6    8D8D 00FBFFFF   lea     ecx, dword ptr ss:[ebp-0x500]
+01A8C7BC    E8 BFCAD6FF     call    017F9280
+01A8C7C1    8BBD CCFCFFFF   mov     edi, dword ptr ss:[ebp-0x334]
+01A8C7C7    8B85 B8FCFFFF   mov     eax, dword ptr ss:[ebp-0x348]
+01A8C7CD    85C0            test    eax, eax
+01A8C7CF    74 09           je      short 01A8C7DA
+01A8C7D1    50              push    eax
+01A8C7D2    E8 48E29A00     call    0243AA1F
+01A8C7D7    83C4 04         add     esp, 0x4
+01A8C7DA    8B85 C4FCFFFF   mov     eax, dword ptr ss:[ebp-0x33C]
+01A8C7E0    85C0            test    eax, eax
+01A8C7E2    74 09           je      short 01A8C7ED
+01A8C7E4    50              push    eax
+01A8C7E5    E8 35E29A00     call    0243AA1F
+01A8C7EA    83C4 04         add     esp, 0x4
+01A8C7ED    85FF            test    edi, edi
+01A8C7EF    74 09           je      short 01A8C7FA
+01A8C7F1    57              push    edi
+01A8C7F2    E8 28E29A00     call    0243AA1F
+01A8C7F7    83C4 04         add     esp, 0x4
+01A8C7FA    8B85 D8FCFFFF   mov     eax, dword ptr ss:[ebp-0x328]
+01A8C800    85C0            test    eax, eax
+01A8C802    74 09           je      short 01A8C80D
+01A8C804    50              push    eax
+01A8C805    E8 15E29A00     call    0243AA1F
+01A8C80A    83C4 04         add     esp, 0x4
+01A8C80D    8D4D 90         lea     ecx, dword ptr ss:[ebp-0x70]
+01A8C810    C745 90 C84B6D0>mov     dword ptr ss:[ebp-0x70], 026D4BC>
+01A8C817    E8 34435200     call    01FB0B50
+01A8C81C    8D4D 90         lea     ecx, dword ptr ss:[ebp-0x70]
+01A8C81F    E8 E94B8800     call    0231140D
+01A8C824    8D4D 10         lea     ecx, dword ptr ss:[ebp+0x10]
+01A8C827    C745 10 C84B6D0>mov     dword ptr ss:[ebp+0x10], 026D4BC>
+01A8C82E    E8 1D435200     call    01FB0B50
+01A8C833    8D4D 10         lea     ecx, dword ptr ss:[ebp+0x10]
+01A8C836    E8 D24B8800     call    0231140D
+01A8C83B    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+01A8C83E    64:890D 0000000>mov     dword ptr fs:[0], ecx
+01A8C845    59              pop     ecx                              ; user32.77D191BE
+01A8C846    5F              pop     edi                              ; user32.77D191BE
+01A8C847    5E              pop     esi                              ; user32.77D191BE
+01A8C848    8B4D F0         mov     ecx, dword ptr ss:[ebp-0x10]
+01A8C84B    33CD            xor     ecx, ebp
+01A8C84D    E8 452C8800     call    0230F497
+01A8C852    8BE5            mov     esp, ebp
+01A8C854    5D              pop     ebp                              ; user32.77D191BE
+01A8C855    C3              retn
+01A8C856    C785 14FDFFFF 0>mov     dword ptr ss:[ebp-0x2EC], 0x0
+01A8C860    C785 18FDFFFF 0>mov     dword ptr ss:[ebp-0x2E8], 0x0
+01A8C86A    83EC 14         sub     esp, 0x14
+01A8C86D    8D85 68FEFFFF   lea     eax, dword ptr ss:[ebp-0x198]
+01A8C873    8BCC            mov     ecx, esp
+01A8C875    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8C87B    50              push    eax
+01A8C87C    E8 6F791600     call    01BF41F0
+01A8C881    C645 FC 2D      mov     byte ptr ss:[ebp-0x4], 0x2D
+01A8C885    E8 A680D9FF     call    01824930
+01A8C88A    C645 FC 2C      mov     byte ptr ss:[ebp-0x4], 0x2C
+01A8C88E    E8 4DB5F8FF     call    01A17DE0
+01A8C893    8885 30FDFFFF   mov     byte ptr ss:[ebp-0x2D0], al
+01A8C899    8D8D 00FBFFFF   lea     ecx, dword ptr ss:[ebp-0x500]
+01A8C89F    8D85 68FEFFFF   lea     eax, dword ptr ss:[ebp-0x198]
+01A8C8A5    50              push    eax
+01A8C8A6    E8 A5E9F4FF     call    019DB250
+01A8C8AB    80BD 30FDFFFF 0>cmp     byte ptr ss:[ebp-0x2D0], 0x0
+01A8C8B2    75 39           jnz     short 01A8C8ED
+01A8C8B4    8B7D C8         mov     edi, dword ptr ss:[ebp-0x38]
+01A8C8B7    8B75 CC         mov     esi, dword ptr ss:[ebp-0x34]
+01A8C8BA    E8 7180D9FF     call    01824930
+01A8C8BF    51              push    ecx
+01A8C8C0    56              push    esi
+01A8C8C1    57              push    edi
+01A8C8C2    8D85 F8FDFFFF   lea     eax, dword ptr ss:[ebp-0x208]
+01A8C8C8    50              push    eax
+01A8C8C9    E8 625AF8FF     call    01A12330
+01A8C8CE    83A5 A4FCFFFF 4>and     dword ptr ss:[ebp-0x35C], 0x40
+01A8C8D5    C785 38FBFFFF 0>mov     dword ptr ss:[ebp-0x4C8], 0x4
+01A8C8DF    84C0            test    al, al
+01A8C8E1    75 0A           jnz     short 01A8C8ED
+01A8C8E3    C785 38FBFFFF 0>mov     dword ptr ss:[ebp-0x4C8], 0x5
+01A8C8ED    8D8D 14FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2EC]
+01A8C8F3    E8 F85F1600     call    01BF28F0
+01A8C8F8  ^ E9 D8FBFFFF     jmp     01A8C4D5
+01A8C8FD    8D8D BCFDFFFF   lea     ecx, dword ptr ss:[ebp-0x244]
+01A8C903    E8 280A0F00     call    01B7D330
+01A8C908    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8C90B    85C0            test    eax, eax
+01A8C90D    75 08           jnz     short 01A8C917
+01A8C90F    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8C914    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8C917    6A 00           push    0x0
+01A8C919    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8C91C    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C91F    E8 DC791600     call    01BF4300
+01A8C924    8D95 BCFDFFFF   lea     edx, dword ptr ss:[ebp-0x244]
+01A8C92A    C645 FC 2F      mov     byte ptr ss:[ebp-0x4], 0x2F
+01A8C92E    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C931    E8 9A040F00     call    01B7CDD0
+01A8C936    84C0            test    al, al
+01A8C938    0F84 9E000000   je      01A8C9DC
+01A8C93E    83BD B0FEFFFF 0>cmp     dword ptr ss:[ebp-0x150], 0x0
+01A8C945    0F9EC0          setle   al
+01A8C948    84C0            test    al, al
+01A8C94A    0F85 8C000000   jnz     01A8C9DC
+01A8C950    C785 10FDFFFF 0>mov     dword ptr ss:[ebp-0x2F0], 0x0
+01A8C95A    C785 14FDFFFF 0>mov     dword ptr ss:[ebp-0x2EC], 0x0
+01A8C964    C785 18FDFFFF 0>mov     dword ptr ss:[ebp-0x2E8], 0x0
+01A8C96E    83EC 14         sub     esp, 0x14
+01A8C971    8D85 ACFEFFFF   lea     eax, dword ptr ss:[ebp-0x154]
+01A8C977    8BCC            mov     ecx, esp
+01A8C979    50              push    eax
+01A8C97A    E8 71781600     call    01BF41F0
+01A8C97F    83EC 14         sub     esp, 0x14
+01A8C982    8D85 BCFDFFFF   lea     eax, dword ptr ss:[ebp-0x244]
+01A8C988    8BCC            mov     ecx, esp
+01A8C98A    50              push    eax
+01A8C98B    E8 60781600     call    01BF41F0
+01A8C990    8D8D 38FFFFFF   lea     ecx, dword ptr ss:[ebp-0xC8]
+01A8C996    E8 25EDFEFF     call    01A7B6C0
+01A8C99B    8D85 38FFFFFF   lea     eax, dword ptr ss:[ebp-0xC8]
+01A8C9A1    C645 FC 31      mov     byte ptr ss:[ebp-0x4], 0x31
+01A8C9A5    50              push    eax
+01A8C9A6    8D8D 10FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2F0]
+01A8C9AC    E8 6F7FF5FF     call    019E4920
+01A8C9B1    8D85 10FDFFFF   lea     eax, dword ptr ss:[ebp-0x2F0]
+01A8C9B7    6A 01           push    0x1
+01A8C9B9    50              push    eax
+01A8C9BA    E8 31F0FBFF     call    01A4B9F0
+01A8C9BF    8BC8            mov     ecx, eax
+01A8C9C1    E8 3AC81400     call    01BD9200
+01A8C9C6    8D8D 38FFFFFF   lea     ecx, dword ptr ss:[ebp-0xC8]
+01A8C9CC    E8 DF38D7FF     call    018002B0
+01A8C9D1    8D8D 10FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2F0]
+01A8C9D7    E8 5484F5FF     call    019E4E30
+01A8C9DC    8D4D DC         lea     ecx, dword ptr ss:[ebp-0x24]
+01A8C9DF    E8 CCDADCFF     call    0185A4B0
+01A8C9E4    8D8D BCFDFFFF   lea     ecx, dword ptr ss:[ebp-0x244]
+01A8C9EA    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8C9EE    E8 AD0C0F00     call    01B7D6A0
+01A8C9F3  ^ E9 F7FAFFFF     jmp     01A8C4EF
+01A8C9F8    81EC B8010000   sub     esp, 0x1B8
+01A8C9FE    8D85 00FBFFFF   lea     eax, dword ptr ss:[ebp-0x500]
+01A8CA04    8BCC            mov     ecx, esp
+01A8CA06    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CA0C    50              push    eax
+01A8CA0D    E8 AEA8D6FF     call    017F72C0
+01A8CA12    6A 01           push    0x1
+01A8CA14    C645 FC 32      mov     byte ptr ss:[ebp-0x4], 0x32
+01A8CA18    E8 0368E7FF     call    01903220
+01A8CA1D    8BC8            mov     ecx, eax
+01A8CA1F    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CA23    E8 7843E9FF     call    01920DA0
+01A8CA28  ^ E9 C2FAFFFF     jmp     01A8C4EF
+01A8CA2D    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8CA34    83EC 10         sub     esp, 0x10
+01A8CA37    BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8CA3C    8BC4            mov     eax, esp
+01A8CA3E    B9 02000000     mov     ecx, 0x2
+01A8CA43    83EC 10         sub     esp, 0x10
+01A8CA46    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CA49    8BC4            mov     eax, esp
+01A8CA4B    83EC 10         sub     esp, 0x10
+01A8CA4E    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CA51    8BC4            mov     eax, esp
+01A8CA53    83EC 10         sub     esp, 0x10
+01A8CA56    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CA59    8BC4            mov     eax, esp
+01A8CA5B    83EC 10         sub     esp, 0x10
+01A8CA5E    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CA61    8BC4            mov     eax, esp
+01A8CA63    83EC 10         sub     esp, 0x10
+01A8CA66    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CA69    8BC4            mov     eax, esp
+01A8CA6B    68 FC846402     push    026484FC                         ; ASCII "recv cmdAM.MsgType = MM_DATA_SYSCMD_IPXX"
+01A8CA70    68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8CA75    68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8CA7A    68 1F050000     push    0x51F
+01A8CA7F    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CA82    E8 A96A1600     call    01BF3530
+01A8CA87    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CA8A    83C4 70         add     esp, 0x70
+01A8CA8D    85C0            test    eax, eax
+01A8CA8F    75 08           jnz     short 01A8CA99
+01A8CA91    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CA96    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CA99    6A 00           push    0x0
+01A8CA9B    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CA9E    E8 637A6C00     call    02154506
+01A8CAA3    83C4 08         add     esp, 0x8
+01A8CAA6  ^ E9 F5FCFFFF     jmp     01A8C7A0
+01A8CAAB    2D 10270000     sub     eax, 0x2710
+01A8CAB0  ^ 0F84 39FAFFFF   je      01A8C4EF
+01A8CAB6    83E8 02         sub     eax, 0x2
+01A8CAB9    0F84 A0000000   je      01A8CB5F
+01A8CABF    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8CAC6    83EC 10         sub     esp, 0x10
+01A8CAC9    8BC4            mov     eax, esp
+01A8CACB    83EC 10         sub     esp, 0x10
+01A8CACE    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CAD1    8BC4            mov     eax, esp
+01A8CAD3    83EC 10         sub     esp, 0x10
+01A8CAD6    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CAD9    8BC4            mov     eax, esp
+01A8CADB    83EC 10         sub     esp, 0x10
+01A8CADE    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CAE1    8BC4            mov     eax, esp
+01A8CAE3    83EC 10         sub     esp, 0x10
+01A8CAE6    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CAE9    8BC4            mov     eax, esp
+01A8CAEB    83EC 10         sub     esp, 0x10
+01A8CAEE    8BCC            mov     ecx, esp
+01A8CAF0    FF75 9C         push    dword ptr ss:[ebp-0x64]          ; user32.77D1882A
+01A8CAF3    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CAF6    E8 059ED6FF     call    017F6900
+01A8CAFB    68 90856402     push    02648590                         ; ASCII "receive a unknown msg type: %d"
+01A8CB00    68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8CB05    68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8CB0A    68 74050000     push    0x574
+01A8CB0F    BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8CB14    B9 03000000     mov     ecx, 0x3
+01A8CB19    E8 126A1600     call    01BF3530
+01A8CB1E    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CB21    83C4 70         add     esp, 0x70
+01A8CB24    85C0            test    eax, eax
+01A8CB26    75 08           jnz     short 01A8CB30
+01A8CB28    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CB2D    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CB30    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A8CB33    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01A8CB36    6A FF           push    -0x1
+01A8CB38    6A 00           push    0x0
+01A8CB3A    50              push    eax
+01A8CB3B    C745 EC 0F00000>mov     dword ptr ss:[ebp-0x14], 0xF
+01A8CB42    C745 E8 0000000>mov     dword ptr ss:[ebp-0x18], 0x0
+01A8CB49    C645 D8 00      mov     byte ptr ss:[ebp-0x28], 0x0
+01A8CB4D    E8 8E50D7FF     call    01801BE0
+01A8CB52    8D4D D8         lea     ecx, dword ptr ss:[ebp-0x28]
+01A8CB55    E8 C654D7FF     call    01802020
+01A8CB5A  ^ E9 41FCFFFF     jmp     01A8C7A0
+01A8CB5F    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CB62    85C0            test    eax, eax
+01A8CB64    75 08           jnz     short 01A8CB6E
+01A8CB66    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CB6B    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CB6E    83EC 14         sub     esp, 0x14
+01A8CB71    8BCC            mov     ecx, esp
+01A8CB73    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CB79    6A 00           push    0x0
+01A8CB7B    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CB7E    E8 7D771600     call    01BF4300
+01A8CB83    C645 FC 33      mov     byte ptr ss:[ebp-0x4], 0x33
+01A8CB87    E8 C43FDCFF     call    01850B50
+01A8CB8C    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CB90    E8 0B55F9FF     call    01A220A0
+01A8CB95    84C0            test    al, al
+01A8CB97    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CB9A    74 3A           je      short 01A8CBD6
+01A8CB9C    85C0            test    eax, eax
+01A8CB9E    75 08           jnz     short 01A8CBA8
+01A8CBA0    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CBA5    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CBA8    83EC 14         sub     esp, 0x14
+01A8CBAB    8BCC            mov     ecx, esp
+01A8CBAD    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CBB3    6A 00           push    0x0
+01A8CBB5    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CBB8    E8 43771600     call    01BF4300
+01A8CBBD    C645 FC 34      mov     byte ptr ss:[ebp-0x4], 0x34
+01A8CBC1    E8 8A3FDCFF     call    01850B50
+01A8CBC6    8BC8            mov     ecx, eax
+01A8CBC8    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CBCC    E8 CF57F9FF     call    01A223A0
+01A8CBD1  ^ E9 CAFBFFFF     jmp     01A8C7A0
+01A8CBD6    85C0            test    eax, eax
+01A8CBD8    75 08           jnz     short 01A8CBE2
+01A8CBDA    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CBDF    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CBE2    83EC 14         sub     esp, 0x14
+01A8CBE5    8BCC            mov     ecx, esp
+01A8CBE7    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CBED    6A 00           push    0x0
+01A8CBEF    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CBF2    E8 09771600     call    01BF4300
+01A8CBF7    C645 FC 35      mov     byte ptr ss:[ebp-0x4], 0x35
+01A8CBFB    E8 00CFF3FF     call    019C9B00
+01A8CC00    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CC04    E8 27FFF3FF     call    019CCB30
+01A8CC09    84C0            test    al, al
+01A8CC0B    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CC0E    74 3A           je      short 01A8CC4A
+01A8CC10    85C0            test    eax, eax
+01A8CC12    75 08           jnz     short 01A8CC1C
+01A8CC14    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CC19    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CC1C    83EC 14         sub     esp, 0x14
+01A8CC1F    8BCC            mov     ecx, esp
+01A8CC21    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CC27    6A 00           push    0x0
+01A8CC29    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CC2C    E8 CF761600     call    01BF4300
+01A8CC31    C645 FC 36      mov     byte ptr ss:[ebp-0x4], 0x36
+01A8CC35    E8 C6CEF3FF     call    019C9B00
+01A8CC3A    8BC8            mov     ecx, eax
+01A8CC3C    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CC40    E8 FB01F4FF     call    019CCE40
+01A8CC45  ^ E9 56FBFFFF     jmp     01A8C7A0
+01A8CC4A    85C0            test    eax, eax
+01A8CC4C    75 08           jnz     short 01A8CC56
+01A8CC4E    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CC53    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CC56    83EC 14         sub     esp, 0x14
+01A8CC59    8BCC            mov     ecx, esp
+01A8CC5B    6A 00           push    0x0
+01A8CC5D    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CC60    E8 9B761600     call    01BF4300
+01A8CC65    E8 E639F6FF     call    019F0650
+01A8CC6A    83C4 14         add     esp, 0x14
+01A8CC6D    84C0            test    al, al
+01A8CC6F    74 75           je      short 01A8CCE6
+01A8CC71    0F1005 68F05D02 movups  xmm0, dqword ptr ds:[0x25DF068]
+01A8CC78    83EC 10         sub     esp, 0x10
+01A8CC7B    8BC4            mov     eax, esp
+01A8CC7D    83EC 10         sub     esp, 0x10
+01A8CC80    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CC83    8BC4            mov     eax, esp
+01A8CC85    83EC 10         sub     esp, 0x10
+01A8CC88    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CC8B    8BC4            mov     eax, esp
+01A8CC8D    83EC 10         sub     esp, 0x10
+01A8CC90    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CC93    8BC4            mov     eax, esp
+01A8CC95    83EC 10         sub     esp, 0x10
+01A8CC98    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CC9B    8BC4            mov     eax, esp
+01A8CC9D    83EC 10         sub     esp, 0x10
+01A8CCA0    8BCC            mov     ecx, esp
+01A8CCA2    FF75 CC         push    dword ptr ss:[ebp-0x34]
+01A8CCA5    0F1100          movups  dqword ptr ds:[eax], xmm0
+01A8CCA8    FF75 C8         push    dword ptr ss:[ebp-0x38]
+01A8CCAB    E8 7000DAFF     call    0182CD20
+01A8CCB0    68 B0856402     push    026485B0                         ; ASCII "On RevokeMsg svrId : %d"
+01A8CCB5    68 00806402     push    02648000                         ; ASCII "SyncMgr"
+01A8CCBA    68 1C846402     push    0264841C                         ; ASCII "SyncMgr::doAddMsg"
+01A8CCBF    68 43050000     push    0x543
+01A8CCC4    BA 5C806402     mov     edx, 0264805C                    ; ASCII "02_manager\SyncMgr.cpp"
+01A8CCC9    B9 02000000     mov     ecx, 0x2
+01A8CCCE    E8 5D681600     call    01BF3530
+01A8CCD3    8A55 59         mov     dl, byte ptr ss:[ebp+0x59]
+01A8CCD6    8D4D 90         lea     ecx, dword ptr ss:[ebp-0x70]
+01A8CCD9    83C4 70         add     esp, 0x70
+01A8CCDC    E8 8F3CF6FF     call    019F0970
+01A8CCE1  ^ E9 BAFAFFFF     jmp     01A8C7A0
+01A8CCE6    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CCE9    85C0            test    eax, eax
+01A8CCEB    75 08           jnz     short 01A8CCF5
+01A8CCED    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CCF2    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CCF5    83EC 14         sub     esp, 0x14
+01A8CCF8    8BCC            mov     ecx, esp
+01A8CCFA    6A 00           push    0x0
+01A8CCFC    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CCFF    E8 FC751600     call    01BF4300
+01A8CD04    E8 970C1E00     call    01C6D9A0
+01A8CD09    83C4 14         add     esp, 0x14
+01A8CD0C    84C0            test    al, al
+01A8CD0E    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CD11    74 38           je      short 01A8CD4B
+01A8CD13    85C0            test    eax, eax
+01A8CD15    75 08           jnz     short 01A8CD1F
+01A8CD17    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CD1C    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CD1F    83EC 14         sub     esp, 0x14
+01A8CD22    8BCC            mov     ecx, esp
+01A8CD24    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CD2A    6A 00           push    0x0
+01A8CD2C    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CD2F    E8 CC751600     call    01BF4300
+01A8CD34    C645 FC 37      mov     byte ptr ss:[ebp-0x4], 0x37
+01A8CD38    E8 13AAD6FF     call    017F7750
+01A8CD3D    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CD41    E8 9A0F1E00     call    01C6DCE0
+01A8CD46  ^ E9 55FAFFFF     jmp     01A8C7A0
+01A8CD4B    85C0            test    eax, eax
+01A8CD4D    75 08           jnz     short 01A8CD57
+01A8CD4F    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CD54    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CD57    83EC 14         sub     esp, 0x14
+01A8CD5A    8BCC            mov     ecx, esp
+01A8CD5C    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CD62    6A 00           push    0x0
+01A8CD64    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CD67    E8 94751600     call    01BF4300
+01A8CD6C    C645 FC 38      mov     byte ptr ss:[ebp-0x4], 0x38
+01A8CD70    E8 BB7BD9FF     call    01824930
+01A8CD75    8BC8            mov     ecx, eax
+01A8CD77    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CD7B    E8 60C2F8FF     call    01A18FE0
+01A8CD80    84C0            test    al, al
+01A8CD82  ^ 0F85 18FAFFFF   jnz     01A8C7A0
+01A8CD88    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CD8B    85C0            test    eax, eax
+01A8CD8D    75 08           jnz     short 01A8CD97
+01A8CD8F    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CD94    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CD97    83EC 14         sub     esp, 0x14
+01A8CD9A    8BCC            mov     ecx, esp
+01A8CD9C    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CDA2    6A 00           push    0x0
+01A8CDA4    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CDA7    E8 54751600     call    01BF4300
+01A8CDAC    C645 FC 39      mov     byte ptr ss:[ebp-0x4], 0x39
+01A8CDB0    E8 DB7BD9FF     call    01824990
+01A8CDB5    8BC8            mov     ecx, eax
+01A8CDB7    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CDBB    E8 306FFFFF     call    01A83CF0
+01A8CDC0    84C0            test    al, al
+01A8CDC2  ^ 0F85 D8F9FFFF   jnz     01A8C7A0
+01A8CDC8    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CDCB    85C0            test    eax, eax
+01A8CDCD    75 08           jnz     short 01A8CDD7
+01A8CDCF    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CDD4    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CDD7    83EC 18         sub     esp, 0x18
+01A8CDDA    8BCC            mov     ecx, esp
+01A8CDDC    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CDE2    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CDE5    E8 D64CD7FF     call    01801AC0
+01A8CDEA    8B45 94         mov     eax, dword ptr ss:[ebp-0x6C]     ; user32.77D18830
+01A8CDED    85C0            test    eax, eax
+01A8CDEF    75 08           jnz     short 01A8CDF9
+01A8CDF1    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CDF6    8B40 04         mov     eax, dword ptr ds:[eax+0x4]
+01A8CDF9    83EC 14         sub     esp, 0x14
+01A8CDFC    8BCC            mov     ecx, esp
+01A8CDFE    89A5 24FDFFFF   mov     dword ptr ss:[ebp-0x2DC], esp
+01A8CE04    6A 00           push    0x0
+01A8CE06    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CE09    E8 F2741600     call    01BF4300
+01A8CE0E    C645 FC 3B      mov     byte ptr ss:[ebp-0x4], 0x3B
+01A8CE12    E8 994FDDFF     call    01861DB0
+01A8CE17    8BC8            mov     ecx, eax
+01A8CE19    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CE1D    E8 7E552B00     call    01D423A0
+01A8CE22    84C0            test    al, al
+01A8CE24  ^ 0F85 76F9FFFF   jnz     01A8C7A0
+01A8CE2A    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CE2D    85C0            test    eax, eax
+01A8CE2F    75 08           jnz     short 01A8CE39
+01A8CE31    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CE36    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CE39    83EC 14         sub     esp, 0x14
+01A8CE3C    8BCC            mov     ecx, esp
+01A8CE3E    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CE44    6A 00           push    0x0
+01A8CE46    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CE49    E8 B2741600     call    01BF4300
+01A8CE4E    C645 FC 3C      mov     byte ptr ss:[ebp-0x4], 0x3C
+01A8CE52    E8 A98EDCFF     call    01855D00
+01A8CE57    8BC8            mov     ecx, eax
+01A8CE59    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CE5D    E8 4E46F5FF     call    019E14B0
+01A8CE62    84C0            test    al, al
+01A8CE64  ^ 0F85 36F9FFFF   jnz     01A8C7A0
+01A8CE6A    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CE6D    85C0            test    eax, eax
+01A8CE6F    75 08           jnz     short 01A8CE79
+01A8CE71    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CE76    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CE79    83EC 14         sub     esp, 0x14
+01A8CE7C    8BCC            mov     ecx, esp
+01A8CE7E    89A5 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], esp
+01A8CE84    6A 00           push    0x0
+01A8CE86    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CE89    E8 72741600     call    01BF4300
+01A8CE8E    C645 FC 3D      mov     byte ptr ss:[ebp-0x4], 0x3D
+01A8CE92    E8 596ED8FF     call    01813CF0
+01A8CE97    8BC8            mov     ecx, eax
+01A8CE99    C645 FC 13      mov     byte ptr ss:[ebp-0x4], 0x13
+01A8CE9D    E8 DE6FE1FF     call    018A3E80
+01A8CEA2    84C0            test    al, al
+01A8CEA4  ^ 0F85 F6F8FFFF   jnz     01A8C7A0
+01A8CEAA    8B45 A4         mov     eax, dword ptr ss:[ebp-0x5C]
+01A8CEAD    85C0            test    eax, eax
+01A8CEAF    75 08           jnz     short 01A8CEB9
+01A8CEB1    A1 B0D88602     mov     eax, dword ptr ds:[0x286D8B0]
+01A8CEB6    8B40 14         mov     eax, dword ptr ds:[eax+0x14]
+01A8CEB9    83EC 14         sub     esp, 0x14
+01A8CEBC    8BCC            mov     ecx, esp
+01A8CEBE    6A 00           push    0x0
+01A8CEC0    FF70 04         push    dword ptr ds:[eax+0x4]
+01A8CEC3    E8 38741600     call    01BF4300
+01A8CEC8    E8 B3C5EFFF     call    01989480
+01A8CECD    8BC8            mov     ecx, eax
+01A8CECF    E8 6C593800     call    01E12840
+01A8CED4  ^ E9 C7F8FFFF     jmp     01A8C7A0
+01A8CED9    8B85 28FBFFFF   mov     eax, dword ptr ss:[ebp-0x4D8]
+01A8CEDF    8985 28FDFFFF   mov     dword ptr ss:[ebp-0x2D8], eax
+01A8CEE5    8B85 2CFBFFFF   mov     eax, dword ptr ss:[ebp-0x4D4]
+01A8CEEB    8985 2CFDFFFF   mov     dword ptr ss:[ebp-0x2D4], eax
+01A8CEF1    E8 BAC2EFFF     call    019891B0
+01A8CEF6    FFB5 2CFDFFFF   push    dword ptr ss:[ebp-0x2D4]
+01A8CEFC    8D8D 28FDFFFF   lea     ecx, dword ptr ss:[ebp-0x2D8]
+01A8CF02    51              push    ecx
+01A8CF03    51              push    ecx
+01A8CF04    8D8D 1CFDFFFF   lea     ecx, dword ptr ss:[ebp-0x2E4]
+01A8CF0A    51              push    ecx
+01A8CF0B    8D48 0C         lea     ecx, dword ptr ds:[eax+0xC]
+01A8CF0E    E8 FD20ECFF     call    0194F010
+01A8CF13    EB 52           jmp     short 01A8CF67
+01A8CF15    81BD 30FBFFFF 1>cmp     dword ptr ss:[ebp-0x4D0], 0x2710
+01A8CF1F    75 58           jnz     short 01A8CF79
+01A8CF21    BA 040D8702     mov     edx, 02870D04
+01A8CF26    8D8D 40FBFFFF   lea     ecx, dword ptr ss:[ebp-0x4C0]
+01A8CF2C    E8 3F231700     call    01BFF270
+01A8CF31    84C0            test    al, al
+01A8CF33    75 44           jnz     short 01A8CF79
+01A8CF35    83A5 A4FCFFFF 0>and     dword ptr ss:[ebp-0x35C], 0x8
+01A8CF3C    0F57C0          xorps   xmm0, xmm0
+01A8CF3F    66:0F1385 28FBF>movlps  qword ptr ss:[ebp-0x4D8], xmm0
+01A8CF47    E8 4447D7FF     call    01801690
+01A8CF4C    8D85 00FBFFFF   lea     eax, dword ptr ss:[ebp-0x500]
+01A8CF52    50              push    eax
+01A8CF53    E8 38C2F6FF     call    019F9190
+01A8CF58    6A 01           push    0x1
+01A8CF5A    8D8D 00FBFFFF   lea     ecx, dword ptr ss:[ebp-0x500]
+01A8CF60    51              push    ecx
+01A8CF61    50              push    eax
+01A8CF62    E8 B9C4F6FF     call    019F9420
+01A8CF67    8B8D 24FDFFFF   mov     ecx, dword ptr ss:[ebp-0x2DC]
+01A8CF6D  - E9 4E466102     jmp     kstEx.040A15C0
+01A8CF72    CC              int3
+01A8CF73    50              push    eax
+01A8CF74    E8 A775D7FF     call    01804520
+01A8CF79    8D8D E0FCFFFF   lea     ecx, dword ptr ss:[ebp-0x320]
+01A8CF7F    E8 2CD5DCFF     call    0185A4B0
+01A8CF84    8D8D 60FFFFFF   lea     ecx, dword ptr ss:[ebp-0xA0]
+01A8CF8A    E8 9150D7FF     call    01802020
+01A8CF8F    8D8D 00FBFFFF   lea     ecx, dword ptr ss:[ebp-0x500]
+01A8CF95    E8 E6C2D6FF     call    017F9280
+01A8CF9A    8D8D B8FCFFFF   lea     ecx, dword ptr ss:[ebp-0x348]
+01A8CFA0    E8 0BD5DCFF     call    0185A4B0
+01A8CFA5    8D8D CCFCFFFF   lea     ecx, dword ptr ss:[ebp-0x334]
+01A8CFAB    E8 00D5DCFF     call    0185A4B0
+01A8CFB0  ^ E9 58F8FFFF     jmp     01A8C80D
+01A8CFB5    0f1f00          nop     dword ptr ds:[eax]
+01A8CFB8    63BE A8013CB9   arpl    word ptr ds:[esi+0xB93C01A8], di
+01A8CFBE    A8 01           test    al, 0x1
+01A8CFC0    0C BC           or      al, 0xBC
+01A8CFC2    A8 01           test    al, 0x1
+01A8CFC4    F8              clc
+01A8CFC5    C9              leave
+01A8CFC6    A8 01           test    al, 0x1
+01A8CFC8    A0 C7A801FD     mov     al, byte ptr ds:[0xFD01A8C7]
+01A8CFCD    C8 A801F2       enter   0x1A8, 0xF2
+01A8CFD1    BB A801A4C3     mov     ebx, 0xC3A401A8
+01A8CFD6    A8 01           test    al, 0x1
+01A8CFD8    ef              out     dx, eax
+01A8CFD9    c4a8 015bbfa8   les     ebp, fword ptr ds:[eax+0xa8bf5b0>
+01A8CFDF    01D7            add     edi, edx
+01A8CFE1    C2 A801         retn    0x1A8
+

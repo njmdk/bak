@@ -1,0 +1,136 @@
+70FEB5E0    55              push    ebp
+70FEB5E1    8BEC            mov     ebp, esp
+70FEB5E3    6A FF           push    -0x1
+70FEB5E5    68 FFC8C971     push    71C9C8FF
+70FEB5EA    64:A1 00000000  mov     eax, dword ptr fs:[0]
+70FEB5F0    50              push    eax                              ; WeChatWi.71EAA55C
+70FEB5F1    51              push    ecx
+70FEB5F2    56              push    esi
+70FEB5F3    A1 C4800672     mov     eax, dword ptr ds:[0x720680C4]
+70FEB5F8    33C5            xor     eax, ebp
+70FEB5FA    50              push    eax                              ; WeChatWi.71EAA55C
+70FEB5FB    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+70FEB5FE    64:A3 00000000  mov     dword ptr fs:[0], eax            ; WeChatWi.71EAA55C
+70FEB604    8BF1            mov     esi, ecx
+70FEB606    833D 70E00C72 0>cmp     dword ptr ds:[0x720CE070], 0x0
+70FEB60D    75 27           jnz     short 70FEB636
+70FEB60F    6A 40           push    0x40
+70FEB611    E8 B1008C00     call    718AB6C7
+70FEB616    83C4 04         add     esp, 0x4
+70FEB619    8945 F0         mov     dword ptr ss:[ebp-0x10], eax     ; WeChatWi.71EAA55C
+70FEB61C    8BC8            mov     ecx, eax                         ; WeChatWi.71EAA55C
+70FEB61E    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+70FEB625    E8 E65D0E00     call    710D1410
+70FEB62A    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+70FEB631    A3 70E00C72     mov     dword ptr ds:[0x720CE070], eax   ; WeChatWi.71EAA55C
+70FEB636    51              push    ecx                              ; 0
+70FEB637    8D86 80050000   lea     eax, dword ptr ds:[esi+0x580]
+70FEB63D    50              push    eax                              ; 结构(0x8:ID 0x50:备注 0x228:1)
+70FEB63E    E8 CD930E00     call    710D4A10                         ; 修改备注CALL
+70FEB643    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+70FEB646    64:890D 0000000>mov     dword ptr fs:[0], ecx
+70FEB64D    59              pop     ecx                              ; 0036E410
+70FEB64E    5E              pop     esi                              ; 0036E410
+70FEB64F    8BE5            mov     esp, ebp
+70FEB651    5D              pop     ebp                              ; 0036E410
+70FEB652    C3              retn
+
+
+
+710D4A10    55              push    ebp
+710D4A11    8BEC            mov     ebp, esp
+710D4A13    6A FF           push    -0x1
+710D4A15    68 5CEACA71     push    71CAEA5C
+710D4A1A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+710D4A20    50              push    eax                              ; WeChatWi.71EAA55C
+710D4A21    83EC 14         sub     esp, 0x14
+710D4A24    56              push    esi
+710D4A25    A1 C4800672     mov     eax, dword ptr ds:[0x720680C4]
+710D4A2A    33C5            xor     eax, ebp
+710D4A2C    50              push    eax                              ; WeChatWi.71EAA55C
+710D4A2D    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+710D4A30    64:A3 00000000  mov     dword ptr fs:[0], eax            ; WeChatWi.71EAA55C
+710D4A36    A1 38D80C72     mov     eax, dword ptr ds:[0x720CD838]
+710D4A3B    A8 01           test    al, 0x1
+710D4A3D    75 28           jnz     short 710D4A67
+710D4A3F    83C8 01         or      eax, 0x1
+710D4A42    A3 38D80C72     mov     dword ptr ds:[0x720CD838], eax   ; WeChatWi.71EAA55C
+710D4A47    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+710D4A4E    E8 DDCE1700     call    71251930
+710D4A53    68 D0C8D271     push    71D2C8D0
+710D4A58    E8 D56F7D00     call    718ABA32
+710D4A5D    83C4 04         add     esp, 0x4
+710D4A60    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+710D4A67    A0 84DD0C72     mov     al, byte ptr ds:[0x720CDD84]
+710D4A6C    84C0            test    al, al
+710D4A6E    74 3A           je      short 710D4AAA
+710D4A70    8B75 08         mov     esi, dword ptr ss:[ebp+0x8]
+710D4A73    8D45 E0         lea     eax, dword ptr ss:[ebp-0x20]
+710D4A76    50              push    eax                              ; WeChatWi.71EAA55C
+710D4A77    8BCE            mov     ecx, esi
+710D4A79    E8 3228DFFF     call    70EC72B0
+710D4A7E    8D4D E0         lea     ecx, dword ptr ss:[ebp-0x20]
+710D4A81    E8 5A9C3700     call    7144E6E0
+710D4A86    84C0            test    al, al
+710D4A88    8B45 E0         mov     eax, dword ptr ss:[ebp-0x20]
+710D4A8B    74 31           je      short 710D4ABE
+710D4A8D    85C0            test    eax, eax                         ; WeChatWi.71EAA55C
+710D4A8F    74 09           je      short 710D4A9A
+710D4A91    50              push    eax                              ; WeChatWi.71EAA55C
+710D4A92    E8 5850B700     call    71C49AEF
+710D4A97    83C4 04         add     esp, 0x4
+710D4A9A    8B45 EC         mov     eax, dword ptr ss:[ebp-0x14]
+710D4A9D    85C0            test    eax, eax                         ; WeChatWi.71EAA55C
+710D4A9F    74 09           je      short 710D4AAA
+710D4AA1    50              push    eax                              ; WeChatWi.71EAA55C
+710D4AA2    E8 4850B700     call    71C49AEF
+710D4AA7    83C4 04         add     esp, 0x4
+710D4AAA    32C0            xor     al, al
+710D4AAC    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+710D4AAF    64:890D 0000000>mov     dword ptr fs:[0], ecx
+710D4AB6    59              pop     ecx
+710D4AB7    5E              pop     esi
+710D4AB8    8BE5            mov     esp, ebp
+710D4ABA    5D              pop     ebp
+710D4ABB    C2 0800         retn    0x8
+710D4ABE    85C0            test    eax, eax                         ; WeChatWi.71EAA55C
+710D4AC0    74 09           je      short 710D4ACB
+710D4AC2    50              push    eax                              ; WeChatWi.71EAA55C
+710D4AC3    E8 2750B700     call    71C49AEF
+710D4AC8    83C4 04         add     esp, 0x4
+710D4ACB    8B45 EC         mov     eax, dword ptr ss:[ebp-0x14]
+710D4ACE    85C0            test    eax, eax                         ; WeChatWi.71EAA55C
+710D4AD0    74 09           je      short 710D4ADB
+710D4AD2    50              push    eax                              ; WeChatWi.71EAA55C
+710D4AD3    E8 1750B700     call    71C49AEF
+710D4AD8    83C4 04         add     esp, 0x4
+710D4ADB    A1 90F80D72     mov     eax, dword ptr ds:[0x720DF890]
+710D4AE0    A8 01           test    al, 0x1
+710D4AE2    75 28           jnz     short 710D4B0C
+710D4AE4    83C8 01         or      eax, 0x1
+710D4AE7    A3 90F80D72     mov     dword ptr ds:[0x720DF890], eax   ; WeChatWi.71EAA55C
+710D4AEC    C745 FC 0100000>mov     dword ptr ss:[ebp-0x4], 0x1
+710D4AF3    E8 F8410600     call    71138CF0
+710D4AF8    68 8046D371     push    71D34680
+710D4AFD    E8 306F7D00     call    718ABA32
+710D4B02    83C4 04         add     esp, 0x4
+710D4B05    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+710D4B0C    51              push    ecx
+710D4B0D    56              push    esi
+710D4B0E    B9 68F80D72     mov     ecx, 720DF868
+710D4B13    E8 884C0600     call    711397A0
+710D4B18    84C0            test    al, al
+710D4B1A    74 0F           je      short 710D4B2B
+710D4B1C    6A 01           push    0x1
+710D4B1E    56              push    esi
+710D4B1F    E8 CC880400     call    7111D3F0
+710D4B24    8BC8            mov     ecx, eax                         ; WeChatWi.71EAA55C
+710D4B26    E8 85861B00     call    7128D1B0
+710D4B2B    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+710D4B2E    64:890D 0000000>mov     dword ptr fs:[0], ecx
+710D4B35    59              pop     ecx
+710D4B36    5E              pop     esi
+710D4B37    8BE5            mov     esp, ebp
+710D4B39    5D              pop     ebp
+710D4B3A    C2 0800         retn    0x8
+

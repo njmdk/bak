@@ -1,0 +1,338 @@
+70513C80    55              push    ebp
+70513C81    8BEC            mov     ebp, esp
+70513C83    83E4 F8         and     esp, 0xFFFFFFF8
+70513C86    51              push    ecx
+70513C87    56              push    esi
+70513C88    8BF1            mov     esi, ecx
+70513C8A    68 2C057471     push    7174052C                         ; UNICODE "profile_view"
+70513C8F    8D4E 30         lea     ecx, dword ptr ds:[esi+0x30]
+70513C92    E8 185E6800     call    70B99AAF
+70513C97    8BC8            mov     ecx, eax
+70513C99    8986 8C030000   mov     dword ptr ds:[esi+0x38C], eax
+70513C9F    E8 7CA70000     call    7051E420                         ; 初始化
+70513CA4    80BE F7030000 0>cmp     byte ptr ds:[esi+0x3F7], 0x0
+70513CAB    0F84 A9000000   je      70513D5A
+70513CB1    83EC 14         sub     esp, 0x14
+70513CB4    8BCC            mov     ecx, esp
+70513CB6    6A FF           push    -0x1
+70513CB8    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+70513CBE    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+70513CC5    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+70513CCC    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+70513CD3    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+70513CDA    FFB6 78030000   push    dword ptr ds:[esi+0x378]
+70513CE0    E8 DB343500     call    708671C0
+70513CE5    83EC 14         sub     esp, 0x14
+70513CE8    8BCC            mov     ecx, esp
+70513CEA    6A FF           push    -0x1
+70513CEC    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+70513CF2    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0
+70513CF9    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+70513D00    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+70513D07    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+70513D0E    FFB6 64030000   push    dword ptr ds:[esi+0x364]
+70513D14    E8 A7343500     call    708671C0
+70513D19    83EC 14         sub     esp, 0x14
+70513D1C    8BCC            mov     ecx, esp
+70513D1E    6A FF           push    -0x1
+70513D20    C701 00000000   mov     dword ptr ds:[ecx], 0x0
+70513D26    C741 04 0000000>mov     dword ptr ds:[ecx+0x4], 0x0      ; call GetCurrentThreadId
+70513D2D    C741 08 0000000>mov     dword ptr ds:[ecx+0x8], 0x0
+70513D34    C741 0C 0000000>mov     dword ptr ds:[ecx+0xC], 0x0
+70513D3B    C741 10 0000000>mov     dword ptr ds:[ecx+0x10], 0x0
+70513D42    FFB6 50030000   push    dword ptr ds:[esi+0x350]
+70513D48    E8 73343500     call    708671C0
+70513D4D    8B8E 8C030000   mov     ecx, dword ptr ds:[esi+0x38C]
+70513D53    E8 38B60000     call    7051F390                         ; 下载头像
+70513D58    EB 12           jmp     short 70513D6C
+70513D5A    8B8E 8C030000   mov     ecx, dword ptr ds:[esi+0x38C]
+70513D60    8D86 F8030000   lea     eax, dword ptr ds:[esi+0x3F8]
+70513D66    50              push    eax
+70513D67    E8 24C20000     call    7051FF90
+70513D6C    8B86 8C030000   mov     eax, dword ptr ds:[esi+0x38C]
+70513D72    8BCE            mov     ecx, esi
+70513D74    6A 01           push    0x1
+70513D76    8B80 180C0000   mov     eax, dword ptr ds:[eax+0xC18]
+70513D7C    8986 90030000   mov     dword ptr ds:[esi+0x390], eax
+70513D82    E8 C9FDFFFF     call    70513B50
+70513D87    8B46 04         mov     eax, dword ptr ds:[esi+0x4]
+70513D8A    C686 F6030000 0>mov     byte ptr ds:[esi+0x3F6], 0x1
+70513D91    A3 80FC9971     mov     dword ptr ds:[0x7199FC80], eax
+70513D96    5E              pop     esi
+70513D97    8BE5            mov     esp, ebp
+70513D99    5D              pop     ebp
+70513D9A    C3              retn
+70513D9B    CC              int3
+70513D9C    CC              int3
+70513D9D    CC              int3
+70513D9E    CC              int3
+70513D9F    CC              int3
+70513DA0    B8 90057471     mov     eax, 71740590                    ; UNICODE "ContactProfileWnd"
+70513DA5    C3              retn
+
+
+
+70EEE420    55              push    ebp
+70EEE421    8BEC            mov     ebp, esp
+70EEE423    6A FF           push    -0x1
+70EEE425    68 50E5E671     push    71E6E550
+70EEE42A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+70EEE430    50              push    eax
+70EEE431    83EC 74         sub     esp, 0x74
+70EEE434    53              push    ebx
+70EEE435    56              push    esi
+70EEE436    57              push    edi
+70EEE437    A1 945B3172     mov     eax, dword ptr ds:[0x72315B94]   ; p巡X
+70EEE43C    33C5            xor     eax, ebp
+70EEE43E    50              push    eax
+70EEE43F    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+70EEE442    64:A3 00000000  mov     dword ptr fs:[0], eax
+70EEE448    8BF1            mov     esi, ecx
+70EEE44A    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE44D    68 101E1172     push    72111E10                         ; profileNicknameLab
+70EEE452    56              push    esi
+70EEE453    E8 96B66700     call    71569AEE
+70EEE458    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE45B    68 7C1F1172     push    72111F7C                         ; nicknameLayout
+70EEE460    56              push    esi
+70EEE461    8986 8C0B0000   mov     dword ptr ds:[esi+0xB8C], eax
+70EEE467    E8 82B66700     call    71569AEE
+70EEE46C    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE46F    68 381E1172     push    72111E38                         ; profileRemarknameEdit
+70EEE474    56              push    esi
+70EEE475    8986 900B0000   mov     dword ptr ds:[esi+0xB90], eax
+70EEE47B    E8 6EB66700     call    71569AEE
+70EEE480    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE483    68 B01E1172     push    72111EB0                         ; profileRemarknameBtn
+70EEE488    56              push    esi
+70EEE489    8986 640B0000   mov     dword ptr ds:[esi+0xB64], eax
+70EEE48F    E8 5AB66700     call    71569AEE
+70EEE494    6A 00           push    0x0
+70EEE496    68 9000EF70     push    70EF0090
+70EEE49B    8BD6            mov     edx, esi
+70EEE49D    8986 680B0000   mov     dword ptr ds:[esi+0xB68], eax
+70EEE4A3    8D4D 98         lea     ecx, dword ptr ss:[ebp-0x68]
+70EEE4A6    E8 354B0000     call    70EF2FE0
+70EEE4AB    83C4 08         add     esp, 0x8
+70EEE4AE    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+70EEE4B5    8B8E 640B0000   mov     ecx, dword ptr ds:[esi+0xB64]
+70EEE4BB    50              push    eax
+70EEE4BC    83C1 34         add     ecx, 0x34
+70EEE4BF    E8 C8726800     call    7157578C
+70EEE4C4    6A 00           push    0x0
+70EEE4C6    68 9000EF70     push    70EF0090
+70EEE4CB    8BD6            mov     edx, esi
+70EEE4CD    8D4D 98         lea     ecx, dword ptr ss:[ebp-0x68]
+70EEE4D0    E8 0B4B0000     call    70EF2FE0
+70EEE4D5    83C4 08         add     esp, 0x8
+70EEE4D8    C745 FC 0100000>mov     dword ptr ss:[ebp-0x4], 0x1
+70EEE4DF    8B8E 680B0000   mov     ecx, dword ptr ds:[esi+0xB68]
+70EEE4E5    50              push    eax
+70EEE4E6    83C1 34         add     ecx, 0x34
+70EEE4E9    E8 9E726800     call    7157578C
+70EEE4EE    68 9C1F1172     push    72111F9C                         ; remarkLayout
+70EEE4F3    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+70EEE4FA    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE4FD    56              push    esi
+70EEE4FE    E8 EBB56700     call    71569AEE
+70EEE503    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE506    68 881E1172     push    72111E88                         ; profileUsernameLab
+70EEE50B    56              push    esi
+70EEE50C    8986 6C0B0000   mov     dword ptr ds:[esi+0xB6C], eax
+70EEE512    E8 D7B56700     call    71569AEE
+70EEE517    8986 5C0B0000   mov     dword ptr ds:[esi+0xB5C], eax
+70EEE51D    68 48051172     push    72110548                         ; profileHeadBtn
+70EEE522    56              push    esi                              ; 对象
+70EEE523    C680 5C080000 0>mov     byte ptr ds:[eax+0x85C], 0x0
+70EEE52A    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE52D    E8 BCB56700     call    71569AEE                         ; 初始化
+70EEE532    6A 00           push    0x0
+70EEE534    68 9000EF70     push    70EF0090
+70EEE539    8BD6            mov     edx, esi
+70EEE53B    8986 580B0000   mov     dword ptr ds:[esi+0xB58], eax    ; 写入对象
+70EEE541    8D4D 98         lea     ecx, dword ptr ss:[ebp-0x68]
+70EEE544    E8 974A0000     call    70EF2FE0
+70EEE549    83C4 08         add     esp, 0x8
+70EEE54C    C745 FC 0200000>mov     dword ptr ss:[ebp-0x4], 0x2
+70EEE553    8B8E 580B0000   mov     ecx, dword ptr ds:[esi+0xB58]    ; ntdll_12.77B79805
+70EEE559    50              push    eax
+70EEE55A    83C1 34         add     ecx, 0x34
+70EEE55D    E8 2A726800     call    7157578C
+70EEE562    68 641E1172     push    72111E64                         ; profileRegionLab
+70EEE567    C745 FC FFFFFFF>mov     dword ptr ss:[ebp-0x4], -0x1
+70EEE56E    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE571    56              push    esi
+70EEE572    E8 77B56700     call    71569AEE
+70EEE577    68 2C1F1172     push    72111F2C                         ; profileGroupNickLab
+70EEE57C    8986 600B0000   mov     dword ptr ds:[esi+0xB60], eax
+70EEE582    56              push    esi
+70EEE583    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE586    E8 63B56700     call    71569AEE
+70EEE58B    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE58E    68 081F1172     push    72111F08                         ; profileSourceLab
+70EEE593    56              push    esi
+70EEE594    8986 700B0000   mov     dword ptr ds:[esi+0xB70], eax
+70EEE59A    E8 4FB56700     call    71569AEE
+70EEE59F    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE5A2    68 44C60C72     push    720CC644                         ; forwardBtn
+70EEE5A7    56              push    esi
+70EEE5A8    8986 740B0000   mov     dword ptr ds:[esi+0xB74], eax
+70EEE5AE    E8 3BB56700     call    71569AEE
+70EEE5B3    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE5B6    68 E8041172     push    721104E8                         ; profileSendBtn
+70EEE5BB    56              push    esi
+70EEE5BC    8986 7C0B0000   mov     dword ptr ds:[esi+0xB7C], eax
+70EEE5C2    E8 27B56700     call    71569AEE
+70EEE5C7    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE5CA    68 541F1172     push    72111F54                         ; sexLab
+70EEE5CF    56              push    esi
+70EEE5D0    8986 780B0000   mov     dword ptr ds:[esi+0xB78], eax
+70EEE5D6    E8 13B56700     call    71569AEE
+70EEE5DB    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE5DE    68 641F1172     push    72111F64                         ; wechatIdLab
+70EEE5E3    56              push    esi
+70EEE5E4    8986 800B0000   mov     dword ptr ds:[esi+0xB80], eax
+70EEE5EA    E8 FFB46700     call    71569AEE
+70EEE5EF    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE5F2    68 E01F1172     push    72111FE0                         ; groupNickLab
+70EEE5F7    56              push    esi
+70EEE5F8    8986 840B0000   mov     dword ptr ds:[esi+0xB84], eax
+70EEE5FE    E8 EBB46700     call    71569AEE
+70EEE603    8B4E 4C         mov     ecx, dword ptr ds:[esi+0x4C]
+70EEE606    68 D0720D72     push    720D72D0                         ; IntroLabInfo
+
+
+
+
+
+6FD53370    55              push    ebp
+6FD53371    8BEC            mov     ebp, esp
+6FD53373    6A FF           push    -0x1
+6FD53375    68 08D3CD70     push    70CDD308
+6FD5337A    64:A1 00000000  mov     eax, dword ptr fs:[0]
+6FD53380    50              push    eax
+6FD53381    56              push    esi
+6FD53382    57              push    edi
+6FD53383    A1 945B1871     mov     eax, dword ptr ds:[0x71185B94]
+6FD53388    33C5            xor     eax, ebp
+6FD5338A    50              push    eax
+6FD5338B    8D45 F4         lea     eax, dword ptr ss:[ebp-0xC]
+6FD5338E    64:A3 00000000  mov     dword ptr fs:[0], eax
+6FD53394    8BF9            mov     edi, ecx
+6FD53396    8B75 08         mov     esi, dword ptr ss:[ebp+0x8]
+6FD53399    68 70DCF270     push    70F2DC70                             ; UNICODE "HeadImgUI"
+6FD5339E    56              push    esi
+6FD5339F    E8 9AE7F300     call    70C91B3E
+6FD533A4    83C4 08         add     esp, 0x8
+6FD533A7    85C0            test    eax, eax
+6FD533A9    75 2E           jnz     short 6FD533D9
+6FD533AB    68 380D0000     push    0xD38
+6FD533B0    E8 7AC7B400     call    7089FB2F
+6FD533B5    83C4 04         add     esp, 0x4
+6FD533B8    8945 08         mov     dword ptr ss:[ebp+0x8], eax
+6FD533BB    8D4F 08         lea     ecx, dword ptr ds:[edi+0x8]
+6FD533BE    51              push    ecx
+6FD533BF    8BC8            mov     ecx, eax
+6FD533C1    E8 CA0AFFFF     call    6FD43E90
+6FD533C6    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+6FD533C9    64:890D 0000000>mov     dword ptr fs:[0], ecx
+6FD533D0    59              pop     ecx                                  ; user32.74AD78D7
+6FD533D1    5F              pop     edi                                  ; user32.74AD78D7
+6FD533D2    5E              pop     esi                                  ; user32.74AD78D7
+6FD533D3    8BE5            mov     esp, ebp
+6FD533D5    5D              pop     ebp                                  ; user32.74AD78D7
+6FD533D6    C2 0400         retn    0x4
+6FD533D9    68 84DCF270     push    70F2DC84                             ; UNICODE "EmotionText"
+6FD533DE    56              push    esi
+6FD533DF    E8 5AE7F300     call    70C91B3E
+6FD533E4    83C4 08         add     esp, 0x8
+6FD533E7    85C0            test    eax, eax
+6FD533E9    75 31           jnz     short 6FD5341C
+6FD533EB    68 70130000     push    0x1370
+6FD533F0    E8 3AC7B400     call    7089FB2F
+6FD533F5    83C4 04         add     esp, 0x4
+6FD533F8    8945 08         mov     dword ptr ss:[ebp+0x8], eax
+6FD533FB    8BC8            mov     ecx, eax
+6FD533FD    C745 FC 0000000>mov     dword ptr ss:[ebp-0x4], 0x0
+6FD53404    E8 379AFDFF     call    6FD2CE40
+6FD53409    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+6FD5340C    64:890D 0000000>mov     dword ptr fs:[0], ecx
+6FD53413    59              pop     ecx                                  ; user32.74AD78D7
+6FD53414    5F              pop     edi                                  ; user32.74AD78D7
+6FD53415    5E              pop     esi                                  ; user32.74AD78D7
+6FD53416    8BE5            mov     esp, ebp
+6FD53418    5D              pop     ebp                                  ; user32.74AD78D7
+6FD53419    C2 0400         retn    0x4
+6FD5341C    68 6805F870     push    70F80568                             ; UNICODE "ContactProfileView"
+6FD53421    56              push    esi
+6FD53422    E8 17E7F300     call    70C91B3E
+6FD53427    83C4 08         add     esp, 0x8
+6FD5342A    85C0            test    eax, eax
+6FD5342C    75 31           jnz     short 6FD5345F
+6FD5342E    68 380C0000     push    0xC38
+6FD53433    E8 F7C6B400     call    7089FB2F                             ; 分配内存
+6FD53438    83C4 04         add     esp, 0x4
+6FD5343B    8945 08         mov     dword ptr ss:[ebp+0x8], eax
+6FD5343E    8BC8            mov     ecx, eax
+6FD53440    C745 FC 0100000>mov     dword ptr ss:[ebp-0x4], 0x1
+6FD53447    E8 44A90000     call    6FD5DD90                             ; 写入数据
+6FD5344C    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+6FD5344F    64:890D 0000000>mov     dword ptr fs:[0], ecx
+6FD53456    59              pop     ecx                                  ; user32.74AD78D7
+6FD53457    5F              pop     edi                                  ; user32.74AD78D7
+6FD53458    5E              pop     esi                                  ; user32.74AD78D7
+6FD53459    8BE5            mov     esp, ebp
+6FD5345B    5D              pop     ebp                                  ; user32.74AD78D7
+6FD5345C    C2 0400         retn    0x4
+6FD5345F    68 1CE4F270     push    70F2E41C                             ; UNICODE "mmLabel"
+6FD53464    56              push    esi
+6FD53465    E8 D4E6F300     call    70C91B3E
+6FD5346A    83C4 08         add     esp, 0x8
+6FD5346D    85C0            test    eax, eax
+6FD5346F    75 31           jnz     short 6FD534A2
+6FD53471    68 B8070000     push    0x7B8
+6FD53476    E8 B4C6B400     call    7089FB2F
+6FD5347B    83C4 04         add     esp, 0x4
+6FD5347E    8945 08         mov     dword ptr ss:[ebp+0x8], eax
+6FD53481    8BC8            mov     ecx, eax
+6FD53483    C745 FC 0200000>mov     dword ptr ss:[ebp-0x4], 0x2
+6FD5348A    E8 119DFBFF     call    6FD0D1A0
+6FD5348F    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+6FD53492    64:890D 0000000>mov     dword ptr fs:[0], ecx
+6FD53499    59              pop     ecx                                  ; user32.74AD78D7
+6FD5349A    5F              pop     edi                                  ; user32.74AD78D7
+6FD5349B    5E              pop     esi                                  ; user32.74AD78D7
+6FD5349C    8BE5            mov     esp, ebp
+6FD5349E    5D              pop     ebp                                  ; user32.74AD78D7
+6FD5349F    C2 0400         retn    0x4
+6FD534A2    68 84DCF270     push    70F2DC84                             ; UNICODE "EmotionText"
+6FD534A7    56              push    esi
+6FD534A8    E8 91E6F300     call    70C91B3E
+6FD534AD    83C4 08         add     esp, 0x8
+6FD534B0    85C0            test    eax, eax
+6FD534B2    75 31           jnz     short 6FD534E5
+6FD534B4    68 70130000     push    0x1370
+6FD534B9    E8 71C6B400     call    7089FB2F
+6FD534BE    83C4 04         add     esp, 0x4
+6FD534C1    8945 08         mov     dword ptr ss:[ebp+0x8], eax
+6FD534C4    8BC8            mov     ecx, eax
+6FD534C6    C745 FC 0300000>mov     dword ptr ss:[ebp-0x4], 0x3
+6FD534CD    E8 6E99FDFF     call    6FD2CE40
+6FD534D2    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+6FD534D5    64:890D 0000000>mov     dword ptr fs:[0], ecx
+6FD534DC    59              pop     ecx                                  ; user32.74AD78D7
+6FD534DD    5F              pop     edi                                  ; user32.74AD78D7
+6FD534DE    5E              pop     esi                                  ; user32.74AD78D7
+6FD534DF    8BE5            mov     esp, ebp
+6FD534E1    5D              pop     ebp                                  ; user32.74AD78D7
+6FD534E2    C2 0400         retn    0x4
+6FD534E5    33C0            xor     eax, eax
+6FD534E7    8B4D F4         mov     ecx, dword ptr ss:[ebp-0xC]
+6FD534EA    64:890D 0000000>mov     dword ptr fs:[0], ecx
+6FD534F1    59              pop     ecx                                  ; user32.74AD78D7
+6FD534F2    5F              pop     edi                                  ; user32.74AD78D7
+6FD534F3    5E              pop     esi                                  ; user32.74AD78D7
+6FD534F4    8BE5            mov     esp, ebp
+6FD534F6    5D              pop     ebp                                  ; user32.74AD78D7
+6FD534F7    C2 0400         retn    0x4
+
